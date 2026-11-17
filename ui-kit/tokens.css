@@ -1,0 +1,61 @@
+/* Philadelphia church — UI kit v0.2
+   Source of truth for colours, type and spacing. Line height and tracking are
+   relative (% of the font size), so they hold at any size, screen and fallback font.
+   Figma: line height in %, letter spacing in %. CSS: unitless line-height, letter-spacing in em. */
+
+@font-face{
+  font-family:"Manrope";
+  src:url("../fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+  font-weight:200 800; font-style:normal; font-display:swap;
+}
+
+:root{
+  /* colour */
+  --cream:#F7F2E8;      /* logo, menu, headings, text on photo */
+  --cream-2:#E6E1D4;    /* secondary text */
+  --night:#14110F;      /* page background, scrims */
+  --black:#000;         /* video card, menu icon */
+  --scrim:linear-gradient(to top,rgba(20,17,15,.62),rgba(20,17,15,0));
+
+  /* colour — used site-wide; added to the kit 2026-11-17 (before that they lived only in components/site.js) */
+  --teal:#317C8E;       /* accent: links, active tabs, buttons */
+  --teal-ink:#28697A;   /* accent on hover / text on light */
+  --card:#E8E7DB;       /* light card on cream */
+  --mute:#85837E;       /* secondary text on cream */
+
+  /* font */
+  --font:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+
+  /* type: size · line height (%) · tracking (%)            Figma original → kit */
+  --h1-size:clamp(44px,6.25vw,90px); --h1-weight:800; --h1-lh:1.02;  --h1-track:-.033em; /* 92 / −4px  → 102% / −3.3%  caps */
+  --h2-size:clamp(34px,3.5vw,50px);  --h2-weight:500; --h2-lh:1.2;   --h2-track:-.03em;  /* 60 / −3px  → 120% / −3%         */
+  --h3-size:24px;                    --h3-weight:600; --h3-lh:1.25;  --h3-track:-.02em;  /* 26.4/−0.8 → 125% / −2%         */
+  --t1-size:18px;                    --t1-weight:600; --t1-lh:1.44;  --t1-track:-.01em;  /* 24 / −0.8 → 144% / −1%         */
+  --t2-size:14px;                    --t2-weight:600; --t2-lh:1.43;  --t2-track:0em;     /* 18 / −0.8 → 143% / 0%          */
+  --t3-size:12px;                    --t3-weight:800; --t3-lh:1.33;  --t3-track:.04em;   /* 13.2/−0.5% → 133% / +4%  caps  */
+
+  /* D1 · display title of inner pages (history, ministries, contacts…) and H2S · section title between H2 and H3 — added 2026-11-17: they were repeated on every page with their own numbers */
+  --d1-size:clamp(40px,4.9vw,70px);  --d1-weight:500; --d1-lh:1.07;  --d1-track:-.057em;
+  --h2s-size:clamp(26px,2.8vw,38px); --h2s-weight:500; --h2s-lh:1.15; --h2s-track:-.045em;
+
+  /* B1 · long-form reading text (articles, interviews, policy): size 19 · line height 175% · tracking −1.2%, weight 500 — added 2026-11-17 */
+  --b1-size:19px; --b1-weight:500; --b1-lh:1.75; --b1-track:-.012em;
+
+  /* space */
+  --gutter:50px; --gutter-m:16px; --top:30px; --bottom:40px;
+  --gap-h1-info:32px; --gap-info:28px;
+  --radius-card:16px;
+}
+@media (max-width:720px){
+  :root{ --t1-size:16px; --b1-size:17.5px; --gutter:var(--gutter-m); }
+}
+
+.h1{font:var(--h1-weight) var(--h1-size)/var(--h1-lh) var(--font);letter-spacing:var(--h1-track);text-transform:uppercase}
+.d1{font:var(--d1-weight) var(--d1-size)/var(--d1-lh) var(--font);letter-spacing:var(--d1-track)}
+.h2{font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track)}
+.h2s{font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track)}
+.h3{font:var(--h3-weight) var(--h3-size)/var(--h3-lh) var(--font);letter-spacing:var(--h3-track)}
+.t1{font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track)}
+.t2{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track)}
+.t3{font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);text-transform:uppercase}
+.b1{font:var(--b1-weight) var(--b1-size)/var(--b1-lh) var(--font);letter-spacing:var(--b1-track)}
