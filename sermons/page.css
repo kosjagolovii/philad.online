@@ -1,0 +1,47 @@
+/* СТОРІНКА СПИСКУ ВІДЕО: «Проповіді» і «Відеобібліотека» — ОДИН файл (бічна панель фільтрів + сітка карток).
+   Картки, плеєр і фільтри — sermons/base.css; розмітку будує sermons/page.js за налаштуваннями window.SM_CONFIG.
+   Правки лише відеобібліотеки — library/section-video.css. */
+.pg{display:grid;justify-items:center;padding-block:130px 90px;padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+.pg>.row-w{min-width:0}
+.hold{position:relative;z-index:1;background:var(--ds-cream)}   /* контент їде вгору й відкриває закріплений футер */
+.lead{margin:0;max-width:520px;font-weight:600;font-size:17px;line-height:1.35;letter-spacing:-.03em;color:var(--mute)}
+.ic-s{width:18px;height:18px}
+@media (max-width:720px){.pg{padding-block:112px 64px}}
+/* ВАРІАНТ A · «Бічна панель» — зліва закріплені фільтри, справа сітка проповідей */
+.top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px 40px;margin-bottom:40px}
+.lay{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:14px;align-items:start}
+/* відступ згори = відступу панелі від лівого краю екрана */
+.side{--sp:calc((100vw - var(--row))/2);grid-column:1/2;position:sticky;top:var(--sp);display:grid;gap:18px;max-height:calc(100svh - 2*var(--sp));overflow:auto;padding:2px 14px 20px 2px;scrollbar-width:thin}
+.fg{border-top:1px solid var(--line);padding-top:16px}
+.fg summary{display:flex;align-items:center;justify-content:space-between;cursor:pointer;list-style:none;font-weight:700;font-size:15px;letter-spacing:-.02em}
+.fg summary::-webkit-details-marker{display:none}
+.fg summary::after{content:"";width:10px;height:10px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;rotate:45deg;translate:0 -2px;transition:rotate .3s ease}
+.fg[open] summary::after{rotate:225deg;translate:0 2px}
+.fg summary:focus-visible{outline:2px solid var(--teal);outline-offset:4px;border-radius:4px}
+.fl{display:flex;flex-wrap:wrap;gap:6px;padding-top:14px}
+.fl .chip{min-height:34px;padding:0 12px;font-size:14px}
+.spk{display:grid;gap:2px;padding-top:10px}
+.spk .chip{display:flex;justify-content:flex-start;gap:10px;border:0;border-radius:10px;min-height:42px;padding:0 8px;width:100%}
+.spk .chip:hover{background:rgba(20,20,20,.06)}
+.spk .chip[aria-pressed="true"]{background:var(--ink)}
+.spk .chip img,.spk .chip i{width:30px;height:30px;border-radius:50%;object-fit:cover;object-position:50% 20%;background:var(--sand);flex:none}
+.spk .chip i{display:grid;place-items:center;font-style:normal;font-weight:800;font-size:10px;color:var(--teal-ink);background:rgba(49,124,142,.14)}
+.spk .chip span{flex:1;text-align:left;font-size:14px}
+.spk-more{margin-top:8px}
+.res{grid-column:2/5;display:grid;gap:22px;min-width:0}
+.rh{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center}
+.rinfo{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;font-weight:700;font-size:15px;letter-spacing:-.02em}
+.act{display:flex;flex-wrap:wrap;gap:6px}
+.act .chip{min-height:34px;padding:0 6px 0 14px;background:var(--teal);border-color:var(--teal);color:var(--ds-cream);font-size:14px}
+.act .chip::after{content:"×";font-size:18px;line-height:1;width:22px;text-align:center;opacity:.8}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 14px}
+.fbtn{display:none}
+@media (max-width:1000px){
+  .lay{grid-template-columns:minmax(0,1fr)}
+  .side,.res{grid-column:1/-1}
+  .side{position:static;max-height:none;overflow:visible;padding:0;display:none}
+  .side.open{display:grid;margin-bottom:24px}
+  .fbtn{display:inline-flex}
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){.grid3{grid-template-columns:minmax(0,1fr);gap:28px}.rh{grid-template-columns:minmax(0,1fr)}}

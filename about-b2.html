@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Про нас</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<script src="components/site.js"></script>
+<link rel="stylesheet" href="about/base.css">
+<style>
+/* ВАРІАНТ B2 · «Арки» — темний перший екран, симетричні портрети пасторів в арках; місія — картки, що складаються стосом при скролі */
+.pad{padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+.wrap{width:var(--row);max-width:100%;margin-inline:auto;box-sizing:border-box;min-width:0}
+h2{font-weight:500;font-size:clamp(30px,3.5vw,50px);line-height:1.12;letter-spacing:-.04em;text-wrap:balance}
+
+/* темна частина */
+.dk{background:var(--ink);color:var(--ds-cream);padding-block:150px 110px}
+.dk .wrap{display:grid;gap:110px}
+.dk .kicker{color:rgba(247,242,232,.6)}
+.top{display:grid;justify-items:center;gap:26px;text-align:center}
+.top h1{font-weight:500;font-size:clamp(64px,12.5vw,210px);line-height:.86;letter-spacing:-.065em}
+.top p:last-child{max-width:560px;font-weight:500;font-size:clamp(20px,2vw,28px);line-height:1.25;letter-spacing:-.035em;color:rgba(247,242,232,.78);text-wrap:balance}
+
+.pas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:-40px}
+.pa{display:grid;gap:26px;justify-items:center;text-align:center}
+.pa figure{width:100%;aspect-ratio:3/4;border-radius:999px 999px 20px 20px;overflow:hidden;background:#232323}
+.pa img{width:100%;height:100%;object-fit:cover;object-position:50% 70%;transition:scale 1.2s cubic-bezier(.2,.7,.2,1)}
+.pa:hover img{scale:1.04}
+.pa-t{display:grid;gap:10px}
+.pa-t h3{font-weight:500;font-size:clamp(30px,3.8vw,58px);line-height:1.02;letter-spacing:-.05em}
+
+.dea-w{display:grid;gap:40px}
+.dea-w h2{text-align:center}
+.dea{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.de{display:flex;align-items:center;gap:16px;padding:14px;border-radius:999px;border:1px solid rgba(247,242,232,.14);min-width:0}
+.de-ph{flex:none;width:64px;height:64px;border-radius:50%;overflow:hidden}
+.de-ph>*{width:100%;height:100%;object-fit:cover}
+.dk .noph{background:rgba(247,242,232,.08);color:rgba(247,242,232,.3)}
+.de b{font-weight:600;font-size:17px;line-height:1.2;letter-spacing:-.02em}
+.dk .is-empty{color:rgba(247,242,232,.35)}
+
+/* світла частина */
+.lt{display:grid;gap:120px;padding-block:120px}
+.say{display:grid;justify-items:center;gap:40px;text-align:center}
+.say-big{max-width:1040px;font-weight:500;font-size:clamp(26px,3.3vw,50px);line-height:1.14;letter-spacing:-.045em;text-wrap:balance}
+.say-big span{color:rgba(20,20,20,.42)}
+.say-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 40px;max-width:920px;text-align:left}
+.wide{aspect-ratio:21/9;border-radius:20px;overflow:hidden;background:var(--sand)}
+.wide img{width:100%;height:100%;object-fit:cover;object-position:50% 64%}
+
+/* місія: зліва закріплене формулювання, справа картки стосом */
+.mis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.mis-h{position:sticky;top:130px;display:grid;gap:22px;padding-right:clamp(0px,4vw,60px)}
+.mis-h h2{font-size:clamp(30px,3.8vw,58px);line-height:1.06;letter-spacing:-.05em}
+.stack{display:grid;gap:14px}
+.cd{position:sticky;top:calc(130px + var(--i)*18px);display:grid;gap:26px;padding:28px 28px 34px;border-radius:20px;background:var(--card);box-shadow:0 -1px 0 rgba(20,20,20,.08),0 -18px 40px -28px rgba(20,20,20,.35);min-width:0}
+.cd-h{display:flex;align-items:center;gap:18px}
+.cd-n{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--teal);color:var(--ds-cream);font-weight:600;font-size:15px}
+.cd h3{font-weight:500;font-size:clamp(26px,2.7vw,40px);line-height:1.04;letter-spacing:-.045em}
+.cd .prose{font-size:16px;line-height:1.5}
+
+/* контакти */
+.con{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 40px;align-items:end;padding:clamp(28px,4.4vw,64px);border-radius:20px;background:var(--ink);color:var(--ds-cream)}
+.con-a{display:grid;gap:18px;align-self:stretch;align-content:space-between}
+.con .kicker{color:rgba(247,242,232,.6)}
+.con h2{font-size:clamp(34px,4.6vw,70px);line-height:1;letter-spacing:-.05em}
+.con-b{display:grid;gap:30px;justify-items:start}
+.con dl{margin:0;display:grid;gap:20px;width:100%}
+.con dl div{padding-bottom:20px;border-bottom:1px solid rgba(247,242,232,.16)}
+.con dt{font-weight:600;font-size:14px;letter-spacing:-.02em;color:rgba(247,242,232,.5);margin-bottom:4px}
+.con dd{margin:0;font-weight:500;font-size:clamp(22px,2.2vw,32px);line-height:1.18;letter-spacing:-.04em}
+.con dd small{display:block;margin-top:6px;font-weight:600;font-size:14px;letter-spacing:-.01em;color:rgba(247,242,232,.5)}
+.con dd a{color:inherit;text-decoration:none}
+
+@media (max-width:1000px){
+  .dea{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mis{grid-template-columns:minmax(0,1fr);gap:36px}
+  .mis-h{position:static;padding:0}
+  .cd{position:static;box-shadow:none}
+}
+@media (max-width:720px){
+  .dk{padding-block:120px 64px}.dk .wrap{gap:64px}
+  .pas{grid-template-columns:minmax(0,1fr);gap:44px;margin-top:-20px}
+  .pa{gap:18px}
+  .dea-w{gap:24px}.dea{grid-template-columns:minmax(0,1fr);gap:8px}
+  .de{padding:8px}.de-ph{width:52px;height:52px}.de b{font-size:16px}
+  .lt{gap:72px;padding-block:72px}
+  .say{gap:24px;text-align:left;justify-items:start}.say-cols{grid-template-columns:minmax(0,1fr)}
+  .wide{aspect-ratio:4/3}
+  .wide,.cd,.con{border-radius:16px}
+  .cd{padding:22px 20px 26px;gap:18px}
+  .con{grid-template-columns:minmax(0,1fr);gap:36px}
+}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+
+<main id="app"></main>
+
+<div class="end">
+  <div class="nx-hold" data-dark><site-next></site-next></div>
+  <site-footer></site-footer>
+</div>
+
+<script src="about/data.js"></script>
+<script src="about/base.js"></script>
+<script>
+(()=>{
+const D=window.ABOUT,{esc,photo,name}=AB;
+const first=D.intro[0], cut=first.indexOf(". ",first.indexOf(". ")+1)+1;
+document.getElementById("app").innerHTML=`
+  <section class="dk pad" data-dark>
+    <div class="wrap">
+      <header class="top">
+        <p class="kicker rv">${esc(D.pastorsTitle)}</p>
+        <h1 class="rv" style="--d:1">${esc(D.kicker)}</h1>
+        <p class="rv" style="--d:2">${esc(D.title)}</p>
+      </header>
+
+      <div class="pas" aria-label="${esc(D.pastorsTitle)}">${D.pastors.map((p,i)=>`
+        <article class="pa rv" style="--d:${i*2}">
+          <figure>${photo(p)}</figure>
+          <div class="pa-t"><p class="kicker">${esc(p.role)}</p><h3>${name(p)}</h3></div>
+        </article>`).join("")}
+      </div>
+
+      <section class="dea-w" aria-labelledby="dea-h">
+        <h2 id="dea-h" class="rv">${esc(D.deaconsTitle)}</h2>
+        <ul class="dea">${D.deacons.map((p,i)=>`
+          <li class="de rv" style="--d:${i%4}"><span class="de-ph">${photo(p,"a")}</span><b${p.name?"":' class="is-empty"'}>${name(p)}</b></li>`).join("")}
+        </ul>
+      </section>
+    </div>
+  </section>
+
+  <div class="lt pad">
+    <section class="wrap say" aria-label="${esc(D.aboutTitle)}">
+      <p class="kicker rv">${esc(D.aboutTitle)}</p>
+      <p class="say-big rv">${first.slice(0,cut)}<span>${first.slice(cut)}</span></p>
+      <div class="say-cols">${D.intro.slice(1).map((t,i)=>`<div class="prose rv" style="--d:${i}"><p>${t}</p></div>`).join("")}</div>
+    </section>
+
+    <figure class="wrap wide rv"><img src="about/church.webp" alt="Церква «Філадельфія»: спільне фото біля будівлі церкви" width="2200" height="1467" loading="lazy"></figure>
+
+    <section class="wrap mis" aria-labelledby="mis-h">
+      <div class="mis-h rv"><p class="kicker">${esc(D.missionKicker)}</p><h2 id="mis-h">${esc(D.mission)}</h2></div>
+      <div class="stack">${D.pillars.map((p,i)=>`
+        <article class="cd" style="--i:${i}">
+          <div class="cd-h"><span class="cd-n">${i+1}</span><h3>${esc(p.title)}</h3></div>
+          <div class="prose">${p.text.map(t=>`<p>${t}</p>`).join("")}</div>
+        </article>`).join("")}
+      </div>
+    </section>
+
+    <section class="wrap con rv" data-dark aria-labelledby="con-h">
+      <div class="con-a"><p class="kicker" id="con-h">${esc(D.contactsTitle)}</p><h2>${esc(D.contacts.welcome)}</h2></div>
+      <div class="con-b">
+        <dl>
+          <div><dt>Email</dt><dd><a href="mailto:${esc(D.contacts.email)}">${esc(D.contacts.email)}</a></dd></div>
+          <div><dt>Адреса</dt><dd>${esc(D.contacts.address)}<small>${esc(D.contacts.metro)}</small></dd></div>
+        </dl>
+        <a class="lbtn" href="${esc(D.contacts.button.href)}">${esc(D.contacts.button.label)}</a>
+      </div>
+    </section>
+  </div>`;
+AB.init();
+})();
+</script>
+</body>
+</html>

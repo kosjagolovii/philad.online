@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Події церкви «Філадельфія» — афіша і календар</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<!-- seo:start -->
+<meta name="description" content="Афіша подій церкви «Філадельфія» у Києві: служіння, семінари, зустрічі для молоді, сімей, сестер і дітей. Дати, місце та реєстрація.">
+<link rel="canonical" href="https://philad.org/cobytiya/">
+<meta name="robots" content="noindex,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Церква «Філадельфія»">
+<meta property="og:title" content="Події церкви «Філадельфія» — афіша і календар">
+<meta property="og:description" content="Афіша подій церкви «Філадельфія» у Києві: служіння, семінари, зустрічі для молоді, сімей, сестер і дітей. Дати, місце та реєстрація.">
+<meta property="og:url" content="https://philad.org/cobytiya/">
+<meta property="og:image" content="https://philad.org/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Події церкви «Філадельфія» — афіша і календар">
+<meta name="twitter:description" content="Афіша подій церкви «Філадельфія» у Києві: служіння, семінари, зустрічі для молоді, сімей, сестер і дітей. Дати, місце та реєстрація.">
+<meta name="twitter:image" content="https://philad.org/og.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Події церкви «Філадельфія» — афіша і календар", "description": "Афіша подій церкви «Філадельфія» у Києві: служіння, семінари, зустрічі для молоді, сімей, сестер і дітей. Дати, місце та реєстрація.", "url": "https://philad.org/cobytiya/", "inLanguage": "uk", "isPartOf": {"@type": "WebSite", "name": "Церква «Філадельфія»", "url": "https://philad.org/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://philad.org/"}, {"@type": "ListItem", "position": 2, "name": "Події церкви «Філадельфія»", "item": "https://philad.org/cobytiya/"}]}</script>
+<!-- seo:end -->
+<script src="components/site.js"></script>
+<link rel="stylesheet" href="ui-kit/tokens.css">
+<style>
+/* Події · основна сторінка (колишній варіант B «Афіша»): головна подія зверху, нижче — сітка карток із фільтрами */
+:root{
+  --ds-cream:#F7F2E8; --ink:#141414; --mute:#85837E; --teal:#317C8E; --teal-ink:#28697A; --sand:#E6E1D4;
+  --sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --side:12px; color-scheme:light;
+}
+html,body{margin:0;padding:0;background:var(--ds-cream);color:var(--ink)}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+
+.ev{position:relative;z-index:1;background:var(--ds-cream);display:grid;justify-items:center;gap:72px;padding-block:150px 100px;
+  padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+.ev > *{min-width:0;width:var(--row);max-width:100%;box-sizing:border-box}
+
+/* intro */
+.ev-top{display:grid;justify-items:center;gap:24px;text-align:center}
+.ev-kicker{margin:0;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);text-transform:uppercase;color:var(--teal)}
+.ev-top h1{margin:0;font:var(--d1-weight) var(--d1-size)/var(--d1-lh) var(--font);letter-spacing:var(--d1-track);text-wrap:balance}
+.ev-top h1 span{color:rgba(20,20,20,.5)}
+
+/* filters */
+.ev-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.ev-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.ev-chip{white-space:nowrap;height:40px;padding:0 16px;border:0;border-radius:10px;background:rgba(20,20,20,.055);color:rgba(20,20,20,.7);cursor:pointer;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);transition:background .25s,color .25s}
+.ev-chip:hover{background:rgba(20,20,20,.09);color:var(--ink)}
+.ev-chip[aria-pressed="true"]{background:var(--teal);color:var(--ds-cream)}
+.ev-chip:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.ev-seg{display:inline-flex;padding:4px;border-radius:12px;background:rgba(20,20,20,.055)}
+.ev-seg .ev-chip{height:34px;padding:0 14px;background:none}
+.ev-seg .ev-chip[aria-pressed="true"]{background:var(--ink);color:var(--ds-cream)}
+.ev-count{margin:0 0 20px;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.45)}
+
+/* grid of cards */
+.ev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 14px;margin:0;padding:0;list-style:none}
+.ev-card{display:grid;align-content:start;gap:16px;width:100%;padding:0;border:0;background:none;text-align:left;cursor:pointer;color:inherit}
+.ev-pic{position:relative;margin:0;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:var(--sand);transition:scale .45s cubic-bezier(.2,.7,.2,1)}
+.ev-pic img{width:100%;height:100%;object-fit:cover;transition:scale .9s cubic-bezier(.2,.7,.2,1)}
+.ev-card:hover .ev-pic{scale:1.03}
+.ev-card:hover .ev-pic img{scale:1.06}
+.ev-card:focus-visible{outline:none}.ev-card:focus-visible .ev-pic{outline:2px solid var(--ink);outline-offset:3px}
+.ev-badge{position:absolute;left:14px;top:14px;display:grid;justify-items:center;min-width:56px;padding:8px 10px;border-radius:12px;background:var(--ds-cream);color:var(--ink);text-align:center}
+.ev-badge b{font:var(--h3-weight) var(--h3-size)/var(--h3-lh) var(--font);letter-spacing:var(--h3-track)}
+.ev-badge span{margin-top:2px;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);text-transform:uppercase;color:rgba(20,20,20,.55)}
+.ev-badge.wk{padding:8px 12px;min-width:0}.ev-badge.wk b{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);text-transform:none}
+.ev-reg{position:absolute;right:14px;top:14px;padding:6px 10px;border-radius:999px;background:var(--teal);color:var(--ds-cream);font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);text-transform:uppercase}
+.ev-card h3{margin:0;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track);text-wrap:balance}
+.ev-tx{display:grid;gap:8px}
+.ev-line{margin:0;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.55)}
+.ev-tags{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.ev-tags span,.ev-tags li{padding:5px 9px;border-radius:8px;background:rgba(49,124,142,.1);color:var(--teal);font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track)}
+.ev-cur{position:fixed;left:0;top:0;z-index:7;width:60px;height:60px;border-radius:50%;background:var(--ds-cream);color:var(--ink);display:grid;place-items:center;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);pointer-events:none;opacity:0;scale:0;transform-origin:0 0;transition:opacity .2s ease,scale .45s cubic-bezier(.3,1.4,.5,1);box-shadow:0 10px 24px -12px rgba(20,20,20,.35)}
+.ev-cur.on{opacity:1;scale:1}
+.ev-arch{display:grid;justify-items:center}
+.ev-empty{margin:0;text-align:center;font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);color:var(--mute)}
+
+.rv{opacity:0;transform:translate3d(0,40px,0);transition:opacity .8s ease,transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0)*60ms)}
+.rv.in{opacity:1;transform:none}
+
+
+/* the two switches: view (Галерея / Список) and time (Майбутні / Архівні) — they keep their own width, never stretch */
+.ev-ctl{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:10px}
+.ev-seg{align-self:center;justify-self:start;width:max-content;max-width:100%}
+
+/* list view: every event in a column, the date is the accent */
+.ev-list{margin:0;padding:0;list-style:none}
+.ev-lmonth{padding:44px 0 14px;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track)}
+.ev-lmonth:first-child{padding-top:0}
+.ev-lmonth span{margin-left:10px;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.4)}
+.ev-lrow{display:grid;grid-template-columns:200px minmax(0,1fr) 300px;column-gap:32px;align-items:center;padding:26px 0;border-top:1px solid rgba(20,20,20,.12);cursor:pointer;}
+.ev-lrow.last{border-bottom:1px solid rgba(20,20,20,.12)}
+.ev-ld{display:grid;gap:4px;align-content:center}
+.ev-ld b{font-weight:500;font-size:clamp(64px,7vw,104px);line-height:.9;letter-spacing:-.08em}
+.ev-ld b small{font-size:.5em;letter-spacing:-.06em}
+.ev-ld span{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);text-transform:uppercase;color:var(--teal)}
+.ev-ld em{font-style:normal;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.5)}
+.ev-li{display:grid;gap:10px;min-width:0}
+.ev-li button{justify-self:start;padding:0;border:0;background:none;text-align:left;cursor:pointer;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track);text-wrap:balance;transition:color .25s}
+.ev-li button:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+.ev-lpic{margin:0;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:var(--sand);transition:scale .45s cubic-bezier(.2,.7,.2,1)}
+.ev-lrow:hover .ev-lpic{scale:1.03}
+.ev-lpic img{width:100%;height:100%;object-fit:cover;transition:scale .8s cubic-bezier(.2,.7,.2,1)}
+.ev-lrow:hover .ev-lpic img{scale:1.06}
+
+/* one calendar at the end of the list: a month, with the event titles written on the days */
+.ev-cal{margin-top:90px;padding:32px 32px 36px;border-radius:32px;background:#fff}
+.ev-cal-h{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:8px}
+.ev-cal-h h2{margin:0;font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track)}
+.ev-cal-h h2 span{color:rgba(20,20,20,.35)}
+.ev-cal-nav{display:flex;gap:8px}
+.ev-cal-nav button{width:48px;height:48px;border:0;border-radius:50%;background:var(--ds-cream);cursor:pointer;font:var(--h3-weight) var(--h3-size)/var(--h3-lh) var(--font);letter-spacing:var(--h3-track);display:grid;place-items:center;transition:background .2s,color .2s,scale .3s cubic-bezier(.3,1.4,.5,1)}
+.ev-cal-nav button:hover:not(:disabled){background:var(--teal);color:var(--ds-cream);scale:1.08}
+.ev-cal-nav button:disabled{opacity:.3;cursor:default}
+.ev-cal-nav button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.ev-cal-key{display:flex;gap:18px;margin:0 0 22px;padding:0;list-style:none;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.5)}
+.ev-cal-key li{display:flex;align-items:center;gap:7px}
+.ev-cal-key li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--teal)}
+.ev-cal-key li+li::before{background:rgba(20,20,20,.22)}
+.cal-g{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.cal-g.swap{animation:calIn .5s cubic-bezier(.2,.7,.2,1)}
+@keyframes calIn{from{opacity:0;translate:0 12px}}
+.cal-w{padding:2px 4px 6px;text-align:center;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);text-transform:uppercase;color:rgba(20,20,20,.38)}
+.cal-c{display:flex;flex-direction:column;gap:6px;min-height:128px;padding:10px 8px 8px;border-radius:18px;background:var(--ds-cream);min-width:0;transition:background .25s}
+.cal-c.wk{background:rgba(231,226,212,.55)}
+.cal-c.out{background:none}
+.cal-c.out>b{opacity:.25}
+.cal-c>b{align-self:flex-start;display:grid;place-items:center;min-width:28px;height:28px;padding:0 6px;border-radius:14px;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track)}
+.cal-c>b small{display:none}
+.cal-c.today>b{background:var(--teal);color:var(--ds-cream)}
+.cal-c.has{background:rgba(49,124,142,.09)}
+.cal-ev{display:grid;gap:2px;width:100%;padding:7px 9px 8px;border:0;border-radius:11px;background:var(--teal);color:var(--ds-cream);text-align:left;cursor:pointer;
+  box-shadow:0 6px 14px -8px rgba(40,105,122,.7);transition:translate .3s cubic-bezier(.2,.7,.2,1),background .2s,box-shadow .3s}
+.cal-ev .t{font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);opacity:.78}
+.cal-ev .n{font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.cal-ev:hover{translate:0 -2px;background:var(--teal-ink);box-shadow:0 12px 18px -10px rgba(40,105,122,.85)}
+.cal-ev.past{background:rgba(20,20,20,.1);color:rgba(20,20,20,.75);box-shadow:none}.cal-ev.past:hover{background:rgba(20,20,20,.17)}
+.cal-ev:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.cal-none{display:none;margin:0;padding:22px;border-radius:16px;background:var(--ds-cream);font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.55)}
+
+@media (max-width:1100px){
+  .ev-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ev-lrow{grid-template-columns:150px minmax(0,1fr);row-gap:14px}
+  .ev-lpic{grid-column:2;max-width:320px}
+}
+@media (max-width:720px){
+  :root{--side:16px}
+  .ev{gap:48px;padding-block:120px 64px}
+  .ev-grid{grid-template-columns:minmax(0,1fr);gap:32px}
+  .ev-bar{display:grid}
+  .ev-chips{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(var(--side) * -1);padding-inline:var(--side);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .ev-chips::-webkit-scrollbar{display:none}
+  .ev-chips .ev-chip{flex:none}
+  .ev-ctl{justify-content:flex-start}
+  .ev-lmonth{padding-top:32px}
+  .ev-lrow{grid-template-columns:minmax(0,1fr) 124px;grid-template-areas:"d p" "i i";column-gap:16px;row-gap:12px;align-items:start;padding:16px 0}
+  .ev-ld{grid-area:d;grid-template-columns:auto 1fr;align-items:end;column-gap:10px;row-gap:2px}
+  .ev-ld b{font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track)}.ev-ld b small{font-size:.5em}.ev-ld span{font-size:var(--t3-size);align-self:end}.ev-ld em{grid-column:1/-1;font-size:var(--t2-size)}
+  .ev-lpic{grid-area:p;grid-column:auto;max-width:none;border-radius:12px}
+  .ev-li{grid-area:i;gap:8px}
+  .ev-li button{font-size:var(--h3-size)}
+  .ev-cal{margin-top:64px}
+  .ev-cal-nav button{width:44px;height:44px}
+  /* on a phone a 7-column grid cannot hold titles: the month turns into an agenda — only the days that have events, one under another */
+  .ev-cal{padding:20px 16px 22px;border-radius:24px}
+  .ev-cal-key{margin-bottom:16px}
+  .cal-g{display:block}
+  .cal-w,.cal-c:not(.has){display:none}
+  .cal-c.has{display:grid;grid-template-columns:72px minmax(0,1fr);grid-auto-rows:min-content;row-gap:0;align-items:start;min-height:0;margin-bottom:8px;padding:12px}
+  .cal-c.has>b{grid-row:1/20;display:grid;justify-items:start;align-content:start;min-width:0;height:auto;padding:0;border-radius:0;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track);background:none}
+  .cal-c.has.today>b{color:var(--teal);background:none}
+  .cal-c.has>b small{display:block;margin:4px 0 0;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);text-transform:uppercase;color:rgba(20,20,20,.45)}
+  .cal-c.has .cal-ev{margin-bottom:6px}.cal-c.has .cal-ev:last-child{margin-bottom:0}
+  .cal-none{display:block}.cal-g:has(.cal-c.has)+.cal-none{display:none}
+}
+@media (prefers-reduced-motion:reduce){.rv,.ev-pic img,.ev-cur,.ev-lpic,.cal-ev{transition:none!important}.cal-g.swap{animation:none}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+
+<main class="ev">
+  <header class="ev-top">
+    <p class="ev-kicker rv">Події</p>
+    <h1 class="rv" style="--d:1">Спільність<br><span>церкви «Філадельфія»</span></h1>
+  </header>
+
+  <section aria-label="Усі події">
+    <div class="ev-bar rv">
+      <ul class="ev-chips" id="evChips" aria-label="Для кого"></ul>
+      <div class="ev-ctl">
+        <div class="ev-seg" id="evView" role="group" aria-label="Вигляд сторінки"></div>
+        <div class="ev-seg" id="evSeg" role="group" aria-label="Майбутні чи архівні"></div>
+      </div>
+    </div>
+    <p class="ev-count" id="evCount" style="margin-top:24px"></p>
+    <ul class="ev-grid" id="evGrid"></ul>
+    <ol class="ev-list" id="evList" hidden></ol>
+    <p class="ev-empty" id="evEmpty" hidden>Під цей вибір подій немає — спробуйте «Усі».</p>
+    <section class="ev-cal" id="evCal" aria-labelledby="calT" hidden>
+      <div class="ev-cal-h"><h2 id="calT"></h2><div class="ev-cal-nav"><button type="button" id="calPrev" aria-label="Попередній місяць">←</button><button type="button" id="calNext" aria-label="Наступний місяць">→</button></div></div>
+      <ul class="ev-cal-key"><li>Майбутні події</li><li>Минулі</li></ul>
+      <div class="cal-g" id="calG"></div>
+      <p class="cal-none" id="calNone">У цьому місяці подій немає.</p>
+    </section>
+  </section>
+  <div class="ev-arch rv"><a class="lbtn" href="/events/" data-no-u>Архів подій 2014–2022</a></div>
+</main>
+
+<site-footer></site-footer>
+
+<div class="ev-cur" id="evCur" aria-hidden="true">Відкрити</div>
+
+<script src="/events/data.js"></script>
+<script src="/events/lib.js"></script>
+<script>
+(()=>{
+const E=window.PhiladEvents,$=id=>document.getElementById(id),el=E.el;
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const footer=$("footer");if(footer)footer.setAttribute("data-dark","");
+
+/* ---------- filters ---------- */
+let aud="all",mode="up",view="gal";
+const chips=$("evChips");
+[["all","Усі"],...E.audKeys([...E.dated(),...E.weekly(),...E.past()])].forEach(([id,l])=>{
+  const li=el("li"),b=el("button","ev-chip",l);b.type="button";b.dataset.a=id;b.setAttribute("aria-pressed",id===aud?"true":"false");
+  b.onclick=()=>{aud=id;chips.querySelectorAll(".ev-chip").forEach(x=>x.setAttribute("aria-pressed",x.dataset.a===id?"true":"false"));paint()};
+  li.append(b);chips.append(li)});
+[["gal","Галерея"],["list","Список"]].forEach(([id,l])=>{
+  const b=el("button","ev-chip",l);b.type="button";b.dataset.v=id;b.setAttribute("aria-pressed",id===view?"true":"false");
+  b.onclick=()=>{view=id;$("evView").querySelectorAll(".ev-chip").forEach(x=>x.setAttribute("aria-pressed",x.dataset.v===id?"true":"false"));paint()};
+  $("evView").append(b)});
+// the toggle only makes sense while there is something in the archive
+if(!E.past().length)$("evSeg").hidden=true;
+[["up","Майбутні"],["arch","Архівні"]].forEach(([id,l])=>{
+  const b=el("button","ev-chip",l);b.type="button";b.dataset.k=id;b.setAttribute("aria-pressed",id===mode?"true":"false");
+  b.onclick=()=>{mode=id;$("evSeg").querySelectorAll(".ev-chip").forEach(x=>x.setAttribute("aria-pressed",x.dataset.k===id?"true":"false"));paint()};
+  $("evSeg").append(b)});
+
+/* ---------- the «Відкрити» circle: grows out of the pointer tip over a picture, like on the ministries page ---------- */
+const cur=$("evCur"),fine=matchMedia("(hover:hover) and (pointer:fine)");
+const place=e=>{cur.style.translate=`${e.clientX+9}px ${e.clientY+12}px`};
+function wireCursor(pic){
+  pic.addEventListener("pointerenter",e=>{if(e.pointerType==="touch"||!fine.matches)return;cur.classList.remove("on");place(e);void cur.offsetWidth;cur.classList.add("on")});
+  pic.addEventListener("pointermove",e=>{if(e.pointerType==="touch"||!fine.matches)return;place(e);if(!cur.classList.contains("on")){void cur.offsetWidth;cur.classList.add("on")}});
+  pic.addEventListener("pointerleave",()=>cur.classList.remove("on"));
+}
+addEventListener("scroll",()=>cur.classList.remove("on"),{passive:true});
+
+/* ---------- cards ---------- */
+const grid=$("evGrid");
+function card(ev,i,archive){
+  const li=el("li","rv in");li.style.setProperty("--d",i%3);
+  const b=el("button","ev-card");b.type="button";b.setAttribute("aria-label",ev.title);
+  const pic=el("span","ev-pic"),im=new Image(1600,900);im.src=ev.img;im.alt=ev.poster?ev.title:"";im.loading="lazy";im.decoding="async";pic.append(im);
+  // a finished poster already carries its date and title: nothing is laid over it
+  if(!ev.poster){
+    const bd=el("span","ev-badge");
+    if(ev.weekly){bd.classList.add("wk");bd.append(el("b",null,E.whenText(ev).split(",")[0]))}
+    else{const a=E.parse(ev.date);bd.append(el("b",null,ev.dateEnd?`${a.getDate()}–${E.parse(ev.dateEnd).getDate()}`:String(a.getDate())),el("span",null,E.MON[a.getMonth()].slice(0,3)))}
+    pic.append(bd);
+    if(!archive&&ev.how.type==="register")pic.append(el("span","ev-reg","Реєстрація"));
+  }
+  wireCursor(pic);
+  const tx=el("span","ev-tx");
+  const tags=el("span","ev-tags");E.audLabels(ev).forEach(x=>tags.append(el("span",null,x)));
+  tx.append(el("h3",null,ev.title),el("span","ev-line",E.whenText(ev)+(ev.place?" · "+ev.place:"")));
+  if(!archive)tx.append(el("span","ev-line",E.howShort(ev)));
+  tx.append(tags);
+  b.append(pic,tx);b.onclick=()=>{cur.classList.remove("on");E.open(ev,b)};li.append(b);return li}
+
+/* ---------- list view ---------- */
+const listEl=$("evList");
+function lrow(ev,archive){
+  const li=el("li","ev-lrow");
+  const d=el("div","ev-ld"),a=ev.date&&E.parse(ev.date);
+  if(ev.weekly){d.append(el("b",null,E.DOW[E.KEY.indexOf(ev.weekly.days[0])].replace(/^./,c=>c.toUpperCase())),el("span",null,"Щотижня"),el("em",null,ev.weekly.times.join(" · ")))}
+  else{
+    const big=el("b",null,ev.dateEnd?`${a.getDate()}–${E.parse(ev.dateEnd).getDate()}`:String(a.getDate()));
+    d.append(big,el("span",null,E.MON[a.getMonth()]+(ev.dateEnd?"":" · "+E.DOW[a.getDay()])),el("em",null,ev.time||"Увесь день"))}
+  const info=el("div","ev-li"),t=el("button",null,ev.title);t.type="button";
+  info.append(t,el("p","ev-line",[ev.place,ev.audText].filter(Boolean).join(" · ")));
+  const tags=el("ul","ev-tags");E.audLabels(ev).forEach(x=>tags.append(el("li",null,x)));
+  info.append(tags);if(!archive)info.append(el("p","ev-line",E.howShort(ev)));
+  const pic=el("figure","ev-lpic"),im=new Image(1600,900);im.src=ev.img;im.alt=ev.poster?ev.title:"";im.loading="lazy";im.decoding="async";pic.append(im);wireCursor(li);   // the circle follows the pointer over the whole row, like over a card in the gallery
+  li.append(d,info,pic);li.addEventListener("click",e=>{cur.classList.remove("on");E.open(ev,t)});return li}
+function paintList(list,archive){
+  listEl.replaceChildren();
+  let key="";
+  list.forEach(ev=>{
+    const a=ev.date?E.parse(ev.date):null,k=a?a.getFullYear()*12+a.getMonth():"w";
+    if(k!==key){key=k;const h=el("li","ev-lmonth",a?E.MONN[a.getMonth()]:"Щотижня");if(a)h.append(el("span",null,String(a.getFullYear())));listEl.append(h)}
+    listEl.append(lrow(ev,archive))});
+  const rows=listEl.querySelectorAll(".ev-lrow");if(rows.length)rows[rows.length-1].classList.add("last");
+}
+
+/* ---------- one calendar: a month, event titles on the dates ---------- */
+const calDated=()=>E.ALL.filter(e=>e.date&&(aud==="all"||e.aud.includes(aud)));
+const T0=E.today(),first0=new Date(T0.getFullYear(),T0.getMonth(),1);
+let cm=new Date(first0);
+const ym=d=>d.getFullYear()*12+d.getMonth();
+function calBounds(){   // [first month, last month] as month numbers: from the earliest event to a year ahead
+  const all=E.ALL.filter(e=>e.date).map(e=>ym(E.parse(e.dateEnd||e.date))),from=E.ALL.filter(e=>e.date).map(e=>ym(E.parse(e.date)));
+  return [Math.min(ym(first0),...from),Math.max(ym(first0)+12,...all)]}
+function paintCal(anim){
+  const [lo,hi]=calBounds();
+  $("calT").textContent="";$("calT").append(E.MONN[cm.getMonth()]+" ",el("span",null,String(cm.getFullYear())));
+  $("calPrev").disabled=ym(cm)<=lo;$("calNext").disabled=ym(cm)>=hi;
+  const g=$("calG");g.replaceChildren();
+  ["Пн","Вт","Ср","Чт","Пт","Сб","Нд"].forEach(d=>g.append(el("div","cal-w",d)));
+  const start=E.add(cm,-((cm.getDay()+6)%7)),weeks=Math.ceil(((cm.getDay()+6)%7+new Date(cm.getFullYear(),cm.getMonth()+1,0).getDate())/7);
+  const evs=calDated();
+  for(let i=0;i<weeks*7;i++){
+    const d=E.add(start,i),c=el("div","cal-c"+(i%7>4?" wk":"")),day=el("b",null,String(d.getDate()));day.append(el("small",null,E.DOW[d.getDay()]));c.append(day);
+    if(d.getMonth()!==cm.getMonth())c.classList.add("out");
+    if(E.same(d,T0))c.classList.add("today");
+    evs.filter(e=>{const a=E.parse(e.date),b=e.dateEnd?E.parse(e.dateEnd):a;return d>=a&&d<=b}).forEach(e=>{
+      const b=el("button","cal-ev"+(E.parse(e.dateEnd||e.date)<T0?" past":""));b.type="button";b.title=e.title;
+      b.append(...(/^\d/.test(e.time||"")?[el("span","t",e.time)]:e.dateEnd?[el("span","t","до "+E.dayText({date:e.dateEnd}))]:[]),el("span","n",e.title));
+      b.onclick=()=>{cur.classList.remove("on");E.open(e,b)};c.append(b);c.classList.add("has")});
+    if(d.getMonth()!==cm.getMonth())c.classList.remove("has");   // days of the neighbouring months stay empty here
+    g.append(c)}
+  if(anim&&!reduce){g.classList.remove('swap');void g.offsetWidth;g.classList.add('swap')}
+}
+$("calPrev").onclick=()=>{cm=new Date(cm.getFullYear(),cm.getMonth()-1,1);paintCal(true)};
+$("calNext").onclick=()=>{cm=new Date(cm.getFullYear(),cm.getMonth()+1,1);paintCal(true)};
+
+function paint(){
+  const list=(mode==="up"?[...E.dated(),...E.weekly()]:E.past()).filter(ev=>aud==="all"||ev.aud.includes(aud));
+  const gal=view==="gal";
+  grid.hidden=!gal;listEl.hidden=gal;$("evCal").hidden=gal;
+  if(gal)grid.replaceChildren(...list.map((ev,i)=>card(ev,i,mode==="arch")));
+  else{paintList(list,mode==="arch");paintCal()}
+  cur.classList.remove("on");
+  $("evCount").textContent=list.length?`Показано: ${list.length}`:"";
+  $("evEmpty").textContent=mode==="arch"?"Архівних подій під цей вибір немає — спробуйте «Усі».":"Майбутніх подій під цей вибір немає — спробуйте «Усі».";
+  $("evEmpty").hidden=list.length>0;
+}
+paint();
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll(".rv").forEach(x=>reduce?x.classList.add("in"):io.observe(x));
+})();
+</script>
+</body>
+</html>

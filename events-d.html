@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Події · D</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<script src="components/site.js"></script>
+<style>
+/* Події · варіант D «Афіші»: афіша 1920×1080 — головна. Її не обрізають і не накладають на неї текст:
+   усе, що треба знати, стоїть поруч. Зверху найближча подія на всю ширину, далі афіші парами, внизу — архів. */
+:root{
+  --ds-cream:#F7F2E8; --ink:#141414; --mute:#85837E; --teal:#317C8E; --teal-ink:#28697A; --sand:#E6E1D4;
+  --sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --side:12px; color-scheme:light;
+}
+html,body{margin:0;padding:0;background:var(--ds-cream);color:var(--ink)}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+
+.ev{position:relative;z-index:1;background:var(--ds-cream);display:grid;justify-items:center;gap:90px;padding-block:150px 100px;
+  padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+.ev > *{min-width:0;width:var(--row);max-width:100%;box-sizing:border-box}
+
+.ev-top{display:grid;justify-items:center;gap:24px;text-align:center}
+.ev-kicker{margin:0;font-weight:600;font-size:14px;line-height:1.3;letter-spacing:-.057em;text-transform:uppercase;color:var(--teal)}
+.ev-top h1{margin:0;font-weight:500;font-size:clamp(42px,4.9vw,70px);line-height:1.1;letter-spacing:-.05em;text-wrap:balance}
+.ev-top h1 span{color:rgba(20,20,20,.5)}
+.ev-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:8px 0 0;padding:0;list-style:none}
+.ev-chip{height:40px;padding:0 16px;border:0;border-radius:10px;background:rgba(20,20,20,.055);color:rgba(20,20,20,.7);cursor:pointer;font-weight:600;font-size:14px;letter-spacing:-.04em;transition:background .25s,color .25s}
+.ev-chip:hover{background:rgba(20,20,20,.09);color:var(--ink)}
+.ev-chip[aria-pressed="true"]{background:var(--teal);color:var(--ds-cream)}
+.ev-chip:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+.ev-h2{margin:0 0 28px;font-weight:500;font-size:clamp(30px,3.2vw,44px);line-height:1.15;letter-spacing:-.045em}
+.ev-h2 small{margin-left:10px;font-weight:600;font-size:15px;letter-spacing:-.02em;color:rgba(20,20,20,.4)}
+
+/* the poster: always 16:9, never cropped, nothing on top of it */
+.pst{position:relative;margin:0;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:var(--sand)}
+.pst img{width:100%;height:100%;object-fit:cover;transition:scale 1s cubic-bezier(.2,.7,.2,1)}
+button:hover>.pst img,.pc:hover .pst img,.main:hover .pst img{scale:1.03}
+
+/* the next event, full width */
+.main{display:grid;gap:16px;cursor:pointer}
+.main .pst{border-radius:24px}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.fact{display:grid;align-content:start;gap:6px;padding:18px 20px;border-radius:16px;background:#fff;min-width:0}
+.fact small{font-weight:600;font-size:12px;letter-spacing:-.01em;color:rgba(20,20,20,.45)}
+.fact b{font-weight:600;font-size:16px;line-height:1.3;letter-spacing:-.025em}
+.fact.go{background:var(--teal);color:var(--ds-cream)}
+.fact.go small{color:rgba(247,242,232,.7)}
+.fact.go b{font-weight:500}
+.go-btn{display:inline-flex;align-items:center;justify-content:center;justify-self:start;height:40px;margin-top:6px;padding:0 16px;border:0;border-radius:10px;background:var(--ds-cream);color:#1a1c19;text-decoration:none;cursor:pointer;
+  font-weight:800;font-size:11px;letter-spacing:.04em;text-transform:uppercase;transition:background .25s,scale .3s cubic-bezier(.2,.7,.2,1)}
+.go-btn:hover{background:#fff;scale:1.03}
+.go-btn:focus-visible{outline:2px solid var(--ds-cream);outline-offset:3px}
+.main-t{margin:6px 0 0;font-weight:500;font-size:clamp(30px,3.4vw,48px);line-height:1.05;letter-spacing:-.055em}
+.main-t span{display:block;margin-bottom:10px;font-weight:600;font-size:14px;letter-spacing:-.057em;text-transform:uppercase;color:var(--teal)}
+
+/* posters in pairs */
+.pairs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 14px;margin:0;padding:0;list-style:none}
+.pc{display:grid;gap:14px;width:100%;padding:0;border:0;background:none;text-align:left;cursor:pointer;color:inherit}
+.pc:focus-visible{outline:none}.pc:focus-visible .pst{outline:2px solid var(--ink);outline-offset:3px}
+.pc-row{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:6px 16px}
+.pc-d{display:grid;justify-items:center;min-width:64px;padding:8px 12px;border-radius:12px;background:#fff}
+.pc-d b{font-weight:500;font-size:28px;line-height:1;letter-spacing:-.06em}
+.pc-d span{margin-top:2px;font-weight:700;font-size:11px;letter-spacing:.02em;text-transform:uppercase;color:rgba(20,20,20,.5)}
+.pc-t{display:grid;gap:4px;min-width:0}
+.pc-t b{font-weight:500;font-size:clamp(20px,1.9vw,26px);line-height:1.12;letter-spacing:-.045em;text-wrap:balance}
+.pc-t span{font-weight:600;font-size:14px;line-height:1.3;letter-spacing:-.015em;color:rgba(20,20,20,.55)}
+.pc-how{padding:7px 11px;border-radius:999px;background:rgba(49,124,142,.1);color:var(--teal);font-weight:700;font-size:12px;white-space:nowrap}
+
+/* weekly: a table, no pictures */
+.tbl{margin:0;padding:0;list-style:none;border-bottom:1px solid rgba(20,20,20,.12)}
+.tr{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1.1fr) minmax(0,1.4fr) 150px;gap:8px 24px;align-items:center;padding:20px 4px;border-top:1px solid rgba(20,20,20,.12);cursor:pointer;transition:opacity .35s}
+.tbl:hover .tr:not(:hover){opacity:.45}
+.tr b{font-weight:500;font-size:clamp(20px,2vw,26px);letter-spacing:-.045em;line-height:1.12}
+.tr span{font-weight:600;font-size:14px;line-height:1.35;letter-spacing:-.015em;color:rgba(20,20,20,.6)}
+.tr .tr-go{justify-self:end;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:12px;letter-spacing:.03em;text-transform:uppercase;color:var(--teal)}
+.tr:hover .tr-go{text-decoration:underline;text-underline-offset:3px}
+.tr button{padding:0;border:0;background:none;text-align:left;cursor:pointer;font:inherit}
+.tr button:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+
+/* archive */
+.arch{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 14px;margin:0;padding:0;list-style:none}
+.ac{display:grid;gap:10px;width:100%;padding:0;border:0;background:none;text-align:left;cursor:pointer;color:inherit}
+.ac .pst{border-radius:14px}
+.ac:hover .pst img{scale:1.04}
+.ac:focus-visible{outline:none}.ac:focus-visible .pst{outline:2px solid var(--ink);outline-offset:3px}
+.ac b{display:block;font-weight:600;font-size:15px;line-height:1.2;letter-spacing:-.03em}
+.ac span{display:block;margin-top:3px;font-weight:600;font-size:13px;color:rgba(20,20,20,.5)}
+.ev-empty{margin:0;text-align:center;font-weight:600;font-size:16px;color:var(--mute)}
+
+.rv{opacity:0;transform:translate3d(0,40px,0);transition:opacity .8s ease,transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0)*70ms)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1100px){
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tr{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.tr .tr-go{justify-self:start}
+  .arch{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  :root{--side:16px}
+  .ev{gap:64px;padding-block:120px 64px}
+  .pairs{grid-template-columns:minmax(0,1fr);gap:32px}
+  .pst,.main .pst{border-radius:14px}
+  .pc-row{grid-template-columns:auto minmax(0,1fr)}.pc-how{grid-column:1/-1;justify-self:start}
+  .facts{grid-template-columns:minmax(0,1fr)}
+  .tr{grid-template-columns:minmax(0,1fr)}
+  .arch{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 10px}
+  .ev-chips{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1*max(var(--side),env(safe-area-inset-left,0px)));padding-inline:max(var(--side),env(safe-area-inset-left,0px));justify-self:stretch}
+  .ev-chips::-webkit-scrollbar{display:none}.ev-chip{flex:none}
+}
+@media (prefers-reduced-motion:reduce){.rv,.pst img,.tr,.go-btn{transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+
+<main class="ev">
+  <header class="ev-top">
+    <p class="ev-kicker rv">Події</p>
+    <h1 class="rv" style="--d:1">Афіші<br><span>наших зустрічей</span></h1>
+    <ul class="ev-chips rv" style="--d:2" id="evChips" aria-label="Для кого"></ul>
+  </header>
+
+  <section id="secMain" aria-labelledby="h-main"><h2 class="ev-h2" id="h-main">Найближча подія</h2><div id="main"></div></section>
+  <section id="secNext" aria-labelledby="h-next"><h2 class="ev-h2" id="h-next">Далі в афіші</h2><ul class="pairs" id="pairs"></ul></section>
+  <p class="ev-empty" id="evEmpty" hidden>Під цей вибір найближчих подій поки немає — спробуйте «Усі».</p>
+  <section id="secWeek" aria-labelledby="h-week"><h2 class="ev-h2" id="h-week">Щотижня</h2><ul class="tbl" id="tbl"></ul></section>
+  <section id="secPast" aria-labelledby="h-past"><h2 class="ev-h2" id="h-past">Минулі події</h2><ul class="arch" id="arch"></ul></section>
+</main>
+
+<site-footer></site-footer>
+
+<script src="/events/data.js"></script>
+<script src="/events/lib.js"></script>
+<script>
+(()=>{
+const E=window.PhiladEvents,$=id=>document.getElementById(id),el=E.el;
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const footer=$("footer");if(footer)footer.setAttribute("data-dark","");
+
+let aud="all";
+const fits=ev=>aud==="all"||ev.aud.includes(aud);
+const chips=$("evChips");
+[["all","Усі"],...E.audKeys([...E.dated(),...E.weekly(),...E.past()])].forEach(([id,l])=>{
+  const li=el("li"),b=el("button","ev-chip",l);b.type="button";b.dataset.a=id;b.setAttribute("aria-pressed",id===aud?"true":"false");
+  b.onclick=()=>{aud=id;chips.querySelectorAll(".ev-chip").forEach(x=>x.setAttribute("aria-pressed",x.dataset.a===id?"true":"false"));paint()};
+  li.append(b);chips.append(li)});
+
+const poster=ev=>{const f=el("figure","pst"),im=new Image(1600,900);im.src=ev.img;im.alt=ev.poster?ev.title:"";im.loading="lazy";im.decoding="async";f.append(im);return f};
+const go=ev=>{const h=ev.how;if(h.type==="free")return null;
+  const a=el(/^https?:/.test(h.href||"")||(h.href&&!/^#/.test(h.href))?"a":"a","go-btn",h.label||"Зареєструватись");
+  if(/^https?:/.test(h.href||"")){a.href=h.href;a.target="_blank";a.rel="noopener"}else if(h.href)a.href=h.href;else{a.href="#footer";a.setAttribute("data-to-footer","")}
+  a.setAttribute("data-no-u","");return a};
+const dateBox=ev=>{const a=E.parse(ev.date),d=el("span","pc-d");d.append(el("b",null,ev.dateEnd?`${a.getDate()}–${E.parse(ev.dateEnd).getDate()}`:String(a.getDate())),el("span",null,E.MON[a.getMonth()].slice(0,3)));return d};
+
+const up=E.dated(),weekly=E.weekly(),past=E.past();
+const main=$("main"),pairs=$("pairs"),tbl=$("tbl"),arch=$("arch");
+
+function paint(){
+  const list=up.filter(fits);
+  main.replaceChildren();pairs.replaceChildren();
+  const first=list[0];
+  if(first){
+    const box=el("div","main rv in");box.append(poster(first));
+    const tt=el("h3","main-t");tt.append(el("span",null,E.dayText(first)+(first.time?" · "+first.time:"")),first.title);box.append(tt);
+    const facts=el("div","facts");
+    const f=(k,v)=>{const d=el("div","fact");d.append(el("small",null,k),el("b",null,v));return d};
+    facts.append(f("Коли",E.whenText(first)),f("Де",first.place||"Уточнюється"),f("Для кого",first.audText));
+    const g=el("div","fact go");g.append(el("small",null,"Як потрапити"),el("b",null,first.how.text));const b=go(first);if(b)g.append(b);facts.append(g);
+    box.append(facts);box.addEventListener("click",e=>{if(e.target.closest("a"))return;E.open(first,box)});main.append(box);
+  }
+  list.slice(1).forEach(ev=>{
+    const li=el("li"),b=el("button","pc");b.type="button";b.append(poster(ev));
+    const row=el("span","pc-row"),t=el("span","pc-t");t.append(el("b",null,ev.title),el("span",null,[ev.every,ev.place||ev.audText].filter(Boolean).join(" · ")));
+    row.append(dateBox(ev),t,el("span","pc-how",E.howShort(ev)));b.append(row);b.onclick=()=>E.open(ev,b);li.append(b);pairs.append(li)});
+  $("secMain").hidden=!first;$("secNext").hidden=list.length<2;$("evEmpty").hidden=!!first;
+
+  tbl.replaceChildren();
+  weekly.filter(fits).forEach(ev=>{
+    const li=el("li","tr"),t=el("button");t.type="button";t.append(el("b",null,ev.title));
+    li.append(t,el("span",null,E.whenText(ev)),el("span",null,ev.audText),el("span","tr-go","Докладніше →"));
+    li.addEventListener("click",()=>E.open(ev,t));tbl.append(li)});
+  $("secWeek").hidden=!tbl.children.length;
+
+  arch.replaceChildren();
+  past.filter(fits).forEach(ev=>{
+    const li=el("li"),b=el("button","ac");b.type="button";b.append(poster(ev));
+    const tx=el("span");tx.append(el("b",null,ev.title),el("span",null,E.dayText(ev)+" "+E.parse(ev.date).getFullYear()));b.append(tx);b.onclick=()=>E.open(ev,b);li.append(b);arch.append(li)});
+  $("secPast").hidden=!arch.children.length;
+}
+paint();
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll(".rv").forEach(x=>reduce?x.classList.add("in"):io.observe(x));
+})();
+</script>
+</body>
+</html>

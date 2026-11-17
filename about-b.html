@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Про нас</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<script src="components/site.js"></script>
+<link rel="stylesheet" href="about/base.css">
+<style>
+/* ВАРІАНТ B · «Портрети» — темний перший екран з великими портретами пасторів, далі світла частина з картками місії */
+.pad{padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+.wrap{width:var(--row);max-width:100%;margin-inline:auto;box-sizing:border-box;min-width:0}
+h2{font-weight:500;font-size:clamp(30px,3.5vw,50px);line-height:1.12;letter-spacing:-.04em;text-wrap:balance}
+
+/* темна частина: заголовок, пастори, диякони */
+.dk{background:var(--ink);color:var(--ds-cream);padding-block:150px 110px}
+.dk .wrap{display:grid;gap:110px}
+.dk .kicker{color:rgba(247,242,232,.6)}
+.top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end;gap:14px}
+.top h1{font-weight:500;font-size:clamp(64px,11.5vw,190px);line-height:.88;letter-spacing:-.065em;margin-left:-.04em}
+.top p{max-width:520px;justify-self:end;font-weight:500;font-size:clamp(20px,2vw,28px);line-height:1.25;letter-spacing:-.035em;color:rgba(247,242,232,.78);text-wrap:balance;padding-bottom:.5em}
+
+.pas{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,1fr);gap:14px;align-items:start;margin-top:-50px}
+.pa{position:relative;border-radius:20px;overflow:hidden;background:#232323;aspect-ratio:4/5}
+.pa:nth-child(2){margin-top:clamp(40px,9vw,150px)}
+.pa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%;transition:scale 1.2s cubic-bezier(.2,.7,.2,1)}
+.pa:hover img{scale:1.04}
+.pa::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(to top,rgba(20,17,15,.78),rgba(20,17,15,0))}
+.pa-t{position:absolute;z-index:1;left:0;right:0;bottom:0;display:grid;gap:8px;padding:clamp(20px,2.6vw,36px)}
+.pa-t .kicker{color:rgba(247,242,232,.75)}
+.pa-t h3{font-weight:500;font-size:clamp(28px,3.4vw,52px);line-height:1.05;letter-spacing:-.045em}
+
+.dea-w{display:grid;gap:44px}
+.dea-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:22px;border-bottom:1px solid rgba(247,242,232,.16)}
+.dea-h span{font-weight:600;font-size:14px;letter-spacing:-.02em;color:rgba(247,242,232,.5)}
+.dea{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:28px 14px}
+.de{display:grid;justify-items:center;gap:14px;text-align:center;min-width:0}
+.de-ph{width:100%;max-width:132px;aspect-ratio:1;border-radius:50%;overflow:hidden}
+.de-ph>*{width:100%;height:100%;object-fit:cover}
+.dk .noph{background:rgba(247,242,232,.08);color:rgba(247,242,232,.3)}
+.de b{font-weight:600;font-size:15px;line-height:1.25;letter-spacing:-.02em}
+.dk .is-empty{color:rgba(247,242,232,.35)}
+
+/* світла частина */
+.lt{display:grid;gap:120px;padding-block:120px}
+.say{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 14px}
+.say .kicker{grid-column:1/2;padding-top:.9em}
+.say-big{grid-column:2/5;font-weight:500;font-size:clamp(24px,2.9vw,44px);line-height:1.16;letter-spacing:-.045em;text-wrap:pretty}
+.say-big span{color:rgba(20,20,20,.42)}
+.say-cols{grid-column:2/5;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 40px}
+.wide{aspect-ratio:21/9;border-radius:20px;overflow:hidden;background:var(--sand)}
+.wide img{width:100%;height:100%;object-fit:cover;object-position:50% 64%}
+
+.mis{display:grid;gap:56px}
+.mis-h{display:grid;justify-items:center;gap:22px;text-align:center}
+.mis-h h2{max-width:1000px;font-size:clamp(30px,4vw,60px);line-height:1.1;letter-spacing:-.05em}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
+.cd{display:flex;flex-direction:column;gap:28px;padding:28px 24px 30px;border-radius:20px;background:var(--card);min-width:0}
+.cd-n{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--teal);color:var(--ds-cream);font-weight:600;font-size:15px}
+.cd h3{font-weight:500;font-size:clamp(26px,2.7vw,40px);line-height:1.04;letter-spacing:-.045em;text-wrap:balance;min-height:2.08em}
+.cd .prose{font-size:15px;line-height:1.45;font-weight:600;letter-spacing:-.012em;color:rgba(20,20,20,.58)}
+
+.con{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.con-a{display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:clamp(28px,3.4vw,48px);border-radius:20px;background:var(--teal);color:var(--ds-cream);min-height:340px}
+.con-a .kicker{color:rgba(247,242,232,.7)}
+.con-a h2{font-size:clamp(34px,4.4vw,66px);line-height:1.02;letter-spacing:-.05em}
+.con-b{display:flex;flex-direction:column;justify-content:space-between;gap:32px;padding:clamp(28px,3.4vw,48px);border-radius:20px;background:var(--card)}
+.con dl{margin:0;display:grid;gap:22px}
+.con dt{font-weight:600;font-size:14px;letter-spacing:-.02em;color:var(--mute);margin-bottom:4px}
+.con dd{margin:0;font-weight:500;font-size:clamp(22px,2.2vw,32px);line-height:1.18;letter-spacing:-.04em}
+.con dd small{display:block;margin-top:6px;font-weight:600;font-size:14px;letter-spacing:-.01em;color:var(--mute)}
+.con dd a{color:inherit;text-decoration:none}
+.con .lbtn{align-self:flex-start}
+
+@media (max-width:1000px){
+  .dea{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .say .kicker,.say-big,.say-cols{grid-column:1/-1}.say .kicker{padding-top:0}
+  .cards{grid-template-columns:minmax(0,1fr)}.cd h3{min-height:0}
+}
+@media (max-width:720px){
+  .dk{padding-block:120px 64px}.dk .wrap{gap:64px}
+  .top{grid-template-columns:minmax(0,1fr);gap:20px}.top p{justify-self:start;padding-bottom:0}
+  .pas{grid-template-columns:minmax(0,1fr);margin-top:-24px}
+  .pa:nth-child(2){margin-top:0}
+  .pa,.wide,.cd,.con-a,.con-b{border-radius:16px}
+  .dea-w{gap:28px}.dea{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 10px}.de b{font-size:13px}
+  .lt{gap:72px;padding-block:72px}
+  .say{gap:20px}.say-cols{grid-template-columns:minmax(0,1fr)}
+  .wide{aspect-ratio:4/3}
+  .mis{gap:32px}
+  .con{grid-template-columns:minmax(0,1fr)}.con-a{min-height:220px}
+}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+
+<main id="app"></main>
+
+<div class="end">
+  <div class="nx-hold" data-dark><site-next></site-next></div>
+  <site-footer></site-footer>
+</div>
+
+<script src="about/data.js"></script>
+<script src="about/base.js"></script>
+<script>
+(()=>{
+const D=window.ABOUT,{esc,photo,name}=AB;
+// перше речення вступу — великим кеглем, решта абзацу приглушено
+const first=D.intro[0], cut=first.indexOf(". ",first.indexOf(". ")+1)+1;
+const filled=D.deacons.filter(d=>d.name).length;
+document.getElementById("app").innerHTML=`
+  <section class="dk pad" data-dark>
+    <div class="wrap">
+      <header class="top">
+        <h1 class="rv">${esc(D.kicker)}</h1>
+        <p class="rv" style="--d:1">${esc(D.title)}</p>
+      </header>
+
+      <div class="pas" aria-label="${esc(D.pastorsTitle)}">${D.pastors.map((p,i)=>`
+        <article class="pa rv" style="--d:${i*2}">
+          ${photo(p)}
+          <div class="pa-t"><p class="kicker">${esc(p.role)}</p><h3>${name(p)}</h3></div>
+        </article>`).join("")}
+      </div>
+
+      <section class="dea-w" aria-labelledby="dea-h">
+        <div class="dea-h rv"><h2 id="dea-h">${esc(D.deaconsTitle)}</h2>${filled?`<span>${filled}</span>`:""}</div>
+        <ul class="dea">${D.deacons.map((p,i)=>`
+          <li class="de rv" style="--d:${i%8}"><span class="de-ph">${photo(p,"a")}</span><b${p.name?"":' class="is-empty"'}>${name(p)}</b></li>`).join("")}
+        </ul>
+      </section>
+    </div>
+  </section>
+
+  <div class="lt pad">
+    <section class="wrap say" aria-label="${esc(D.aboutTitle)}">
+      <p class="kicker rv">${esc(D.aboutTitle)}</p>
+      <p class="say-big rv">${first.slice(0,cut)}<span>${first.slice(cut)}</span></p>
+      <div class="say-cols">${D.intro.slice(1).map((t,i)=>`<div class="prose rv" style="--d:${i}"><p>${t}</p></div>`).join("")}</div>
+    </section>
+
+    <figure class="wrap wide rv"><img src="about/church.webp" alt="Церква «Філадельфія»: спільне фото біля будівлі церкви" width="2200" height="1467" loading="lazy"></figure>
+
+    <section class="wrap mis" aria-labelledby="mis-h">
+      <div class="mis-h"><p class="kicker rv">${esc(D.missionKicker)}</p><h2 id="mis-h" class="rv" style="--d:1">${esc(D.mission)}</h2></div>
+      <div class="cards">${D.pillars.map((p,i)=>`
+        <article class="cd rv" style="--d:${i}">
+          <span class="cd-n">${i+1}</span>
+          <h3>${esc(p.title)}</h3>
+          <div class="prose">${p.text.map(t=>`<p>${t}</p>`).join("")}</div>
+        </article>`).join("")}
+      </div>
+    </section>
+
+    <section class="wrap con" aria-labelledby="con-h">
+      <div class="con-a rv"><p class="kicker" id="con-h">${esc(D.contactsTitle)}</p><h2>${esc(D.contacts.welcome)}</h2></div>
+      <div class="con-b rv" style="--d:1">
+        <dl>
+          <div><dt>Email</dt><dd><a href="mailto:${esc(D.contacts.email)}">${esc(D.contacts.email)}</a></dd></div>
+          <div><dt>Адреса</dt><dd>${esc(D.contacts.address)}<small>${esc(D.contacts.metro)}</small></dd></div>
+        </dl>
+        <a class="lbtn" href="${esc(D.contacts.button.href)}">${esc(D.contacts.button.label)}</a>
+      </div>
+    </section>
+  </div>`;
+AB.init();
+})();
+</script>
+</body>
+</html>

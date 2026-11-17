@@ -1,0 +1,7104 @@
+{
+ "updated": "2026-11-17T11:49:33+00:00",
+ "playlist": "PL7YZQRnSwed-FcOBb76LTVZFtCzs373gI",
+ "topics": [
+  {
+   "id": "faith",
+   "label": "Віра"
+  },
+  {
+   "id": "spirit",
+   "label": "Святий Дух і дари"
+  },
+  {
+   "id": "holiness",
+   "label": "Святість і гріх"
+  },
+  {
+   "id": "love",
+   "label": "Любов, єдність і прощення"
+  },
+  {
+   "id": "church",
+   "label": "Церква й служіння"
+  },
+  {
+   "id": "prayer",
+   "label": "Молитва"
+  },
+  {
+   "id": "word",
+   "label": "Біблія й Слово"
+  },
+  {
+   "id": "feasts",
+   "label": "Свята й Писання про Христа"
+  },
+  {
+   "id": "trials",
+   "label": "Випробування й надія"
+  },
+  {
+   "id": "identity",
+   "label": "Особистість і зростання"
+  },
+  {
+   "id": "salvation",
+   "label": "Спасіння й Євангеліє"
+  },
+  {
+   "id": "kingdom",
+   "label": "Боже Царство й останні часи"
+  },
+  {
+   "id": "power",
+   "label": "Божа сила й чудеса"
+  },
+  {
+   "id": "war",
+   "label": "Країна й війна"
+  },
+  {
+   "id": "other",
+   "label": "Інше"
+  }
+ ],
+ "durations": [
+  {
+   "id": "s",
+   "label": "до 20 хв"
+  },
+  {
+   "id": "m",
+   "label": "20–30 хв"
+  },
+  {
+   "id": "l",
+   "label": "30–40 хв"
+  },
+  {
+   "id": "xl",
+   "label": "понад 40 хв"
+  }
+ ],
+ "avatars": {
+  "Анатолій Фещенко": "about/feshchenko-a.webp",
+  "Юрій Кавун": "about/kavun-a.webp",
+  "Андрій Шашлов": "about/shashlov-d.webp",
+  "Володимир Рудницький": "about/rudnytskyi-d.webp",
+  "Андрій Лещук": "about/leshchuk-d.webp",
+  "Олексій Вольвачев": "about/volvachev-d.webp",
+  "Вадим Павленко": "about/pavlenko-d.webp",
+  "Ефе Прінц": "about/prinz-d.webp",
+  "Наталія Вольвачева": "about/volvachova-d.webp",
+  "Сергій Маренич": "about/marenych-d.webp",
+  "Ярослав Котилко": "about/kotylko-d.webp"
+ },
+ "items": [
+  {
+   "id": "7NHpA8-KcQg",
+   "title": "Поради від Істини",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2026-11-13",
+   "sec": 1719,
+   "dur": "m",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "j4gI2GllBzo",
+   "title": "Церква — це місце Божої слави",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2026-11-13",
+   "sec": 2740,
+   "dur": "xl",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "MQjXQYyrQnA",
+   "title": "Від букви до любові",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2026-11-11",
+   "sec": 2062,
+   "dur": "l",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "IHntl0tqGhw",
+   "title": "Очікування та реальність",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2026-11-11",
+   "sec": 2061,
+   "dur": "l",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "kwECQLyw5Lw",
+   "title": "Пурим",
+   "speaker": "Ярослав Котилко",
+   "format": "Проповідь",
+   "date": "2026-10-28",
+   "sec": 2446,
+   "dur": "xl",
+   "topics": [
+    "feasts"
+   ]
+  },
+  {
+   "id": "HlntYuL3LjQ",
+   "title": "Коли Бог хоче інакше",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2026-10-26",
+   "sec": 2474,
+   "dur": "xl",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "pnMmTDCGG48",
+   "title": "Віра, яка творить чудеса",
+   "speaker": "Віктор Маселко",
+   "format": "Проповідь",
+   "date": "2026-10-24",
+   "sec": 1352,
+   "dur": "m",
+   "topics": [
+    "faith",
+    "power"
+   ]
+  },
+  {
+   "id": "Rp70n0dfWMc",
+   "title": "Прийди до Ісуса",
+   "speaker": "Віктор Прохор",
+   "format": "Проповідь",
+   "date": "2026-10-21",
+   "sec": 1901,
+   "dur": "l",
+   "topics": [
+    "salvation"
+   ]
+  },
+  {
+   "id": "uhPAm6CJ-Ug",
+   "title": "Життєдайний докір",
+   "speaker": "Олексій Вольвачев",
+   "format": "Проповідь",
+   "date": "2026-10-14",
+   "sec": 1495,
+   "dur": "m",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "8XqfTCaU2s4",
+   "title": "Як жити вірою на життєвій дорозі",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2026-10-09",
+   "sec": 2365,
+   "dur": "l",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "yKbug7gVrAU",
+   "title": "Шлях до спокою",
+   "speaker": "Андрій Лещук",
+   "format": "Проповідь",
+   "date": "2026-09-30",
+   "sec": 2244,
+   "dur": "l",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "jbGX3Q6GHRE",
+   "title": "Дорога правди та життя",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2026-09-25",
+   "sec": 2259,
+   "dur": "l",
+   "topics": [
+    "salvation"
+   ]
+  },
+  {
+   "id": "ieT357AoIQo",
+   "title": "Чому важливо бути в мирі із Святим Духом?",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь",
+   "date": "2026-09-18",
+   "sec": 1217,
+   "dur": "m",
+   "topics": [
+    "spirit",
+    "love"
+   ]
+  },
+  {
+   "id": "zmdCa0s_VxI",
+   "title": "Очікування та реальність",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2026-09-14",
+   "sec": 1975,
+   "dur": "l",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "T6AZGv9_E4Y",
+   "title": "Тож не занедбуймо храму нашого Бога",
+   "speaker": "Вадим Павленко",
+   "format": "Проповідь",
+   "date": "2026-09-12",
+   "sec": 1043,
+   "dur": "s",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "ueinsJHo_ts",
+   "title": "Практикуючи життя з Богом",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2026-08-31",
+   "sec": 2084,
+   "dur": "l",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "nTxxhStHgqs",
+   "title": "Бог ніколи не змириться з гріхом",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2026-08-25",
+   "sec": 2007,
+   "dur": "l",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "HmL7Zmk8Y60",
+   "title": "Людська цінність",
+   "speaker": "Андрій Лещук",
+   "format": "Проповідь",
+   "date": "2026-08-22",
+   "sec": 1132,
+   "dur": "s",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "BzIaaZzuEGM",
+   "title": "Те, що завжди в Твоїх руках",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2026-08-21",
+   "sec": 2267,
+   "dur": "l",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "1h9pXhV-e0A",
+   "title": "Святість і як її пильнувати",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2026-08-19",
+   "sec": 2530,
+   "dur": "xl",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "sHl5e9omHGI",
+   "title": "Ви — храм Духа Святого",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь",
+   "date": "2026-08-17",
+   "sec": 1261,
+   "dur": "m",
+   "topics": [
+    "spirit",
+    "church"
+   ]
+  },
+  {
+   "id": "TQCSjOO4NCc",
+   "title": "Віра після бурі",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2026-08-14",
+   "sec": 2757,
+   "dur": "xl",
+   "topics": [
+    "faith",
+    "trials"
+   ]
+  },
+  {
+   "id": "raubzZcUIHQ",
+   "title": "Полумʼя твого серця",
+   "speaker": "Вадим Павленко",
+   "format": "Проповідь",
+   "date": "2026-08-13",
+   "sec": 1355,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "cCzJLN-ySt8",
+   "title": "Хіба ви не тілесні?",
+   "speaker": "Андрій Лещук",
+   "format": "Проповідь",
+   "date": "2026-07-30",
+   "sec": 2181,
+   "dur": "l",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "8dK1TQPmrOk",
+   "title": "Скарб",
+   "speaker": "Ярослав Котилко",
+   "format": "Проповідь",
+   "date": "2026-07-28",
+   "sec": 1666,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "674np4k9Yiw",
+   "title": "Відпусти мій народ",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2026-07-22",
+   "sec": 935,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "G_9BBlk29hY",
+   "title": "Живі камені Божої будівлі",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2026-07-20",
+   "sec": 1511,
+   "dur": "m",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "Wp4xhHrIjRs",
+   "title": "Останні часи",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2026-07-18",
+   "sec": 2005,
+   "dur": "l",
+   "topics": [
+    "kingdom"
+   ]
+  },
+  {
+   "id": "ybRJ6P8ORCs",
+   "title": "Бережи своє серце понад усе",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2026-07-15",
+   "sec": 946,
+   "dur": "s",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "oWqCIfC-9DI",
+   "title": "Бог є Отцем всякої втіхи",
+   "speaker": "Віктор Маселко",
+   "format": "Проповідь",
+   "date": "2026-07-13",
+   "sec": 1423,
+   "dur": "m",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "PwehNF7k6z8",
+   "title": "Послух краще жертви",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2026-07-10",
+   "sec": 2055,
+   "dur": "l",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "lJZg_7reKx4",
+   "title": "Коли наші сили закінчуються",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2026-07-03",
+   "sec": 1622,
+   "dur": "m",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "GMKXcL5UhcQ",
+   "title": "Поклич імʼя Господнє — і будеш спасенний",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2026-07-02",
+   "sec": 1959,
+   "dur": "l",
+   "topics": [
+    "salvation"
+   ]
+  },
+  {
+   "id": "-_fjvSUKUNc",
+   "title": "Єдність і любов - два стовпи для дії дарів Духа Святого",
+   "speaker": "Віталій Марченко",
+   "format": "Проповідь",
+   "date": "2026-06-13",
+   "sec": 1704,
+   "dur": "m",
+   "topics": [
+    "spirit",
+    "love"
+   ]
+  },
+  {
+   "id": "jvjaS8ea7Ic",
+   "title": "У період невизначеності",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2026-06-12",
+   "sec": 1164,
+   "dur": "s",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "_1rb0leijuM",
+   "title": "У що ви хрестилися?",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2026-06-06",
+   "sec": 1500,
+   "dur": "m",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "68nX9U7VRxc",
+   "title": "В обіймах люблячого батька",
+   "speaker": "Володимир Павлов",
+   "format": "Проповідь",
+   "date": "2026-05-28",
+   "sec": 1427,
+   "dur": "m",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "Pk70_mowUgA",
+   "title": "Поведінка віруючого як свідчення віри",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2026-05-27",
+   "sec": 1699,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "fZ1aLgVDwCQ",
+   "title": "Праведність Божа",
+   "speaker": "Мігель Дієз",
+   "format": "Проповідь",
+   "date": "2026-05-25",
+   "sec": 2097,
+   "dur": "l",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "RWVtO_Z5XlI",
+   "title": "Метаноя",
+   "speaker": "Назар Савчук",
+   "format": "Проповідь",
+   "date": "2026-05-23",
+   "sec": 1609,
+   "dur": "m",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "FbKYoXM-M5g",
+   "title": "Вціліла віра",
+   "speaker": "Назар Савчук",
+   "format": "Проповідь",
+   "date": "2026-05-22",
+   "sec": 1978,
+   "dur": "l",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "8tfRXNkEFCM",
+   "title": "Не опущені руки",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2026-05-21",
+   "sec": 1858,
+   "dur": "l",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "tvPeDOMX078",
+   "title": "Жінка біля Божого потоку",
+   "speaker": "Анна Скоць",
+   "format": "Сестринська зустріч",
+   "date": "2026-05-09",
+   "sec": 2122,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "NLIYO_ic-Uw",
+   "title": "Більше ніж ми думаємо",
+   "speaker": "Андрій Лещук",
+   "format": "Проповідь",
+   "date": "2026-05-04",
+   "sec": 1822,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "fY-8DcjOJiI",
+   "title": "Як тлумачити Біблію?",
+   "speaker": "Олексій Вольвачев",
+   "format": "Проповідь",
+   "date": "2026-05-02",
+   "sec": 1850,
+   "dur": "l",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "SgqtGMBjfdQ",
+   "title": "Світильник для тіла є око",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2026-05-01",
+   "sec": 1873,
+   "dur": "l",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "vw6j9wlUZD8",
+   "title": "Три рівні самопізнання християнина",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь",
+   "date": "2026-04-30",
+   "sec": 1302,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "C1dgtsYSMDE",
+   "title": "Пасхальні уроки",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2026-04-23",
+   "sec": 2027,
+   "dur": "l",
+   "topics": [
+    "feasts"
+   ]
+  },
+  {
+   "id": "pfA_1G2ISYI",
+   "title": "Діло не в їжі, діло в спільноті",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2026-04-22",
+   "sec": 1668,
+   "dur": "m",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "28CmaoR7cHg",
+   "title": "Воскресіння Христа — гарантія нашого нового життя",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2026-04-21",
+   "sec": 1405,
+   "dur": "m",
+   "topics": [
+    "feasts"
+   ]
+  },
+  {
+   "id": "UFxMYbIKcyE",
+   "title": "Воскресіння - це перемога",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2026-04-17",
+   "sec": 1864,
+   "dur": "l",
+   "topics": [
+    "feasts"
+   ]
+  },
+  {
+   "id": "HYTcaRLATxM",
+   "title": "Дві сторони одного чуда",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2026-04-08",
+   "sec": 2095,
+   "dur": "l",
+   "topics": [
+    "power"
+   ]
+  },
+  {
+   "id": "CZTVhBxGlEE",
+   "title": "Прийдіть до Мене, всі струджені та обтяжені",
+   "speaker": "Віктор Маселко",
+   "format": "Проповідь",
+   "date": "2026-04-07",
+   "sec": 1132,
+   "dur": "s",
+   "topics": [
+    "salvation"
+   ]
+  },
+  {
+   "id": "E6iWPmsklAY",
+   "title": "І слово стало тілом",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2026-04-01",
+   "sec": 1641,
+   "dur": "m",
+   "topics": [
+    "feasts"
+   ]
+  },
+  {
+   "id": "EzmG4fN-tMc",
+   "title": "Жертвоприношення в Біблії",
+   "speaker": "Володимир Павлов",
+   "format": "Проповідь",
+   "date": "2026-03-31",
+   "sec": 1464,
+   "dur": "m",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "r-mEQjUcf_4",
+   "title": "Даремне шанування",
+   "speaker": "Віталій Яцюк",
+   "format": "Братерська зустріч",
+   "date": "2026-03-25",
+   "sec": 2879,
+   "dur": "xl",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "NKNNjds9nQA",
+   "title": "Від чого тікати і до чого прагнути",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2026-03-24",
+   "sec": 2160,
+   "dur": "l",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "_5lEXVQ7PmY",
+   "title": "Оберігаючи Боже Слово",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2026-03-21",
+   "sec": 1185,
+   "dur": "s",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "shWh_qmFHAo",
+   "title": "Ідол та родове прокляття",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2026-03-20",
+   "sec": 1736,
+   "dur": "m",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "tpKRG5mK3Fc",
+   "title": "Царство небесне",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2026-03-09",
+   "sec": 2113,
+   "dur": "l",
+   "topics": [
+    "kingdom"
+   ]
+  },
+  {
+   "id": "pdTvZtkZQ-o",
+   "title": "Ознаки здорового християнства",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2026-03-06",
+   "sec": 1970,
+   "dur": "l",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "KWKXCESt-ds",
+   "title": "Спасіння по вірі",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2026-03-05",
+   "sec": 1624,
+   "dur": "m",
+   "topics": [
+    "faith",
+    "salvation"
+   ]
+  },
+  {
+   "id": "86l-BO9x0pQ",
+   "title": "Віра у незрозумілих обставинах життя",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2026-03-04",
+   "sec": 2487,
+   "dur": "xl",
+   "topics": [
+    "faith",
+    "trials"
+   ]
+  },
+  {
+   "id": "tyzJlYxZO-g",
+   "title": "Зцілення серця істиною Божою",
+   "speaker": "Олексій Вольвачев",
+   "format": "Проповідь",
+   "date": "2026-02-28",
+   "sec": 1539,
+   "dur": "m",
+   "topics": [
+    "word",
+    "trials",
+    "identity"
+   ]
+  },
+  {
+   "id": "WxEK96Jess8",
+   "title": "Криві лінії, що перетворюються у шедевр",
+   "speaker": "Андрій Лещук",
+   "format": "Проповідь",
+   "date": "2026-02-26",
+   "sec": 1106,
+   "dur": "s",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "56kvNx4dfhU",
+   "title": "Моя ідентичність",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2026-02-20",
+   "sec": 1694,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "Ldx0Ru4r0LM",
+   "title": "Немочі в служінні",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь",
+   "date": "2026-02-13",
+   "sec": 1004,
+   "dur": "s",
+   "topics": [
+    "church",
+    "trials"
+   ]
+  },
+  {
+   "id": "JVhEWFcUgEs",
+   "title": "Обраний народ",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2026-02-11",
+   "sec": 2194,
+   "dur": "l",
+   "topics": [
+    "kingdom"
+   ]
+  },
+  {
+   "id": "AhK3cShNM3s",
+   "title": "Ключ до покликання",
+   "speaker": "Віктор Маселко",
+   "format": "Проповідь",
+   "date": "2026-02-10",
+   "sec": 1146,
+   "dur": "s",
+   "topics": [
+    "church",
+    "identity"
+   ]
+  },
+  {
+   "id": "l5BigMUS_ok",
+   "title": "Вільний, який став рабом",
+   "speaker": "Віталій Яцюк",
+   "format": "Братерська зустріч",
+   "date": "2026-02-08",
+   "sec": 1570,
+   "dur": "m",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "_tQCGitEPTs",
+   "title": "Майстерня Бога",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2026-02-05",
+   "sec": 2216,
+   "dur": "l",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "tBDoyO5uwss",
+   "title": "1425 день повномасштабного вторгнення",
+   "speaker": "Юрій Петренко",
+   "format": "Проповідь",
+   "date": "2026-01-30",
+   "sec": 1668,
+   "dur": "m",
+   "topics": [
+    "war"
+   ]
+  },
+  {
+   "id": "YT-JGuAdOrw",
+   "title": "Думки від пастора",
+   "speaker": "Олександр Бабійчук",
+   "format": "Проповідь",
+   "date": "2026-01-29",
+   "sec": 1518,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "PqVTiiufM1M",
+   "title": "Бог, оглядаючий землю",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2026-01-24",
+   "sec": 1544,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "oWAHEvdU-Zc",
+   "title": "Влада Божої дитини",
+   "speaker": "Володимир Павлов",
+   "format": "Проповідь",
+   "date": "2026-01-23",
+   "sec": 1525,
+   "dur": "m",
+   "topics": [
+    "power"
+   ]
+  },
+  {
+   "id": "Ylhi60XpY-Q",
+   "title": "Стіл Господній",
+   "speaker": "Ефе Прінц",
+   "format": "Проповідь",
+   "date": "2026-01-12",
+   "sec": 2140,
+   "dur": "l",
+   "topics": [
+    "feasts"
+   ]
+  },
+  {
+   "id": "DqLfAYH4pjQ",
+   "title": "Ти зможеш",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2026-01-09",
+   "sec": 1829,
+   "dur": "l",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "U4hN1CE_TW8",
+   "title": "Надприродна віра",
+   "speaker": "Олексій Вольвачев",
+   "format": "Проповідь",
+   "date": "2026-01-08",
+   "sec": 1710,
+   "dur": "m",
+   "topics": [
+    "faith",
+    "power"
+   ]
+  },
+  {
+   "id": "twuG8LgZoXY",
+   "title": "Справедливість, правда та закон",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2026-01-01",
+   "sec": 1921,
+   "dur": "l",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "3SH523pgeT0",
+   "title": "Коло Ісусових послідовників",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2025-12-31",
+   "sec": 2583,
+   "dur": "xl",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "79r_xtC6RAA",
+   "title": "Бог хоче бути знайденим та пізнаним",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2025-12-30",
+   "sec": 1340,
+   "dur": "m",
+   "topics": [
+    "salvation"
+   ]
+  },
+  {
+   "id": "fM9gSwo1fAQ",
+   "title": "Для чого прийшов Ісус?",
+   "speaker": "Наталія Вольвачева",
+   "format": "Сестринська зустріч",
+   "date": "2025-12-29",
+   "sec": 1380,
+   "dur": "m",
+   "topics": [
+    "salvation"
+   ]
+  },
+  {
+   "id": "LZv492F3Jyc",
+   "title": "Духовні дари в церкві",
+   "speaker": "Василь Попудник",
+   "format": "Семінар",
+   "date": "2025-12-28",
+   "sec": 10059,
+   "dur": "xl",
+   "topics": [
+    "spirit",
+    "identity"
+   ]
+  },
+  {
+   "id": "Vaxm0GFEpDk",
+   "title": "Знати таємниці Царства небесного",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2025-12-27",
+   "sec": 1824,
+   "dur": "l",
+   "topics": [
+    "kingdom"
+   ]
+  },
+  {
+   "id": "gmj-BeNkEa8",
+   "title": "Там де буря втрачає силу",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2025-12-20",
+   "sec": 1477,
+   "dur": "m",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "ZjEhbZMfhRc",
+   "title": "Не забувай Бога!",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2025-12-19",
+   "sec": 1663,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "cJR7jLGCGq8",
+   "title": "Для чого молитися духом іншими мовами",
+   "speaker": "Володимир Чорнописький",
+   "format": "Проповідь",
+   "date": "2025-12-11",
+   "sec": 2501,
+   "dur": "xl",
+   "topics": [
+    "spirit",
+    "prayer"
+   ]
+  },
+  {
+   "id": "6WlBwIfdguY",
+   "title": "Безпорадна людина, але Всемогутній Бог",
+   "speaker": "Андрій Лещук",
+   "format": "Проповідь",
+   "date": "2025-12-10",
+   "sec": 1155,
+   "dur": "s",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "l08HFWDUqi0",
+   "title": "Духовне життя",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь",
+   "date": "2025-12-04",
+   "sec": 1227,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "uk74W-yWGn4",
+   "title": "6 видів стосунків учня",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2025-12-03",
+   "sec": 2248,
+   "dur": "l",
+   "topics": [
+    "church",
+    "identity"
+   ]
+  },
+  {
+   "id": "p8k1j6eY48Q",
+   "title": "Джерело води живої",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2025-11-25",
+   "sec": 1873,
+   "dur": "l",
+   "topics": [
+    "salvation"
+   ]
+  },
+  {
+   "id": "1ZBPsRfKYBU",
+   "title": "Прощення",
+   "speaker": "Ярослав Котилко",
+   "format": "Проповідь",
+   "date": "2025-11-24",
+   "sec": 2078,
+   "dur": "l",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "kRbiiTZhC1Q",
+   "title": "Не застрягни між Єгиптом та Ханааном",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2025-11-22",
+   "sec": 1699,
+   "dur": "m",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "XKAz9bvfe1g",
+   "title": "Блаженні миротворці, бо вони будуть названі синами Божими",
+   "speaker": "Віктор Маселко",
+   "format": "Проповідь",
+   "date": "2025-11-21",
+   "sec": 1704,
+   "dur": "m",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "Xaq4WdH-VwA",
+   "title": "Ісус приходить на свято",
+   "speaker": "Віктор Прохор",
+   "format": "Проповідь",
+   "date": "2025-11-18",
+   "sec": 1146,
+   "dur": "s",
+   "topics": [
+    "feasts",
+    "salvation"
+   ]
+  },
+  {
+   "id": "PxFMjWwtHOQ",
+   "title": "Хто нас покликав і для чого",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь",
+   "date": "2025-11-17",
+   "sec": 2824,
+   "dur": "xl",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "QGu525bS2pY",
+   "title": "Відкривай свої бажання Богові",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2025-11-16",
+   "sec": 472,
+   "dur": "s",
+   "topics": [
+    "prayer"
+   ]
+  },
+  {
+   "id": "1XymUAqTTwE",
+   "title": "Щастя починається з прозрінням",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь",
+   "date": "2025-11-13",
+   "sec": 2100,
+   "dur": "l",
+   "topics": [
+    "trials",
+    "identity"
+   ]
+  },
+  {
+   "id": "09eoxnRxJAY",
+   "title": "Сила єдності",
+   "speaker": "Віталій Яцюк",
+   "format": "Братерська зустріч",
+   "date": "2025-10-28",
+   "sec": 1271,
+   "dur": "m",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "jq68vrN8ztc",
+   "title": "Реальність зла",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2025-10-27",
+   "sec": 2279,
+   "dur": "l",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "VUd7FmDyRqA",
+   "title": "Підготовка до весілля",
+   "speaker": "Володимир Павлов",
+   "format": "Проповідь",
+   "date": "2025-10-24",
+   "sec": 1146,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "CM95Vd5yZfE",
+   "title": "Жінка з новим серцем Частина 2",
+   "speaker": "Ріта Федорчук",
+   "format": "Сестринська зустріч",
+   "date": "2025-10-23",
+   "sec": 3599,
+   "dur": "xl",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "42LsmZVppFY",
+   "title": "Жінка з новим серцем Частина 1",
+   "speaker": "Наталія Вольвачева",
+   "format": "Сестринська зустріч",
+   "date": "2025-10-22",
+   "sec": 1652,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "HbGYpgPzl7A",
+   "title": "4 етапи зростання у вірі",
+   "speaker": "Сергій Вознюк",
+   "format": "Проповідь",
+   "date": "2025-10-22",
+   "sec": 2653,
+   "dur": "xl",
+   "topics": [
+    "faith",
+    "identity"
+   ]
+  },
+  {
+   "id": "WsLUqHaYrxU",
+   "title": "4 етапи зростання у вірі",
+   "speaker": "Сергій Вознюк",
+   "format": "Проповідь",
+   "date": "2025-10-21",
+   "sec": 2569,
+   "dur": "xl",
+   "topics": [
+    "faith",
+    "identity"
+   ]
+  },
+  {
+   "id": "4TikDtGTMJc",
+   "title": "Ходити вірою",
+   "speaker": "Ефе Прінц",
+   "format": "Проповідь",
+   "date": "2025-10-20",
+   "sec": 1213,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "17WDTPuNCHQ",
+   "title": "Так а як, все-таки, народитися згори?",
+   "speaker": "Олексій Вольвачев",
+   "format": "Проповідь",
+   "date": "2025-10-15",
+   "sec": 1836,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "jde-LigwaxI",
+   "title": "Кожна влада поставлена Богом",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2025-10-13",
+   "sec": 2260,
+   "dur": "l",
+   "topics": [
+    "power"
+   ]
+  },
+  {
+   "id": "Uh2Jsk6yQrk",
+   "title": "За все дякуйте!",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2025-09-29",
+   "sec": 1661,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "3KieDDuI1Qk",
+   "title": "Що вам дається найскладніше в молитві?",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2025-09-24",
+   "sec": 1164,
+   "dur": "s",
+   "topics": [
+    "prayer"
+   ]
+  },
+  {
+   "id": "zxArm-piOFQ",
+   "title": "Що мені тепер робити, Господи?",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2025-09-10",
+   "sec": 2100,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "1tFuwWjElPo",
+   "title": "Три ступені відповідальності на шляху до призначення",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь",
+   "date": "2025-09-09",
+   "sec": 1435,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "jmFLWdODvtE",
+   "title": "Шлях для благословення",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2025-09-03",
+   "sec": 1388,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "JN2pG8R81eQ",
+   "title": "Бог, який мене бачить",
+   "speaker": "Марек Камінскі",
+   "format": "Проповідь",
+   "date": "2025-09-02",
+   "sec": 3177,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Rp-E6tAC2aM",
+   "title": "Усвідом Божу велич",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2025-09-01",
+   "sec": 1249,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "wlzMkVgYKTc",
+   "title": "Нарікання та бунт - дорога до пекла",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2025-08-27",
+   "sec": 1949,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "L9gTOljdB7k",
+   "title": "Цінності",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь",
+   "date": "2025-08-26",
+   "sec": 1333,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "rltdNV65Rco",
+   "title": "Вихід із темряви",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2025-08-20",
+   "sec": 2333,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "UTRe2Y9_UAk",
+   "title": "Відречення Петра",
+   "speaker": "Віктор Маселко",
+   "format": "Проповідь",
+   "date": "2025-08-19",
+   "sec": 1148,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "KaYl8jBwyuA",
+   "title": "Куди ми дивимось - те і бачимо",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2025-08-16",
+   "sec": 1493,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "KwNDi_1IAO0",
+   "title": "За лаштунками",
+   "speaker": "Андрій Лещук",
+   "format": "Проповідь",
+   "date": "2025-08-15",
+   "sec": 1027,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "enZlcp3B1Q0",
+   "title": "Слухай!",
+   "speaker": "Ярослав Котилко",
+   "format": "Проповідь",
+   "date": "2025-08-14",
+   "sec": 1388,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "gwIUjNGuwSc",
+   "title": "Засмучення на покаяння",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2025-08-10",
+   "sec": 2516,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Bfk4WcWRcDQ",
+   "title": "Надія вмирає останньою",
+   "speaker": "Олександр Кушнірук",
+   "format": "Проповідь",
+   "date": "2025-08-09",
+   "sec": 2090,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "cZ0xiEOuDoU",
+   "title": "Бог, благословляючий рух вперед",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2025-07-24",
+   "sec": 1498,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "emKm5_g2Nxc",
+   "title": "Боже, я не розумію",
+   "speaker": "Принц Еффі",
+   "format": "Проповідь",
+   "date": "2025-07-23",
+   "sec": 1168,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "mv15JS7HHAg",
+   "title": "Історія Корнилія",
+   "speaker": "Вʼячеслав Когут",
+   "format": "Проповідь",
+   "date": "2025-07-19",
+   "sec": 1734,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "bVNirL_bLpM",
+   "title": "Сила Благовістя",
+   "speaker": "Девід Хасавей",
+   "format": "Проповідь",
+   "date": "2025-07-18",
+   "sec": 4326,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "kG1BzV4_XqI",
+   "title": "Духовна спадщина",
+   "speaker": "Олексій Вольвачев",
+   "format": "Проповідь",
+   "date": "2025-07-17",
+   "sec": 943,
+   "dur": "s",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "NPwKNTnlFww",
+   "title": "Життя у боргу любові",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2025-07-16",
+   "sec": 2017,
+   "dur": "l",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "XijwXPqv7Rw",
+   "title": "Моє Слово буде судити останнього дня",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2025-07-11",
+   "sec": 2115,
+   "dur": "l",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "ugm6mzBtnfA",
+   "title": "Вибір людини та наслідки",
+   "speaker": "Володимир Павлов",
+   "format": "Проповідь",
+   "date": "2025-07-10",
+   "sec": 1358,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "e_4Nggc9kkU",
+   "title": "Боже, навіщо ти їх залишив?",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2025-07-04",
+   "sec": 2206,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "db7y7vzXIbs",
+   "title": "Зворотна сторона чуда",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2025-07-03",
+   "sec": 1398,
+   "dur": "m",
+   "topics": [
+    "power"
+   ]
+  },
+  {
+   "id": "pR4RFsUpIYg",
+   "title": "Коли праведники зникають - світ ламається",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2025-06-25",
+   "sec": 2449,
+   "dur": "xl",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "8o9PcLB-cSM",
+   "title": "Хрещення Святим Духом",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2025-06-17",
+   "sec": 2061,
+   "dur": "l",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "Zp88b6V4Elw",
+   "title": "Не засмучуй Духа Святого",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2025-06-10",
+   "sec": 2318,
+   "dur": "l",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "G8OHZpIL0ZM",
+   "title": "Дорога в Емаус",
+   "speaker": "Ярослав Котилко",
+   "format": "Проповідь",
+   "date": "2025-06-09",
+   "sec": 1401,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "_Mv66G84bjY",
+   "title": "Воно то так, але трішечки не так",
+   "speaker": "Василь Черняк",
+   "format": "Проповідь",
+   "date": "2025-06-04",
+   "sec": 2032,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "jdGX-UybJX0",
+   "title": "Сповнення Духом Святим",
+   "speaker": "Віталій Марченко",
+   "format": "Проповідь",
+   "date": "2025-06-03",
+   "sec": 1752,
+   "dur": "m",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "HYVoQJXHxuI",
+   "title": "Нехай прийде царство Твоє",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2025-06-02",
+   "sec": 1918,
+   "dur": "l",
+   "topics": [
+    "kingdom"
+   ]
+  },
+  {
+   "id": "RGIi22hFShw",
+   "title": "Живе зерно",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2025-05-30",
+   "sec": 1846,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "lFfD49NyWtM",
+   "title": "Нехай прийде царство Твоє",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2025-05-29",
+   "sec": 1268,
+   "dur": "m",
+   "topics": [
+    "kingdom"
+   ]
+  },
+  {
+   "id": "2Eg53APTfyI",
+   "title": "Родинні спогади в Біблії",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2025-05-06",
+   "sec": 1959,
+   "dur": "l",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "7_Eo3U7Nvtg",
+   "title": "Особлива Пасха!?",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2025-04-20",
+   "sec": 1456,
+   "dur": "m",
+   "topics": [
+    "feasts"
+   ]
+  },
+  {
+   "id": "UlihGkUQT1I",
+   "title": "Дорога правди та життя",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2025-04-15",
+   "sec": 2152,
+   "dur": "l",
+   "topics": [
+    "salvation"
+   ]
+  },
+  {
+   "id": "2F-Mw-a4qY4",
+   "title": "Бог Вірний, коли людина невірна",
+   "speaker": "Володимир Павлов",
+   "format": "Проповідь",
+   "date": "2025-04-14",
+   "sec": 1184,
+   "dur": "s",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "vhcQTxc7CYg",
+   "title": "Переможець той, хто переміг себе",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2025-04-09",
+   "sec": 1425,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "ZUke6hNYBOA",
+   "title": "Доморядники в домі Господа",
+   "speaker": "Принц Еффі",
+   "format": "Проповідь",
+   "date": "2025-04-08",
+   "sec": 1387,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "UGtsS1IeBqY",
+   "title": "Мир Божий",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2025-04-07",
+   "sec": 1760,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "C7svPOCx3qk",
+   "title": "Бог бачить і чує",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2025-04-01",
+   "sec": 1999,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "cuYZ-7LslRc",
+   "title": "Нехай буде воля Твоя і на землі, як на небі",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2025-03-31",
+   "sec": 1354,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "ldMEsemwxw4",
+   "title": "Мудрість, яка від Бога",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2025-03-28",
+   "sec": 1866,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "tFaaqUREiUY",
+   "title": "Віра, яка рухає вперед",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2025-03-27",
+   "sec": 1839,
+   "dur": "l",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "l_0-XJCSKtg",
+   "title": "Чудесний Бог",
+   "speaker": "Андрій Лещук",
+   "format": "Проповідь",
+   "date": "2025-03-25",
+   "sec": 1057,
+   "dur": "s",
+   "topics": [
+    "power"
+   ]
+  },
+  {
+   "id": "xWH7rZPeIJQ",
+   "title": "Не бійся!",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2025-03-24",
+   "sec": 2170,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "1bOgqZJScIo",
+   "title": "Бог - наш Утішитель",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2025-03-18",
+   "sec": 2732,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "788vhn5ljKc",
+   "title": "Притча про таланти",
+   "speaker": "Віктор Маселко",
+   "format": "Проповідь",
+   "date": "2025-03-17",
+   "sec": 1168,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "g-EUwWvm2vE",
+   "title": "Якщо Бог за нас, то хто проти нас?",
+   "speaker": "David Dobson",
+   "format": "Проповідь",
+   "date": "2025-02-24",
+   "sec": 1029,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "kGFu1rwLUv4",
+   "title": "Благовістя",
+   "speaker": "Віктор Маселко",
+   "format": "Проповідь",
+   "date": "2025-02-22",
+   "sec": 1018,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "pQXZ2Q8-lzo",
+   "title": "Як вистояти в бурях життя?",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2025-02-21",
+   "sec": 1604,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "U4AASeSi1D0",
+   "title": "Пізнаючи Божу любов",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2025-02-12",
+   "sec": 1138,
+   "dur": "s",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "jMjyprVPKy8",
+   "title": "Спасіння у вірі та любові",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2025-02-11",
+   "sec": 2214,
+   "dur": "l",
+   "topics": [
+    "faith",
+    "love",
+    "salvation"
+   ]
+  },
+  {
+   "id": "l-HCJpIYZmI",
+   "title": "Сила вдячного серця",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2025-02-03",
+   "sec": 1808,
+   "dur": "l",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "KXaO-c2nFbA",
+   "title": "Дай Мені свого човна",
+   "speaker": "Віктор Прохор",
+   "format": "Проповідь",
+   "date": "2025-02-01",
+   "sec": 1847,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "WlmZwV5fPvw",
+   "title": "Будуймо разом з Богом!",
+   "speaker": "Володимир Павлов",
+   "format": "Проповідь",
+   "date": "2025-01-31",
+   "sec": 1142,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "bve6rrcEZ20",
+   "title": "Бог воює за тебе",
+   "speaker": "Андрій Лещук",
+   "format": "Проповідь",
+   "date": "2025-01-25",
+   "sec": 1218,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "WgY-LQl9J8o",
+   "title": "Нарікання, як нездоланна перешкода до Царства Божого",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2025-01-21",
+   "sec": 2033,
+   "dur": "l",
+   "topics": [
+    "kingdom"
+   ]
+  },
+  {
+   "id": "Qm3rbqXz7IY",
+   "title": "Віра, що змінює історію народів",
+   "speaker": "Ярослав Котилко",
+   "format": "Проповідь",
+   "date": "2025-01-20",
+   "sec": 1386,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "C8vXO4vxk94",
+   "title": "Ключові фактори премоги",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2025-01-08",
+   "sec": 1741,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Zv-agcwgdmI",
+   "title": "Різдвяна проповідь",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2025-01-06",
+   "sec": 2034,
+   "dur": "l",
+   "topics": [
+    "feasts"
+   ]
+  },
+  {
+   "id": "0gdYCkaYhNA",
+   "title": "Ходити з Богом",
+   "speaker": "Віктор Маселко",
+   "format": "Проповідь",
+   "date": "2025-01-04",
+   "sec": 1237,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "kVZwk9uF4gY",
+   "title": "Звіщаю вам велику радість, яка буде всім людям",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2024-12-23",
+   "sec": 1592,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "fF0k7gRwbw4",
+   "title": "Віра Божа",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2024-12-21",
+   "sec": 2014,
+   "dur": "l",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "r_yW40DKEsk",
+   "title": "Шукаю Справжніх Поклонників",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2024-12-20",
+   "sec": 1774,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "C37gQ09ndlI",
+   "title": "Розмова Ісуса з Никодимом",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2024-12-09",
+   "sec": 989,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "7ljVMp4koN0",
+   "title": "Коли зупиняється Бог",
+   "speaker": "Володимир Павлов",
+   "format": "Проповідь",
+   "date": "2024-12-07",
+   "sec": 1023,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "fA9BV08E06Y",
+   "title": "Як нам протистояти дияволу?",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2024-11-23",
+   "sec": 2009,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "A8r5O6sqZvc",
+   "title": "Полегшення і врятування прийде, але пам’ятай, що ти у потрібний час",
+   "speaker": "Сергій Манелюк",
+   "format": "Проповідь",
+   "date": "2024-10-29",
+   "sec": 2893,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "l6MGAgPSuhY",
+   "title": "Вірую, Господи, допоможи недовірі моїй",
+   "speaker": "Вікторія Андросова",
+   "format": "Жіноча конференція",
+   "date": "2024-10-28",
+   "sec": 4650,
+   "dur": "xl",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "t1ItaKK8BUo",
+   "title": "Як досягти надії?",
+   "speaker": "Ігор Капустін",
+   "format": "Проповідь",
+   "date": "2024-10-18",
+   "sec": 1574,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "4KL3OAofVEc",
+   "title": "Він прийшов, щоб спасти кожного",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2024-10-11",
+   "sec": 1946,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "pX9GXeMJsGY",
+   "title": "Подяка",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь",
+   "date": "2024-10-05",
+   "sec": 1916,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "tBsoEJSUFzw",
+   "title": "Хліб наш насущний дай нам на сьогодні",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2024-09-28",
+   "sec": 2082,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "5rjl3cInPz0",
+   "title": "Цінність царства Божого",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь",
+   "date": "2024-08-27",
+   "sec": 1172,
+   "dur": "s",
+   "topics": [
+    "identity",
+    "kingdom"
+   ]
+  },
+  {
+   "id": "DiuhIWo333k",
+   "title": "Що виводить людей зі смутку та розчарування?",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2024-08-16",
+   "sec": 2369,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Tg79u9EAu-s",
+   "title": "Вибір і передвизначення",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2024-06-23",
+   "sec": 1352,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "KAXHCEM5pZM",
+   "title": "Ревність в Бозі",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2024-06-06",
+   "sec": 1074,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "mY92Ye0KiCU",
+   "title": "В'їзд Христа в Єрусалим",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2024-04-04",
+   "sec": 1744,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "o-wbLEDr8-4",
+   "title": "Самооцінка",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2024-03-29",
+   "sec": 1369,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "dt_uqUGLsP4",
+   "title": "Що нам дав Ісус",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2024-03-23",
+   "sec": 1623,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "hsAwMzboSGM",
+   "title": "Якщо Господь твій Пастир",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2024-03-22",
+   "sec": 1225,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "I2HmbAL_Tfs",
+   "title": "Один механізм",
+   "speaker": "Костянтин Мельник",
+   "format": "Проповідь",
+   "date": "2024-03-21",
+   "sec": 3276,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "CUNuFCnqjMA",
+   "title": "Радість у випробуваннях",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2024-03-15",
+   "sec": 1238,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Z5HWUxMRBSA",
+   "title": "“Милість і жертва”",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2024-03-14",
+   "sec": 1851,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "f-DZXGtmcBM",
+   "title": "Серцевина духовності",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь #філадельфія #проповідь #паночко",
+   "date": "2024-03-14",
+   "sec": 2324,
+   "dur": "l",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "_mNCakmMHeM",
+   "title": "Серцевина духовності",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь #філадельфія #проповідь #паночко",
+   "date": "2024-03-13",
+   "sec": 4242,
+   "dur": "xl",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "r6klPHY5EFo",
+   "title": "Під керівництвом Святого Духа",
+   "speaker": "Анатолій Козачок",
+   "format": "#філадельфія #церква #проповідь",
+   "date": "2024-03-09",
+   "sec": 1434,
+   "dur": "m",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "C54RBQ-dsKs",
+   "title": "Кого поважає Господь",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь #філадельфія",
+   "date": "2024-03-01",
+   "sec": 1823,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "bihe1gHFIMY",
+   "title": "Міцне серце під час бурі",
+   "speaker": "Володимир Павлов",
+   "format": "Проповідь",
+   "date": "2024-02-29",
+   "sec": 988,
+   "dur": "s",
+   "topics": [
+    "trials",
+    "identity"
+   ]
+  },
+  {
+   "id": "mKhPgMSgYmc",
+   "title": "Непрощення та образа є дорогою до пекла",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь #філадельфія",
+   "date": "2024-02-24",
+   "sec": 1579,
+   "dur": "m",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "R9bNnEVlZ9Y",
+   "title": "Оціни любов",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2024-02-22",
+   "sec": 1352,
+   "dur": "m",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "qRSetvwdLBI",
+   "title": "Перемога неможлива поразка",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2024-02-15",
+   "sec": 1319,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "jVw28aUgMzs",
+   "title": "«Легкий тягар »",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2024-02-10",
+   "sec": 1319,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "QixOjJfWLMo",
+   "title": "“Милість і жертва”",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2024-02-09",
+   "sec": 780,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "IRH9H12_8dY",
+   "title": "\"Чотири пріоритети ранньої церкви\"",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2024-02-09",
+   "sec": 2243,
+   "dur": "l",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "THt4nZ_UhCc",
+   "title": "«Мислення з двох боків»",
+   "speaker": "Анатолій Козачок",
+   "format": "#філадельфія #церква #проповідь",
+   "date": "2024-02-01",
+   "sec": 1899,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "zJJSsXX8qQc",
+   "title": "«Божа сила»",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2024-01-26",
+   "sec": 1581,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "dln3PHj3p6U",
+   "title": "«Зовнішні і внутрішні цінності »",
+   "speaker": "Володимир Павлов",
+   "format": "Проповідь",
+   "date": "2024-01-25",
+   "sec": 1075,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "7OImj2haK84",
+   "title": "\"Навіщо нам випробування?\"",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2024-01-20",
+   "sec": 1529,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "rohMxz9_8zY",
+   "title": "\"Жертва отця\"",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь #філадельфія",
+   "date": "2024-01-19",
+   "sec": 1269,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "p_5lGesbb5k",
+   "title": "Біль та життя",
+   "speaker": "Анатолій Козачок",
+   "format": "#філадельфія #церква #проповідь",
+   "date": "2024-01-12",
+   "sec": 2077,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "DS0DIyVAF9A",
+   "title": "Частина Божої сім'ї",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2024-01-11",
+   "sec": 1444,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "T0MXgETsYwM",
+   "title": "Бог гордим противиться, а смиренним дає благодать",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь #філадельфія",
+   "date": "2024-01-05",
+   "sec": 2067,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "gF_IXuLysf4",
+   "title": "Прихована битва: від спокус до перемоги",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2024-01-04",
+   "sec": 1609,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "0PolW_yEJBs",
+   "title": "Народження Ісуса Христа",
+   "speaker": "Анатолій Козачок",
+   "format": "#філадельфія #церква #проповідь",
+   "date": "2023-12-30",
+   "sec": 1701,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "2-T42AWqGCM",
+   "title": "Христо народження: таємниця Божого провидіння",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2023-12-28",
+   "sec": 1528,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "4mUfmLiwVC0",
+   "title": "Зрозуміти Божу любов",
+   "speaker": "Козачок Анатолій",
+   "format": "Проповіді",
+   "date": "2023-12-22",
+   "sec": 2191,
+   "dur": "l",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "_l6URjbpiHU",
+   "title": "Духовна сліпота",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2023-12-21",
+   "sec": 1028,
+   "dur": "s",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "ZCIkvGkjCfA",
+   "title": "Любов, як основа духовного балансу",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2023-12-07",
+   "sec": 1029,
+   "dur": "s",
+   "topics": [
+    "love",
+    "identity"
+   ]
+  },
+  {
+   "id": "bJAZOLnujEQ",
+   "title": "\"Дорога Валаама \"",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2023-12-01",
+   "sec": 2288,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "hsHstVelzrs",
+   "title": "Володимир Павлов",
+   "speaker": "«Вийди з глухого кута»",
+   "format": "проповідь",
+   "date": "2023-11-30",
+   "sec": 1179,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "gOm-wlWsUn4",
+   "title": "Богопізнання через Слово",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2023-11-24",
+   "sec": 994,
+   "dur": "s",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "Xirtf90BzAY",
+   "title": "\"Бог є любов і суддя праведний \"",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2023-11-19",
+   "sec": 1851,
+   "dur": "l",
+   "topics": [
+    "holiness",
+    "love"
+   ]
+  },
+  {
+   "id": "teLGphm9T84",
+   "title": "Нехай буде воля Твоя",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2023-11-18",
+   "sec": 1551,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "vGECulmjU80",
+   "title": "Нехай прийде Царство Твоє",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2023-11-11",
+   "sec": 1579,
+   "dur": "m",
+   "topics": [
+    "kingdom"
+   ]
+  },
+  {
+   "id": "ga2rJJzXLT4",
+   "title": "\"Життя на роздоріжжі між плоттю і Духом\"",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2023-11-11",
+   "sec": 1147,
+   "dur": "s",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "CkE1JizmOrk",
+   "title": "\"Життя на роздоріжжі між плоттю і Духом\"",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2023-11-10",
+   "sec": 1143,
+   "dur": "s",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "0LDpRJJafUo",
+   "title": "«Як вижити вівцям серед вовків»",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2023-11-04",
+   "sec": 1919,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "4dBIIThBxJA",
+   "title": "\"Життя і смерть я пропоную тобі сьогодні \"",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2023-10-28",
+   "sec": 1925,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "5uwksjv913I",
+   "title": "Воля Божа",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2023-10-27",
+   "sec": 1223,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "hd4ZHpRPraw",
+   "title": "Кого обирає Господь?",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2023-10-21",
+   "sec": 1300,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Hv9H0NfIuBA",
+   "title": "Покликання",
+   "speaker": "Вʼячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2023-10-19",
+   "sec": 1483,
+   "dur": "m",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "GEMOhGfwkYU",
+   "title": "Вчитель від Бога",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-10-15",
+   "sec": 2400,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "LTQvEDsAPKI",
+   "title": "Куди віє вітер?",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь #філадельфія #проповідь",
+   "date": "2023-10-12",
+   "sec": 1535,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "fZLLD3FvWig",
+   "title": "Сила Нового заповіту",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь #філадельфія #проповідь #паночко",
+   "date": "2023-10-07",
+   "sec": 1831,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "7RahNnlvmyM",
+   "title": "Примирення",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь #філадельфія #проповідь #паночко",
+   "date": "2023-10-06",
+   "sec": 1432,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "BWjPetGXgos",
+   "title": "Вірний Бог",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь #філадельфія #проповідь #володимиррудницький",
+   "date": "2023-10-05",
+   "sec": 1047,
+   "dur": "s",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "jyYG-wXCus8",
+   "title": "\"Сіяння та жатва \"",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь #філадельфія #проповідь #анатолійфещенко",
+   "date": "2023-09-29",
+   "sec": 2072,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "EIiglArvkZw",
+   "title": "Володимир Рудницький",
+   "speaker": "Слово онлайн #філадельфія",
+   "format": "Проповідь",
+   "date": "2023-09-25",
+   "sec": 1402,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "v_YKgVJzj2Q",
+   "title": "Потіха в Господі",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь #анатолійкозачок #проповідь #філадельфія",
+   "date": "2023-09-23",
+   "sec": 1773,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "g3_3EXUgKiI",
+   "title": "Володимир Павлов",
+   "speaker": "Слово онлайн",
+   "format": "Проповідь",
+   "date": "2023-09-18",
+   "sec": 596,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "nVz2tnflu4Y",
+   "title": "Зцілення ран душі",
+   "speaker": "Джордж Давидюк",
+   "format": "Проповідь",
+   "date": "2023-09-16",
+   "sec": 3153,
+   "dur": "xl",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "pHZlmZibtfA",
+   "title": "Головні цілі та засади духовного наставника",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2023-09-14",
+   "sec": 1832,
+   "dur": "l",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "tcLLl-qqZyg",
+   "title": "На зустріч з Христом",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-09-09",
+   "sec": 1810,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "QAI5lPdGgZU",
+   "title": "«Приступайте до Христа!»",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2023-09-07",
+   "sec": 1523,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "UjpIVk9JRXw",
+   "title": "\"Завіт з Господом\"",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2023-09-02",
+   "sec": 1516,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "_qBsdcm3pZQ",
+   "title": "\"Дві протилежності у ставленні до благодаті\"",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2023-08-31",
+   "sec": 1444,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "fCVz8G-nmow",
+   "title": "Наші особисті стосунки з Богом\"",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2023-08-26",
+   "sec": 2076,
+   "dur": "l",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "0TGZmN84WJY",
+   "title": "Покликання",
+   "speaker": "Вʼячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2023-08-25",
+   "sec": 1539,
+   "dur": "m",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "qMFAOBkATRM",
+   "title": "«Безпечне місце в небезпечному місці»",
+   "speaker": "Віталій Яцюк",
+   "format": "Проповідь",
+   "date": "2023-08-20",
+   "sec": 2162,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "S9KRxBHJVNw",
+   "title": "Моральні аспекти в молитві \"Отче наш\"",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2023-08-17",
+   "sec": 1217,
+   "dur": "m",
+   "topics": [
+    "prayer"
+   ]
+  },
+  {
+   "id": "i7RwXOX1v8A",
+   "title": "Яка головна ціль?",
+   "speaker": "Володимир Павлов",
+   "format": "Проповідь",
+   "date": "2023-08-12",
+   "sec": 1312,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "51HNOHeWxJw",
+   "title": "Дорога до Єрусалиму",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-08-08",
+   "sec": 1752,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "CC2_6-bOuh4",
+   "title": "Пливи на глибину",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2023-08-04",
+   "sec": 1731,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "4varYvd4a-s",
+   "title": "Свідоцтво твоєї віри",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2023-08-02",
+   "sec": 1505,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "gtCesFj6Bek",
+   "title": "Християнська гідність, як противага нав’язуваній меншовартості",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2023-07-28",
+   "sec": 1493,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "T2WqDKj3ryU",
+   "title": "Ідіть та проповідуйте",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-07-21",
+   "sec": 1384,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "XI59mGgeZ1s",
+   "title": "Моїми учнями будете",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2023-07-18",
+   "sec": 1444,
+   "dur": "m",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "ksWauWd2Gpc",
+   "title": "Як Я вас полюбив, так любіть один одного й ви!",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2023-07-14",
+   "sec": 1509,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "JaIwykx0jkw",
+   "title": "Коли бо я слабий, тоді я сильний",
+   "speaker": "Вʼячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2023-07-11",
+   "sec": 1465,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "H359P_GGc6g",
+   "title": "Се стою і стукаю",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2023-07-08",
+   "sec": 1618,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "oFbS70wW8Yg",
+   "title": "Прийдіть до Мене, усі струджені та обтяжені!",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2023-07-05",
+   "sec": 1208,
+   "dur": "m",
+   "topics": [
+    "salvation"
+   ]
+  },
+  {
+   "id": "cgjgVE9ly6A",
+   "title": "Володимир Рудницький",
+   "speaker": "Слово онлайн",
+   "format": "Проповідь",
+   "date": "2023-07-03",
+   "sec": 1257,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "i9NpY3wR7EU",
+   "title": "",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-06-29",
+   "sec": 1565,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "EePKu7NesGg",
+   "title": "Маленькі кроки для великих справ",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2023-06-28",
+   "sec": 1749,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "a1PPSCMx3sY",
+   "title": "Зброя, міцна Богом, на зруйнування твердинь",
+   "speaker": "Богдан Галюк",
+   "format": "Проповідь",
+   "date": "2023-06-23",
+   "sec": 2078,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "OBvfdl_bHi0",
+   "title": "А народ, що знає свого Бога, зміцніє та й діятиме",
+   "speaker": "Девід Хасавей",
+   "format": "Проповідь",
+   "date": "2023-06-14",
+   "sec": 2953,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "bbYPGC6Yzb4",
+   "title": "Віра, що перемагає",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-06-09",
+   "sec": 1668,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "V-OIHFneF0U",
+   "title": "Я – хліб життя!",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2023-06-06",
+   "sec": 1209,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "YdX0gvP3cvk",
+   "title": "Та ви приймете силу, як Дух Святий злине на вас",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-06-01",
+   "sec": 2174,
+   "dur": "l",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "_Gd1-yf01cE",
+   "title": "Рушійна сила, що провадить нас",
+   "speaker": "Віктор Прохор",
+   "format": "Проповідь",
+   "date": "2023-05-25",
+   "sec": 1858,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "F-rI366uMA0",
+   "title": "Підперезавши стегна свої правдою, і зодягнувшись у броню праведности",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-05-20",
+   "sec": 1410,
+   "dur": "m",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "kcFZGOszVTM",
+   "title": "Серце своє стережи, бо з нього походить життя",
+   "speaker": "В’ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2023-05-17",
+   "sec": 1485,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "07NGa7WQPT8",
+   "title": "Одяг Божої праведності",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-05-13",
+   "sec": 2042,
+   "dur": "l",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "hMxIsWEEht0",
+   "title": "Ось іде Він, говорить Господь Саваот!",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2023-05-10",
+   "sec": 690,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "3w4wqWEQs1Q",
+   "title": "Послух ліпший від жертви, покірливість краща від баранячого лою!",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2023-05-06",
+   "sec": 1602,
+   "dur": "m",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "Yk0Wt7-E6JY",
+   "title": "Служити Господу – велике надбання для нас",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2023-05-03",
+   "sec": 1336,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Jf2Ke6ixL3s",
+   "title": "Праведний житиме вірою",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-04-29",
+   "sec": 2576,
+   "dur": "xl",
+   "topics": [
+    "faith",
+    "holiness"
+   ]
+  },
+  {
+   "id": "sJTXpFf2EnQ",
+   "title": "Вільна слухавка для Бога",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2023-04-25",
+   "sec": 1155,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "-XceWEli80Q",
+   "title": "Божий землетрус",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-04-22",
+   "sec": 1451,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "6NJxMXqnnU0",
+   "title": "Як Ісус Христос провів останній вечір з учнями?",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2023-04-21",
+   "sec": 1019,
+   "dur": "s",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "b_zxbWDwLCU",
+   "title": "Володимир Павлов",
+   "speaker": "Свідоцтво",
+   "format": "Проповідь",
+   "date": "2023-04-19",
+   "sec": 999,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Y94eanxB5aM",
+   "title": "Христос, за нас у жертву принесений",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2023-04-15",
+   "sec": 1410,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "zeYyR3o_o0c",
+   "title": "Велика та потужна любов Божа до кожного з нас",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-04-08",
+   "sec": 1633,
+   "dur": "m",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "Z_ZNowoFads",
+   "title": "Не бійся, з тобою бо Я, і не озирайсь",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2023-04-07",
+   "sec": 1344,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "8EZN2MTgatU",
+   "title": "І буде вам кожне видіння, немов би слова запечатаної книжки",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2023-03-31",
+   "sec": 1435,
+   "dur": "m",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "vw3t0UvFqF4",
+   "title": "Будьте відважні: Я світ переміг!",
+   "speaker": "В’ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2023-03-29",
+   "sec": 1388,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "UBvIgZmkVU8",
+   "title": "Володимир Рудницький",
+   "speaker": "Слово онлайн",
+   "format": "Проповідь",
+   "date": "2023-03-27",
+   "sec": 1485,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Saoe03HsL_s",
+   "title": "У молитві Господній міститься ніби все Євангеліє",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2023-03-24",
+   "sec": 2064,
+   "dur": "l",
+   "topics": [
+    "prayer"
+   ]
+  },
+  {
+   "id": "NItrET8CpDY",
+   "title": "Кому ж мало прощається, такий мало любить",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2023-03-22",
+   "sec": 1023,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "zXIsYw6eWL8",
+   "title": "Переможець наслідує усе!",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-03-17",
+   "sec": 1895,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "WF1iJQhF9Rw",
+   "title": "Господь закликає, щоб ми були єдині",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2023-03-16",
+   "sec": 924,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Uu_I3C2Vsn8",
+   "title": "А найбільш над усе візьміть щита віри",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-03-10",
+   "sec": 1671,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "M_mULsTKiKM",
+   "title": "Бо це кров Моя Нового Заповіту, що за багатьох проливається на відпущення гріхів!",
+   "speaker": "Андрій Сорогін",
+   "format": "Проповідь",
+   "date": "2023-03-09",
+   "sec": 404,
+   "dur": "s",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "_uDJzsW4nSo",
+   "title": "Ось на горах ноги благовісника, що звіщає про мир",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2023-03-04",
+   "sec": 1587,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "zkIJ2yiqMiM",
+   "title": "Господь з тобою, хоробрий муже!",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2023-03-01",
+   "sec": 1263,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "0LGLT6x6oBQ",
+   "title": "Бог судитиме свій народ",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2023-02-24",
+   "sec": 1304,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "0XMavtCmhFw",
+   "title": "Правильні дії є ключем до скарбу – Слова Божого",
+   "speaker": "В’ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2023-02-22",
+   "sec": 1463,
+   "dur": "m",
+   "topics": [
+    "word",
+    "identity"
+   ]
+  },
+  {
+   "id": "qLC11qqTVAE",
+   "title": "...А істина вас вільними зробить!",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-02-18",
+   "sec": 1397,
+   "dur": "m",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "RpdLoA3bGVs",
+   "title": "Господь - гарант надії",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2023-02-15",
+   "sec": 1138,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "50tmi3YZoEw",
+   "title": "Споконвіку було Слово",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2023-02-11",
+   "sec": 1605,
+   "dur": "m",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "SvyfYkkRDSM",
+   "title": "Пам‘ятай про Ісуса Христа, що воскрес з мертвих",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2023-02-10",
+   "sec": 1415,
+   "dur": "m",
+   "topics": [
+    "feasts"
+   ]
+  },
+  {
+   "id": "6tVqfxmK4gM",
+   "title": "Ми працюємо для Бога не для того, щоб врятуватися, а тому, що ми врятовані",
+   "speaker": "Андрій Сорогін",
+   "format": "Проповідь",
+   "date": "2023-02-03",
+   "sec": 622,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "uEbUJ_mg6LI",
+   "title": "Смиренним Бог дає благодать",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2023-01-30",
+   "sec": 1442,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "zDMQD4XhYnM",
+   "title": "Бог є любов",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2023-01-14",
+   "sec": 1025,
+   "dur": "s",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "rVzHQqQdA8Y",
+   "title": "Християнство - це принципова віра",
+   "speaker": "В'ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2023-01-12",
+   "sec": 1192,
+   "dur": "s",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "0gd8zF05G98",
+   "title": "Анатолій Козачок",
+   "speaker": "Прагну Тебе",
+   "format": "Проповідь",
+   "date": "2023-01-06",
+   "sec": 2504,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "AGbBhOeVlBo",
+   "title": "Андрій Сорогін",
+   "speaker": "2023 - від Різдва Христова",
+   "format": "Проповідь",
+   "date": "2023-01-04",
+   "sec": 845,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "rwCbskZ6BJI",
+   "title": "Анатолій Козачок",
+   "speaker": "Найвища подія",
+   "format": "Проповідь",
+   "date": "2022-12-29",
+   "sec": 1909,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "I0Vm7JRAoFI",
+   "title": "\"Наша зброя - мудрість\"",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2022-12-24",
+   "sec": 1278,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "aSLIC6t-pUU",
+   "title": "Премудрість Божа",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2022-12-22",
+   "sec": 1809,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "SxSAMBvmzsI",
+   "title": "Слово Господнє, вогнем випробовуване",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2022-12-03",
+   "sec": 1933,
+   "dur": "l",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "It6F9dq-ar8",
+   "title": "Боже Роздоріжжя",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2022-12-01",
+   "sec": 1246,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "AB2cE4w7tbQ",
+   "title": "Для чого побудована церква",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2022-11-19",
+   "sec": 1545,
+   "dur": "m",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "dMxrE74IIKs",
+   "title": "Шукайте Господа",
+   "speaker": "Андрій Сорогін",
+   "format": "Проповідь",
+   "date": "2022-11-17",
+   "sec": 783,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "TGHhASXoQfQ",
+   "title": "Готуйте дорогу для Господа",
+   "speaker": "В'ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2022-11-11",
+   "sec": 1445,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "pcuG32vU7jg",
+   "title": "Біблія для родини",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2022-11-08",
+   "sec": 2155,
+   "dur": "l",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "UgtYLUUKhkc",
+   "title": "Як зрощувати віру?",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2022-11-06",
+   "sec": 2198,
+   "dur": "l",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "wH6EggwDPaA",
+   "title": "Служіння Богові винагороджується",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2022-11-03",
+   "sec": 1467,
+   "dur": "m",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "znPah3fHgw0",
+   "title": "Вірність",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2022-10-15",
+   "sec": 2230,
+   "dur": "l",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "J74uJLCulOU",
+   "title": "Вдячність як стан серця",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2022-10-13",
+   "sec": 1092,
+   "dur": "s",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "n6XRZ5C1Cdk",
+   "title": "Усе на добро",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2022-10-09",
+   "sec": 1852,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "j_eX3mc2iq0",
+   "title": "Сутність Свободи",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2022-10-08",
+   "sec": 1869,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "1CFPaYtatGc",
+   "title": "Від переживання до подяки",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2022-10-05",
+   "sec": 2046,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "UBGBMBeUJmM",
+   "title": "Віра VS Критичне мислення",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2022-10-02",
+   "sec": 1682,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "GbQqtXnAvYQ",
+   "title": "Майте віру Божу",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2022-09-30",
+   "sec": 1682,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "JgQqAppqSuw",
+   "title": "Як вистояти в день злий",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2022-09-29",
+   "sec": 1796,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "5y03IXElGUM",
+   "title": "Чини розсудливо",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2022-09-28",
+   "sec": 1562,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "pfRvxKp-k2E",
+   "title": "Що християнин повинен робити безперестанку?",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь",
+   "date": "2022-09-22",
+   "sec": 2590,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "VgLM3H2w5s4",
+   "title": "Подорож до центру Євангелія",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь",
+   "date": "2022-09-20",
+   "sec": 2770,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "ZURR58hgxG0",
+   "title": "Відновлення",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2022-08-25",
+   "sec": 1560,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "jXAdwQZfpgY",
+   "title": "Дух-Утішник",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2022-08-23",
+   "sec": 1949,
+   "dur": "l",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "VKACXjMnBtE",
+   "title": "Особливості дії Святого Духа",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2022-08-20",
+   "sec": 1473,
+   "dur": "m",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "swsmNY7DQr0",
+   "title": "Речі, які заважають бути щасливими",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2022-08-19",
+   "sec": 1914,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "xwOReE295gw",
+   "title": "Чи винен Бог, що у нас війна?",
+   "speaker": "В'ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2022-08-17",
+   "sec": 1588,
+   "dur": "m",
+   "topics": [
+    "war"
+   ]
+  },
+  {
+   "id": "eDW-PlO11FU",
+   "title": "Я - Господь, Бог твій",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2022-08-05",
+   "sec": 1540,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "OrNJ6P1pqFU",
+   "title": "НАЙВИЩА ЦІЛЬ СВЯТОГО ДУХА",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2022-06-15",
+   "sec": 2062,
+   "dur": "l",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "7kygjXOUwOM",
+   "title": "Наша місія перед Богом",
+   "speaker": "Вячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2022-06-10",
+   "sec": 1136,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "edk73JY_xvs",
+   "title": "Пробачити - не значить виправдати гріх",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2022-06-08",
+   "sec": 2471,
+   "dur": "xl",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "-1AKpZId8iM",
+   "title": "Храм Бога Живого",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2022-05-07",
+   "sec": 1793,
+   "dur": "m",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "VG0Si4ZEyNA",
+   "title": "Освячене життя",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2022-05-06",
+   "sec": 1541,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "5KHh7k329bM",
+   "title": "Як жити далі?",
+   "speaker": "В'ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2022-05-06",
+   "sec": 1759,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "x2jen49UoKw",
+   "title": "Жертва приємна Богові",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2022-05-04",
+   "sec": 1711,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "kHndvBoaKI0",
+   "title": "Як про війни та розрухи почуєте ви — не лякайтесь",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2022-04-28",
+   "sec": 1950,
+   "dur": "l",
+   "topics": [
+    "war"
+   ]
+  },
+  {
+   "id": "ITnrnldreJs",
+   "title": "Чотири речі, які обкрадають наше повноцінне життя",
+   "speaker": "Андрій Сорогін",
+   "format": "Проповідь",
+   "date": "2021-09-16",
+   "sec": 1292,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "6Adz_XElO7Y",
+   "title": "Закладання основ при \"будівництві\"",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2021-09-15",
+   "sec": 1693,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "TXiku3USNrE",
+   "title": "Навіщо я ходжу до церкви",
+   "speaker": "В'ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2021-09-14",
+   "sec": 1679,
+   "dur": "m",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "O2ca78KoBHE",
+   "title": "Сіяння та жнива нашого життя",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2021-09-13",
+   "sec": 1697,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "_mbjU3m1OW8",
+   "title": "Спокуса",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2021-09-12",
+   "sec": 1975,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Sc2SVES9MOg",
+   "title": "Шлях до свободи",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2021-09-10",
+   "sec": 1057,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "D65rGAKVV1A",
+   "title": "На що здатна сильна людина",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2021-09-09",
+   "sec": 1181,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "8cbJJnan6EM",
+   "title": "Чому послання про Хрест - безумство",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2021-09-08",
+   "sec": 1576,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "kslNdQ7865U",
+   "title": "Плодовитість в нашому житті",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2021-09-07",
+   "sec": 1774,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "CuR5T4uwV8c",
+   "title": "Сумніви",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2021-09-06",
+   "sec": 1566,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "kfQbr_4ExA8",
+   "title": "Євангельський Закон і моральні приписи",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2021-09-06",
+   "sec": 1009,
+   "dur": "s",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "1PUG03MlLis",
+   "title": "Чого варті наші зусилля?",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2021-05-07",
+   "sec": 1576,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "t-njreeAbBs",
+   "title": "Структура моральної поведінки",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2021-04-26",
+   "sec": 1333,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "EdWE5ohTODs",
+   "title": "Повага до держави та послух Богові",
+   "speaker": "Роман Єгоров",
+   "format": "Проповідь",
+   "date": "2021-03-28",
+   "sec": 1601,
+   "dur": "m",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "Xa_DfnvI4rs",
+   "title": "Істина вище всього",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2021-01-05",
+   "sec": 1627,
+   "dur": "m",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "9JsGZcZ7Tps",
+   "title": "Народження Христа та три болі людства",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-12-30",
+   "sec": 1458,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "xQsmNRwVUVQ",
+   "title": "Що нам було продемонстровано через прихід Ісуса Христа?",
+   "speaker": "Анатолий Козачок",
+   "format": "Проповідь",
+   "date": "2020-12-29",
+   "sec": 1950,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "_jGz1gefDhU",
+   "title": "Входити і виходити в силі",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2020-12-28",
+   "sec": 753,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "TPiXCLnIGws",
+   "title": "Дивись Його очима",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2020-12-27",
+   "sec": 929,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "lzOs6GpVazU",
+   "title": "Стосунки з Богом при новому народженні",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-12-23",
+   "sec": 2023,
+   "dur": "l",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "dyBfPZlZpes",
+   "title": "Випробування свободою",
+   "speaker": "Тарас Домбровський",
+   "format": "Проповідь",
+   "date": "2020-12-20",
+   "sec": 909,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "AkAcZw3un00",
+   "title": "Заповідь: Любіть одне одного!",
+   "speaker": "Олексій Вольвачев",
+   "format": "Проповідь",
+   "date": "2020-12-17",
+   "sec": 1602,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "L45jrXRq4WM",
+   "title": "Джерело радості",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-12-15",
+   "sec": 2277,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "4gpcWYEVp0c",
+   "title": "Гіркий досвід, що спонукає до виконання заповідей",
+   "speaker": "Андрій Бевз",
+   "format": "Проповідь",
+   "date": "2020-12-15",
+   "sec": 936,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "NI9u83drGoc",
+   "title": "Підтримка рук, що борються",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2020-12-11",
+   "sec": 1305,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "DMI2IiH_OkQ",
+   "title": "Значення миру",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-12-10",
+   "sec": 1018,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "PVSIQW2-AiU",
+   "title": "Хвилюєшся? А сенс?",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2020-12-09",
+   "sec": 1350,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Sbd290Z__ms",
+   "title": "Духовна велич церкви",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-12-08",
+   "sec": 1681,
+   "dur": "m",
+   "topics": [
+    "church",
+    "identity"
+   ]
+  },
+  {
+   "id": "6yOBbe3whdU",
+   "title": "А ти озброєний проти лукавого?",
+   "speaker": "Віктор Маселко",
+   "format": "Проповідь",
+   "date": "2020-12-07",
+   "sec": 1832,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "KGy9O2coqhs",
+   "title": "Любов до Господа",
+   "speaker": "Віктор Маселко",
+   "format": "Проповідь",
+   "date": "2020-12-05",
+   "sec": 1163,
+   "dur": "s",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "sNYsURWmDqE",
+   "title": "Життя в надії",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-12-03",
+   "sec": 1626,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "eFBv60QzCMU",
+   "title": "Святе Письмо і духовність",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-12-02",
+   "sec": 1497,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "lR7qEtyMpow",
+   "title": "Запроси Христа у свій дім",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2020-12-01",
+   "sec": 1166,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "fYKsWzr3FLI",
+   "title": "Пізнання Бога: Його цінність, роль у спасінні",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2020-11-30",
+   "sec": 1932,
+   "dur": "l",
+   "topics": [
+    "identity",
+    "salvation"
+   ]
+  },
+  {
+   "id": "tJaRgEXpai4",
+   "title": "Принципи непохитного царства",
+   "speaker": "Андрій Долганов",
+   "format": "Проповідь",
+   "date": "2020-11-28",
+   "sec": 2135,
+   "dur": "l",
+   "topics": [
+    "kingdom"
+   ]
+  },
+  {
+   "id": "IwHd-fxhCdM",
+   "title": "Церква — місце турботи",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-11-28",
+   "sec": 1215,
+   "dur": "m",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "1FrVwwq-t90",
+   "title": "Людина П'ятидесятниці",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-11-28",
+   "sec": 1693,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Ixl9RwjjxRI",
+   "title": "Хороші друзі - погані поради",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-11-26",
+   "sec": 1457,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "F73AKn1prIs",
+   "title": "Переваги від знання, служіння, поклоніння",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-11-25",
+   "sec": 1786,
+   "dur": "m",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "2jRZ5d02-PU",
+   "title": "Духовний плід",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-11-24",
+   "sec": 1193,
+   "dur": "s",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "BRuMe1w_Igw",
+   "title": "Досвід віри від слухання Слова Божого",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-11-22",
+   "sec": 1593,
+   "dur": "m",
+   "topics": [
+    "faith",
+    "word"
+   ]
+  },
+  {
+   "id": "RTambR1_oWE",
+   "title": "Смирення",
+   "speaker": "Олексій Вольвачев",
+   "format": "Проповідь",
+   "date": "2020-11-21",
+   "sec": 1418,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Vz_6_K_pWBk",
+   "title": "Три принципи, щоб не йти навпомацки",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-11-19",
+   "sec": 1606,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "xC9kPWR21Oo",
+   "title": "Як залишитись нормальною людиною",
+   "speaker": "В'ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2020-11-15",
+   "sec": 2038,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "eitSrQi4x4o",
+   "title": "Взаємовідносини в християнському житті",
+   "speaker": "Сергій Костров",
+   "format": "Проповідь",
+   "date": "2020-11-13",
+   "sec": 1612,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "tZbAqPTjXYA",
+   "title": "Дзеркало для душі",
+   "speaker": "Євгеній Русан",
+   "format": "Проповідь",
+   "date": "2020-11-13",
+   "sec": 900,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Ko8SY4PW-Ds",
+   "title": "Смирення — шлях до благословіння",
+   "speaker": "Павло Бровченко",
+   "format": "Проповідь",
+   "date": "2020-11-12",
+   "sec": 1145,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "eMdq785i3HE",
+   "title": "Перешкоди на шляху вперед",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-11-12",
+   "sec": 1273,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "DtImv9pAgfA",
+   "title": "Роль покаяння в отриманні спасіння",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-11-04",
+   "sec": 1582,
+   "dur": "m",
+   "topics": [
+    "salvation"
+   ]
+  },
+  {
+   "id": "FNAapNekjYQ",
+   "title": "Мир - наслідок погляду крізь віру",
+   "speaker": "Андрій Бевз",
+   "format": "Проповідь",
+   "date": "2020-11-02",
+   "sec": 1599,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "NpgWV8pZYn0",
+   "title": "Зростання під час кризи",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-10-29",
+   "sec": 1181,
+   "dur": "s",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "rKmj3DQXWGc",
+   "title": "Принципи життя з Богом",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-10-25",
+   "sec": 2172,
+   "dur": "l",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "GyfDNAWVAmM",
+   "title": "Надія на Господа",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-10-22",
+   "sec": 555,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "0QSgK_QwLrw",
+   "title": "Страх Господній та пізнання Святого",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-10-21",
+   "sec": 1709,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "8L1QMnaVPSA",
+   "title": "Стосунки між нами — індикатор духовного життя",
+   "speaker": "Роман Чехов",
+   "format": "Проповідь",
+   "date": "2020-10-18",
+   "sec": 1748,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "gDimePD9R-0",
+   "title": "Божа любов",
+   "speaker": "Андрій Долганов",
+   "format": "Проповідь",
+   "date": "2020-10-15",
+   "sec": 1965,
+   "dur": "l",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "LPnDrOFK8iU",
+   "title": "Віра хананеянки",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-10-14",
+   "sec": 2019,
+   "dur": "l",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "Bqw7Ij74ElY",
+   "title": "Обирання скарбу",
+   "speaker": "Олексій Вольвачев",
+   "format": "Проповідь",
+   "date": "2020-10-11",
+   "sec": 1736,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "lUYugg7Cfuc",
+   "title": "Християнство щоденніх кроків",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2020-10-08",
+   "sec": 815,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "q3FAgCpc0U8",
+   "title": "Про перевагу первосвященства Ісуса Христа",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-10-07",
+   "sec": 1361,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "nSQy-kB5eDs",
+   "title": "Подяка в процесі",
+   "speaker": "Роман Шеремета",
+   "format": "Проповідь",
+   "date": "2020-10-01",
+   "sec": 1210,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "XIngRslUO3k",
+   "title": "Недооцінена сила вдячності",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-09-30",
+   "sec": 705,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "XWUTAIG4Y2I",
+   "title": "Цінність особистих відносин із Богом",
+   "speaker": "Володимир Хочай",
+   "format": "Проповідь",
+   "date": "2020-09-28",
+   "sec": 1998,
+   "dur": "l",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "j0VsVCtb9Sw",
+   "title": "Голос Божий",
+   "speaker": "Володимир Павлов",
+   "format": "Проповідь",
+   "date": "2020-09-24",
+   "sec": 1934,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "7drz3gg-eMQ",
+   "title": "Як Бог виправдовує людину",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-09-23",
+   "sec": 1433,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "71P4GRS2Jm4",
+   "title": "Дар Божий - надія",
+   "speaker": "Павло Козачок",
+   "format": "Проповідь",
+   "date": "2020-09-20",
+   "sec": 677,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "-ppN_5CumWU",
+   "title": "Шукач скарбів",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2020-09-17",
+   "sec": 1570,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "G6aQvLIZQEA",
+   "title": "Освячення через жертву Ісуса Христа",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-09-16",
+   "sec": 832,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "kJy3RYWXOBs",
+   "title": "Бути гідним покликання Бога",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-09-16",
+   "sec": 1412,
+   "dur": "m",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "KStATUmz5Qk",
+   "title": "Сильні у вірі",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-09-13",
+   "sec": 1619,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "mxRtTMtGVJI",
+   "title": "Дві дії віри у стосунках із Богом",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь",
+   "date": "2020-09-11",
+   "sec": 794,
+   "dur": "s",
+   "topics": [
+    "faith",
+    "identity"
+   ]
+  },
+  {
+   "id": "34oAPmoDwxs",
+   "title": "Християнин, тренуйся як спортсмен!",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-09-08",
+   "sec": 827,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "S3GPV6BiZs4",
+   "title": "Освіта чи просвітництво",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2020-09-06",
+   "sec": 1639,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "W9nt6cAZV3g",
+   "title": "Шлях цього світу та християнина",
+   "speaker": "Олексій Вольвачев",
+   "format": "Проповідь",
+   "date": "2020-09-05",
+   "sec": 1778,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "aJ8BgMJ2ON0",
+   "title": "Шість умов близьких стосунків із Богом",
+   "speaker": "Роман Чехов",
+   "format": "Проповідь",
+   "date": "2020-09-03",
+   "sec": 523,
+   "dur": "s",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "QwHiKQN5nkI",
+   "title": "Обітниці Бога та хижі птахи",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-09-01",
+   "sec": 1296,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "ZhVyoHKJAsU",
+   "title": "Що робить нації величними?",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-08-28",
+   "sec": 740,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "KvU-awM6Nu4",
+   "title": "Фокусування",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-08-26",
+   "sec": 1691,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "suuQvEvOlls",
+   "title": "Подолання перешкод у спілкуванні з Богом",
+   "speaker": "Роман Єгоров",
+   "format": "Проповідь",
+   "date": "2020-08-23",
+   "sec": 909,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "ogKlwDWHRSw",
+   "title": "Розігрівай себе для Бога",
+   "speaker": "В’ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2020-08-20",
+   "sec": 1559,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "ahKGpU9gq2I",
+   "title": "Дари та характер",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-08-18",
+   "sec": 1659,
+   "dur": "m",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "XF5JJUZVSek",
+   "title": "Твоє магнітне поле",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2020-08-16",
+   "sec": 2190,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "0w8SialK6EY",
+   "title": "Довіряй, слухай, дій",
+   "speaker": "Євгеній Русан",
+   "format": "Проповідь",
+   "date": "2020-08-15",
+   "sec": 1262,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "FWSgu05rbqE",
+   "title": "Хвалимось в утисках",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-08-13",
+   "sec": 1307,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "GU278OoNSEI",
+   "title": "Життя серед негативних емоцій",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-08-11",
+   "sec": 1772,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "PheoeunIZZs",
+   "title": "Що забирає нашу любов?",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2020-08-08",
+   "sec": 1578,
+   "dur": "m",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "C2yxI0lWh9Q",
+   "title": "Очікування",
+   "speaker": "Микола Балакін",
+   "format": "Проповідь",
+   "date": "2020-08-06",
+   "sec": 2264,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "iqE3RslRBzs",
+   "title": "Хто твій ближній",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-08-04",
+   "sec": 1717,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "qL4lumOilSE",
+   "title": "Куди провадить віра",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-08-02",
+   "sec": 1754,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "NTXBbW0ccWM",
+   "title": "Благоговіння",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2020-08-01",
+   "sec": 1614,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "REZbErJTGI0",
+   "title": "Божий план",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь",
+   "date": "2020-07-31",
+   "sec": 1795,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "2lX57xQlFc0",
+   "title": "У ревності не лінуймось",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь",
+   "date": "2020-07-29",
+   "sec": 3945,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "VkWErTWcjIg",
+   "title": "Почни свій шлях з покаяння",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-07-28",
+   "sec": 1318,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Sw2ryvLpW0Q",
+   "title": "Перепони на шляху християнина",
+   "speaker": "Андрій Долганов",
+   "format": "Проповідь",
+   "date": "2020-07-26",
+   "sec": 1909,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "mvziv8XTSDI",
+   "title": "Як Бог дивиться на нас",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2020-07-23",
+   "sec": 1528,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "-hW1w8RTmwc",
+   "title": "Міцний ланцюг",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-07-21",
+   "sec": 2021,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "RCl-HBd2BqI",
+   "title": "Покаяння, а не — розкаяння",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2020-07-19",
+   "sec": 1062,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "OYMLrClBP5I",
+   "title": "Постійність та вигорання",
+   "speaker": "Тарас Домбровський",
+   "format": "Проповідь",
+   "date": "2020-07-17",
+   "sec": 1266,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "gIoYOEz6puY",
+   "title": "Ходити у Христі",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-07-15",
+   "sec": 1202,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "PcHSX_YeXQc",
+   "title": "Праведна людина | Анатолій Козачок",
+   "speaker": "Проповідь",
+   "format": "PHL Youth",
+   "date": "2020-07-13",
+   "sec": 1988,
+   "dur": "l",
+   "topics": [
+    "holiness"
+   ]
+  },
+  {
+   "id": "mD85cDxXFYY",
+   "title": "Перекручена любов",
+   "speaker": "Андрій Сорогін",
+   "format": "Проповідь",
+   "date": "2020-07-08",
+   "sec": 2023,
+   "dur": "l",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "IFVilvEEgaY",
+   "title": "Шляхи подолання стресу",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-07-05",
+   "sec": 2045,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "toO8oJaltZQ",
+   "title": "Принципи благословенного життя",
+   "speaker": "В'ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2020-07-02",
+   "sec": 1861,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "cufPZY67Pvg",
+   "title": "Праця над собою",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-07-01",
+   "sec": 1441,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "p_ZdNF9Jeew",
+   "title": "Неможливо служити Богу без Бога",
+   "speaker": "Андрій Бевз",
+   "format": "Проповідь",
+   "date": "2020-06-28",
+   "sec": 2085,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "n-kk6vYNatY",
+   "title": "Оцінка духовності задає напрям розвитку",
+   "speaker": "Андрій Шашлов",
+   "format": "Проповідь",
+   "date": "2020-06-25",
+   "sec": 1650,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "O8Pt9rlO63I",
+   "title": "5 \"НЕ\" сімейного життя",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-06-23",
+   "sec": 1328,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "K-vwKpxKcLI",
+   "title": "Мир Божий",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2020-06-22",
+   "sec": 1618,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "HPOWHw1ieug",
+   "title": "Наш час та плани у присутності Господа",
+   "speaker": "Сергій Маренич",
+   "format": "Проповідь",
+   "date": "2020-06-20",
+   "sec": 2049,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "OBly5zm4h9A",
+   "title": "Глибоке коріння. Головне в житті - невидиме",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-06-18",
+   "sec": 1382,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "06YxNaCBaGo",
+   "title": "Як не проґавити головне",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2020-06-12",
+   "sec": 1424,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "JEMQZpdVVr8",
+   "title": "Хрещення Святим Духом",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-06-11",
+   "sec": 997,
+   "dur": "s",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "kMptXzK6NCE",
+   "title": "Беззаперечне керівництво",
+   "speaker": "Євген Русан",
+   "format": "Проповідь",
+   "date": "2020-06-10",
+   "sec": 649,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "FiB5B1rMo-Y",
+   "title": "Робота Духа Святого в нас",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-06-09",
+   "sec": 1335,
+   "dur": "m",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "-qruP9VWUpk",
+   "title": "FOMO або синдром втраченої можливості",
+   "speaker": "Євгеній Русан",
+   "format": "Проповідь",
+   "date": "2020-06-07",
+   "sec": 1421,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "TDdbSaX-fiw",
+   "title": "Слава Богу",
+   "speaker": "Володимир Павлов",
+   "format": "Проповідь",
+   "date": "2020-06-05",
+   "sec": 874,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "gEtWIjV-bmg",
+   "title": "Святий Бог та грішні люди",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2020-06-04",
+   "sec": 1722,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "vcKX2SEp8uo",
+   "title": "Христився у Христа Ісуса",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-06-02",
+   "sec": 1704,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "F-QeJvf70sY",
+   "title": "4 принципи духовної опіки або хто твій \"Онисим\"?",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-05-31",
+   "sec": 1721,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "Dneg1Xr9Ivc",
+   "title": "Стережіться, щоб вас ніхто не ввів в оману",
+   "speaker": "Юрій Кулакевич",
+   "format": "Проповідь",
+   "date": "2020-05-29",
+   "sec": 1154,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "XHGrV_IPNoc",
+   "title": "Людина, яка заспокоює серця",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-05-28",
+   "sec": 2606,
+   "dur": "xl",
+   "topics": [
+    "trials",
+    "identity"
+   ]
+  },
+  {
+   "id": "V7GjRooDups",
+   "title": "Водяна стіна",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-05-26",
+   "sec": 2036,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Ef8RzA8fZIA",
+   "title": "Духовний дощ",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-05-24",
+   "sec": 1001,
+   "dur": "s",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "askUWI8TY7Q",
+   "title": "Відповідальність в критичних ситуаціях",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-05-19",
+   "sec": 2293,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "2Z5Wg6BsrJ4",
+   "title": "Вибір",
+   "speaker": "Ігор Туровській",
+   "format": "Проповідь",
+   "date": "2020-05-17",
+   "sec": 584,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "UCb5EsiaP2E",
+   "title": "Єгипет та коронавирус",
+   "speaker": "Андрій Сорогін",
+   "format": "Проповідь",
+   "date": "2020-05-17",
+   "sec": 948,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "MeQec1q2yAo",
+   "title": "Ісус — Господь для кожного",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-05-15",
+   "sec": 563,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "-kQ547OYs6s",
+   "title": "Бог наблизиться до вас",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь",
+   "date": "2020-05-14",
+   "sec": 2269,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "eaanopzHEfQ",
+   "title": "Новий і живий шлях",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2020-05-12",
+   "sec": 1362,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "7MGBcFazvsA",
+   "title": "Звідкіля Я прийшов і куди Я йду",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-05-07",
+   "sec": 2261,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "K6hJwdwZM0s",
+   "title": "Мої думки – не ваші думки",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2020-05-05",
+   "sec": 2092,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "yoQMwSTUv9Y",
+   "title": "Нещире покаяння – гіркий корінь",
+   "speaker": "Володимир Хочай",
+   "format": "Проповідь",
+   "date": "2020-05-02",
+   "sec": 1168,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "2OW5KstrEfo",
+   "title": "Чи знає Бог твою адресу?",
+   "speaker": "Євгеній Русан",
+   "format": "Проповідь",
+   "date": "2020-05-01",
+   "sec": 683,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "BYNbrXfV4KE",
+   "title": "Сила, любов і здоровий розум",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-04-30",
+   "sec": 2249,
+   "dur": "l",
+   "topics": [
+    "love"
+   ]
+  },
+  {
+   "id": "YFFS78rSFns",
+   "title": "Море хвилюється раз...",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2020-04-28",
+   "sec": 1610,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "CE-NhFP9joA",
+   "title": "Дія, а не бажання",
+   "speaker": "Олег Бевз",
+   "format": "Проповідь",
+   "date": "2020-04-25",
+   "sec": 848,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "4z6L6KqWxmY",
+   "title": "Справжня Пасха",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-04-24",
+   "sec": 413,
+   "dur": "s",
+   "topics": [
+    "feasts"
+   ]
+  },
+  {
+   "id": "F5Vwa9t9FNU",
+   "title": "Воскресіння — це надія християн, усього людства",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-04-23",
+   "sec": 662,
+   "dur": "s",
+   "topics": [
+    "feasts"
+   ]
+  },
+  {
+   "id": "imOzHUX4mqs",
+   "title": "Христос - наша Пасха!",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-04-21",
+   "sec": 2552,
+   "dur": "xl",
+   "topics": [
+    "feasts"
+   ]
+  },
+  {
+   "id": "4IDopSWw3qs",
+   "title": "Так бо Бог полюбив світ",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2020-04-20",
+   "sec": 1418,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "e9ctal-wo-k",
+   "title": "Прощальна мова",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-04-19",
+   "sec": 2417,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "1YuYX8GQ2L8",
+   "title": "Принципи благословенного життя",
+   "speaker": "В'ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2020-04-18",
+   "sec": 1516,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "004xkY3pkUY",
+   "title": "Уроки кризи",
+   "speaker": "Роман Єгоров",
+   "format": "Проповідь",
+   "date": "2020-04-18",
+   "sec": 1072,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "XBI_Ik3SF5k",
+   "title": "Наведи лад в своєму житті",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-04-09",
+   "sec": 1782,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "o9T9PyDgNJA",
+   "title": "Бог не пішов на карантин",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-04-06",
+   "sec": 2178,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "15vlNNFl4aI",
+   "title": "Християнин під час випробувань",
+   "speaker": "Роман Чехов",
+   "format": "Проповідь",
+   "date": "2020-04-04",
+   "sec": 1545,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "z_lVMvkTK9I",
+   "title": "Час наблизитись до Бога",
+   "speaker": "Андрій Сорогін",
+   "format": "Проповідь",
+   "date": "2020-04-02",
+   "sec": 1112,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "VxPsi4B2e40",
+   "title": "Три питання миру",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-03-30",
+   "sec": 2280,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "ep5OWZ-Fqik",
+   "title": "Диво в пустелі",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-03-25",
+   "sec": 2298,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "QXW6ccAUCjc",
+   "title": "Вплив благовістя",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2020-03-22",
+   "sec": 1346,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "uP3gnCY3iiI",
+   "title": "Від утисків до надії",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-03-19",
+   "sec": 1802,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "7wGu3WODX8M",
+   "title": "Три перемоги або як зберегти мир в серці",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-03-17",
+   "sec": 2207,
+   "dur": "l",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "uM0H_JgmNMQ",
+   "title": "Християнське поводження",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-03-12",
+   "sec": 1801,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "IONxi_zT6LQ",
+   "title": "Пустіть дітей до Ісуса (звіт благодіної акції \"Подарунок неба\")",
+   "speaker": "Мирослав Гловацький",
+   "format": "Проповідь",
+   "date": "2020-03-09",
+   "sec": 1471,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "_ln-z_Qqyho",
+   "title": "Ціна твого відкуплення",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2020-03-05",
+   "sec": 1109,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "viTb4ivgYk0",
+   "title": "4 тяжкі ситуації Христа",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-03-02",
+   "sec": 2045,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "riQGv-9abKg",
+   "title": "Логіка духовної сили",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2020-02-27",
+   "sec": 1623,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "o3ndCPYdBQ4",
+   "title": "Йти слідами Ісуса",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь",
+   "date": "2020-02-24",
+   "sec": 2721,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "lO2Z_uARISI",
+   "title": "Чому мовчить твоя канарка",
+   "speaker": "Валентин Ярошенко",
+   "format": "Проповідь",
+   "date": "2020-02-20",
+   "sec": 2749,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "RlAS2nFvJ4g",
+   "title": "Для чого потрібна молитва?",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-02-17",
+   "sec": 986,
+   "dur": "s",
+   "topics": [
+    "prayer"
+   ]
+  },
+  {
+   "id": "MEbX_sUBiVk",
+   "title": "Перевага нашого синівства",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-02-13",
+   "sec": 2208,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "7GbW850URrg",
+   "title": "Дисциплінування в церкві",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-02-10",
+   "sec": 1615,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "hoAbadlOy7Y",
+   "title": "Страх Господній",
+   "speaker": "Юрій Веремій",
+   "format": "Проповідь",
+   "date": "2020-02-06",
+   "sec": 2501,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "GB7PJIyGVRY",
+   "title": "Не обманюйтеся!",
+   "speaker": "Роман Филипів",
+   "format": "Проповідь",
+   "date": "2020-02-03",
+   "sec": 1461,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "tX9WbV2HoCs",
+   "title": "Переможне життя християнина",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-01-30",
+   "sec": 1767,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "FpeeCqpA624",
+   "title": "Фінанси співають романси",
+   "speaker": "В'ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2020-01-27",
+   "sec": 2027,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "5yn1_YhpKhc",
+   "title": "В Божих руках",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-01-23",
+   "sec": 2071,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "-AChVmzbN98",
+   "title": "Духовні вправи",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2020-01-22",
+   "sec": 1868,
+   "dur": "l",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "hIpgK2JVyms",
+   "title": "Три небезпечні кроки",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2020-01-16",
+   "sec": 1527,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "INjg0ddL1Bg",
+   "title": "Шлях до істинної віри",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2020-01-13",
+   "sec": 1241,
+   "dur": "m",
+   "topics": [
+    "faith",
+    "word"
+   ]
+  },
+  {
+   "id": "8h7cHtuxNI4",
+   "title": "Що є вірою?",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-01-09",
+   "sec": 2237,
+   "dur": "l",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "xV5OFXZpKg4",
+   "title": "Кров Нового Заповіту",
+   "speaker": "Андрій Сорогін",
+   "format": "Проповідь",
+   "date": "2020-01-06",
+   "sec": 563,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "M_IH_1Y5zJI",
+   "title": "Спасти самарянку",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2020-01-02",
+   "sec": 2071,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "GV3wBEcC4Ms",
+   "title": "Блаженні чисті серцем",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2019-12-30",
+   "sec": 1504,
+   "dur": "m",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "y2rWjUEQSuM",
+   "title": "Пустий сніп не б'ють",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2019-12-27",
+   "sec": 1994,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Tz2SnxH-a3A",
+   "title": "Все буде краще!",
+   "speaker": "Анатолій Безкровний",
+   "format": "Проповідь",
+   "date": "2019-12-26",
+   "sec": 2149,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "BZI5dRGTBN8",
+   "title": "Три відкриття для 2020",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2019-12-23",
+   "sec": 1892,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "yDv6rcDE72Q",
+   "title": "В чому ваша радість?",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2019-12-19",
+   "sec": 676,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "AFnBbPYXPGY",
+   "title": "Твоя посвята Богові",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2019-12-12",
+   "sec": 1598,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "SNlvCwETDcc",
+   "title": "Що ти бачиш?",
+   "speaker": "Ігор Туровський",
+   "format": "Проповідь",
+   "date": "2019-12-10",
+   "sec": 1524,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "L0vXPnxni9Y",
+   "title": "Правила, за якими нам варто жити",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь",
+   "date": "2019-12-03",
+   "sec": 2593,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "eYGrSkkFCJA",
+   "title": "Господь, прости!",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2019-12-01",
+   "sec": 463,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "4d0O4SxdOqM",
+   "title": "Скарби людини",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2019-11-24",
+   "sec": 1889,
+   "dur": "l",
+   "topics": [
+    "identity"
+   ]
+  },
+  {
+   "id": "VcVlLXGWlok",
+   "title": "Я - християнин?",
+   "speaker": "В'ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2019-11-24",
+   "sec": 1772,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "kBx2qKjZ-yE",
+   "title": "Досягай нових вершин",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2019-11-17",
+   "sec": 1723,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "ovqVQYFtLlA",
+   "title": "Виростіть дерево",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2019-11-10",
+   "sec": 1937,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "F5HRGY797Os",
+   "title": "Учнівство",
+   "speaker": "Олександр Хропач",
+   "format": "Проповідь",
+   "date": "2019-11-10",
+   "sec": 981,
+   "dur": "s",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "T_Tg0pyzdLQ",
+   "title": "Потужна формула",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2019-11-05",
+   "sec": 1601,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "cdhj0tG7r3Y",
+   "title": "Спокуси",
+   "speaker": "Володимир Рудницький",
+   "format": "Проповідь",
+   "date": "2019-11-05",
+   "sec": 1077,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "WWJx9vLGXdk",
+   "title": "Як до нас промовляє Господь",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2019-11-05",
+   "sec": 1633,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "2lnbJENewoM",
+   "title": "Як не пропустити те, що дає Бог?",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2019-11-02",
+   "sec": 1418,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "ccY43DT3ijI",
+   "title": "Перемога в Крові Агнця",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2019-11-02",
+   "sec": 1163,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "RHrOfCQo6TQ",
+   "title": "Покликання",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2019-10-24",
+   "sec": 1300,
+   "dur": "m",
+   "topics": [
+    "church"
+   ]
+  },
+  {
+   "id": "xBgTrwn26E4",
+   "title": "Водне хрещення",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2019-10-23",
+   "sec": 1233,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "afliPU8gB14",
+   "title": "Три речі",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2019-10-13",
+   "sec": 1144,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "NQ5CDxMW1HY",
+   "title": "Божественні сили",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2019-10-06",
+   "sec": 1687,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "7YTkfaa1K2A",
+   "title": "Син обітниці",
+   "speaker": "Анатолій Фещенко",
+   "format": "Проповідь",
+   "date": "2019-10-06",
+   "sec": 1197,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "-gOrE6dR7Gg",
+   "title": "Про церкву",
+   "speaker": "Олег Гончар",
+   "format": "Проповідь",
+   "date": "2019-09-29",
+   "sec": 1278,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "TjRmzx4DQDE",
+   "title": "Випробування манною",
+   "speaker": "Юрій Кавун",
+   "format": "Проповідь",
+   "date": "2019-09-29",
+   "sec": 1255,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "e4kTW4Z2dLY",
+   "title": "Євхаристія",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2019-09-22",
+   "sec": 1965,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "qpxgxhcwB3g",
+   "title": "Уроки подяки в системі жертвоприношення",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2019-09-22",
+   "sec": 499,
+   "dur": "s",
+   "topics": [
+    "word"
+   ]
+  },
+  {
+   "id": "ksM_IylqUxU",
+   "title": "Вибори",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь",
+   "date": "2019-09-20",
+   "sec": 2912,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "wFmSsFyPcDU",
+   "title": "Щастя",
+   "speaker": "Валерій Вернер",
+   "format": "Проповідь",
+   "date": "2019-09-08",
+   "sec": 1994,
+   "dur": "l",
+   "topics": [
+    "trials"
+   ]
+  },
+  {
+   "id": "jSXKOI0-wqk",
+   "title": "Терпение",
+   "speaker": "Андрей Сорогин",
+   "format": "Проповедь",
+   "date": "2019-09-08",
+   "sec": 1033,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "kCT7RPKR1rM",
+   "title": "Борги християнина",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2019-09-01",
+   "sec": 1252,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "dL8XsWGVntw",
+   "title": "Я втрачаю віру!",
+   "speaker": "В'ячеслав Бевз",
+   "format": "Проповідь",
+   "date": "2019-09-01",
+   "sec": 1458,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "0OFNECx0uu8",
+   "title": "Думки людини",
+   "speaker": "Анатолій Козачок",
+   "format": "Проповідь",
+   "date": "2019-08-26",
+   "sec": 1599,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "76LI9FVnr7M",
+   "title": "Спасти ще одного",
+   "speaker": "Проповідь",
+   "format": "Проповідь",
+   "date": "2019-08-18",
+   "sec": 1779,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "kzkr955Mr7w",
+   "title": "А де ж ягня?",
+   "speaker": "Проповідь",
+   "format": "Проповідь",
+   "date": "2019-08-18",
+   "sec": 1358,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "pwxq6yU9P8Q",
+   "title": "Що приводить нас до миру з Богом",
+   "speaker": "Проповідь",
+   "format": "Проповідь",
+   "date": "2019-08-11",
+   "sec": 2212,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "mbf0_m9vna0",
+   "title": "Родове благословіння",
+   "speaker": "Проповідь",
+   "format": "Проповідь",
+   "date": "2019-08-11",
+   "sec": 1317,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "rHRKpDB6pOQ",
+   "title": "Дві проблеми",
+   "speaker": "Проповідь",
+   "format": "Проповідь",
+   "date": "2019-08-04",
+   "sec": 1753,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "rnq6-ee_MDs",
+   "title": "Перший камінь",
+   "speaker": "Проповідь",
+   "format": "Проповідь",
+   "date": "2019-08-04",
+   "sec": 915,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "vnNeNITGVGk",
+   "title": "Валерій Вернер † Поспішай отримати обітницю",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-07-28",
+   "sec": 1282,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "vbbRXPdxB6c",
+   "title": "Павло Федорук † Пісні Давида",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-07-18",
+   "sec": 2161,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "uEfQ3FZHNFc",
+   "title": "Віктор Максимишин † Близькість із Святим Духом",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-07-07",
+   "sec": 1467,
+   "dur": "m",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "eIZ-snTf56E",
+   "title": "Магнус Лундін † Віра з гірчичне зерно",
+   "speaker": "Проповідь",
+   "format": "Проповідь",
+   "date": "2019-07-06",
+   "sec": 1099,
+   "dur": "s",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "WRbIWFHwOMI",
+   "title": "Анатолій Козачок – Братерство",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-06-29",
+   "sec": 1781,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "IR4-Z-68-QI",
+   "title": "Місія Святого Духа",
+   "speaker": "Проповідь",
+   "format": "Проповідь",
+   "date": "2019-06-17",
+   "sec": 1372,
+   "dur": "m",
+   "topics": [
+    "spirit"
+   ]
+  },
+  {
+   "id": "iRc2kZbDAcI",
+   "title": "Майте віру Божу",
+   "speaker": "Проповідь",
+   "format": "Проповідь",
+   "date": "2019-06-16",
+   "sec": 1320,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "ZFUev6ZZmtU",
+   "title": "Гнів",
+   "speaker": "Проповідь",
+   "format": "Проповідь",
+   "date": "2019-06-09",
+   "sec": 1686,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "z2riSiyY0ws",
+   "title": "Горе мне...",
+   "speaker": "Проповедь",
+   "format": "Проповідь",
+   "date": "2019-06-03",
+   "sec": 1574,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "x2KOLSAwPqc",
+   "title": "Юрій Кавун – Що принесла жертва Христа в наше життя?",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-06-02",
+   "sec": 1353,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "7Q9PlDD-6U4",
+   "title": "Игорь Капустин † О Кресте",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-05-26",
+   "sec": 1749,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "lqb5dSYi5N0",
+   "title": "Анатолій Козачок † Піду ловити рибу",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-05-19",
+   "sec": 2131,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "ZtcDbAYlZGQ",
+   "title": "Ярослав Малько † Первый капеллан",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-05-19",
+   "sec": 918,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "1ZZN_8pC8l4",
+   "title": "Анатолій Козачок † Одяг християнина",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-05-12",
+   "sec": 876,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "VdOdP8vo9Jk",
+   "title": "Олег Гончар † До хліболамання",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-05-12",
+   "sec": 857,
+   "dur": "s",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "Efh2j-_H_ig",
+   "title": "Олег Гончар † Динамічна віра",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-05-05",
+   "sec": 1346,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "Jr7GQcsueJY",
+   "title": "Олексій Федченко † Благовістя",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-05-05",
+   "sec": 1470,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "qeO7xqajOHA",
+   "title": "Анатолій Козачок † Нема Його тут, бо воскрес!",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-04-28",
+   "sec": 1879,
+   "dur": "l",
+   "topics": [
+    "feasts"
+   ]
+  },
+  {
+   "id": "QywCakohjb8",
+   "title": "Юрій Кавун † Особливості причастя",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-04-26",
+   "sec": 1423,
+   "dur": "m",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "hHsaOV1ABts",
+   "title": "Олег Гончар † Вірні друзі \"Щасливого завтра\"",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-04-23",
+   "sec": 1666,
+   "dur": "m",
+   "topics": [
+    "faith"
+   ]
+  },
+  {
+   "id": "JSpN5niCxh4",
+   "title": "Ли Янг Гу † Бог управляет",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-04-23",
+   "sec": 2315,
+   "dur": "l",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "3tZ3G-f7Ut0",
+   "title": "Сергій Вознюк † Рукопокладення пасторів",
+   "speaker": "Невідомий спікер",
+   "format": "Проповідь",
+   "date": "2019-04-23",
+   "sec": 2844,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  },
+  {
+   "id": "ZTaBB-_O71Y",
+   "title": "Рідкісна тема",
+   "speaker": "Михайло Паночко",
+   "format": "Проповідь",
+   "date": "2017-03-27",
+   "sec": 2974,
+   "dur": "xl",
+   "topics": [
+    "other"
+   ]
+  }
+ ]
+}

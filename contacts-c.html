@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Контакти</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<script src="components/site.js"></script>
+<script src="components/map.js"></script>
+<link rel="stylesheet" href="contacts/base.css">
+<style>
+.pg{display:grid;justify-items:center;gap:90px;padding-block:150px 90px;
+  padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+.pg>*{min-width:0;box-sizing:border-box}
+.pg>.row-w,.pg>.fv-map{width:var(--row);max-width:100%}
+@media (max-width:720px){.pg{gap:56px;padding-block:120px 56px}}
+/* ВАРІАНТ C · «Розклад» — спочатку великі плитки з часом зібрань, далі контакти й форма двома колонками, карта внизу */
+.sched{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.when{display:grid;align-content:space-between;gap:56px;min-height:300px;padding:clamp(24px,3vw,44px);border-radius:24px;background:var(--ink);color:var(--ds-cream)}
+.when:nth-child(2){background:var(--teal)}
+.when .kick{color:rgba(247,242,232,.7)}
+.when b{display:block;font-weight:500;font-size:clamp(72px,11vw,170px);line-height:.86;letter-spacing:-.065em;margin-left:-.04em}
+.when span{font-weight:600;font-size:clamp(18px,1.8vw,26px);letter-spacing:-.03em;color:rgba(247,242,232,.8)}
+.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.list{display:grid;gap:0;padding:6px 0}
+.list>div{display:grid;gap:8px;padding:26px 4px;border-top:1px solid var(--line)}
+.list>div:last-child{border-bottom:1px solid var(--line)}
+.list h2{margin:0;font-weight:600;font-size:14px;letter-spacing:-.02em;color:var(--mute)}
+.list .v{margin:0;font-weight:500;font-size:clamp(26px,3vw,46px);line-height:1.1;letter-spacing:-.045em;overflow-wrap:anywhere}
+.list .v small{display:block;margin-top:8px;font-weight:600;font-size:16px;letter-spacing:-.01em;color:var(--mute)}
+.formcard{display:grid;gap:22px;padding:clamp(24px,3vw,44px);border-radius:24px;background:var(--card)}
+.formcard h2{margin:0;font-weight:500;font-size:clamp(28px,3vw,44px);line-height:1.1;letter-spacing:-.045em}
+@media (max-width:1000px){.split{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:720px){.sched{grid-template-columns:minmax(0,1fr);gap:8px}.when{min-height:0;gap:36px;border-radius:16px}.formcard{border-radius:16px;padding:28px 20px}}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+<main class="pg" id="app"></main>
+<site-footer></site-footer>
+<script src="contacts/base.js"></script>
+<script>
+(()=>{
+const {esc,S,days,MAIL,addr,formHTML}=CT;
+document.getElementById("app").innerHTML=`
+  <section class="intro" aria-labelledby="h">
+    <p class="kick rv">Контакти</p>
+    <h1 id="h" class="rv" style="--d:1">Зв’яжіться з нами</h1>
+    <p class="lead rv" style="--d:2">Напишіть нам, залиште заявку або приходьте на недільне служіння — ми раді кожному.</p>
+    <a class="go rv" style="--d:3" href="#map" data-goto="#map">Як добратись?</a>
+  </section>
+  <section class="sched row-w" aria-label="Час основних зібрань">${days.map((d,i)=>`
+    <div class="when rv" style="--d:${i}" data-dark><p class="kick">Час основних зібрань</p><div><b>${esc(d.time)}</b><span>${esc(d.day)}</span></div></div>`).join("")}
+  </section>
+  <section class="split row-w" aria-label="Контакти та форма">
+    <div class="list">
+      <div class="rv"><h2>Пошта</h2><p class="v"><a class="big-link" href="mailto:${esc(MAIL)}" data-no-u>${esc(MAIL)}</a></p></div>
+      <div class="rv" style="--d:1"><h2>Адреса</h2><p class="v">${esc(addr)}<small>Поряд зі станцією метро «Голосіївська»</small></p></div>
+    </div>
+    <div class="formcard rv" style="--d:1"><h2>Залишити заявку</h2>${formHTML()}</div>
+  </section>
+  <church-map></church-map>`;
+CT.init();
+})();
+</script>
+</body>
+</html>

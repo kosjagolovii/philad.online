@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Всі служіння · B</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<script src="components/site.js"></script>
+<style>
+/* Варіант B — «Покажчик»: усі служіння як зміст книги; фото спливає біля курсора */
+:root{
+  --ds-cream:#F7F2E8; --ink:#141414; --mute:#85837E; --teal:#317C8E; --sand:#E6E1D4; --line:rgba(20,20,20,.12);
+  --sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --side:12px; color-scheme:light;
+}
+html,body{margin:0;padding:0;background:var(--ds-cream);color:var(--ink)}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+
+.ix{display:grid;gap:120px;padding-block:150px 110px;
+  padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+
+/* intro: a giant count beside the title */
+.ix-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end}
+.ix-num{margin:0;font-weight:500;font-size:clamp(140px,19vw,300px);line-height:.8;letter-spacing:-.07em;color:var(--teal)}
+.ix-intro-tx{display:grid;gap:22px;padding-bottom:10px}
+.ix-kicker{margin:0;font-weight:600;font-size:14px;letter-spacing:-.04em;text-transform:uppercase;color:var(--teal)}
+.ix-intro h1{margin:0;font-weight:500;font-size:clamp(40px,4.4vw,64px);line-height:1.08;letter-spacing:-.045em;text-wrap:balance}
+.ix-lead{margin:0;max-width:460px;font-weight:600;font-size:18px;line-height:1.35;letter-spacing:-.04em;color:var(--mute);text-wrap:pretty}
+.ix-jump{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.ix-jump a{height:36px;padding:0 12px;border-radius:10px;display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:rgba(20,20,20,.7);
+  background:rgba(20,20,20,.055);font-weight:600;font-size:13px;letter-spacing:-.03em;transition:background .25s,color .25s}
+.ix-jump a:hover{background:var(--ink);color:var(--ds-cream)}
+.ix-jump small{opacity:.5;font-size:11px}
+
+/* the index */
+.ix-list{display:grid;gap:72px}
+.ix-cat{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,4fr);column-gap:10px;scroll-margin-top:24px}
+.ix-cat-h{position:sticky;top:96px;align-self:start;display:grid;gap:8px;padding-top:22px}
+.ix-cat-h h2{margin:0;font-weight:500;font-size:clamp(24px,2.2vw,32px);line-height:1.15;letter-spacing:-.035em}
+.ix-cat-h span{font-weight:600;font-size:13px;letter-spacing:-.02em;color:rgba(20,20,20,.45)}
+.ix-rows{margin:0;padding:0;list-style:none;border-bottom:1px solid var(--line)}
+.ix-row{display:grid;grid-template-columns:56px minmax(0,1fr) auto;align-items:center;column-gap:16px;width:100%;padding:22px 4px;border:0;border-top:1px solid var(--line);
+  background:none;text-align:left;cursor:pointer;color:inherit;transition:opacity .35s ease}
+.ix-row i{font-style:normal;font-weight:600;font-size:13px;letter-spacing:-.02em;color:rgba(20,20,20,.4);font-variant-numeric:tabular-nums}
+.ix-row b{display:block;font-weight:500;font-size:clamp(24px,2.5vw,38px);line-height:1.1;letter-spacing:-.04em;transition:translate .5s cubic-bezier(.2,.7,.2,1),color .3s}
+.ix-row em{display:block;margin-top:6px;font-style:normal;font-weight:600;font-size:13px;letter-spacing:-.02em;color:rgba(20,20,20,.5)}
+.ix-row .go{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(20,20,20,.06);transition:background .3s,scale .35s cubic-bezier(.2,.7,.2,1)}
+.ix-row .go img{width:13px;height:12px}
+.ix-row .th{display:none}
+.ix-rows.hot .ix-row:not(.on){opacity:.28}
+.ix-row.on b{translate:14px 0;color:var(--teal)}
+.ix-row.on .go{background:var(--ds-cream);scale:1.1;box-shadow:0 0 0 1px var(--line)}
+.ix-row:focus-visible{outline:2px solid var(--ink);outline-offset:-2px;border-radius:8px}
+
+/* the floating photo that follows the pointer */
+.ix-float{position:fixed;left:0;top:0;z-index:6;width:300px;aspect-ratio:1;border-radius:22px;overflow:hidden;pointer-events:none;background:var(--sand);
+  opacity:0;scale:.6;transition:opacity .3s ease,scale .45s cubic-bezier(.3,1.4,.5,1);box-shadow:0 30px 60px -30px rgba(20,20,20,.45);will-change:transform}
+.ix-float.on{opacity:1;scale:1}
+.ix-float img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .35s ease}
+.ix-float img.out{opacity:0}
+.ix-float.noph{display:grid;place-items:center}
+.ix-float.noph img{position:static;width:64px;height:64px;opacity:.25;filter:grayscale(1) brightness(.2)}
+
+/* CTA strip */
+.ix-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:40px;border-radius:24px;background:var(--teal);color:var(--ds-cream);text-decoration:none}
+.ix-cta b{font-weight:500;font-size:clamp(28px,3vw,44px);line-height:1.1;letter-spacing:-.04em;text-wrap:balance}
+.ix-cta span{flex:none;width:64px;height:64px;border-radius:50%;background:var(--ds-cream);display:grid;place-items:center;transition:scale .35s cubic-bezier(.2,.7,.2,1)}
+.ix-cta:hover span{scale:1.12}
+.ix-cta:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* dialog (same as variant A) */
+.mdlg{width:min(860px,calc(100vw - 32px));max-height:calc(100svh - 32px);padding:0;border:0;border-radius:24px;background:var(--ds-cream);color:var(--ink);overflow:auto;box-shadow:0 40px 80px -30px rgba(0,0,0,.45)}
+.mdlg::backdrop{background:rgba(20,20,20,.55);backdrop-filter:blur(4px)}
+.mdlg[open]{animation:dlgIn .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes dlgIn{from{opacity:0;translate:0 24px}}
+.mdlg-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.mdlg-ph{margin:0;aspect-ratio:1;background:var(--sand)}
+.mdlg-ph img{width:100%;height:100%;object-fit:cover}
+.mdlg-ph.noph{display:grid;place-items:center}.mdlg-ph.noph img{width:64px;height:64px;opacity:.25;filter:grayscale(1) brightness(.2)}
+.mdlg-tx{display:grid;align-content:start;gap:16px;padding:44px 36px 36px}
+.mdlg-tx .k{margin:0;font-weight:600;font-size:13px;letter-spacing:-.02em;text-transform:uppercase;color:var(--teal)}
+.mdlg-tx h2{margin:0;font-weight:600;font-size:clamp(28px,3vw,38px);line-height:1.1;letter-spacing:-.04em;text-wrap:balance}
+.mdlg-tx p{margin:0;font-weight:500;font-size:17px;line-height:1.55;color:rgba(20,20,20,.7);text-wrap:pretty}
+.mdlg-lead{display:grid;gap:2px;padding:14px 16px;border-radius:14px;background:rgba(20,20,20,.05)}
+.mdlg-lead small{font-weight:600;font-size:12px;color:rgba(20,20,20,.5)}.mdlg-lead b{font-weight:600;font-size:16px;letter-spacing:-.02em}
+.mdlg-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.mbtn{height:48px;padding:0 22px;border-radius:12px;display:inline-flex;align-items:center;font-weight:600;font-size:15px;letter-spacing:-.03em;text-decoration:none;border:0;cursor:pointer;background:var(--teal);color:var(--ds-cream)}
+.mbtn:hover{background:#28697A}.mbtn.ghost{background:rgba(20,20,20,.07);color:var(--ink)}
+.mdlg-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(247,242,232,.92);cursor:pointer;font-size:20px}
+
+.rv{opacity:0;transform:translate3d(0,40px,0);transition:opacity .8s ease,transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0)*60ms)}
+.rv.in{opacity:1;transform:none}
+.end{position:relative;z-index:3}.nx-hold{position:relative;z-index:1}
+
+@media (hover:none),(max-width:900px){
+  .ix-float{display:none}
+  .ix-rows.hot .ix-row:not(.on){opacity:1}
+  .ix-row{grid-template-columns:64px minmax(0,1fr) auto}
+  .ix-row i{display:none}
+  .ix-row .th{display:block;width:64px;height:64px;border-radius:14px;object-fit:cover;background:var(--sand)}
+  .ix-row .th.noph{object-fit:contain;padding:18px;box-sizing:border-box;opacity:.35;filter:grayscale(1) brightness(.2)}
+}
+@media (max-width:900px){
+  .ix-intro{grid-template-columns:minmax(0,1fr)}
+  .ix-cat{grid-template-columns:minmax(0,1fr);row-gap:8px}
+  .ix-cat-h{position:static;padding-top:0}
+}
+@media (max-width:720px){
+  :root{--side:16px}
+  .ix{gap:72px;padding-block:120px 64px}
+  .ix-row{padding:16px 0;column-gap:12px}
+  .ix-row b{font-size:21px}
+  .ix-row .go{width:34px;height:34px}
+  .ix-cta{padding:24px;border-radius:20px}.ix-cta span{width:48px;height:48px}
+  .mdlg{width:100vw;max-width:100vw;max-height:92svh;margin:auto 0 0;border-radius:22px 22px 0 0}
+  .mdlg-in{grid-template-columns:minmax(0,1fr)}.mdlg-ph{aspect-ratio:16/10}.mdlg-tx{padding:24px 20px calc(24px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){.rv,.ix-row,.ix-row b,.ix-float,.ix-float img{transition:none!important}.rv{opacity:1;transform:none}.mdlg[open]{animation:none}}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+
+<main class="ix">
+  <header class="ix-intro">
+    <p class="ix-num rv" id="ixNum" aria-hidden="true">34</p>
+    <div class="ix-intro-tx">
+      <p class="ix-kicker rv">Служіння</p>
+      <h1 class="rv" style="--d:1">Служіння нашої церкви</h1>
+      <p class="ix-lead rv" style="--d:2">Тут кожен може знайти своє місце: від хору й медіа до допомоги людям, які втратили дім.</p>
+      <nav class="ix-jump rv" style="--d:3" id="ixJump" aria-label="Напрямки"></nav>
+    </div>
+  </header>
+
+  <div class="ix-list" id="ixList"></div>
+
+  <a class="ix-cta rv" href="#footer" id="ixCta"><b>Не знайшли своє служіння? Напишіть нам — допоможемо знайти місце.</b><span aria-hidden="true"><img src="b6/arrow.svg" alt="" width="13" height="12"></span></a>
+</main>
+
+<div class="end">
+  <div class="nx-hold" data-dark><site-next></site-next></div>
+  <site-footer></site-footer>
+</div>
+
+<div class="ix-float" id="ixFloat" aria-hidden="true"><img alt=""><img alt="" class="out"></div>
+
+<dialog class="mdlg" id="mdlg" aria-labelledby="mdlgName">
+  <div class="mdlg-in">
+    <figure class="mdlg-ph"><img id="mdlgImg" alt="" width="800" height="800"></figure>
+    <div class="mdlg-tx">
+      <p class="k" id="mdlgCat"></p><h2 id="mdlgName"></h2><p id="mdlgText"></p>
+      <div class="mdlg-lead" id="mdlgLead" hidden><small>Лідер служіння</small><b id="mdlgLeadN"></b></div>
+      <div class="mdlg-acts"><a class="mbtn" id="mdlgJoin" href="#footer">Хочу долучитися</a><a class="mbtn ghost" id="mdlgMore" href="#" hidden>Детальніше</a></div>
+    </div>
+  </div>
+  <button class="mdlg-x" id="mdlgX" type="button" aria-label="Закрити">×</button>
+</dialog>
+
+<script src="min/data.js"></script>
+<script>
+(()=>{
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $=id=>document.getElementById(id);
+const CATS=window.PHILAD_MIN_CATS,ALL=window.PHILAD_MIN,catLabel=Object.fromEntries(CATS.map(c=>[c.id,c.label])),byId=Object.fromEntries(ALL.map(m=>[m.id,m]));
+const footer=$("footer");if(footer)footer.setAttribute("data-dark","");
+const LOGO="b6/badge-logo.svg",pic=m=>m.nophoto?LOGO:(m.img||"min/"+m.id+".webp");
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+$("ixNum").textContent=ALL.length;
+
+/* ---------- build the index ---------- */
+let n=0;const rows=[];
+CATS.forEach(c=>{
+  const list=ALL.filter(m=>m.cat===c.id);if(!list.length)return;
+  const sec=el("section","ix-cat");sec.id="c-"+c.id;sec.setAttribute("aria-labelledby","h-"+c.id);
+  const h=el("div","ix-cat-h rv");const h2=el("h2",null,c.label);h2.id="h-"+c.id;const k=list.length,few=k%10>=1&&k%10<=4&&(k%100<10||k%100>20);h.append(h2,el("span",null,k+(few?" служіння":" служінь")));sec.append(h);
+  const ul=el("ul","ix-rows");
+  list.forEach((m,i)=>{
+    n++;const li=el("li","rv");li.style.setProperty("--d",i);
+    const b=el("button","ix-row");b.type="button";b.dataset.id=m.id;
+    const th=new Image(64,64);th.className="th"+(m.nophoto?" noph":"");th.alt="";th.loading="lazy";th.src=pic(m);
+    const num=el("i",null,String(n).padStart(2,"0"));
+    const tx=el("span");tx.append(el("b",null,m.name));if(m.lead)tx.append(el("em",null,m.lead));
+    const go=el("span","go");go.setAttribute("aria-hidden","true");go.innerHTML='<img src="b6/arrow.svg" alt="" width="13" height="12">';
+    b.append(th,num,tx,go);li.append(b);ul.append(li);rows.push(b);
+  });
+  sec.append(ul);$("ixList").append(sec);
+  const a=el("a");a.href="#c-"+c.id;a.append(c.label," ");a.append(el("small",null,String(list.length)));$("ixJump").append(a);
+});
+// thumbs are only for touch / narrow screens: put them first in the row
+rows.forEach(b=>b.prepend(b.querySelector(".th")));
+$("ixJump").addEventListener("click",e=>{const a=e.target.closest("a");if(!a)return;e.preventDefault();document.querySelector(a.hash).scrollIntoView({behavior:reduce?"auto":"smooth"})});
+
+/* ---------- the photo that follows the pointer ---------- */
+const fl=$("ixFloat"),imgs=[...fl.querySelectorAll("img")];let front=0,hot=null,tx=0,ty=0,x=0,y=0,raf=0,off=0;
+const fine=matchMedia("(hover:hover) and (min-width:901px)");
+const tick=()=>{x+=(tx-x)*.16;y+=(ty-y)*.16;const tilt=Math.max(-8,Math.min(8,(tx-x)*.05));
+  // the photo hangs to the right of the pointer (to its left near the right edge), so it never covers the name being read
+  const w=fl.offsetWidth||300,dx=x+40+w>innerWidth-12?x-40-w:x+40;
+  fl.style.transform=`translate3d(${dx.toFixed(1)}px,${(y-w/2).toFixed(1)}px,0) rotate(${tilt.toFixed(2)}deg)`;
+  raf=Math.abs(tx-x)+Math.abs(ty-y)>.3?requestAnimationFrame(tick):0};
+const swap=m=>{const nx=imgs[1-front];nx.onload=null;
+  if(m.nophoto){fl.classList.add("noph")}else fl.classList.remove("noph");
+  nx.src=pic(m);nx.classList.remove("out");imgs[front].classList.add("out");front=1-front};
+const enter=b=>{clearTimeout(off);if(hot===b)return;if(hot)hot.classList.remove("on");hot=b;b.classList.add("on");b.closest(".ix-rows").classList.add("hot");
+  document.querySelectorAll(".ix-rows.hot").forEach(u=>{if(u!==b.closest(".ix-rows"))u.classList.remove("hot")});
+  if(fine.matches){swap(byId[b.dataset.id]);fl.classList.add("on")}};
+const leave=()=>{clearTimeout(off);off=setTimeout(()=>{if(hot)hot.classList.remove("on");hot=null;document.querySelectorAll(".ix-rows.hot").forEach(u=>u.classList.remove("hot"));fl.classList.remove("on")},80)};
+addEventListener("pointermove",e=>{if(e.pointerType==="touch")return;tx=e.clientX;ty=e.clientY;if(!fl.classList.contains("on")){x=tx;y=ty}if(!raf&&!reduce)raf=requestAnimationFrame(tick);else if(reduce){x=tx;y=ty;tick()}},{passive:true});
+addEventListener("scroll",()=>{if(hot&&!hot.matches(":hover"))leave()},{passive:true});
+rows.forEach(b=>{
+  b.addEventListener("pointerenter",e=>{if(e.pointerType!=="touch")enter(b)});b.addEventListener("pointerleave",leave);
+  b.addEventListener("focus",()=>{enter(b);fl.classList.remove("on")});b.addEventListener("blur",leave);
+  b.addEventListener("click",()=>openM(byId[b.dataset.id],b));
+});
+// preload the photos once the page is idle, so the floating picture never shows empty
+(window.requestIdleCallback||setTimeout)(()=>ALL.forEach(m=>{if(!m.nophoto){const i=new Image();i.src=pic(m)}}));
+
+/* ---------- dialog ---------- */
+const dlg=$("mdlg");let opener=null;
+function openM(m,from){
+  opener=from;fl.classList.remove("on");
+  const di=$("mdlgImg"),ph=di.parentElement;ph.classList.toggle("noph",!!m.nophoto);di.src=pic(m);di.alt=m.nophoto?"":m.name;
+  $("mdlgCat").textContent=catLabel[m.cat];$("mdlgName").textContent=m.name;$("mdlgText").textContent=m.text;
+  $("mdlgLead").hidden=!m.lead;$("mdlgLeadN").textContent=m.lead||"";
+  const more=$("mdlgMore");more.hidden=!m.href;if(m.href){more.href=m.href;more.textContent=m.id==="homegroups"?"Обрати групу":"Детальніше"}
+  dlg.showModal();
+}
+$("mdlgX").onclick=()=>dlg.close();
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener("close",()=>{if(opener)opener.focus({preventScroll:true})});
+const toFooter=e=>{e.preventDefault();if(dlg.open){opener=null;dlg.close()}requestAnimationFrame(()=>scrollTo({top:document.documentElement.scrollHeight,behavior:reduce?"auto":"smooth"}))};
+$("mdlgJoin").addEventListener("click",toFooter);$("ixCta").addEventListener("click",toFooter);
+const fromHash=()=>{const id=decodeURIComponent(location.hash.slice(1)),b=rows.find(r=>r.dataset.id===id);if(b){b.scrollIntoView({block:"center"});openM(byId[id],b)}};
+addEventListener("hashchange",fromHash);fromHash();
+
+/* ---------- reveal ---------- */
+document.querySelectorAll(".nx-card").forEach((c,i)=>{c.classList.add("rv");c.style.setProperty("--d",i)});
+document.querySelectorAll(".nx-head").forEach(h=>h.classList.add("rv"));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -6% 0px"});
+document.querySelectorAll(".rv").forEach(x=>reduce?x.classList.add("in"):io.observe(x));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<base href="/">
+<title>Сторінку не знайдено | Церква «Філадельфія»</title>
+<meta name="robots" content="noindex,follow">
+<meta name="claude:viewport-fit-sides" content="cover">
+<script src="components/site.js"></script>
+<link rel="stylesheet" href="ui-kit/tokens.css">
+<style>
+:root{--ds-cream:#F7F2E8;--ink:#141414;--mute:#85837E;--teal:#317C8E;--teal-ink:#28697A;--card:#E8E7DB;--sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--side:12px;color-scheme:light}
+html,body{margin:0;background:var(--ds-cream);color:var(--ink)}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.end{position:relative;z-index:3}
+.hold{position:relative;z-index:1;background:var(--ds-cream)}
+.pg{min-height:100svh;box-sizing:border-box;align-content:center;display:grid;justify-items:center;gap:36px;text-align:center;padding:170px max(var(--side),env(safe-area-inset-left,0px)) 110px}
+.code{margin:0;font-weight:800;font-size:clamp(90px,16vw,230px);line-height:.85;letter-spacing:-.06em;color:var(--teal)}
+h1{margin:0;font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track);text-wrap:balance}
+p{margin:0;max-width:520px;font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);color:var(--mute)}
+.links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.links a{color:var(--ink);display:inline-flex;align-items:center;height:44px;padding:0 20px;border-radius:12px;background:var(--card);text-decoration:none;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);transition:background .25s,color .25s}
+.links a:hover{background:var(--teal);color:var(--ds-cream)}
+@media (max-width:720px){:root{--side:16px}.pg{padding-top:130px}}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+<div class="end"><div class="hold">
+<main class="pg">
+  <p class="code" aria-hidden="true">404</p>
+  <h1>Такої сторінки немає</h1>
+  <p>Можливо, адресу змінено або в ній помилка. Спробуйте почати з головної або одного з розділів.</p>
+  <nav class="links" aria-label="Корисні розділи">
+    <a href="/">Головна</a><a href="/first-visit/">Ви вперше у нас?</a><a href="/cobytiya/">Події</a><a href="/category/sermon/">Проповіді</a><a href="/category/vse_zapisi/">Блог</a><a href="/contacts/">Контакти</a>
+  </nav>
+</main>
+</div>
+<site-footer></site-footer></div>
+</body>
+</html>

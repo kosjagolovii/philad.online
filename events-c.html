@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Події · C</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<script src="components/site.js"></script>
+<style>
+/* Події · варіант C «Календар»: обираєте день у календарі — праворуч події цього дня */
+:root{
+  --ds-cream:#F7F2E8; --ink:#141414; --mute:#85837E; --teal:#317C8E; --teal-ink:#28697A; --sand:#E6E1D4;
+  --sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --side:12px; color-scheme:light;
+}
+html,body{margin:0;padding:0;background:var(--ds-cream);color:var(--ink)}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+
+.ev{position:relative;z-index:1;background:var(--ds-cream);display:grid;justify-items:center;gap:72px;padding-block:150px 100px;
+  padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+.ev > *{min-width:0;width:var(--row);max-width:100%;box-sizing:border-box}
+
+.ev-top{display:grid;justify-items:center;gap:24px;text-align:center}
+.ev-kicker{margin:0;font-weight:600;font-size:14px;line-height:1.3;letter-spacing:-.057em;text-transform:uppercase;color:var(--teal)}
+.ev-top h1{margin:0;font-weight:500;font-size:clamp(42px,4.9vw,70px);line-height:1.1;letter-spacing:-.05em;text-wrap:balance}
+.ev-top h1 span{color:rgba(20,20,20,.5)}
+.ev-lead{margin:0;max-width:520px;font-weight:600;font-size:18px;line-height:1.35;letter-spacing:-.044em;color:var(--mute);text-wrap:pretty}
+
+/* calendar on the left, the chosen day on the right */
+.ev-body{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,4fr);column-gap:10px;align-items:start}
+.cal{padding:24px;border-radius:24px;background:#fff}
+.cal-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:18px}
+.cal-head h2{margin:0;font-weight:500;font-size:26px;letter-spacing:-.045em}
+.cal-head div{display:flex;gap:6px}
+.cal-nav{width:40px;height:40px;border:0;border-radius:50%;background:var(--ds-cream);cursor:pointer;display:grid;place-items:center;font-size:18px;line-height:1;transition:background .2s,scale .3s cubic-bezier(.2,.7,.2,1)}
+.cal-nav:hover{background:var(--sand);scale:1.06}
+.cal-nav:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.cal-nav:disabled{opacity:.35;cursor:default;scale:1}
+.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;margin:0;padding:0;list-style:none}
+.cal-dow{padding:4px 0 8px;text-align:center;font-weight:700;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:rgba(20,20,20,.4)}
+.cal-day{position:relative;aspect-ratio:1;width:100%;border:0;border-radius:50%;background:none;cursor:pointer;font-weight:600;font-size:15px;letter-spacing:-.02em;color:var(--ink);transition:background .2s,color .2s}
+.cal-day:hover{background:var(--ds-cream)}
+.cal-day.out{color:rgba(20,20,20,.25)}
+.cal-day.past{color:rgba(20,20,20,.3)}
+.cal-day.today{box-shadow:inset 0 0 0 1.5px var(--teal)}
+.cal-day[aria-pressed="true"]{background:var(--ink);color:var(--ds-cream)}
+.cal-day i{position:absolute;left:50%;bottom:7px;translate:-50% 0;display:flex;gap:3px}
+.cal-day i::before,.cal-day i::after{content:"";width:5px;height:5px;border-radius:50%;display:none}
+.cal-day.has-one i::before{display:block;background:var(--teal)}
+.cal-day.has-wk i::after{display:block;background:rgba(20,20,20,.28)}
+.cal-day[aria-pressed="true"].has-one i::before{background:#7FC4D3}
+.cal-day[aria-pressed="true"].has-wk i::after{background:rgba(247,242,232,.55)}
+.cal-day:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.cal-key{display:flex;flex-wrap:wrap;gap:6px 16px;margin:16px 0 0;padding:0;list-style:none;font-weight:600;font-size:12px;letter-spacing:-.01em;color:rgba(20,20,20,.5)}
+.cal-key li{display:flex;align-items:center;gap:6px}
+.cal-key li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.cal-key li+li::before{background:rgba(20,20,20,.28)}
+
+/* the chosen day */
+.day{display:grid;gap:20px;min-width:0}
+.day-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.day-head h2{margin:0;font-weight:500;font-size:clamp(28px,3vw,42px);line-height:1.1;letter-spacing:-.05em}
+.day-head h2 span{color:rgba(20,20,20,.45)}
+.day-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.day-chip{height:34px;padding:0 12px;border:0;border-radius:9px;background:rgba(20,20,20,.055);color:rgba(20,20,20,.7);cursor:pointer;font-weight:600;font-size:13px;letter-spacing:-.03em;transition:background .25s,color .25s}
+.day-chip:hover{background:rgba(20,20,20,.09)}.day-chip[aria-pressed="true"]{background:var(--teal);color:var(--ds-cream)}
+.day-chip:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.slots{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.slot{display:grid;grid-template-columns:200px minmax(0,1fr);border-radius:20px;overflow:hidden;background:#fff;cursor:pointer;transition:translate .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+.slot:hover{translate:0 -3px;box-shadow:0 22px 40px -28px rgba(20,20,20,.5)}
+.slot figure{margin:0;min-height:100%;background:var(--sand)}
+.slot figure img{width:100%;height:100%;object-fit:cover;transition:scale .8s cubic-bezier(.2,.7,.2,1)}
+.slot:hover figure img{scale:1.06}
+.slot-tx{display:grid;gap:10px;padding:22px 24px;min-width:0}
+.slot-time{margin:0;font-weight:700;font-size:13px;letter-spacing:.01em;color:var(--teal)}
+.slot h3{margin:0}
+.slot h3 button{padding:0;border:0;background:none;text-align:left;cursor:pointer;font-weight:500;font-size:clamp(22px,2.2vw,30px);line-height:1.12;letter-spacing:-.045em;text-wrap:balance}
+.slot h3 button:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+.slot-meta{margin:0;font-weight:600;font-size:14px;line-height:1.35;letter-spacing:-.015em;color:rgba(20,20,20,.55)}
+.slot-foot{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.slot-how{font-weight:700;font-size:13px;letter-spacing:-.01em}
+.slot-go{display:inline-flex;align-items:center;height:36px;padding:0 14px;border-radius:9px;background:var(--teal);color:var(--ds-cream);text-decoration:none;font-weight:700;font-size:11px;letter-spacing:.04em;text-transform:uppercase;transition:background .25s}
+.slot-go:hover{background:var(--teal-ink)}
+.slot-go:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.none{padding:28px;border-radius:20px;background:rgba(20,20,20,.05);display:grid;gap:14px;justify-items:start}
+.none p{margin:0;font-weight:600;font-size:16px;line-height:1.4;letter-spacing:-.02em;color:rgba(20,20,20,.65)}
+.none button{height:44px;padding:0 18px;border:0;border-radius:10px;background:var(--teal);color:var(--ds-cream);cursor:pointer;font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+
+/* what is next */
+.soon h2{margin:0 0 20px;font-weight:500;font-size:clamp(28px,3vw,42px);letter-spacing:-.05em}
+.soon ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px 10px;margin:0;padding:0;list-style:none}
+.sc{display:grid;gap:12px;width:100%;padding:0;border:0;background:none;text-align:left;cursor:pointer;color:inherit}
+.sc-pic{position:relative;margin:0;aspect-ratio:1;border-radius:20px;overflow:hidden;background:var(--sand);transition:scale .45s cubic-bezier(.2,.7,.2,1)}
+.sc-pic img{width:100%;height:100%;object-fit:cover;transition:scale .8s cubic-bezier(.2,.7,.2,1)}
+.sc:hover .sc-pic{scale:1.03}.sc:hover .sc-pic img{scale:1.06}
+.sc:focus-visible{outline:none}.sc:focus-visible .sc-pic{outline:2px solid var(--ink);outline-offset:3px}
+.sc-pic b{position:absolute;left:12px;top:12px;padding:6px 10px;border-radius:9px;background:var(--ds-cream);font-weight:700;font-size:12px;letter-spacing:-.01em}
+.sc strong{display:block;font-weight:600;font-size:16px;line-height:1.2;letter-spacing:-.03em;text-wrap:balance}
+.sc em{display:block;margin-top:4px;font-style:normal;font-weight:600;font-size:13px;color:rgba(20,20,20,.5)}
+
+.rv{opacity:0;transform:translate3d(0,40px,0);transition:opacity .8s ease,transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0)*70ms)}
+.rv.in{opacity:1;transform:none}
+.slots.swap{animation:swap .45s cubic-bezier(.2,.7,.2,1)}@keyframes swap{from{opacity:0;translate:0 14px}}
+
+@media (max-width:1100px){
+  .ev-body{grid-template-columns:minmax(0,1fr);row-gap:28px}
+  .cal{max-width:520px;width:100%;justify-self:center}
+  .soon ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  :root{--side:16px}
+  .ev{gap:48px;padding-block:120px 64px}
+  .ev-lead{font-size:16px}
+  .cal{padding:16px;border-radius:20px}
+  .slot{grid-template-columns:minmax(0,1fr)}
+  .slot figure{aspect-ratio:16/9;min-height:0}
+  .slot-tx{padding:18px 18px 20px}
+}
+@media (prefers-reduced-motion:reduce){.rv,.slot,.slot figure img,.sc-pic,.sc-pic img{transition:none!important}.rv{opacity:1;transform:none}.slots.swap{animation:none}}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+
+<main class="ev">
+  <header class="ev-top">
+    <p class="ev-kicker rv">Події</p>
+    <h1 class="rv" style="--d:1">Календар<br><span>церковних подій</span></h1>
+    <p class="ev-lead rv" style="--d:2">Оберіть день — і побачите, що відбувається, для кого це і як потрапити.</p>
+  </header>
+
+  <div class="ev-body rv">
+    <aside class="cal" aria-label="Календар">
+      <div class="cal-head"><h2 id="calT"></h2><div><button class="cal-nav" id="calPrev" type="button" aria-label="Попередній місяць">←</button><button class="cal-nav" id="calNext" type="button" aria-label="Наступний місяць">→</button></div></div>
+      <ul class="cal-grid" id="calG"></ul>
+      <ul class="cal-key"><li>Подія з датою</li><li>Щотижневе зібрання</li></ul>
+    </aside>
+    <section class="day" aria-live="polite">
+      <div class="day-head"><h2 id="dayT"></h2><ul class="day-chips" id="dayChips" aria-label="Для кого"></ul></div>
+      <ul class="slots" id="slots"></ul>
+    </section>
+  </div>
+
+  <section class="soon" aria-labelledby="h-soon">
+    <h2 id="h-soon" class="rv">Найближчі події з датою</h2>
+    <ul id="soon"></ul>
+  </section>
+</main>
+
+<site-footer></site-footer>
+
+<script src="/events/data.js"></script>
+<script src="/events/lib.js"></script>
+<script>
+(()=>{
+const E=window.PhiladEvents,$=id=>document.getElementById(id),el=E.el;
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const footer=$("footer");if(footer)footer.setAttribute("data-dark","");
+
+const TODAY=E.today();
+let view=new Date(TODAY.getFullYear(),TODAY.getMonth(),1),sel=TODAY,aud="all";
+const first=new Date(TODAY.getFullYear(),TODAY.getMonth(),1);
+const last=E.dated().reduce((m,e)=>{const d=E.parse(e.dateEnd||e.date);return d>m?d:m},TODAY);
+const lastView=new Date(last.getFullYear(),last.getMonth(),1);
+const ymd=d=>d.getFullYear()+"-"+d.getMonth()+"-"+d.getDate();
+
+/* one pass: which days of the visible months have events */
+function mapFor(from,to){const m=new Map();E.occ(from,to).filter(o=>aud==="all"||o.ev.aud.includes(aud)).forEach(o=>{
+  for(let d=o.date;d<=o.end;d=E.add(d,1)){const k=ymd(d),r=m.get(k)||{one:0,wk:0,list:[]};o.ev.weekly?r.wk++:r.one++;r.list.push({ev:o.ev,time:o.time,date:d});m.set(k,r)}});return m}
+
+function drawCal(){
+  $("calT").textContent=E.MONN[view.getMonth()]+" "+view.getFullYear();
+  $("calPrev").disabled=view<=first;$("calNext").disabled=view>=lastView;
+  const g=$("calG");g.replaceChildren();
+  ["Пн","Вт","Ср","Чт","Пт","Сб","Нд"].forEach(d=>g.append(el("li","cal-dow",d)));
+  const start=E.add(view,-((view.getDay()+6)%7)),end=E.add(start,41),m=mapFor(start,end);
+  for(let i=0;i<42;i++){
+    const d=E.add(start,i),r=m.get(ymd(d)),li=el("li"),b=el("button","cal-day",String(d.getDate()));
+    b.type="button";b.setAttribute("aria-label",d.getDate()+" "+E.MON[d.getMonth()]);
+    if(d.getMonth()!==view.getMonth())b.classList.add("out");
+    if(d<TODAY)b.classList.add("past");if(E.same(d,TODAY))b.classList.add("today");
+    if(r){if(r.one)b.classList.add("has-one");if(r.wk)b.classList.add("has-wk");b.append(el("i"))}
+    b.setAttribute("aria-pressed",E.same(d,sel)?"true":"false");
+    b.onclick=()=>{sel=d;if(d.getMonth()!==view.getMonth())view=new Date(d.getFullYear(),d.getMonth(),1);drawCal();drawDay(true)};
+    li.append(b);g.append(li)}
+}
+$("calPrev").onclick=()=>{view=new Date(view.getFullYear(),view.getMonth()-1,1);drawCal()};
+$("calNext").onclick=()=>{view=new Date(view.getFullYear(),view.getMonth()+1,1);drawCal()};
+
+/* the right side: events of the chosen day */
+function slot(o){
+  const ev=o.ev,li=el("li","slot");
+  const f=el("figure"),im=new Image(400,400);im.src=ev.img;im.alt="";im.loading="lazy";f.append(im);
+  const tx=el("div","slot-tx");
+  const when=ev.weekly?(E.whenText({weekly:{days:[E.KEY[o.date.getDay()]],times:o.times||[o.time]}})):(ev.dateEnd?"До "+E.dayText({date:ev.dateEnd}):(ev.time||"Увесь день"));
+  const h=el("h3"),t=el("button",null,ev.title);t.type="button";h.append(t);
+  const foot=el("div","slot-foot");foot.append(el("span","slot-how",E.howShort(ev)));
+  if(ev.how.type==="register"&&/^https?:/.test(ev.how.href||"")){const g=el("a","slot-go",ev.how.label||"Зареєструватись");g.href=ev.how.href;g.target="_blank";g.rel="noopener";g.setAttribute("data-no-u","");foot.append(g)}
+  const tags=E.audLabels(ev).join(" · ");
+  tx.append(el("p","slot-time",ev.weekly?when:when+(ev.dateEnd?" · "+E.dayText(ev):"")),h,el("p","slot-meta",[ev.audText,ev.place].filter(Boolean).join(" · ")),foot);
+  li.append(f,tx);li.addEventListener("click",e=>{if(e.target.closest("a"))return;E.open(ev,t)});return li}
+function drawDay(anim){
+  const m=mapFor(sel,sel).get(ymd(sel)),dw=E.DOWL[sel.getDay()];
+  $("dayT").innerHTML=`${E.same(sel,TODAY)?"Сьогодні":dw}, <span>${sel.getDate()} ${E.MON[sel.getMonth()]}</span>`;
+  const s=$("slots");s.replaceChildren();
+  if(m){const g=new Map();   // one card per event: the same weekly meeting at two hours shows both times
+    m.list.forEach(o=>{const r=g.get(o.ev.id)||{...o,times:[]};r.times.push(o.time);g.set(o.ev.id,r)});
+    [...g.values()].sort((a,b)=>a.times[0].localeCompare(b.times[0])).forEach(o=>s.append(slot(o)))}
+  else{
+    const li=el("li","none");const nx=E.occ(E.add(sel,1),E.add(sel,400)).find(o=>aud==="all"||o.ev.aud.includes(aud));
+    li.append(el("p",null,"У цей день подій немає."+(nx?` Найближча — ${nx.ev.title}, ${nx.date.getDate()} ${E.MON[nx.date.getMonth()]}.`:"")));
+    if(nx){const b=el("button",null,"Перейти");b.type="button";b.onclick=()=>{sel=nx.date;view=new Date(sel.getFullYear(),sel.getMonth(),1);drawCal();drawDay(true)};li.append(b)}
+    s.append(li)}
+  if(anim&&!reduce){s.classList.remove("swap");void s.offsetWidth;s.classList.add("swap")}
+}
+/* audience chips */
+const chips=$("dayChips");
+[["all","Усі"],...E.audKeys()].forEach(([id,l])=>{
+  const li=el("li"),b=el("button","day-chip",l);b.type="button";b.dataset.a=id;b.setAttribute("aria-pressed",id===aud?"true":"false");
+  b.onclick=()=>{aud=id;chips.querySelectorAll(".day-chip").forEach(x=>x.setAttribute("aria-pressed",x.dataset.a===id?"true":"false"));drawCal();drawDay(true)};
+  li.append(b);chips.append(li)});
+
+/* next dated events */
+E.dated().slice(0,4).forEach((ev,i)=>{
+  const li=el("li","rv");li.style.setProperty("--d",i);const b=el("button","sc");b.type="button";
+  const pic=el("span","sc-pic"),im=new Image(400,400);im.src=ev.img;im.alt="";im.loading="lazy";pic.append(im,el("b",null,E.dayText(ev)));
+  const tx=el("span");tx.append(el("strong",null,ev.title),el("em",null,E.howShort(ev)));
+  b.append(pic,tx);b.onclick=()=>{sel=E.parse(ev.date);view=new Date(sel.getFullYear(),sel.getMonth(),1);drawCal();drawDay(true);scrollTo({top:document.querySelector(".ev-body").getBoundingClientRect().top+scrollY-110,behavior:reduce?"auto":"smooth"});E.open(ev,b)};
+  li.append(b);$("soon").append(li)});
+
+drawCal();drawDay(false);
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll(".rv").forEach(x=>reduce?x.classList.add("in"):io.observe(x));
+})();
+</script>
+</body>
+</html>

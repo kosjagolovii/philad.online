@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Всі служіння · C</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<script src="components/site.js"></script>
+<style>
+/* Варіант C — «Знайди своє»: людина обирає, що їй до душі, і стіна фото сама перебудовується */
+:root{
+  --ds-cream:#F7F2E8; --ink:#141414; --mute:#85837E; --teal:#317C8E; --sand:#E6E1D4;
+  --sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --side:12px; color-scheme:light;
+}
+html,body{margin:0;padding:0;background:var(--ds-cream);color:var(--ink)}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+
+.fd{display:grid;gap:56px;padding-block:150px 110px;
+  padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+
+/* the question */
+.fd-q{display:grid;justify-items:center;gap:22px;text-align:center}
+.fd-kicker{margin:0;font-weight:600;font-size:14px;letter-spacing:-.04em;text-transform:uppercase;color:var(--teal)}
+.fd-q h1{margin:0;font-weight:500;font-size:clamp(40px,4.9vw,70px);line-height:1.12;letter-spacing:-.043em;text-wrap:balance}
+.fd-q h1 span{color:var(--teal)}
+.fd-lead{margin:0;max-width:540px;font-weight:600;font-size:18px;line-height:1.35;letter-spacing:-.04em;color:var(--mute);text-wrap:pretty}
+.fd-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:980px;margin:8px 0 0;padding:0;list-style:none}
+.fd-tag{height:52px;padding:0 22px;border-radius:26px;border:1.5px solid rgba(20,20,20,.14);background:transparent;cursor:pointer;
+  display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:16px;letter-spacing:-.035em;color:var(--ink);
+  transition:background .25s ease,border-color .25s ease,color .25s ease,scale .35s cubic-bezier(.3,1.5,.5,1)}
+.fd-tag::before{content:"";width:10px;height:10px;border-radius:50%;border:1.5px solid currentColor;opacity:.45;transition:background .25s,opacity .25s}
+.fd-tag:hover{border-color:rgba(20,20,20,.4)}
+.fd-tag[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:var(--ds-cream)}
+.fd-tag[aria-pressed="true"]::before{background:currentColor;opacity:1}
+.fd-tag:active{scale:.96}
+.fd-tag:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* result line */
+.fd-res{display:flex;align-items:center;justify-content:space-between;gap:16px;width:var(--row);justify-self:center;
+  position:sticky;top:0;z-index:4;padding-block:14px;margin-block:-14px;background:linear-gradient(var(--ds-cream) 80%,rgba(247,242,232,0));transition:top .45s cubic-bezier(.2,.7,.2,1)}
+.fd-res p{margin:0;font-weight:600;font-size:15px;letter-spacing:-.03em;color:rgba(20,20,20,.6)}
+.fd-res p b{color:var(--ink);font-weight:700}
+.fd-reset{height:38px;padding:0 14px;border:0;border-radius:10px;background:rgba(20,20,20,.06);cursor:pointer;font-weight:600;font-size:13px;letter-spacing:-.03em}
+.fd-reset:hover{background:rgba(20,20,20,.1)}
+.fd-reset:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* the wall — the square photo cards of the home block, six across */
+.fd-wall{display:grid;width:var(--row);justify-self:center;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.fd-wall li{view-transition-name:var(--vt);min-width:0}
+.fd-card{position:relative;display:block;width:100%;aspect-ratio:1;padding:0;border:0;border-radius:20px;overflow:hidden;background:var(--sand);cursor:pointer;color:#fff;text-align:left}
+.fd-card img{width:100%;height:100%;object-fit:cover;transition:scale .8s cubic-bezier(.2,.7,.2,1)}
+.fd-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,17,15,.78) 0%,rgba(20,17,15,.15) 45%,rgba(20,17,15,0) 70%)}
+.fd-card b{position:absolute;left:14px;right:14px;bottom:13px;z-index:1;font-weight:600;font-size:16px;line-height:1.15;letter-spacing:-.03em;text-wrap:balance}
+.fd-card small{position:absolute;left:14px;top:12px;z-index:1;padding:5px 8px;border-radius:8px;background:rgba(247,242,232,.9);color:var(--ink);font-weight:600;font-size:11px;letter-spacing:-.01em;
+  opacity:0;translate:0 -4px;transition:opacity .3s,translate .3s}
+.fd-card:hover img{scale:1.06}
+.fd-card:hover small,.fd-card:focus-visible small{opacity:1;translate:0 0}
+.fd-card:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.fd-card.noph{display:grid;place-items:center}
+.fd-card.noph img{width:30%;height:auto;max-width:64px;opacity:.25;filter:grayscale(1) brightness(.2)}
+.fd-card.noph::after{background:linear-gradient(to top,rgba(20,17,15,.55),rgba(20,17,15,0) 55%)}
+/* a matched card says why it matched */
+.fd-card i{position:absolute;right:12px;top:12px;z-index:1;width:28px;height:28px;border-radius:50%;background:var(--teal);display:none;place-items:center;font-style:normal;font-weight:700;font-size:12px;color:var(--ds-cream)}
+.fd-wall.filtered .fd-card i{display:grid}
+.fd-cta{display:flex;flex-direction:column;justify-content:space-between;width:100%;aspect-ratio:1;box-sizing:border-box;padding:20px;border-radius:20px;background:var(--teal);color:var(--ds-cream);text-decoration:none;transition:scale .45s cubic-bezier(.2,.7,.2,1)}
+.fd-cta span{font-weight:600;font-size:clamp(16px,1.5vw,22px);line-height:1.1;letter-spacing:-.033em}
+.fd-cta i{align-self:flex-end;width:36px;height:36px;border-radius:50%;background:var(--ds-cream);display:grid;place-items:center}
+.fd-cta:hover{scale:1.03}
+.fd-cta:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.fd-empty{width:var(--row);justify-self:center;text-align:center;font-weight:600;font-size:16px;color:var(--mute)}
+::view-transition-group(*){animation-duration:.55s;animation-timing-function:cubic-bezier(.2,.7,.2,1)}
+
+/* dialog */
+.mdlg{width:min(860px,calc(100vw - 32px));max-height:calc(100svh - 32px);padding:0;border:0;border-radius:24px;background:var(--ds-cream);color:var(--ink);overflow:auto;box-shadow:0 40px 80px -30px rgba(0,0,0,.45)}
+.mdlg::backdrop{background:rgba(20,20,20,.55);backdrop-filter:blur(4px)}
+.mdlg[open]{animation:dlgIn .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes dlgIn{from{opacity:0;translate:0 24px}}
+.mdlg-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.mdlg-ph{margin:0;aspect-ratio:1;background:var(--sand)}
+.mdlg-ph img{width:100%;height:100%;object-fit:cover}
+.mdlg-ph.noph{display:grid;place-items:center}.mdlg-ph.noph img{width:64px;height:64px;opacity:.25;filter:grayscale(1) brightness(.2)}
+.mdlg-tx{display:grid;align-content:start;gap:16px;padding:44px 36px 36px}
+.mdlg-tx .k{margin:0;font-weight:600;font-size:13px;letter-spacing:-.02em;text-transform:uppercase;color:var(--teal)}
+.mdlg-tx h2{margin:0;font-weight:600;font-size:clamp(28px,3vw,38px);line-height:1.1;letter-spacing:-.04em;text-wrap:balance}
+.mdlg-tx p{margin:0;font-weight:500;font-size:17px;line-height:1.55;color:rgba(20,20,20,.7);text-wrap:pretty}
+.mdlg-tags{display:flex;flex-wrap:wrap;gap:6px}
+.mdlg-tags span{padding:6px 10px;border-radius:8px;background:rgba(49,124,142,.1);color:var(--teal);font-weight:600;font-size:12px}
+.mdlg-lead{display:grid;gap:2px;padding:14px 16px;border-radius:14px;background:rgba(20,20,20,.05)}
+.mdlg-lead small{font-weight:600;font-size:12px;color:rgba(20,20,20,.5)}.mdlg-lead b{font-weight:600;font-size:16px;letter-spacing:-.02em}
+.mdlg-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.mbtn{height:48px;padding:0 22px;border-radius:12px;display:inline-flex;align-items:center;font-weight:600;font-size:15px;letter-spacing:-.03em;text-decoration:none;border:0;cursor:pointer;background:var(--teal);color:var(--ds-cream)}
+.mbtn:hover{background:#28697A}.mbtn.ghost{background:rgba(20,20,20,.07);color:var(--ink)}
+.mdlg-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(247,242,232,.92);cursor:pointer;font-size:20px}
+
+.rv{opacity:0;transform:translate3d(0,40px,0);transition:opacity .8s ease,transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0)*50ms)}
+.rv.in{opacity:1;transform:none}
+.end{position:relative;z-index:3}.nx-hold{position:relative;z-index:1}
+
+@media (max-width:1100px){.fd-wall{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:720px){
+  :root{--side:16px}
+  .fd{gap:40px;padding-block:120px 64px}
+  .fd-lead{font-size:16px}
+  .fd-tags{gap:8px}
+  .fd-tag{height:44px;padding:0 16px;font-size:14px}
+  .fd-wall,.fd-res,.fd-empty{width:100%}
+  .fd-wall{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fd-card,.fd-cta{border-radius:14px}
+  .fd-card b{font-size:14px;left:11px;right:11px;bottom:10px}
+  .mdlg{width:100vw;max-width:100vw;max-height:92svh;margin:auto 0 0;border-radius:22px 22px 0 0}
+  .mdlg-in{grid-template-columns:minmax(0,1fr)}.mdlg-ph{aspect-ratio:16/10}.mdlg-tx{padding:24px 20px calc(24px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){.rv,.fd-card img,.fd-tag{transition:none!important}.rv{opacity:1;transform:none}.mdlg[open]{animation:none}::view-transition-group(*){animation:none}}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+
+<main class="fd">
+  <header class="fd-q">
+    <p class="fd-kicker rv">34 служіння</p>
+    <h1 class="rv" style="--d:1">Що вам <span>до душі?</span></h1>
+    <p class="fd-lead rv" style="--d:2">Оберіть одне чи кілька — і ми покажемо служіння, де ваші дари стануть у пригоді.</p>
+    <ul class="fd-tags rv" style="--d:3" id="fdTags" aria-label="Інтереси"></ul>
+  </header>
+
+  <div class="fd-res" id="fdRes" role="status">
+    <p id="fdCount"></p>
+    <button class="fd-reset" type="button" id="fdReset" hidden>Скинути вибір</button>
+  </div>
+
+  <ul class="fd-wall" id="fdWall"></ul>
+  <p class="fd-empty" id="fdEmpty" hidden>Такого поєднання поки немає — спробуйте зняти один із виборів.</p>
+</main>
+
+<div class="end">
+  <div class="nx-hold" data-dark><site-next></site-next></div>
+  <site-footer></site-footer>
+</div>
+
+<dialog class="mdlg" id="mdlg" aria-labelledby="mdlgName">
+  <div class="mdlg-in">
+    <figure class="mdlg-ph"><img id="mdlgImg" alt="" width="800" height="800"></figure>
+    <div class="mdlg-tx">
+      <p class="k" id="mdlgCat"></p><h2 id="mdlgName"></h2><p id="mdlgText"></p>
+      <div class="mdlg-tags" id="mdlgTags"></div>
+      <div class="mdlg-lead" id="mdlgLead" hidden><small>Лідер служіння</small><b id="mdlgLeadN"></b></div>
+      <div class="mdlg-acts"><a class="mbtn" id="mdlgJoin" href="#footer">Хочу долучитися</a><a class="mbtn ghost" id="mdlgMore" href="#" hidden>Детальніше</a></div>
+    </div>
+  </div>
+  <button class="mdlg-x" id="mdlgX" type="button" aria-label="Закрити">×</button>
+</dialog>
+
+<script src="min/data.js"></script>
+<script>
+(()=>{
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $=id=>document.getElementById(id);
+const CATS=window.PHILAD_MIN_CATS,ALL=window.PHILAD_MIN,catLabel=Object.fromEntries(CATS.map(c=>[c.id,c.label])),byId=Object.fromEntries(ALL.map(m=>[m.id,m]));
+const footer=$("footer");if(footer)footer.setAttribute("data-dark","");
+const LOGO="b6/badge-logo.svg",pic=m=>m.nophoto?LOGO:(m.img||"min/"+m.id+".webp");
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+const plural=k=>k+(k%10>=1&&k%10<=4&&(k%100<10||k%100>20)?(k%10===1?" служіння":" служіння"):" служінь");
+
+/* what people care about → which ministries it fits */
+const TAGS=[
+  {id:"people",label:"Люди і спілкування",ids:["hospitality","homegroups","family-nights","plus37","sisters","women","seekers","day-center","premarital","young-families"]},
+  {id:"music",label:"Музика і спів",ids:["worship","choir","kids-choir"]},
+  {id:"kids",label:"Діти і підлітки",ids:["sunday-school","kids-choir","camps","teens","special-kids"]},
+  {id:"youth",label:"Молодь",ids:["youth","night","teens"]},
+  {id:"help",label:"Практична допомога",ids:["evacuation","settlement","social","day-center","special-kids","mil-families","szho","order"]},
+  {id:"army",label:"Військові та їхні рідні",ids:["chaplain","front","mil-families","szho"]},
+  {id:"pray",label:"Молитва",ids:["prayer","night","wednesday"]},
+  {id:"word",label:"Слово і навчання",ids:["think","baptism","seekers","limetels","homegroups","wednesday"]},
+  {id:"family",label:"Сім’я",ids:["family-nights","young-families","premarital","plus37"]},
+  {id:"tech",label:"Фото, відео, техніка",ids:["media","films"]}
+];
+const tagsOf=id=>TAGS.filter(t=>t.ids.includes(id));
+
+/* ---------- interests ---------- */
+const on=new Set();
+TAGS.forEach(t=>{const li=el("li");const b=el("button","fd-tag",t.label);b.type="button";b.setAttribute("aria-pressed","false");b.dataset.id=t.id;
+  b.onclick=()=>{on.has(t.id)?on.delete(t.id):on.add(t.id);b.setAttribute("aria-pressed",on.has(t.id));apply(true)};li.append(b);$("fdTags").append(li)});
+$("fdReset").onclick=()=>{on.clear();document.querySelectorAll(".fd-tag").forEach(b=>b.setAttribute("aria-pressed","false"));apply(true)};
+
+/* ---------- the wall ---------- */
+const wall=$("fdWall"),items=[];
+ALL.forEach((m,i)=>{
+  const li=el("li","rv");li.style.setProperty("--d",i%6);li.style.setProperty("--vt","m-"+i);
+  const b=el("button","fd-card"+(m.nophoto?" noph":""));b.type="button";b.dataset.id=m.id;b.setAttribute("aria-label",m.name);
+  const im=new Image(800,800);im.alt="";im.loading="lazy";im.decoding="async";im.src=pic(m);
+  b.append(im,el("small",null,catLabel[m.cat]),el("i"),el("b",null,m.name));
+  b.onclick=()=>openM(m,b);li.append(b);wall.append(li);items.push({li,b,m});
+});
+const ctaLi=el("li");ctaLi.style.setProperty("--vt","m-cta");
+ctaLi.innerHTML='<a class="fd-cta" href="#footer" id="fdCta"><span>Не знайшли своє? Напишіть нам</span><i aria-hidden="true"><img src="b6/arrow.svg" alt="" width="13" height="12"></i></a>';
+wall.append(ctaLi);
+
+function apply(animate){
+  const run=()=>{
+    let shown=0;
+    const score=it=>tagsOf(it.m.id).filter(t=>on.has(t.id)).length;
+    // the best matches come first; with nothing chosen, the original order
+    const order=on.size?[...items].sort((a,b)=>score(b)-score(a)||items.indexOf(a)-items.indexOf(b)):items;
+    order.forEach(it=>{const s=score(it),vis=!on.size||s>0;it.li.hidden=!vis;if(vis){shown++;wall.insertBefore(it.li,ctaLi)}it.b.querySelector("i").textContent=s>1?s:"✓"});
+    wall.classList.toggle("filtered",on.size>0);
+    $("fdEmpty").hidden=shown>0;
+    $("fdCount").innerHTML=on.size?`Вам може підійти <b>${plural(shown)}</b>`:`Усі <b>${plural(ALL.length)}</b> церкви`;
+    $("fdReset").hidden=!on.size;
+  };
+  if(animate&&!reduce&&document.startViewTransition)document.startViewTransition(run);else run();
+}
+apply(false);
+
+/* the result line rides under the header while it is shown */
+const bar=document.querySelector(".bar"),res=$("fdRes");
+if(bar){const fit=()=>{res.style.top=(bar.classList.contains("away")?0:Math.max(0,bar.getBoundingClientRect().bottom-6))+"px"};
+  new MutationObserver(fit).observe(bar,{attributes:true,attributeFilter:["class"]});addEventListener("resize",fit);fit()}
+
+/* ---------- dialog ---------- */
+const dlg=$("mdlg");let opener=null;
+function openM(m,from){
+  opener=from;
+  const di=$("mdlgImg"),ph=di.parentElement;ph.classList.toggle("noph",!!m.nophoto);di.src=pic(m);di.alt=m.nophoto?"":m.name;
+  $("mdlgCat").textContent=catLabel[m.cat];$("mdlgName").textContent=m.name;$("mdlgText").textContent=m.text;
+  $("mdlgTags").replaceChildren(...tagsOf(m.id).map(t=>el("span",null,t.label)));
+  $("mdlgLead").hidden=!m.lead;$("mdlgLeadN").textContent=m.lead||"";
+  const more=$("mdlgMore");more.hidden=!m.href;if(m.href){more.href=m.href;more.textContent=m.id==="homegroups"?"Обрати групу":"Детальніше"}
+  dlg.showModal();
+}
+$("mdlgX").onclick=()=>dlg.close();
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener("close",()=>{if(opener)opener.focus({preventScroll:true})});
+const toFooter=e=>{e.preventDefault();if(dlg.open){opener=null;dlg.close()}requestAnimationFrame(()=>scrollTo({top:document.documentElement.scrollHeight,behavior:reduce?"auto":"smooth"}))};
+$("mdlgJoin").addEventListener("click",toFooter);$("fdCta").addEventListener("click",toFooter);
+const fromHash=()=>{const id=decodeURIComponent(location.hash.slice(1)),it=items.find(x=>x.m.id===id);if(it){it.b.scrollIntoView({block:"center"});openM(it.m,it.b)}};
+addEventListener("hashchange",fromHash);fromHash();
+
+/* ---------- reveal ---------- */
+document.querySelectorAll(".nx-card").forEach((c,i)=>{c.classList.add("rv");c.style.setProperty("--d",i)});
+document.querySelectorAll(".nx-head").forEach(h=>h.classList.add("rv"));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -6% 0px"});
+document.querySelectorAll(".rv").forEach(x=>reduce?x.classList.add("in"):io.observe(x));
+})();
+</script>
+</body>
+</html>

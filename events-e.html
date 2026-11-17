@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Події · E</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<script src="components/site.js"></script>
+<style>
+/* Події · варіант E «Кінозал»: афіша 16:9 на великому екрані, праворуч — програма. Обираєте подію — афіша й подробиці змінюються. */
+:root{
+  --ds-cream:#F7F2E8; --ink:#141414; --mute:#85837E; --teal:#317C8E; --teal-ink:#28697A; --sand:#E6E1D4;
+  --sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --side:12px; color-scheme:light;
+}
+html,body{margin:0;padding:0;background:var(--ds-cream);color:var(--ink)}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+
+.ev{position:relative;z-index:1;background:var(--ds-cream);display:grid;justify-items:center;gap:80px;padding-block:150px 100px;
+  padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+.ev > *{min-width:0;width:var(--row);max-width:100%;box-sizing:border-box}
+
+.ev-top{display:grid;justify-items:center;gap:24px;text-align:center}
+.ev-kicker{margin:0;font-weight:600;font-size:14px;line-height:1.3;letter-spacing:-.057em;text-transform:uppercase;color:var(--teal)}
+.ev-top h1{margin:0;font-weight:500;font-size:clamp(42px,4.9vw,70px);line-height:1.1;letter-spacing:-.05em;text-wrap:balance}
+.ev-top h1 span{color:rgba(20,20,20,.5)}
+
+/* controls */
+.ctl{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px}
+.seg{display:inline-flex;padding:4px;border-radius:12px;background:rgba(20,20,20,.055)}
+.chip{height:36px;padding:0 15px;border:0;border-radius:9px;background:none;color:rgba(20,20,20,.65);cursor:pointer;font-weight:600;font-size:14px;letter-spacing:-.04em;transition:background .25s,color .25s}
+.chip:hover{color:var(--ink)}
+.seg .chip[aria-pressed="true"]{background:var(--ink);color:var(--ds-cream)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.chips .chip{background:rgba(20,20,20,.055)}
+.chips .chip:hover{background:rgba(20,20,20,.09)}
+.chips .chip[aria-pressed="true"]{background:var(--teal);color:var(--ds-cream)}
+.chip:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* the screen and the programme */
+.stage{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,1fr);gap:14px;align-items:stretch}
+.scr{display:grid;gap:12px;min-width:0}
+.pst{position:relative;margin:0;aspect-ratio:16/9;border-radius:24px;overflow:hidden;background:var(--sand);cursor:pointer}
+.pst img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .5s ease,scale 1s cubic-bezier(.2,.7,.2,1)}
+.pst img.out{opacity:0}
+.pst:hover img{scale:1.02}
+.info{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px;padding:26px 28px;border-radius:24px;background:#fff}
+.info-l{display:grid;align-content:start;gap:8px}
+.info-l small{font-weight:600;font-size:13px;letter-spacing:-.057em;text-transform:uppercase;color:var(--teal)}
+.info-l h2{margin:0;font-weight:500;font-size:clamp(26px,2.8vw,40px);line-height:1.05;letter-spacing:-.055em;text-wrap:balance}
+.info-l p{margin:6px 0 0;font-weight:600;font-size:14px;line-height:1.4;letter-spacing:-.015em;color:rgba(20,20,20,.6);max-width:420px}
+.info-r{display:grid;align-content:space-between;gap:16px}
+.info-r dl{margin:0;display:grid;gap:10px}
+.info-r dl div{display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;align-items:baseline}
+.info-r dt{font-weight:600;font-size:12px;letter-spacing:-.01em;color:rgba(20,20,20,.45)}
+.info-r dd{margin:0;font-weight:600;font-size:14px;line-height:1.35;letter-spacing:-.02em}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;height:44px;padding:0 18px;border-radius:11px;border:0;background:var(--teal);color:var(--ds-cream);text-decoration:none;cursor:pointer;font-weight:800;font-size:12px;letter-spacing:.04em;text-transform:uppercase;transition:background .25s,scale .3s cubic-bezier(.2,.7,.2,1)}
+.btn:hover{background:var(--teal-ink);scale:1.02}
+.btn.ghost{background:rgba(20,20,20,.07);color:var(--ink)}.btn.ghost:hover{background:rgba(20,20,20,.12)}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+.prog{position:relative;min-height:0}
+.prog ul{position:absolute;inset:0;margin:0;padding:0 2px 0 0;list-style:none;display:grid;align-content:start;gap:8px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(20,20,20,.2) transparent}
+.it{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;align-items:center;width:100%;padding:14px 16px;border:0;border-radius:16px;background:rgba(20,20,20,.05);text-align:left;cursor:pointer;transition:background .25s,color .25s,translate .35s cubic-bezier(.2,.7,.2,1)}
+.it:hover{background:rgba(20,20,20,.09)}
+.it[aria-selected="true"]{background:var(--teal);color:var(--ds-cream);translate:-4px 0}
+.it:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.it i{grid-row:1/3;display:grid;justify-items:center;min-width:44px;font-style:normal}
+.it i b{font-weight:500;font-size:28px;line-height:1;letter-spacing:-.06em}
+.it i span{margin-top:2px;font-weight:700;font-size:10px;letter-spacing:.03em;text-transform:uppercase;opacity:.55}
+.it strong{font-weight:600;font-size:15px;line-height:1.2;letter-spacing:-.03em;text-wrap:balance}
+.it em{font-style:normal;font-weight:600;font-size:12px;opacity:.6}
+.none{margin:0;padding:24px;border-radius:16px;background:rgba(20,20,20,.05);font-weight:600;font-size:15px;line-height:1.4;color:rgba(20,20,20,.6)}
+
+/* weekly strip */
+.ev-h2{margin:0 0 6px;font-weight:500;font-size:clamp(30px,3.2vw,44px);line-height:1.15;letter-spacing:-.045em}
+.ev-note{margin:0 0 26px;max-width:560px;font-weight:600;font-size:14px;line-height:1.35;color:var(--mute)}
+.strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.wc{display:grid;gap:12px;width:100%;padding:0;border:0;background:none;text-align:left;cursor:pointer;color:inherit}
+.wc .pw{margin:0;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:var(--sand);transition:scale .45s cubic-bezier(.2,.7,.2,1)}
+.wc .pw img{width:100%;height:100%;object-fit:cover;transition:scale .8s cubic-bezier(.2,.7,.2,1)}
+.wc:hover .pw{scale:1.03}.wc:hover .pw img{scale:1.06}
+.wc:focus-visible{outline:none}.wc:focus-visible .pw{outline:2px solid var(--ink);outline-offset:3px}
+.wc b{display:block;font-weight:600;font-size:16px;line-height:1.2;letter-spacing:-.03em;text-wrap:balance}
+.wc span{display:block;margin-top:4px;font-weight:600;font-size:13px;line-height:1.3;color:rgba(20,20,20,.5)}
+
+.rv{opacity:0;transform:translate3d(0,40px,0);transition:opacity .8s ease,transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0)*70ms)}
+.rv.in{opacity:1;transform:none}
+.scr.swap .info{animation:sw .45s cubic-bezier(.2,.7,.2,1)}@keyframes sw{from{opacity:0;translate:0 10px}}
+
+@media (max-width:1100px){
+  .stage{grid-template-columns:minmax(0,1fr)}
+  .prog ul{position:static;display:flex;overflow-x:auto;overflow-y:visible;padding:0 0 6px;scroll-snap-type:x proximity}
+  .it{flex:none;width:260px;scroll-snap-align:start}.it[aria-selected="true"]{translate:0}
+  .strip{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .info{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:720px){
+  :root{--side:16px}
+  .ev{gap:56px;padding-block:120px 64px}
+  .pst{border-radius:16px}.info{padding:20px;border-radius:18px}
+  .strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 10px}
+  .info-r dl div{grid-template-columns:78px minmax(0,1fr)}
+  .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1*max(var(--side),env(safe-area-inset-left,0px)));padding-inline:max(var(--side),env(safe-area-inset-left,0px))}
+  .chips::-webkit-scrollbar{display:none}.chips .chip{flex:none}
+}
+@media (prefers-reduced-motion:reduce){.rv,.pst img,.it,.wc .pw,.wc .pw img,.btn{transition:none!important}.rv{opacity:1;transform:none}.scr.swap .info{animation:none}}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+
+<main class="ev">
+  <header class="ev-top">
+    <p class="ev-kicker rv">Події</p>
+    <h1 class="rv" style="--d:1">Програма<br><span>церковних подій</span></h1>
+  </header>
+
+  <section aria-label="Програма подій">
+    <div class="ctl rv">
+      <div class="seg" id="seg" role="group" aria-label="Найближчі чи минулі"></div>
+      <ul class="chips" id="chips" aria-label="Для кого"></ul>
+    </div>
+    <div class="stage rv">
+      <div class="scr" id="scr">
+        <figure class="pst" id="pst"><img id="p1" alt="" width="1600" height="900"><img id="p2" class="out" alt="" width="1600" height="900"></figure>
+        <div class="info">
+          <div class="info-l"><small id="iK"></small><h2 id="iT"></h2><p id="iP"></p></div>
+          <div class="info-r"><dl id="iD"></dl><div class="acts" id="iA"></div></div>
+        </div>
+      </div>
+      <div class="prog"><ul id="list" role="tablist" aria-orientation="vertical" aria-label="Події"></ul></div>
+    </div>
+  </section>
+
+  <section id="secWeek" aria-labelledby="h-week">
+    <h2 class="ev-h2" id="h-week">Щотижня</h2>
+    <p class="ev-note">Ці зібрання проходять постійно — реєстрація не потрібна, просто приходьте.</p>
+    <ul class="strip" id="strip"></ul>
+  </section>
+</main>
+
+<site-footer></site-footer>
+
+<script src="/events/data.js"></script>
+<script src="/events/lib.js"></script>
+<script>
+(()=>{
+const E=window.PhiladEvents,$=id=>document.getElementById(id),el=E.el;
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const footer=$("footer");if(footer)footer.setAttribute("data-dark","");
+
+let mode="up",aud="all",cur=null,front=1;
+const up=E.dated(),past=E.past();
+const fits=ev=>aud==="all"||ev.aud.includes(aud);
+const items=()=>(mode==="up"?up:past).filter(fits);
+
+/* controls */
+[["up","Найближчі"],["past","Минулі"]].forEach(([id,l])=>{const b=el("button","chip",l);b.type="button";b.dataset.m=id;b.setAttribute("aria-pressed",id===mode?"true":"false");
+  b.onclick=()=>{mode=id;$("seg").querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x.dataset.m===id?"true":"false"));cur=null;paintList()};$("seg").append(b)});
+[["all","Усі"],...E.audKeys([...up,...past,...E.weekly()])].forEach(([id,l])=>{const li=el("li"),b=el("button","chip",l);b.type="button";b.dataset.a=id;b.setAttribute("aria-pressed",id===aud?"true":"false");
+  b.onclick=()=>{aud=id;$("chips").querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x.dataset.a===id?"true":"false"));cur=null;paintList();paintWeek()};li.append(b);$("chips").append(li)});
+
+/* the programme list */
+function paintList(){
+  const list=$("list"),arr=items();list.replaceChildren();
+  if(!arr.length){const li=el("li","none","Подій під цей вибір немає — спробуйте «Усі» або «"+(mode==="up"?"Минулі":"Найближчі")+"».");list.append(li);showNone();return}
+  arr.forEach(ev=>{
+    const li=el("li"),b=el("button","it");b.type="button";b.setAttribute("role","tab");b.dataset.id=ev.id;
+    const a=E.parse(ev.date),d=el("i");d.append(el("b",null,ev.dateEnd?`${a.getDate()}–${E.parse(ev.dateEnd).getDate()}`:String(a.getDate())),el("span",null,E.MON[a.getMonth()].slice(0,3)));
+    b.append(d,el("strong",null,ev.title),el("em",null,E.howShort(ev)));
+    b.onclick=()=>show(ev);b.addEventListener("keydown",e=>{const k=e.key==="ArrowDown"||e.key==="ArrowRight"?1:e.key==="ArrowUp"||e.key==="ArrowLeft"?-1:0;if(!k)return;
+      e.preventDefault();const bs=[...list.querySelectorAll(".it")],n=bs[(bs.indexOf(b)+k+bs.length)%bs.length];n.focus();n.click()});
+    li.append(b);list.append(li)});
+  show(arr[0],true);
+}
+function setPoster(ev,first){
+  const a=front?$("p1"):$("p2"),b=front?$("p2"):$("p1");
+  if(first||reduce){a.src=ev.img;a.alt=ev.poster?ev.title:"";a.classList.remove("out");b.classList.add("out");return}
+  b.src=ev.img;b.alt=ev.poster?ev.title:"";b.classList.remove("out");a.classList.add("out");front=front?0:1;
+}
+function show(ev,first){
+  cur=ev;
+  $("list").querySelectorAll(".it").forEach(x=>{const on=x.dataset.id===ev.id;x.setAttribute("aria-selected",on?"true":"false");x.tabIndex=on?0:-1});
+  setPoster(ev,first);
+  $("iK").textContent=(mode==="past"?"Минула подія · ":"")+E.dayText(ev)+(ev.time?" · "+ev.time:"");
+  $("iT").textContent=ev.title;$("iP").textContent=ev.text;
+  const rows=[["Де",ev.place||"Уточнюється"],["Для кого",ev.audText],["Як потрапити",ev.how.text]];
+  $("iD").replaceChildren(...rows.map(([k,v])=>{const d=el("div");d.append(el("dt",null,k),el("dd",null,v));return d}));
+  const acts=$("iA");acts.replaceChildren();
+  const h=ev.how;
+  if(h.type!=="free"&&mode!=="past"){const a=el("a","btn",h.label||"Зареєструватись");
+    if(/^https?:/.test(h.href||"")){a.href=h.href;a.target="_blank";a.rel="noopener"}else if(h.href)a.href=h.href;else{a.href="#footer";a.setAttribute("data-to-footer","")}
+    a.setAttribute("data-no-u","");acts.append(a)}
+  const m=el("button","btn ghost","Докладніше");m.type="button";m.onclick=()=>E.open(ev,m);acts.append(m);
+  if(!first&&!reduce){const s=$("scr");s.classList.remove("swap");void s.offsetWidth;s.classList.add("swap")}
+}
+function showNone(){$("p1").removeAttribute("src");$("p2").removeAttribute("src");$("iK").textContent="";$("iT").textContent="Подій немає";$("iP").textContent="";$("iD").replaceChildren();$("iA").replaceChildren()}
+$("pst").addEventListener("click",()=>cur&&E.open(cur,$("pst")));
+
+/* weekly */
+function paintWeek(){
+  const strip=$("strip");strip.replaceChildren();
+  E.weekly().filter(fits).forEach(ev=>{
+    const li=el("li"),b=el("button","wc");b.type="button";
+    const pw=el("span","pw"),im=new Image(640,360);im.src=ev.img;im.alt="";im.loading="lazy";pw.append(im);
+    const tx=el("span");tx.append(el("b",null,ev.title),el("span",null,E.whenText(ev)));
+    b.append(pw,tx);b.onclick=()=>E.open(ev,b);li.append(b);strip.append(li)});
+  $("secWeek").hidden=!strip.children.length;
+}
+paintList();paintWeek();
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll(".rv").forEach(x=>reduce?x.classList.add("in"):io.observe(x));
+})();
+</script>
+</body>
+</html>

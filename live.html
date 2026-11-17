@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>LIVE трансляція — Церква «Філадельфія»</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<!-- seo:start -->
+<meta name="description" content="Дивіться зібрання церкви «Філадельфія» у прямому ефірі та записи трансляцій.">
+<link rel="canonical" href="https://philad.org/online-translyaciya/">
+<meta name="robots" content="noindex,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Церква «Філадельфія»">
+<meta property="og:title" content="LIVE трансляція — Церква «Філадельфія»">
+<meta property="og:description" content="Дивіться зібрання церкви «Філадельфія» у прямому ефірі та записи трансляцій.">
+<meta property="og:url" content="https://philad.org/online-translyaciya/">
+<meta property="og:image" content="https://philad.org/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LIVE трансляція — Церква «Філадельфія»">
+<meta name="twitter:description" content="Дивіться зібрання церкви «Філадельфія» у прямому ефірі та записи трансляцій.">
+<meta name="twitter:image" content="https://philad.org/og.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "LIVE трансляція — Церква «Філадельфія»", "description": "Дивіться зібрання церкви «Філадельфія» у прямому ефірі та записи трансляцій.", "url": "https://philad.org/online-translyaciya/", "inLanguage": "uk", "isPartOf": {"@type": "WebSite", "name": "Церква «Філадельфія»", "url": "https://philad.org/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://philad.org/"}, {"@type": "ListItem", "position": 2, "name": "LIVE трансляція", "item": "https://philad.org/online-translyaciya/"}]}</script>
+<!-- seo:end -->
+<script src="components/site.js"></script>
+<script src="components/live-player.js"></script>
+<style>
+/* ОСНОВНА · LIVE трансляція (за основою варіанта B): без меню й футера, відео з панеллю вміщуються в екран без скролу */
+:root{--ds-cream:#F7F2E8;--sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--pt:84px;--pb:24px;--bar:74px;color-scheme:dark}
+html,body{margin:0;padding:0;height:100%;overflow:hidden;background:#1E1B19;color:var(--ds-cream)}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased}
+.pg{box-sizing:border-box;height:100vh;height:100svh;display:grid;place-items:center;
+  padding:var(--pt) max(var(--gutter),env(safe-area-inset-right,0px)) var(--pb) max(var(--gutter),env(safe-area-inset-left,0px))}
+.pg>.row-w{min-width:0}
+/* відео + панель кнопок = рівно в екран: ширина обмежується висотою вікна */
+.lp-box{width:min(100%,calc((100vh - var(--pt) - var(--pb) - var(--bar))*16/9));width:min(100%,calc((100svh - var(--pt) - var(--pb) - var(--bar))*16/9));margin-inline:auto}
+live-player{--lp-cap:#F7F2E8}
+/* хрестик замість меню: той самий кружок і лінії, що й у кнопки меню, коли вона відкрита */
+.x{position:fixed;z-index:10;top:calc(30px + env(safe-area-inset-top,0px));right:max(var(--gutter),env(safe-area-inset-right,0px));display:block;width:40px;height:40px;line-height:0;border-radius:50%;
+  transition:scale .35s cubic-bezier(.2,.7,.2,1)}
+.x:hover{scale:1.05}
+.x svg{width:100%;height:100%;display:block;overflow:visible}
+.x .mc{fill:#F7F2E8;transition:fill .25s ease}
+.x .ml{fill:#000;transform-box:view-box;transform-origin:20px 20px;transition:fill .25s ease,transform .5s cubic-bezier(.7,0,.2,1)}
+.x .ml1{transform:rotate(45deg) translateY(3px)}
+.x .ml2{transform:rotate(-45deg) translateY(-3px)}
+.x:hover .mc{fill:#000}
+.x:hover .ml{fill:#F7F2E8}
+.x:focus-visible{outline:2px solid #F7F2E8;outline-offset:3px}
+@media (max-width:720px){:root{--pt:68px;--pb:16px;--bar:68px}.pg{padding-inline:16px}.pg>.row-w{width:100%}.x{width:36px;height:36px;top:calc(18px + env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px))}}
+@media (prefers-reduced-motion:reduce){.x,.x .ml,.x .mc{transition:none}}
+</style>
+</head>
+<body>
+<a class="x" id="close" href="/" aria-label="Закрити"><svg viewBox="0 0 40 40" aria-hidden="true"><rect class="mc" width="40" height="40" rx="20"/><rect class="ml ml1" x="12" y="16" width="16" height="2" rx="1"/><rect class="ml ml2" x="12" y="22" width="16" height="2" rx="1"/></svg></a>
+<main class="pg"><div class="row-w"><live-player variant="b" caption="overlay"></live-player></div></main>
+<script>
+// хрестик повертає туди, звідки прийшли (якщо це наш сайт), інакше — на головну
+document.getElementById("close").addEventListener("click",e=>{
+  try{if(history.length>1&&document.referrer&&new URL(document.referrer).origin===location.origin){e.preventDefault();history.back()}}catch(_){}
+});
+</script>
+</body>
+</html>

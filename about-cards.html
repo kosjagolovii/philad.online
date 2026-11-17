@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Про нас — картки</title>
+<script src="components/site.js"></script>
+<link rel="stylesheet" href="about/base.css">
+<style>
+/* Порівняння варіантів карток керівництва (P1–P3) і дияконів (D1–D3). Після вибору переносимо в about.html. */
+.pg{display:grid;justify-items:center;gap:90px;padding-block:130px 120px;
+  padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+.pg>*{width:var(--row);max-width:100%;min-width:0;box-sizing:border-box}
+h2{font-weight:500;font-size:clamp(30px,3.5vw,50px);line-height:1.12;letter-spacing:-.04em}
+.opt{display:grid;gap:28px;padding-top:28px;border-top:1px solid var(--line)}
+.tag{display:flex;align-items:center;gap:10px;font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--teal)}
+.tag b{display:grid;place-items:center;min-width:34px;height:34px;padding:0 8px;border-radius:999px;background:var(--teal);color:var(--ds-cream)}
+.tag span{color:var(--mute);text-transform:none;letter-spacing:-.01em;font-weight:600;font-size:14px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+figure{margin:0}
+.ph{overflow:hidden;background:var(--sand)}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:scale 1.1s cubic-bezier(.2,.7,.2,1)}
+.card:hover .ph img{scale:1.04}
+.nm{font-weight:500;font-size:clamp(22px,2.2vw,32px);line-height:1.1;letter-spacing:-.04em}
+
+/* P1 · дві вузькі картки + заголовок поруч */
+.p1{align-items:end}
+.p1 .lead{grid-column:3/5;display:grid;gap:18px;align-self:start;padding:0 0 0 14px}
+.p1 .lead p:last-child{font-weight:500;font-size:clamp(18px,1.6vw,22px);line-height:1.4;letter-spacing:-.025em;color:var(--soft);max-width:420px}
+.p1 .ph{aspect-ratio:6/7;border-radius:20px}
+.p1 .card{display:grid;gap:14px}
+.p1 .meta{display:grid;gap:6px;padding:0 4px}
+
+/* P2 · горизонтальні картки: фото + підпис */
+.p2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.p2 .card{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr);gap:14px;padding:12px;border-radius:24px;background:var(--card)}
+.p2 .ph{aspect-ratio:6/7;border-radius:14px}
+.p2 .meta{display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:14px 10px 10px}
+.p2 .nm{font-size:clamp(24px,2.6vw,38px);line-height:1.04}
+
+/* P3 · по центру, підпис поверх фото */
+.p3{grid-template-columns:repeat(2,minmax(0,1fr));width:calc(var(--row)*.5);justify-self:center;max-width:100%}
+.p3 .card{position:relative;border-radius:20px;overflow:hidden}
+.p3 .ph{aspect-ratio:6/7}
+.p3 .card::after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(to top,rgba(20,17,15,.7),rgba(20,17,15,0))}
+.p3 .meta{position:absolute;z-index:1;left:0;right:0;bottom:0;display:grid;gap:6px;padding:20px;color:var(--ds-cream)}
+.p3 .meta .kicker{color:rgba(247,242,232,.8)}
+.p3 .nm{font-size:clamp(20px,1.9vw,28px)}
+
+/* диякони */
+/* D1 · квадратні картки з фото зверху */
+.d1 .card{display:grid;gap:12px;padding:10px 10px 18px;border-radius:20px;background:var(--card)}
+.d1 .ph{aspect-ratio:1;border-radius:14px}
+.d1 .nm{padding:0 8px;font-size:19px;font-weight:600;letter-spacing:-.02em}
+/* D2 · горизонтальні, дві в ряд, велике фото */
+.d2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.d2 .card{display:flex;align-items:center;gap:22px;padding:14px;border-radius:20px;background:var(--card)}
+.d2 .ph{flex:none;width:clamp(96px,10vw,140px);aspect-ratio:1;border-radius:14px}
+.d2 .nm{font-size:clamp(20px,2vw,28px)}
+.d2 small{display:block;margin-top:6px;font-weight:600;font-size:14px;color:var(--mute)}
+/* D3 · портретні картки 4:5, ім'я поверх */
+.d3 .card{position:relative;border-radius:20px;overflow:hidden}
+.d3 .ph{aspect-ratio:4/5}
+.d3 .card::after{content:"";position:absolute;inset:50% 0 0;background:linear-gradient(to top,rgba(20,17,15,.65),rgba(20,17,15,0))}
+.d3 .nm{position:absolute;z-index:1;left:0;right:0;bottom:0;padding:16px 18px;font-size:19px;font-weight:600;letter-spacing:-.02em;color:var(--ds-cream)}
+.d3 .is-empty{color:rgba(247,242,232,.7)}
+.noph{width:100%;height:100%}
+
+@media (max-width:1000px){
+  .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .p1 .lead{grid-column:1/-1;order:-1;padding:0}
+  .p2{grid-template-columns:minmax(0,1fr)}
+  .p3{width:var(--row)}
+}
+@media (max-width:720px){
+  .pg{gap:64px;padding-block:110px 72px}
+  .p1 .ph,.p3 .card,.d3 .card{border-radius:16px}
+  .p2 .card{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .d2{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+<main class="pg" id="app"></main>
+<script src="about/data.js"></script>
+<script src="about/base.js"></script>
+<script>
+(()=>{
+const D=window.ABOUT,{esc,photo,name}=AB;
+// у пасторів — нові портрети (-p), у дияконів — квадратні аватари (-a)
+const pc=(p,extra="")=>`<article class="card rv ${extra}"><figure class="ph">${photo(p,"p")}</figure><div class="meta"><p class="kicker">${esc(p.role)}</p><h3 class="nm">${name(p)}</h3></div></article>`;
+const dc=(p,i,sub)=>`<li class="card rv" style="--d:${i%4}"><figure class="ph">${photo(p,"a")}</figure>${sub?`<div><h3 class="nm${p.name?"":" is-empty"}">${name(p)}</h3><small>Диякон</small></div>`:`<h3 class="nm${p.name?"":" is-empty"}">${name(p)}</h3>`}</li>`;
+const tag=(k,t)=>`<p class="tag"><b>${k}</b><span>${t}</span></p>`;
+document.getElementById("app").innerHTML=`
+  <h2>${esc(D.pastorsTitle)}</h2>
+  <section class="opt">${tag("P1","Дві вузькі картки (по 1 колонці сітки) і заголовок поруч")}
+    <div class="g4 p1">${D.pastors.map(p=>pc(p)).join("")}<div class="lead"><p class="kicker">Про нас</p><p>${esc(D.title)}</p></div></div></section>
+  <section class="opt">${tag("P2","Горизонтальні картки: фото ліворуч, ім’я праворуч")}
+    <div class="g4 p2">${D.pastors.map(p=>pc(p)).join("")}</div></section>
+  <section class="opt">${tag("P3","Дві картки по центру, ім’я поверх фото")}
+    <div class="g4 p3">${D.pastors.map(p=>pc(p)).join("")}</div></section>
+
+  <h2>${esc(D.deaconsTitle)}</h2>
+  <section class="opt d1">${tag("D1","Квадратні картки: фото зверху, ім’я знизу (4 в ряд)")}
+    <ul class="g4">${D.deacons.map((p,i)=>dc(p,i)).join("")}</ul></section>
+  <section class="opt">${tag("D2","Горизонтальні картки, по дві в ряд, більше фото")}
+    <ul class="g4 d2">${D.deacons.map((p,i)=>dc(p,i,true)).join("")}</ul></section>
+  <section class="opt d3">${tag("D3","Портретні картки 4:5, ім’я поверх фото")}
+    <ul class="g4">${D.deacons.map((p,i)=>dc(p,i)).join("")}</ul></section>`;
+document.querySelectorAll("ul.g4,ol.g4").forEach(u=>u.style.cssText="list-style:none;margin:0;padding:0");
+AB.init();
+})();
+</script>
+</body>
+</html>

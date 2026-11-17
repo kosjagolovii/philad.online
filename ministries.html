@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Служіння церкви «Філадельфія»</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<!-- seo:start -->
+<meta name="description" content="Усі служіння церкви «Філадельфія»: молодь, діти, сім’ї, молитва, допомога військовим і переселенцям. Знайдіть, де можна послужити.">
+<link rel="canonical" href="https://philad.org/sluzhinnya/">
+<meta name="robots" content="noindex,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Церква «Філадельфія»">
+<meta property="og:title" content="Служіння церкви «Філадельфія»">
+<meta property="og:description" content="Усі служіння церкви «Філадельфія»: молодь, діти, сім’ї, молитва, допомога військовим і переселенцям. Знайдіть, де можна послужити.">
+<meta property="og:url" content="https://philad.org/sluzhinnya/">
+<meta property="og:image" content="https://philad.org/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Служіння церкви «Філадельфія»">
+<meta name="twitter:description" content="Усі служіння церкви «Філадельфія»: молодь, діти, сім’ї, молитва, допомога військовим і переселенцям. Знайдіть, де можна послужити.">
+<meta name="twitter:image" content="https://philad.org/og.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Служіння церкви «Філадельфія»", "description": "Усі служіння церкви «Філадельфія»: молодь, діти, сім’ї, молитва, допомога військовим і переселенцям. Знайдіть, де можна послужити.", "url": "https://philad.org/sluzhinnya/", "inLanguage": "uk", "isPartOf": {"@type": "WebSite", "name": "Церква «Філадельфія»", "url": "https://philad.org/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://philad.org/"}, {"@type": "ListItem", "position": 2, "name": "Служіння церкви «Філадельфія»", "item": "https://philad.org/sluzhinnya/"}]}</script>
+<!-- seo:end -->
+<script src="components/site.js"></script>
+<link rel="stylesheet" href="ui-kit/tokens.css">
+<style>
+/* «Всі служіння» — за макетом Figma «Claude figma» (вузли 286:6448, 301:6885, 284:5983) */
+:root{
+  --ds-cream:#F7F2E8; --ink:#141414; --mute:#85837E; --teal:#317C8E; --badge:#2890A8; --sand:#E6E1D4;
+  --sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --side:12px;   /* grid (--cw, --row, --gutter) comes from components/site.js */
+  --c:212px;     /* badge size, the proportions of the home page badge */
+  --top:120px;   /* the catalogue starts this far from the top, the left column stays there */
+  color-scheme:light;
+}
+html,body{margin:0;padding:0;background:var(--ds-cream);color:var(--ink)}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+
+/* the page covers the footer, then scrolls away and uncovers it */
+.mn{position:relative;z-index:1;background:var(--ds-cream);display:grid;gap:90px;padding-block:var(--top) 110px;
+  padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+
+/* ---------- catalogue: title / badge on the left, ministries on the right ---------- */
+.mn-body{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,4fr);column-gap:10px;align-items:start}
+.mn-side{position:relative;min-width:0}
+.mn-main{display:grid;gap:64px;min-width:0}
+
+/* title: on the left, the same voice as the home block */
+.mn-intro{display:grid;justify-items:center;gap:24px;text-align:center;transition:opacity .35s ease,translate .5s cubic-bezier(.2,.7,.2,1)}
+.mn-kicker{margin:0;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);text-transform:uppercase;color:var(--teal)}
+.mn-intro h1{margin:0;font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track);text-wrap:balance}
+.mn-lead{margin:0;max-width:346px;font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);color:var(--mute);text-wrap:pretty}
+.mn-side.hot .mn-intro{opacity:0;translate:0 -14px;pointer-events:none}
+
+/* category filters */
+.mn-nav{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.mn-nav::-webkit-scrollbar{display:none}
+.mn-nav.ovf{-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 48px),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 48px),transparent)}
+.mn-nav.ovf.at-end{-webkit-mask-image:none;mask-image:none}
+.mn-chip{flex:none;height:40px;padding:0 16px;border:0;border-radius:10px;background:rgba(20,20,20,.055);color:rgba(20,20,20,.7);cursor:pointer;display:inline-flex;align-items:center;gap:7px;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);transition:background .25s ease,color .25s ease}
+.mn-chip small{font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);opacity:.5}
+.mn-chip:hover{background:rgba(20,20,20,.09);color:var(--ink)}
+.mn-chip[aria-pressed="true"]{background:var(--teal);color:var(--ds-cream)}
+.mn-chip:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+.mn-groups{display:grid;gap:64px}
+.mn-group{display:grid;gap:20px}
+.mn-group h2{margin:0;display:flex;align-items:baseline;gap:10px;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track)}
+.mn-group h2 small{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.4)}
+/* a chosen filter shows one plain grid, without the group titles */
+.mn-groups.filtered{gap:26px}
+.mn-groups.filtered .mn-group h2{display:none}
+.mgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px 10px;margin:0;padding:0;list-style:none}
+.mgrid li{min-width:0}
+.mgrid li.in-f{animation:fIn .5s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*40ms)}
+@keyframes fIn{from{opacity:0;translate:0 18px}}
+
+/* a ministry card: the square photo of the home block, its name under it */
+.mcard{display:grid;gap:12px;width:100%;padding:0;border:0;background:none;text-align:left;cursor:pointer;color:inherit;transition:opacity .4s ease}
+.mcard-ph{position:relative;aspect-ratio:1;border-radius:20px;overflow:hidden;background:var(--sand);transition:scale .45s cubic-bezier(.2,.7,.2,1)}
+.mcard-ph img{width:100%;height:100%;object-fit:cover;transition:scale .8s cubic-bezier(.2,.7,.2,1)}
+.mcard-n{font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);text-wrap:balance;padding-right:8px}
+.mcard-l{display:block;margin-top:4px;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.45)}
+.mcard:focus-visible{outline:none}
+.mcard:focus-visible .mcard-ph{outline:2px solid var(--ink);outline-offset:3px}
+.mn-main.hot .mcard:not(.is-hot){opacity:.4}
+.mcard.is-hot .mcard-ph{scale:1.03}
+.mcard.is-hot .mcard-ph img{scale:1.06}
+
+/* the round label that follows the pointer over a photo */
+.mn-cur{position:fixed;left:0;top:0;z-index:7;width:60px;height:60px;border-radius:50%;background:var(--ds-cream);color:var(--ink);display:grid;place-items:center;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);pointer-events:none;opacity:0;scale:0;transform-origin:0 0;transition:opacity .2s ease,scale .45s cubic-bezier(.3,1.4,.5,1);box-shadow:0 10px 24px -12px rgba(20,20,20,.35)}
+.mn-cur.on{opacity:1;scale:1}
+
+/* the teal card from the home block */
+.scta{position:relative;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:1;box-sizing:border-box;padding:20px;border-radius:20px;
+  background:var(--teal);color:var(--ds-cream);text-decoration:none;transition:scale .45s cubic-bezier(.2,.7,.2,1)}
+.scta span{font:var(--h3-weight) var(--h3-size)/var(--h3-lh) var(--font);letter-spacing:var(--h3-track)}
+.scta i{align-self:flex-end;width:36px;height:36px;border-radius:50%;background:var(--ds-cream);display:grid;place-items:center;transition:scale .35s cubic-bezier(.2,.7,.2,1)}
+.scta i img{width:13px;height:12px}
+.scta:hover{scale:1.03}.scta:hover i{scale:1.12}
+.scta:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* ---------- the name badge drops in on its lanyard while a card is hovered ---------- */
+/* the title scrolls with the page, so the badge hangs from the top of the screen above the left column */
+.sbadge{position:fixed;top:77px;left:var(--bx,25%);width:0;height:0;z-index:5;pointer-events:none}
+.sbadge-swing{position:absolute;left:0;top:0;transform-origin:0 calc(var(--c)*-.3);transform:translate3d(0,calc(var(--c)*-3.2),0) rotate(9deg);transition:transform .4s cubic-bezier(.5,0,.8,.3)}
+.sbadge.on .sbadge-swing{transform:translate3d(0,0,0) rotate(-4.06deg);transition:transform .75s cubic-bezier(.3,1.5,.5,1)}
+.sbadge.kick .sbadge-swing{animation:sbkick .6s cubic-bezier(.3,.6,.3,1)}
+@keyframes sbkick{0%{transform:rotate(-4.06deg)}35%{transform:rotate(-8.5deg)}70%{transform:rotate(-2.4deg)}100%{transform:rotate(-4.06deg)}}
+.sbadge-strap{position:absolute;left:0;top:calc(var(--c)*-.22);width:calc(var(--c)*.145);height:calc(var(--c)*.72);translate:-50% 0;z-index:1;display:block;max-width:none}
+/* the strap runs on up past the top of the screen */
+.sbadge-up{position:absolute;left:0;bottom:calc(var(--c)*.22 - 2px);width:calc(var(--c)*.145);height:calc(var(--top) + 240px);translate:-50% 0;background:#EDEBD7}
+.sbadge-card{position:absolute;left:0;top:calc(var(--c)*.373);translate:-50% 0;width:calc(var(--c)*1.033);height:calc(var(--c)*1.263);box-sizing:border-box;
+  border-radius:calc(var(--c)*.0877);background:var(--badge);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+  padding:calc(var(--c)*.105) calc(var(--c)*.105) calc(var(--c)*.14);box-shadow:0 18px 40px -22px rgba(13,68,81,.55)}
+.sbadge-card::before{content:"";width:calc(var(--c)*.18);height:calc(var(--c)*.031);border-radius:2px;background:var(--ds-cream)}
+.sbadge-card strong{font:var(--h3-weight) var(--h3-size)/var(--h3-lh) var(--font);letter-spacing:var(--h3-track);text-align:center;text-wrap:balance}
+.sbadge-card img{width:calc(var(--c)*.14);height:calc(var(--c)*.14);display:block}
+
+/* ---------- how to join ---------- */
+.mn-join{display:grid;justify-items:center;gap:56px}
+/* Figma 301:7106 — the heading speaks in the voice of the group titles */
+.mn-join-head{display:grid;justify-items:center;gap:16px;text-align:center}
+.mn-h2{margin:0;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track);text-wrap:balance}
+.mn-join-head p{margin:0;max-width:360px;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.5);text-wrap:pretty}
+.mn-steps{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0;padding:0;list-style:none;counter-reset:st}
+.mn-step{display:grid;align-content:start;justify-items:start;gap:14px;padding:32px;border-radius:24px;background:#fff;min-height:277px;box-sizing:border-box;counter-increment:st}
+.mn-step::before{content:counter(st,decimal-leading-zero);font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:var(--teal);margin-bottom:28px}
+.mn-step h3{margin:0;font:var(--h3-weight) var(--h3-size)/var(--h3-lh) var(--font);letter-spacing:var(--h3-track)}
+.mn-step p{margin:0;max-width:360px;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.5)}
+
+/* ---------- a ministry opened: sheet / window ---------- */
+.mdlg{width:min(860px,calc(100vw - 32px));max-height:calc(100svh - 32px);padding:0;border:0;border-radius:24px;background:var(--ds-cream);color:var(--ink);overflow:auto;
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.45)}
+.mdlg::backdrop{background:rgba(20,20,20,.55);backdrop-filter:blur(4px)}
+.mdlg[open]{animation:dlgIn .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes dlgIn{from{opacity:0;translate:0 24px}}
+.mdlg-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.mdlg-ph{margin:0;aspect-ratio:1;background:var(--sand)}
+.mdlg-ph img{width:100%;height:100%;object-fit:cover}
+.mdlg-tx{display:grid;align-content:start;gap:16px;padding:44px 36px 36px}
+.mdlg-tx .k{margin:0;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);text-transform:uppercase;color:var(--teal)}
+.mdlg-tx h2{margin:0;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track);text-wrap:balance}
+.mdlg-tx p{margin:0;font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);color:rgba(20,20,20,.7);text-wrap:pretty}
+.mdlg-lead{display:grid;gap:2px;padding:14px 16px;border-radius:14px;background:rgba(20,20,20,.05)}
+.mdlg-lead small{font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);color:rgba(20,20,20,.5)}
+.mdlg-lead b{font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track)}
+.mdlg-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.mbtn{height:48px;padding:0 22px;border-radius:12px;display:inline-flex;align-items:center;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);text-decoration:none;border:0;cursor:pointer;background:var(--teal);color:var(--ds-cream);transition:background .25s ease}
+.mbtn:hover{background:#28697A}
+.mbtn.ghost{background:rgba(20,20,20,.07);color:var(--ink)}
+.mbtn.ghost:hover{background:rgba(20,20,20,.12)}
+.mbtn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.mdlg-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(247,242,232,.92);cursor:pointer;display:grid;place-items:center;font:var(--h3-weight) var(--h3-size)/var(--h3-lh) var(--font);letter-spacing:var(--h3-track)}
+.mdlg-x:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* reveal on scroll */
+.rv{opacity:0;transform:translate3d(0,40px,0);transition:opacity .8s ease,transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0)*70ms)}
+.rv.in{opacity:1;transform:none}
+
+/* no lanyard and no pointer label where there is no hover or no room: the title sits above the filters */
+@media (max-width:1100px),(hover:none){
+  .mn-body{grid-template-columns:minmax(0,1fr);row-gap:48px}
+  .mn-side{position:static;height:auto}
+  .sbadge,.mn-cur{display:none}
+  .mn-side.hot .mn-intro{opacity:1;translate:none}
+  .mn-main.hot .mcard:not(.is-hot){opacity:1}
+}
+@media (max-width:860px){
+  .mgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .mn-steps{grid-template-columns:minmax(0,1fr);gap:12px}
+  .mn-step{min-height:0;padding:24px;border-radius:20px}
+  .mn-h2{font-size:var(--h2s-size)}
+  .mn-step::before{margin-bottom:8px}
+  .mdlg-in{grid-template-columns:minmax(0,1fr)}
+  .mdlg-ph{aspect-ratio:16/10}
+  .mdlg-tx{padding:24px 20px 24px}
+}
+@media (max-width:720px){
+  :root{--side:16px;--top:110px}
+  .mn{gap:72px;padding-bottom:64px}
+  .mn-intro{gap:18px}
+  .mn-lead{font-size:var(--t1-size)}
+  .mn-main,.mn-groups{gap:48px}
+  .mgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 10px}
+  .mcard-ph,.scta{border-radius:14px}
+  .mcard-n{font-size:var(--t2-size)}
+  .scta{padding:14px}
+  /* filters run edge to edge on a phone */
+  .mn-nav{margin-inline:calc(-1*max(var(--side),env(safe-area-inset-left,0px)));padding-inline:max(var(--side),env(safe-area-inset-left,0px))}
+  .mdlg{width:100vw;max-width:100vw;max-height:92svh;margin:auto 0 0;border-radius:22px 22px 0 0}
+  .mdlg[open]{animation:sheetIn .45s cubic-bezier(.2,.7,.2,1)}
+  @keyframes sheetIn{from{translate:0 40%}}
+  .mdlg-tx{padding-bottom:calc(24px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){
+  .rv,.mcard,.mcard-ph,.mcard-ph img,.scta,.scta i,.mn-intro,.mn-cur,.sbadge-swing,.sbadge.on .sbadge-swing{transition:none!important}
+  .rv{opacity:1;transform:none}.sbadge.kick .sbadge-swing{animation:none}.mdlg[open]{animation:none}.mgrid li.in-f{animation:none}
+}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+
+<main class="mn">
+  <div class="mn-body row-w">
+    <aside class="mn-side" id="mnSide">
+      <header class="mn-intro">
+        <p class="mn-kicker rv">Служіння</p>
+        <h1 class="rv" style="--d:1">Служіння<br>нашої церкви</h1>
+        <p class="mn-lead rv" style="--d:2">Дізнайтеся про життя нашої церкви, наші активні служіння та можливість долучитися до команд. Кожен може знайти своє місце.</p>
+      </header>
+      <div class="sbadge" id="sbadge" aria-hidden="true"><div class="sbadge-swing">
+        <span class="sbadge-up"></span>
+        <img class="sbadge-strap" src="b6/lanyard.svg" alt="" width="33" height="162">
+        <div class="sbadge-card"><strong id="sbName"></strong><img src="b6/badge-logo.svg" alt="" width="32" height="32"></div>
+      </div></div>
+    </aside>
+
+    <div class="mn-main" id="mnMain">
+      <div class="mn-nav" id="mnNav" role="group" aria-label="Показати служіння"></div>
+      <div class="mn-groups" id="mnGroups"></div>
+    </div>
+  </div>
+
+  <section class="mn-join row-w" aria-labelledby="mn-join">
+    <div class="mn-join-head">
+      <h2 class="mn-h2 rv" id="mn-join">Як долучитися до служіння?</h2>
+      <p class="rv" style="--d:1">Не треба бути особливим, щоб служити. Достатньо бажання — а всьому іншому ми навчимо разом.</p>
+    </div>
+    <ol class="mn-steps">
+      <li class="mn-step rv"><h3>Оберіть напрямок</h3><p>Подумайте, що вам близько: люди, музика, діти, техніка чи практична допомога.</p></li>
+      <li class="mn-step rv" style="--d:1"><h3>Напишіть нам</h3><p>Залиште повідомлення або підійдіть після недільного богослужіння — ми познайомимо вас із лідером.</p><a class="lbtn" href="#footer" data-to-footer>Написати</a></li>
+      <li class="mn-step rv" style="--d:2"><h3>Спробуйте</h3><p>Прийдіть на зустріч команди, роздивіться і почніть із малого. Поруч завжди будуть ті, хто допоможе.</p></li>
+    </ol>
+  </section>
+</main>
+
+<site-footer></site-footer>
+
+<div class="mn-cur" id="mnCur" aria-hidden="true">Відкрити</div>
+
+<dialog class="mdlg" id="mdlg" aria-labelledby="mdlgName">
+  <div class="mdlg-in">
+    <figure class="mdlg-ph"><img id="mdlgImg" alt="" width="680" height="680"></figure>
+    <div class="mdlg-tx">
+      <p class="k" id="mdlgCat"></p>
+      <h2 id="mdlgName"></h2>
+      <p id="mdlgText"></p>
+      <div class="mdlg-lead" id="mdlgLead" hidden><small>Лідер служіння</small><b id="mdlgLeadN"></b></div>
+      <div class="mdlg-acts">
+        <a class="mbtn" id="mdlgJoin" href="#footer">Хочу долучитися</a>
+        <a class="mbtn ghost" id="mdlgMore" href="#" hidden>Детальніше</a>
+      </div>
+    </div>
+  </div>
+  <button class="mdlg-x" id="mdlgX" type="button" aria-label="Закрити">×</button>
+</dialog>
+
+<script src="min/data.js"></script>
+<script>
+(()=>{
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $=id=>document.getElementById(id);
+const CATS=window.PHILAD_MIN_CATS,ALL=window.PHILAD_MIN.filter(m=>!m.archived),catLabel=Object.fromEntries(CATS.map(c=>[c.id,c.label])),byId=Object.fromEntries(ALL.map(m=>[m.id,m]));
+const footer=$("footer");if(footer)footer.setAttribute("data-dark","");
+const pic=m=>m.img||("min/"+m.id+".webp");
+const el=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e};
+
+/* filters: one per direction, «Діти і молодь» splits into two */
+const FILTERS=[
+  {id:"all",label:"Всі",test:()=>true},
+  {id:"pray",label:"Поклоніння і молитва",test:m=>m.cat==="pray"},
+  {id:"kids",label:"Діти",test:m=>["sunday-school","kids-choir","camps","teens"].includes(m.id)},
+  {id:"youth",label:"Молодь",test:m=>["youth","night","teens"].includes(m.id)},
+  {id:"family",label:"Сім’я і спільнота",test:m=>m.cat==="family"},
+  {id:"help",label:"Допомога",test:m=>m.cat==="help"},
+  {id:"faith",label:"Віра і навчання",test:m=>m.cat==="faith"},
+  {id:"team",label:"Команди церкви",test:m=>m.cat==="team"}
+];
+
+/* ---------- build the catalogue, grouped by direction ---------- */
+const groups=$("mnGroups"),nav=$("mnNav"),cards=[];let cta;
+CATS.forEach((c,ci)=>{
+  const list=ALL.filter(m=>m.cat===c.id);if(!list.length)return;
+  const sec=el("section","mn-group");sec.setAttribute("aria-labelledby","h-"+c.id);
+  const h=el("h2","rv",c.label);h.id="h-"+c.id;sec.append(h);
+  const ul=el("ul","mgrid");
+  list.forEach((m,i)=>{
+    const li=el("li","rv");li.style.setProperty("--d",i%4);
+    const b=el("button","mcard");b.type="button";b.dataset.id=m.id;
+    const ph=el("span","mcard-ph");const im=new Image(680,680);im.src=pic(m);im.alt="";im.loading="lazy";im.decoding="async";ph.append(im);
+    const n=el("span","mcard-n",m.name);
+    b.append(ph,n);li.append(b);ul.append(li);cards.push({b,li,m});
+  });
+  if(ci===CATS.length-1){
+    cta=el("li","rv");cta.style.setProperty("--d",list.length%4);
+    cta.innerHTML='<a class="scta" href="#footer" data-to-footer><span>Не знайшли своє? Напишіть нам</span><i aria-hidden="true"><img src="b6/arrow.svg" alt="" width="13" height="12"></i></a>';
+    ul.append(cta);
+  }
+  sec.append(ul);groups.append(sec);
+});
+
+/* ---------- filters ---------- */
+let cur="all";
+FILTERS.forEach(f=>{
+  const n=ALL.filter(f.test).length;
+  const b=el("button","mn-chip");b.type="button";b.dataset.f=f.id;b.setAttribute("aria-pressed",f.id===cur?"true":"false");
+  b.append(f.label," ");b.append(el("small",null,String(n)));b.onclick=()=>setFilter(f.id);nav.append(b);
+});
+function setFilter(id){
+  if(id===cur)return;cur=id;const f=FILTERS.find(x=>x.id===id);curEl.classList.remove("on");
+  nav.querySelectorAll(".mn-chip").forEach(b=>b.setAttribute("aria-pressed",b.dataset.f===id?"true":"false"));
+  groups.classList.toggle("filtered",id!=="all");
+  let k=0;
+  cards.forEach(c=>{const vis=f.test(c.m);c.li.hidden=!vis;c.li.classList.remove("in-f");
+    if(vis&&!reduce){c.li.classList.add("in");void c.li.offsetWidth;c.li.style.setProperty("--i",k++);c.li.classList.add("in-f")}});
+  if(cta)cta.hidden=id!=="all";
+  groups.querySelectorAll(".mn-group").forEach(s=>{s.hidden=![...s.querySelectorAll(".mgrid li")].some(li=>!li.hidden&&li!==cta)&&!(id==="all")});
+  // bring the start of the list into view if the reader is further down
+  const top=$("mnMain").getBoundingClientRect().top;
+  if(top<0)scrollTo({top:scrollY+top-(document.querySelector(".bar:not(.away)")?80:8),behavior:reduce?"auto":"smooth"});
+  const b=nav.querySelector(`[data-f="${id}"]`);nav.scrollTo({left:b.offsetLeft-nav.offsetLeft-16,behavior:reduce?"auto":"smooth"});
+}
+const ovf=()=>{nav.classList.toggle("ovf",nav.scrollWidth>nav.clientWidth+1);nav.classList.toggle("at-end",nav.scrollLeft+nav.clientWidth>=nav.scrollWidth-2)};
+nav.addEventListener("scroll",ovf,{passive:true});addEventListener("resize",ovf);ovf();
+
+/* ---------- hover: the badge drops in on its lanyard in place of the title ---------- */
+const main=$("mnMain"),side=$("mnSide"),badge=$("sbadge"),sbName=$("sbName"),curEl=$("mnCur");
+let hot=null,off=0;
+const fine=matchMedia("(hover:hover) and (min-width:1101px)");
+const show=b=>{
+  clearTimeout(off);if(hot===b)return;
+  if(hot)hot.classList.remove("is-hot");
+  const was=badge.classList.contains("on");hot=b;b.classList.add("is-hot");main.classList.add("hot");
+  if(!fine.matches)return;
+  const sr=side.getBoundingClientRect();badge.style.setProperty("--bx",(sr.left+sr.width/2)+"px");
+  sbName.textContent=byId[b.dataset.id].name;side.classList.add("hot");badge.classList.add("on");
+  if(was&&!reduce){badge.classList.remove("kick");void badge.offsetWidth;badge.classList.add("kick")}
+};
+const hide=()=>{clearTimeout(off);curEl.classList.remove("on");off=setTimeout(()=>{if(hot)hot.classList.remove("is-hot");hot=null;main.classList.remove("hot");side.classList.remove("hot");badge.classList.remove("on","kick")},140)};
+cards.forEach(({b,m})=>{
+  b.addEventListener("pointerenter",e=>{if(e.pointerType!=="touch")show(b)});
+  b.addEventListener("pointerleave",hide);
+  b.addEventListener("focus",()=>show(b));b.addEventListener("blur",hide);
+  b.addEventListener("click",()=>{if(m.page)location.href=m.page;else openM(m,b)});   // a ministry with its own page opens that page
+  // the round «Відкрити» label follows the pointer over the photo
+  const ph=b.querySelector(".mcard-ph");
+  // below and to the right of the pointer tip (Figma: +9, +12), it grows out of its corner next to the tip.
+  // Position goes through the `translate` property: `scale` is applied after it, so the offset is never scaled
+  // (with `transform` the offset was scaled too and the circle flew in from the screen corner)
+  const place=e=>{curEl.style.translate=`${e.clientX+9}px ${e.clientY+12}px`};
+  b.addEventListener("pointerenter",e=>{if(e.pointerType==="touch"||!fine.matches)return;curEl.classList.remove("on");place(e);void curEl.offsetWidth;curEl.classList.add("on")});
+  b.addEventListener("pointermove",e=>{if(e.pointerType==="touch"||!fine.matches)return;place(e);if(!curEl.classList.contains("on")){void curEl.offsetWidth;curEl.classList.add("on")}});
+});
+addEventListener("scroll",()=>curEl.classList.remove("on"),{passive:true});
+
+/* ---------- open a ministry ---------- */
+const dlg=$("mdlg");let opener=null;
+function openM(m,from){
+  opener=from;curEl.classList.remove("on");
+  const di=$("mdlgImg");di.src=pic(m);di.alt=m.name;
+  $("mdlgCat").textContent=catLabel[m.cat];$("mdlgName").textContent=m.name;$("mdlgText").textContent=m.text;
+  $("mdlgLead").hidden=!m.lead;$("mdlgLeadN").textContent=m.lead||"";
+  const more=$("mdlgMore");more.hidden=!m.href;if(m.href){more.href=m.href;more.textContent=m.id==="homegroups"?"Обрати групу":"Детальніше"}
+  dlg.showModal();
+}
+$("mdlgX").onclick=()=>dlg.close();
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener("close",()=>{if(opener)opener.focus({preventScroll:true})});
+// the footer (contacts) sits at the very bottom of the page: go all the way down
+const toFooter=e=>{e.preventDefault();if(dlg.open){opener=null;dlg.close()}
+  requestAnimationFrame(()=>scrollTo({top:document.documentElement.scrollHeight,behavior:reduce?"auto":"smooth"}))};
+$("mdlgJoin").addEventListener("click",toFooter);
+document.querySelectorAll("[data-to-footer]").forEach(a=>a.addEventListener("click",toFooter));
+
+/* a link like ministries.html#worship (cards on the home page) opens that ministry */
+const fromHash=()=>{const id=decodeURIComponent(location.hash.slice(1)),c=cards.find(x=>x.m.id===id);
+  if(!c)return;
+  if(c.m.page){location.replace(c.m.page);return}   // every ministry has its own page now
+  c.b.scrollIntoView({block:"center"});openM(c.m,c.b)};
+addEventListener("hashchange",fromHash);fromHash();
+
+/* ---------- reveal ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll(".rv").forEach(x=>reduce?x.classList.add("in"):io.observe(x));
+})();
+</script>
+</body>
+</html>

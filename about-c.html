@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Про нас</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<script src="components/site.js"></script>
+<link rel="stylesheet" href="about/base.css">
+<style>
+/* ВАРІАНТ C · «Довідник» — зліва закріплена навігація по розділах, справа зміст; диякони списком імен (фото не потрібні) */
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.ab{padding-block:150px 120px;padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+.lay{width:var(--row);max-width:100%;margin-inline:auto;box-sizing:border-box;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:14px;align-items:start}
+h2{font-weight:500;font-size:clamp(30px,3.5vw,50px);line-height:1.1;letter-spacing:-.04em;text-wrap:balance}
+
+/* ліва колонка */
+.side{grid-column:1/2;position:sticky;top:120px;display:grid;gap:36px;padding-right:20px}
+.side h1{font-weight:500;font-size:clamp(40px,4.4vw,64px);line-height:1;letter-spacing:-.05em}
+.toc{display:grid;gap:2px;justify-items:start}
+.toc a{position:relative;display:flex;align-items:center;gap:12px;padding:7px 0;font-weight:600;font-size:16px;line-height:1.3;letter-spacing:-.02em;color:rgba(20,20,20,.42);text-decoration:none;transition:color .3s ease}
+.toc a::before{content:"";width:0;height:1px;background:var(--teal);transition:width .45s cubic-bezier(.2,.7,.2,1)}
+.toc a:hover{color:var(--ink)}
+.toc a[aria-current]{color:var(--ink)}
+.toc a[aria-current]::before{width:24px}
+.toc a:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+
+/* права колонка */
+.main{grid-column:2/5;display:grid;gap:110px;min-width:0}
+.sec{display:grid;gap:36px;scroll-margin-top:120px}
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.sec-h span{font-weight:600;font-size:14px;letter-spacing:-.02em;color:var(--mute)}
+
+/* пастори */
+.pas{display:grid;gap:14px}
+.pa{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:14px;align-items:stretch}
+.pa figure{aspect-ratio:840/570;border-radius:20px;overflow:hidden;background:var(--sand)}
+.pa img{width:100%;height:100%;object-fit:cover;transition:scale 1.1s cubic-bezier(.2,.7,.2,1)}
+.pa:hover img{scale:1.04}
+.pa-t{display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:24px;border-radius:20px;background:var(--card)}
+.pa-t h3{font-weight:500;font-size:clamp(28px,3vw,44px);line-height:1.02;letter-spacing:-.045em}
+.pa:nth-child(even) figure{order:2}
+
+/* диякони — список імен */
+.dea{columns:2;column-gap:14px}
+.de{break-inside:avoid;display:flex;align-items:baseline;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.de i{flex:none;width:2ch;font-style:normal;font-weight:600;font-size:13px;color:var(--teal);font-variant-numeric:tabular-nums}
+.de b{font-weight:500;font-size:clamp(20px,1.9vw,26px);line-height:1.2;letter-spacing:-.03em}
+
+/* про церкву */
+.lead{font-weight:500;font-size:clamp(22px,2.3vw,34px);line-height:1.2;letter-spacing:-.04em;text-wrap:pretty}
+.prose{max-width:720px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.fa{display:flex;flex-direction:column;justify-content:space-between;gap:36px;padding:24px;border-radius:20px;background:var(--card);min-height:190px}
+.fa b{font-weight:500;font-size:clamp(26px,2.6vw,38px);line-height:1;letter-spacing:-.045em;color:var(--teal-ink)}
+.fa span{font-weight:600;font-size:14px;line-height:1.36;letter-spacing:-.014em;color:rgba(20,20,20,.55)}
+.wide{aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:var(--sand)}
+.wide img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+
+/* місія — акордеон */
+.mis-t{font-weight:500;font-size:clamp(26px,3vw,46px);line-height:1.1;letter-spacing:-.045em;text-wrap:balance}
+.acc{border-top:1px solid var(--line)}
+.ac{border-bottom:1px solid var(--line)}
+.ac summary{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:20px;padding:26px 0;cursor:pointer;list-style:none}
+.ac summary::-webkit-details-marker{display:none}
+.ac summary i{font-style:normal;font-weight:600;font-size:13px;color:var(--teal);font-variant-numeric:tabular-nums}
+.ac summary b{font-weight:500;font-size:clamp(22px,2.3vw,34px);line-height:1.1;letter-spacing:-.04em;transition:translate .45s cubic-bezier(.2,.7,.2,1)}
+.ac summary:hover b{translate:8px 0}
+.ac summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:6px}
+.plus{position:relative;width:44px;height:44px;border-radius:50%;background:var(--card);transition:background .25s ease,rotate .45s cubic-bezier(.2,.7,.2,1)}
+.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;margin:-.75px 0 0 -7px;background:var(--ink);transition:background .25s ease}
+.plus::after{rotate:90deg}
+.ac[open] .plus{rotate:45deg;background:var(--teal)}
+.ac[open] .plus::before,.ac[open] .plus::after{background:var(--ds-cream)}
+.ac .prose{padding:0 64px 32px calc(2ch + 20px)}
+.ac[open] .prose{animation:open .6s cubic-bezier(.2,.7,.2,1)}
+@keyframes open{from{opacity:0;translate:0 -8px}}
+
+/* контакти */
+.con{display:grid}
+.con>div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:14px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.con dt{font-weight:600;font-size:14px;letter-spacing:-.02em;color:var(--mute)}
+.con dd{margin:0;font-weight:500;font-size:clamp(20px,2vw,28px);line-height:1.2;letter-spacing:-.035em}
+.con dd small{display:block;margin-top:6px;font-weight:600;font-size:14px;letter-spacing:-.01em;color:var(--mute)}
+.con dd a{color:inherit;text-decoration:none}
+.con-f{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.con-f p{font-weight:500;font-size:clamp(22px,2.3vw,34px);letter-spacing:-.04em}
+
+@media (max-width:1000px){
+  .side{grid-column:1/-1;position:static;padding:0;margin-bottom:56px;gap:24px}
+  .toc{display:flex;flex-wrap:wrap;gap:8px}
+  .toc a{padding:9px 14px;border-radius:999px;background:var(--card);font-size:14px;color:var(--ink)}
+  .toc a::before{display:none}
+  .main{grid-column:1/-1}
+}
+@media (max-width:720px){
+  .ab{padding-block:120px 72px}
+  .main{gap:72px}.sec{gap:24px}
+  .pa{grid-template-columns:minmax(0,1fr);gap:8px}.pa:nth-child(even) figure{order:0}
+  .pa figure,.pa-t,.fa,.wide{border-radius:16px}
+  .pa-t{flex-direction:column-reverse;gap:8px;padding:18px}
+  .dea{columns:1}
+  .facts{grid-template-columns:minmax(0,1fr);gap:8px}.fa{min-height:0;gap:20px}
+  .ac summary{gap:14px;padding:20px 0}.plus{width:38px;height:38px}
+  .ac .prose{padding:0 0 24px}
+  .con>div{grid-template-columns:minmax(0,1fr);gap:4px}
+}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+
+<main class="ab" id="app"></main>
+
+<div class="end">
+  <div class="nx-hold" data-dark><site-next></site-next></div>
+  <site-footer></site-footer>
+</div>
+
+<script src="about/data.js"></script>
+<script src="about/base.js"></script>
+<script>
+(()=>{
+const D=window.ABOUT,{esc,photo,name}=AB;
+const num=i=>String(i+1).padStart(2,"0");
+const TOC=[["team",D.pastorsTitle],["deacons",D.deaconsTitle],["church",D.aboutTitle],["mission",D.missionKicker],["contacts",D.contactsTitle]];
+document.getElementById("app").innerHTML=`
+<div class="lay">
+  <aside class="side">
+    <h1 class="rv">${esc(D.kicker)}</h1>
+    <nav class="toc rv" style="--d:1" aria-label="Розділи сторінки">${TOC.map(([id,t])=>`<a href="#${id}" data-no-u>${esc(t)}</a>`).join("")}</nav>
+  </aside>
+
+  <div class="main">
+    <section class="sec" id="team" aria-labelledby="team-h">
+      <div class="sec-h rv"><h2 id="team-h">${esc(D.pastorsTitle)}</h2></div>
+      <div class="pas">${D.pastors.map(p=>`
+        <article class="pa rv">
+          <figure>${photo(p,"w",'width="840" height="570"')}</figure>
+          <div class="pa-t"><p class="kicker">${esc(p.role)}</p><h3>${name(p)}</h3></div>
+        </article>`).join("")}
+      </div>
+    </section>
+
+    <section class="sec" id="deacons" aria-labelledby="dea-h">
+      <div class="sec-h rv"><h2 id="dea-h">${esc(D.deaconsTitle)}</h2></div>
+      <ol class="dea rv">${D.deacons.map((p,i)=>`<li class="de"><i>${num(i)}</i><b${p.name?"":' class="is-empty"'}>${name(p)}</b></li>`).join("")}</ol>
+    </section>
+
+    <section class="sec" id="church" aria-labelledby="ch-h">
+      <div class="sec-h rv"><h2 id="ch-h">${esc(D.aboutTitle)}</h2></div>
+      <p class="lead rv">${esc(D.title)}.</p>
+      <div class="prose rv">${D.intro.map(t=>`<p>${t}</p>`).join("")}</div>
+      <div class="facts">${D.facts.map((f,i)=>`<div class="fa rv" style="--d:${i}"><b>${esc(f.big)}</b><span>${esc(f.text)}</span></div>`).join("")}</div>
+      <figure class="wide rv"><img src="about/church.webp" alt="Церква «Філадельфія»: спільне фото біля будівлі церкви" width="2200" height="1467" loading="lazy"></figure>
+    </section>
+
+    <section class="sec" id="mission" aria-labelledby="mis-h">
+      <div class="sec-h rv"><h2 id="mis-h">${esc(D.missionKicker)}</h2></div>
+      <p class="mis-t rv">${esc(D.mission)}</p>
+      <div class="acc rv">${D.pillars.map((p,i)=>`
+        <details class="ac" name="pillar"${i?"":" open"}>
+          <summary><i>${num(i)}</i><b>${esc(p.title)}</b><span class="plus" aria-hidden="true"></span></summary>
+          <div class="prose">${p.text.map(t=>`<p>${t}</p>`).join("")}</div>
+        </details>`).join("")}
+      </div>
+    </section>
+
+    <section class="sec" id="contacts" aria-labelledby="con-h">
+      <div class="sec-h rv"><h2 id="con-h">${esc(D.contactsTitle)}</h2></div>
+      <dl class="con rv" style="margin:-36px 0 0">
+        <div><dt>Email</dt><dd><a href="mailto:${esc(D.contacts.email)}">${esc(D.contacts.email)}</a></dd></div>
+        <div><dt>Адреса</dt><dd>${esc(D.contacts.address)}<small>${esc(D.contacts.metro)}</small></dd></div>
+      </dl>
+      <div class="con-f rv"><p>${esc(D.contacts.welcome)}</p><a class="lbtn" href="${esc(D.contacts.button.href)}">${esc(D.contacts.button.label)}</a></div>
+    </section>
+  </div>
+</div>`;
+AB.init();
+
+// підсвічування поточного розділу в навігації
+const links=[...document.querySelectorAll(".toc a")], secs=TOC.map(([id])=>document.getElementById(id));
+const spy=()=>{
+  const y=innerHeight*.35; let cur=0;
+  secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<=y)cur=i});
+  links.forEach((a,i)=>i===cur?a.setAttribute("aria-current","true"):a.removeAttribute("aria-current"));
+};
+addEventListener("scroll",spy,{passive:true}); addEventListener("resize",spy); spy();
+})();
+</script>
+</body>
+</html>

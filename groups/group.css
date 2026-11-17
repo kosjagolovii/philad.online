@@ -1,0 +1,31 @@
+/* Сторінка домашньої групи — ОДИН файл для всіх груп (homegroups/<slug>/). Шаблон — як у запису блогу / теми домашньої групи.
+   Підключається після blog/base.css і blog/post.css; текст і кольори — з UI-кіта (ui-kit/tokens.css).
+   Дані груп: groups/data.js → build-group-pages.py → homegroups/<slug>/index.html. */
+.hg-pg .hero{margin-bottom:36px}
+.hg-pg .hero img{object-position:50% 30%}
+.gfacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:12px;margin:0 0 28px;padding:0}
+.gfacts div{display:grid;gap:6px;align-content:start;padding:18px 20px;border-radius:20px;background:var(--card)}
+.gfacts dt{font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);text-transform:uppercase;color:var(--teal-ink)}
+.gfacts dd{margin:0;font:var(--h3-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track)}
+.gnote{margin:0 0 28px;padding:16px 20px;border-radius:16px;background:var(--cream-2);font:var(--t1-weight) var(--t2-size)/var(--t1-lh) var(--font)}
+.gacts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 56px}
+.art .gacts a.lbtn.ghost{background:transparent;color:var(--night);box-shadow:inset 0 0 0 1.5px rgba(20,20,20,.18)}
+.art .gacts a.lbtn.ghost:hover{background:rgba(20,20,20,.05)}
+.gsteps{display:grid;gap:12px;margin:0 0 8px;padding:0;list-style:none}
+.gsteps li{display:grid;gap:4px;padding:18px 22px;border-radius:20px;background:var(--card)}
+.gsteps b{font:var(--h3-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track)}
+.gsteps span{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.7)}
+.gjoin{margin-top:56px;padding:32px;border-radius:24px;background:#E9E2D3;scroll-margin-top:100px}
+.gjoin h2{margin:0 0 6px!important;text-align:center}
+.gjoin>p{margin:0 0 22px!important;text-align:center;font:var(--t1-weight) var(--t2-size)/var(--t1-lh) var(--font)!important;color:rgba(20,20,20,.65)!important}
+.gjoin .cf{display:block}
+.gmore{margin-top:64px}
+.gmore h2{margin:0 0 18px!important}
+.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr));gap:12px;margin:0;padding:0;list-style:none}
+.ggrid a{display:grid;gap:10px;padding:14px;border-radius:20px;background:var(--card);text-decoration:none;transition:background .25s,translate .4s cubic-bezier(.2,.7,.2,1)}
+.ggrid a:hover{background:#E1E0D2;translate:0 -3px}
+.ggrid img,.ggrid i{width:100%;aspect-ratio:1/1;border-radius:14px;object-fit:cover;object-position:50% 25%;background:var(--cream-2)}
+.ggrid i{display:grid;place-items:center;font:600 28px/1 var(--font);color:var(--mute);font-style:normal}
+.ggrid b{font:var(--h3-weight) var(--t1-size)/1.2 var(--font);letter-spacing:var(--t1-track)}
+.ggrid span{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);color:var(--mute)}
+@media (max-width:720px){.gjoin{padding:24px 18px;border-radius:20px}}

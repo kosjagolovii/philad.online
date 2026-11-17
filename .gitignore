@@ -1,0 +1,14 @@
+# службове
+.DS_Store
+*.bak
+*.pyc
+__pycache__/
+# резервні копії сторінок і старі версії
+index-v*.html
+*-v[0-9]-*.html
+*-v[0-9].html
+min-v1-bak/
+# секрети (ключ YouTube лежить поза сайтом, у ../../.secrets — тут лише на випадок помилки)
+.secrets/
+.env
+*api-key*

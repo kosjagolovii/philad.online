@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>PhiladYouth — молодіжне служіння церкви «Філадельфія»</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<!-- seo:start -->
+<meta name="description" content="PhiladYouth — молодіжне служіння церкви «Філадельфія» у Києві: зустрічі, команди та домашні групи для молоді 16–25 років.">
+<link rel="canonical" href="https://philad.org/project/philadyouth/">
+<meta name="robots" content="noindex,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Церква «Філадельфія»">
+<meta property="og:title" content="PhiladYouth — молодіжне служіння церкви «Філадельфія»">
+<meta property="og:description" content="PhiladYouth — молодіжне служіння церкви «Філадельфія» у Києві: зустрічі, команди та домашні групи для молоді 16–25 років.">
+<meta property="og:url" content="https://philad.org/project/philadyouth/">
+<meta property="og:image" content="https://philad.org/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PhiladYouth — молодіжне служіння церкви «Філадельфія»">
+<meta name="twitter:description" content="PhiladYouth — молодіжне служіння церкви «Філадельфія» у Києві: зустрічі, команди та домашні групи для молоді 16–25 років.">
+<meta name="twitter:image" content="https://philad.org/og.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "PhiladYouth — молодіжне служіння церкви «Філадельфія»", "description": "PhiladYouth — молодіжне служіння церкви «Філадельфія» у Києві: зустрічі, команди та домашні групи для молоді 16–25 років.", "url": "https://philad.org/project/philadyouth/", "inLanguage": "uk", "isPartOf": {"@type": "WebSite", "name": "Церква «Філадельфія»", "url": "https://philad.org/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://philad.org/"}, {"@type": "ListItem", "position": 2, "name": "Служіння", "item": "https://philad.org/sluzhinnya/"}, {"@type": "ListItem", "position": 3, "name": "PhiladYouth", "item": "https://philad.org/project/philadyouth/"}]}</script>
+<!-- seo:end -->
+<script src="components/site.js"></script>
+<link rel="stylesheet" href="ui-kit/tokens.css">
+<script src="components/groups.js"></script>
+<style>
+/* «Служіння / PhiladYouth» — за макетом Figma 254:3502 */
+:root{
+  --ds-cream:#F7F2E8; --ink:#141414; --grey:#9A9A8D; --teal:#317C8E; --teal-ink:#28697A; --sand:#E8E7DB;
+  --sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --side:12px; color-scheme:light;
+}
+html,body{margin:0;padding:0;background:var(--ds-cream);color:var(--ink)}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+button,input,textarea{font:inherit;color:inherit}
+[hidden]{display:none!important}
+
+/* the page covers the footer, then scrolls away and uncovers it */
+.yt{position:relative;z-index:1;background:var(--ds-cream);display:grid;gap:90px;padding-block:164px 90px;
+  padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+/* every block is as wide as the home page content (--row from components/site.js) */
+.yt{justify-items:center}
+.yt > *{min-width:0;width:var(--row);max-width:100%;box-sizing:border-box}
+
+/* shared type */
+.y-h2{margin:0;max-width:978px;font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track);text-align:center;text-wrap:balance}
+.y-h2 span{color:rgba(20,20,20,.5)}
+.y-txt{margin:0;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:var(--grey)}
+.y-copy{max-width:600px;display:grid;gap:18px;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.7)}
+.y-copy p{margin:0}
+.y-copy a{color:inherit}
+.y-head{display:grid;justify-items:center;gap:24px;width:100%}
+
+/* 1 · title */
+.y-top{display:grid;justify-items:center;gap:24px;text-align:center}
+.y-crumbs{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;margin:0;padding:0;list-style:none;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:var(--grey)}
+.y-crumbs li+li::before{content:"/";margin-right:4px}
+.y-crumbs a{color:inherit;text-decoration:none;transition:color .2s}
+.y-crumbs a:hover{color:var(--ink)}
+.y-top h1{margin:0;max-width:900px;font:var(--d1-weight) var(--d1-size)/var(--d1-lh) var(--font);letter-spacing:var(--d1-track);text-wrap:balance}
+.y-top h1 span{color:rgba(20,20,20,.5)}
+
+/* photos */
+/* the big photo keeps the proportions of the layout (1416×720) at every width */
+.y-hero{margin:0;aspect-ratio:1416/720;border-radius:20px;overflow:hidden;background:var(--sand)}
+.y-hero img{width:100%;height:100%;object-fit:cover;transform:scale(var(--ps,1.06));will-change:transform}
+/* the newest broadcast: a small card pinned to the screen, 55px from its right and bottom edges; grows on hover */
+.y-herow{position:relative}
+.y-live{position:fixed;z-index:8;right:calc(55px + env(safe-area-inset-right,0px));bottom:calc(55px + env(safe-area-inset-bottom,0px));width:201px;aspect-ratio:201/107;padding:0;border:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#141414;
+  box-shadow:0 18px 40px -18px rgba(0,0,0,.55);transform-origin:100% 100%;transition:scale .5s cubic-bezier(.3,1.4,.5,1),box-shadow .4s ease}
+.y-live img{width:100%;height:100%;object-fit:cover}
+.y-live.gone{opacity:0;scale:.85;pointer-events:none;visibility:hidden;transition:opacity .35s ease,scale .45s cubic-bezier(.2,.7,.2,1),visibility 0s .45s}
+.y-live:not(.gone){transition:scale .5s cubic-bezier(.3,1.4,.5,1),box-shadow .4s ease,opacity .35s ease}
+.y-live:hover{scale:1.15;box-shadow:0 26px 50px -18px rgba(0,0,0,.6)}
+.y-live:focus-visible{outline:3px solid var(--ds-cream);outline-offset:3px}
+/* the video window */
+.y-dlg{width:min(1100px,calc(100vw - 32px));padding:0;border:0;border-radius:20px;background:#141414;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.y-dlg::backdrop{background:rgba(20,20,20,.7);backdrop-filter:blur(4px)}
+.y-dlg[open]{animation:yIn .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes yIn{from{opacity:0;scale:.96}}
+.y-dlg-f{position:relative;aspect-ratio:16/9}
+.y-dlg-f iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.y-dlg-x{position:absolute;top:12px;right:12px;z-index:1;width:40px;height:40px;border:0;border-radius:50%;background:rgba(247,242,232,.92);cursor:pointer;font:var(--h3-weight) var(--h3-size)/var(--h3-lh) var(--font);letter-spacing:var(--h3-track)}
+.y-dlg .y-fall{inset:auto 16px 16px 16px}
+.y-row{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.y-row.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.y-row.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.y-row li{height:500px;border-radius:20px;overflow:hidden;background:var(--sand)}
+.y-row img{width:100%;height:100%;object-fit:cover;transition:scale .9s cubic-bezier(.2,.7,.2,1)}
+.y-row li:hover img{scale:1.04}
+
+/* 2 · leader */
+.y-lead{display:flex;align-items:center;justify-content:center;gap:24px}
+.y-lead img{width:150px;height:150px;border-radius:50%;object-fit:cover;background:var(--sand)}
+.y-lead div{display:grid;gap:4px}
+.y-lead b{font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track)}
+
+/* 3 · about */
+.y-about{display:grid;justify-items:center;gap:60px}
+.y-cols{display:grid;grid-template-columns:repeat(2,minmax(0,288px));gap:24px;justify-content:center}
+.y-logo{width:60px;height:60px}
+
+/* 5 · video */
+.y-video{display:grid;grid-template-columns:minmax(0,534fr) minmax(0,870fr);gap:12px}
+.y-vtx{display:grid;justify-items:center;align-content:center;gap:24px;padding:24px 40px;border-radius:20px;background:var(--sand);text-align:center}
+.y-vtx .y-h2{font-size:var(--h2-size)}
+.y-vtx .y-txt{max-width:394px;color:rgba(20,20,20,.5)}
+.y-yt{display:grid;place-items:center;width:300px;max-width:100%;height:72px;border-radius:15px;background:var(--teal);color:var(--ds-cream);text-decoration:none;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);text-transform:uppercase;transition:background .25s,scale .3s cubic-bezier(.2,.7,.2,1)}
+.y-yt:hover{background:var(--teal-ink);scale:1.03}
+.y-yt:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.y-player{position:relative;aspect-ratio:870/490;border-radius:19px;overflow:hidden;background:#141414}
+.y-player > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:scale .9s cubic-bezier(.2,.7,.2,1)}
+.y-play{position:absolute;inset:0;width:100%;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+.y-play i{width:120px;height:120px;border-radius:50%;background:var(--ds-cream);display:grid;place-items:center;filter:drop-shadow(0 4px 20px rgba(0,0,0,.25));transition:scale .4s cubic-bezier(.3,1.5,.5,1)}
+.y-play i img{width:40px;height:40px}
+.y-play:hover i{scale:1.08}
+.y-player:hover > img{scale:1.03}
+.y-play:focus-visible i{outline:3px solid var(--ds-cream);outline-offset:4px}
+.y-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.y-fall{position:absolute;inset:auto 16px 16px 16px;margin:0;padding:12px 14px;border-radius:12px;background:rgba(20,20,20,.8);color:var(--ds-cream);font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track)}
+.y-fall a{color:inherit}
+
+/* 6 · when & where */
+.y-when{display:grid;justify-items:center;gap:24px;text-align:center}
+.y-when .y-copy{text-align:center}
+.y-soc{display:flex;gap:12px;margin:0;padding:0;list-style:none}
+.y-soc a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;transition:scale .3s cubic-bezier(.2,.7,.2,1),opacity .2s}
+.y-soc a:hover{scale:1.1}
+.y-soc a:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.y-soc img{width:44px;height:44px}
+.y-soc .tg img{width:34px;height:34px}
+
+/* 7 · two cards: form + instagram (Figma 322:8449) */
+.y-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}
+.y-card{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));min-height:464px;border-radius:20px;overflow:hidden;background:var(--teal);color:var(--ds-cream)}
+.y-card figure{margin:0;min-height:0;background:var(--sand)}
+.y-card figure img{width:100%;height:100%;object-fit:cover;transition:scale .9s cubic-bezier(.2,.7,.2,1)}
+.y-card:hover figure img{scale:1.04}
+.y-card-tx{display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:24px;min-width:0}
+.y-card-tx div{display:grid;gap:16px}
+.y-card small{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track)}
+.y-card h2{margin:0;font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track);text-wrap:balance}
+.y-card p{margin:0;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);opacity:.5}
+.y-card a{display:grid;place-items:center;height:48px;border-radius:12px;background:var(--ds-cream);color:#1a1c19;text-decoration:none;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);text-transform:uppercase;transition:background .25s,scale .3s cubic-bezier(.2,.7,.2,1)}
+.y-card a:hover{background:#fff;scale:1.02}
+.y-card a:focus-visible{outline:2px solid var(--ds-cream);outline-offset:3px}
+
+/* reveal on scroll */
+.rv{opacity:0;transform:translate3d(0,40px,0);transition:opacity .8s ease,transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0)*80ms)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1100px){
+  /* tablet & phone: the broadcast card sits right under the big photo, as wide as it, height in proportion */
+  .y-herow{display:grid;gap:12px}
+  .y-live{position:static;width:100%;border-radius:16px}
+  .y-live:hover{scale:1.02}
+  .y-row.four{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .y-row li{height:380px}
+  .y-video{grid-template-columns:minmax(0,1fr)}
+  .y-cards{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:720px){
+  :root{--side:16px}
+  .yt{gap:64px;padding-block:130px 64px}
+  .y-row.two{grid-template-columns:minmax(0,1fr)}
+  .y-row li{height:300px;border-radius:16px}
+  .y-hero{border-radius:16px}
+  .y-cols{grid-template-columns:minmax(0,1fr)}
+  .y-lead{gap:16px}
+  .y-lead img{width:96px;height:96px}
+  .y-lead b{font-size:var(--h2s-size)}
+  .y-vtx{padding:32px 20px}
+  .y-play i{width:84px;height:84px}
+  .y-play i img{width:30px;height:30px}
+  .y-card{grid-template-columns:minmax(0,1fr);min-height:0;border-radius:16px}
+  .y-card figure{aspect-ratio:350/300}
+}
+@media (prefers-reduced-motion:reduce){.rv,.y-row img,.y-player>img,.y-play i,.y-yt{transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+
+<main class="yt">
+  <header class="y-top">
+    <ol class="y-crumbs rv" aria-label="Ви тут">
+      <li><a href="/" data-no-u>Церква Філадельфія</a></li>
+      <li><a href="/sluzhinnya/" data-no-u>Служіння</a></li>
+      <li aria-current="page">PhiladYouth</li>
+    </ol>
+    <h1 class="rv" style="--d:1">PhiladYouth<br><span>або молодіжне служіння в церкві Філадельфія</span></h1>
+  </header>
+
+  <!-- no reveal transform on this wrapper: a transformed parent would pin the fixed broadcast card to itself instead of the screen -->
+  <div class="y-herow">
+    <figure class="y-hero rv"><img src="youth/hero.webp" alt="Молодь церкви «Філадельфія» — велике спільне фото" width="2400" height="1220"></figure>
+    <!-- the newest broadcast of youtube.com/@philadyouth/streams (youth/live.json, written by update-latest.py) -->
+    <button class="y-live" type="button" id="yLive" aria-label="Дивитись останню трансляцію PhiladYouth"><img id="yLiveImg" src="youth/live.jpg" alt="" width="1280" height="720"></button>
+  </div>
+
+  <section class="y-lead rv" aria-label="Лідер служіння">
+    <img src="youth/leader.webp" alt="Андрій Лещук" width="150" height="150" loading="lazy">
+    <div><span class="y-txt">Лідер служіння</span><b>Лещук Андрій</b></div>
+  </section>
+
+  <section class="y-about" aria-labelledby="y-about">
+    <div class="y-head">
+      <h2 class="y-h2 rv" id="y-about">Молодіжне служіння <span>— це потужний інструмент впливу на життя сучасної людини.</span></h2>
+      <div class="y-cols rv" style="--d:1">
+        <p class="y-txt">Не секрет, що кожен з нас наділений унікальними здібностями, які хочеться розвивати людям різного віку, особливо молоді. На жаль, їх можна легко втратити, якщо направити в неправильне русло або не мати можливості проявляти. Саме з метою реалізації природних талантів підростаючого покоління в Церкві «Філадельфія» з’явилося молодіжне та підліткове служіння.</p>
+        <p class="y-txt">Воно є хорошим підґрунтям для спроб у розкритті потенціалу молоді — покоління талановитих, енергійних, запальних та яскравих людей, які розвиваються, пробують щось нове, досягають успіхів і будують майбутнє. Справа Церкви — допомогти їм розпочати своє активне життя в чесноті та вірі.</p>
+      </div>
+    </div>
+    <ul class="y-row four" style="width:100%">
+      <li class="rv"><img src="youth/p1.webp" alt="Молодь на служінні" loading="lazy"></li>
+      <li class="rv" style="--d:1"><img src="youth/p2.webp" alt="Прославлення на молодіжці" loading="lazy"></li>
+      <li class="rv" style="--d:2"><img src="youth/p3.webp" alt="Молодіжна зустріч" loading="lazy"></li>
+      <li class="rv" style="--d:3"><img src="youth/p4.webp" alt="Друзі на молодіжці" loading="lazy"></li>
+    </ul>
+  </section>
+
+  <section class="y-head" aria-labelledby="y-vision">
+    <img class="y-logo rv" src="youth/logo.svg" alt="" width="60" height="60">
+    <h2 class="y-h2 rv" id="y-vision">Молодіжне бачення:<br><span>Досягати загиблих.<br>Укріпляти спасенних.<br>Навчати примножувати.</span></h2>
+    <div class="y-copy rv">
+      <p>Молодіжне служіння спрямоване на створення спільних інтересів. Тут формуються музичні гурти, медіа-команди, організовуються тематичні зустрічі. Молодь розвиває в собі навички фотографів, дизайнерів, програмістів, музикантів, організаторів. Підлітки й студенти активно беруть участь в інших церковних служіннях: працюють з дітьми, піклуються про людей літнього віку, їздять до прифронтових зон на Сході України як волонтери. У літній період організовують християнські табори, сповнені радості активного відпочинку.</p>
+      <p>Андрій Лещук — лідер молодіжного служіння — та його команда <a href="https://www.instagram.com/philadyouth/" target="_blank" rel="noopener">#PhiladYouth</a> мають на меті створити з нього не просто місце для проведення часу, а цілий рух. Тому молодь, окрім перебування в Церкві, бере активну участь у соціальних проектах, різноманітних акціях і святах, які допомагають вплинути на суспільство через поширення Божого Слова. Християнська молодь має на меті не досягнення високого статусу, а любов до Бога та людей.</p>
+      <p><a href="https://www.instagram.com/philadyouth/" target="_blank" rel="noopener">PhiladYouth</a> — цілеспрямований молодіжний рух церкви «Філадельфія». Але це не просто чергова назва, не просто логотип чи певний набір букв. <a href="https://www.instagram.com/philadyouth/" target="_blank" rel="noopener">PhiladYouth</a> — це сім’я: гостинні люди, чуйні лідери та відкриті серця.</p>
+      <p>Наш рух — це перш за все прийняття. Тут ніхто не одягає маски, ніхто не прикидається. Ми хочемо бути самі собою і віримо, що Бог допоможе нам стати кращими.</p>
+      <p>Ми завжди готові прийняти тебе в нашу велику родину, розділити гарячий чай та смачну їжу. Тобі потрібно самому це побачити і зробити власний вибір — чи стати частиною такої сім’ї.</p>
+    </div>
+  </section>
+
+  <ul class="y-row two">
+    <li class="rv"><img src="youth/w1.webp" alt="Молодіжне служіння на сцені" loading="lazy"></li>
+    <li class="rv" style="--d:1"><img src="youth/w2.webp" alt="Молодь разом після служіння" loading="lazy"></li>
+  </ul>
+
+  <section class="y-head" aria-labelledby="y-groups">
+    <h2 class="y-h2 rv" id="y-groups">Молодіжні<br><span>домашні групи</span></h2>
+    <div class="y-copy rv">
+      <p>Домашня група — це невелика спільнота людей, які зустрічаються посеред тижня для спілкування, спільного вивчення Біблії та молитви. Це місце, де ви можете знайти справжніх друзів.</p>
+      <p>Навіщо потрібна домашня група?</p>
+      <p>Церква — це не просто недільні богослужіння у великому залі. Перша церква щодня збиралася по домах, щоб перебувати у вченні апостолів, спілкуванні, ламанні хліба та в молитвах.</p>
+      <p>Саме в невеликій групі (до 15 осіб) найпростіше побудувати міцні дружні стосунки, отримати духовну та молитовну підтримку, а також глибше пізнати Слово Боже, обговорюючи його в комфортній атмосфері.</p>
+    </div>
+  </section>
+
+  <!-- the same block as on homegroups.html: one base of groups (groups/data.js), here filtered to youth with the first group open -->
+  <home-groups class="rv" title="Молодіжні домашки" who="young" open-first></home-groups>
+
+  <section class="y-video" aria-labelledby="y-talk">
+    <div class="y-vtx rv">
+      <h2 class="y-h2" id="y-talk">Приєднуйтесь до обговорення</h2>
+      <p class="y-txt">Переглянь нове відео на нашому YouTube-каналі. Роби власні нотатки та приєднуйся до обговорення в коментарях.</p>
+      <a class="y-yt" href="https://www.youtube.com/@philadyouth" target="_blank" rel="noopener" data-no-u>Всі відео на YouTube</a>
+    </div>
+    <div class="y-player rv" style="--d:1" id="yPlayer">
+      <img id="yThumb" src="youth/latest.jpg" alt="" loading="lazy">
+      <button class="y-play" type="button" id="yPlay" aria-label="Дивитись останнє відео PhiladYouth"><i><img src="youth/play.svg" alt="" width="40" height="40"></i></button>
+      <p class="y-fall" id="yFall" hidden>Відео не відкривається тут — <a id="yLink" href="https://www.youtube.com/@philadyouth" target="_blank" rel="noopener">дивіться на YouTube</a>.</p>
+    </div>
+  </section>
+
+  <section class="y-when" aria-labelledby="y-when">
+    <h2 class="y-h2 rv" id="y-when">Щосуботи о 17:00,<br><span>м. Київ, вул. Голосіївська, 57</span></h2>
+    <div class="y-copy rv"><p>Щоб бути на зв’язку, приєднуйся до молодіжних соцмереж. Там ми розповідаємо, чим живе молодь, коли будуть наступні івенти, або просто ділимося світлинами, як пройшла молодіжка.</p></div>
+    <ul class="y-soc rv" aria-label="Соцмережі PhiladYouth">
+      <li><a href="https://www.youtube.com/@philadyouth" target="_blank" rel="noopener" aria-label="YouTube" data-no-u><img src="youth/s-yt.svg" alt=""></a></li>
+      <li><a href="https://www.instagram.com/philadyouth/" target="_blank" rel="noopener" aria-label="Instagram" data-no-u><img src="youth/s-ig.svg" alt=""></a></li>
+      <li><a class="tg" href="https://t.me/philadyouth" target="_blank" rel="noopener" aria-label="Telegram" data-no-u><img src="youth/s-tg.svg" alt=""></a></li>
+    </ul>
+  </section>
+
+  <ul class="y-cards" id="yCards" aria-label="Як доєднатись до молодіжки">
+    <li class="y-card rv">
+      <figure><img src="youth/card-form.webp" alt="Дві дівчини усміхаються на молодіжці" loading="lazy"></figure>
+      <div class="y-card-tx">
+        <div><small>Welcome to Philadyouth family!</small><h2>Давай знайомитись</h2><p>Заповни форму, і ми зв’яжемося з тобою та з’ясуємо деталі.</p></div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc62gS2XMBT4ZosPNy2BlJj2VAHO0HqGhbX7g5y1E1UFOn8xA/viewform" target="_blank" rel="noopener" data-no-u>Залишити заявку (2 хв)</a>
+      </div>
+    </li>
+    <li class="y-card rv" style="--d:1">
+      <figure><img src="youth/card-insta.webp" alt="Друзі на молодіжці показують «вікторі»" loading="lazy"></figure>
+      <div class="y-card-tx">
+        <div><small>Спілкування</small><h2>Ми в інстаграм</h2><p>Насправді не тільки тут, але підпишись хоча б на Instagram, а там, дивись, і в Telegram будеш нас читати.</p></div>
+        <a href="https://www.instagram.com/philadyouth/" target="_blank" rel="noopener" data-no-u>Переглянути</a>
+      </div>
+    </li>
+  </ul>
+</main>
+
+<site-footer></site-footer>
+
+<dialog class="y-dlg" id="yDlg" aria-label="Трансляція PhiladYouth">
+  <div class="y-dlg-f" id="yDlgF"></div>
+  <p class="y-fall" id="yDlgFall" hidden>Відео не відкривається тут — <a id="yDlgLink" href="https://www.youtube.com/@philadyouth/streams" target="_blank" rel="noopener">дивіться на YouTube</a>.</p>
+  <button class="y-dlg-x" type="button" id="yDlgX" aria-label="Закрити">×</button>
+</dialog>
+
+<script>
+(()=>{
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $=id=>document.getElementById(id);
+const footer=$("footer");if(footer)footer.setAttribute("data-dark","");
+
+/* ---------- the newest video of youtube.com/@philadyouth ----------
+   youth/latest.json and youth/latest.jpg are written by update-latest.py (run it on a schedule) */
+const embed=id=>{const f=document.createElement("iframe");
+  f.src="https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1&rel=0&playsinline=1";
+  f.allow="autoplay; encrypted-media; picture-in-picture; fullscreen";f.allowFullscreen=true;f.referrerPolicy="strict-origin-when-cross-origin";return f};
+
+/* ---------- the newest broadcast (card on the big photo) → plays in a window over the page ---------- */
+let live={id:"M8T-COzhjH4",title:"Молодіжка Philad Youth | LIVE"};
+fetch("youth/live.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(n=>{
+  if(!n||!/^[\w-]{6,20}$/.test(n.id))return;
+  live={id:n.id,title:String(n.title||live.title)};$("yLiveImg").src="youth/live.jpg?v="+n.id;$("yLive").setAttribute("aria-label","Дивитись трансляцію: "+live.title);
+}).catch(()=>{});
+const dlg=$("yDlg");
+$("yLive").onclick=()=>{
+  const f=embed(live.id);f.title=live.title;$("yDlgF").replaceChildren(f);
+  $("yDlgLink").href="https://www.youtube.com/watch?v="+live.id;$("yDlgFall").hidden=true;dlg.showModal();
+};
+$("yDlgX").onclick=()=>dlg.close();
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener("close",()=>$("yDlgF").replaceChildren());   // removing the player stops the sound
+
+let v={id:"rS6sJV40k4o",title:"Останнє відео PhiladYouth"};
+fetch("youth/latest.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(n=>{
+  if(!n||!/^[\w-]{6,20}$/.test(n.id))return;
+  v={id:n.id,title:String(n.title||v.title)};$("yThumb").src="youth/latest.jpg?v="+n.id;$("yPlay").setAttribute("aria-label","Дивитись: "+v.title);
+}).catch(()=>{});
+$("yPlay").onclick=()=>{
+  $("yLink").href="https://www.youtube.com/watch?v="+v.id;
+  const f=document.createElement("iframe");
+  f.src="https://www.youtube-nocookie.com/embed/"+v.id+"?autoplay=1&rel=0&playsinline=1";
+  f.title=v.title;f.allow="autoplay; encrypted-media; picture-in-picture; fullscreen";f.allowFullscreen=true;f.referrerPolicy="strict-origin-when-cross-origin";
+  $("yPlay").hidden=true;$("yThumb").hidden=true;$("yPlayer").append(f);
+};
+// where embedding is forbidden (e.g. a sandboxed preview) offer the link instead of an empty frame
+document.addEventListener("securitypolicyviolation",e=>{if(!/frame/.test(e.effectiveDirective||e.violatedDirective||""))return;
+  if(dlg.open)$("yDlgFall").hidden=false;else if($("yPlayer").querySelector("iframe"))$("yFall").hidden=false});
+
+/* ---------- the broadcast card stays pinned to the screen until the last block (the two cards) reaches it,
+   then fades away — so it never sits on the footer ---------- */
+{const card=$("yLive"),last=$("yCards"),pin=matchMedia("(min-width:1101px)");
+ const step=()=>{if(!pin.matches){card.classList.remove("gone");return}
+   const gap=parseFloat(getComputedStyle(card).bottom)||55;
+   card.classList.toggle("gone",last.getBoundingClientRect().bottom<innerHeight-gap)};
+ addEventListener("scroll",step,{passive:true});addEventListener("resize",step);pin.addEventListener("change",step);step()}
+
+/* ---------- reveal & a slow zoom on the big photo ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll(".rv").forEach(x=>reduce?x.classList.add("in"):io.observe(x));
+const hero=document.querySelector(".y-hero img");
+if(!reduce){let raf=0;const step=()=>{raf=0;const r=hero.parentElement.getBoundingClientRect(),t=Math.min(1,Math.max(0,(innerHeight-r.top)/(innerHeight+r.height)));hero.style.setProperty("--ps",(1.08-.08*t).toFixed(4))};
+  addEventListener("scroll",()=>{if(!raf)raf=requestAnimationFrame(step)},{passive:true});step()}
+})();
+</script>
+</body>
+</html>
