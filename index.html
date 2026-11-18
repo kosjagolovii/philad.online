@@ -35,14 +35,14 @@
   --ink:#FFFFFF; --ink-soft:rgba(255,255,255,.88);
   --cream:#F4EFE6; --cream-ink:#1F1A17;
   --night:#14110F; --glass:rgba(255,255,255,.14); --glass-line:rgba(255,255,255,.38);
-  --panel:rgba(20,17,15,.86); --panel-line:rgba(255,255,255,.14); --panel-mute:rgba(255,255,255,.55); --accent:#E9C46A; --changed:#5FD4FF;
+
   --ds-cream:#F7F2E8;
   --h1-size:90px; --h1-lh:1.02; --h1-track:-.033em;
   --t1-size:18px; --t1-lh:1.44; --t1-track:-.01em;
   --t3-size:12px; --t3-lh:1.33; --t3-track:.04em;
   --gutter:50px;
   --sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+
   color-scheme:dark;
 }
 html,body{margin:0;padding:0;background:var(--night);color:var(--ink)}
@@ -305,51 +305,6 @@ canvas.trail{position:fixed;inset:0;width:100%;height:100%;z-index:11;pointer-ev
 @keyframes drip{0%{transform:scaleY(.2);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}100%{transform:scaleY(.2);transform-origin:bottom}}
 
 /* tuner */
-.tuner-tab{position:fixed;z-index:20;right:0;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;
-  font:600 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--ink);
-  padding:16px 9px;padding-right:calc(9px + env(safe-area-inset-right,0px));
-  background:var(--panel);border:1px solid var(--panel-line);border-right:0;border-radius:10px 0 0 10px;cursor:pointer;
-  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
-.tuner-tab:hover{color:var(--accent)}
-.tuner{position:fixed;z-index:21;top:0;right:0;bottom:0;width:min(340px,92vw);display:flex;flex-direction:column;
-  background:var(--panel);border-left:1px solid var(--panel-line);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
-  font:400 var(--t3-size)/1.35 var(--mono);color:var(--ink);transform:translateX(102%);transition:transform .32s cubic-bezier(.2,.7,.2,1)}
-.tuner.open{transform:none}
-.tuner header{display:flex;align-items:center;justify-content:space-between;gap:8px;
-  padding:calc(16px + env(safe-area-inset-top,0px)) calc(16px + env(safe-area-inset-right,0px)) 12px 16px;border-bottom:1px solid var(--panel-line)}
-.tuner header b{text-transform:uppercase;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track)}
-.tuner header button,.tuner footer button{font:600 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);
-  background:transparent;border:1px solid var(--panel-line);border-radius:7px;padding:8px 10px;cursor:pointer}
-.tuner header button:hover,.tuner footer button:hover{border-color:var(--accent);color:var(--accent)}
-.tuner .body{flex:1;overflow:auto;padding:4px 16px 16px;padding-right:calc(16px + env(safe-area-inset-right,0px))}
-.ver{display:grid;gap:6px;padding:14px 0 16px;border-bottom:1px solid var(--panel-line)}
-.ver label{font:600 10px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--panel-mute)}
-.ver select{font:600 13px/1.2 var(--mono);color:var(--ink);background:rgba(255,255,255,.08);border:1px solid var(--accent);border-radius:7px;padding:9px 8px}
-.ver p{margin:2px 0 0;color:var(--panel-mute);font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track)}
-.grp{border-bottom:1px solid var(--panel-line)}
-.grp summary{display:flex;align-items:center;gap:8px;list-style:none;cursor:pointer;padding:14px 0;
-  font:600 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase}
-.grp summary::-webkit-details-marker{display:none}
-.grp summary::before{content:"+";width:12px;color:var(--panel-mute)}
-.grp[open] summary::before{content:"−"}
-.grp summary:hover{color:var(--accent)}
-.grp summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.grp .badge{margin-left:auto;min-width:18px;padding:3px 6px;border-radius:9px;background:var(--changed);color:#0b1a22;font-style:normal;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);text-align:center}
-.grp[open]{padding-bottom:8px}
-.tuner h4{margin:12px 0 8px;font:600 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--panel-mute)}
-.ctl{display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:center;margin:0 0 10px}
-.ctl label{min-width:0}
-.ctl{user-select:none;-webkit-user-select:none}
-.ctl output{color:var(--panel-mute);font-variant-numeric:tabular-nums;transition:color .15s}
-.ctl.changed output{color:var(--changed)}
-.ctl.changed label::after{content:"";display:inline-block;width:6px;height:6px;margin-left:7px;border-radius:50%;background:var(--changed);vertical-align:middle}
-.ctl input[type=range]{grid-column:1/-1;width:100%;accent-color:var(--accent);margin:0}
-.ctl select{grid-column:1/-1;width:100%;font:inherit;color:var(--ink);background:rgba(255,255,255,.06);border:1px solid var(--panel-line);border-radius:6px;padding:6px}
-.ctl.check{grid-template-columns:auto 1fr}
-.ctl.check input{accent-color:var(--accent);margin:0}
-.tuner footer{display:flex;gap:8px;flex-wrap:wrap;padding:12px 16px calc(14px + env(safe-area-inset-bottom,0px));padding-right:calc(16px + env(safe-area-inset-right,0px));border-top:1px solid var(--panel-line)}
-.tuner footer small{flex:1 1 100%;color:var(--panel-mute)}
-.tuner textarea{width:100%;height:110px;font:11px/1.4 var(--mono);color:var(--ink);background:rgba(0,0,0,.35);border:1px solid var(--panel-line);border-radius:6px;padding:8px}
 
 /* tablet: 721–1000px */
 @media (min-width:721px) and (max-width:1000px){
@@ -503,7 +458,7 @@ canvas.trail{position:fixed;inset:0;width:100%;height:100%;z-index:11;pointer-ev
   html body .ft-nav{gap:var(--sp-4)!important}
   html body .ft-col{gap:var(--sp-1)!important}
 }
-@media (prefers-reduced-motion:reduce){.reveal,.svc-video.reveal{opacity:1;transform:none;transition:none}.hint i{animation:none}.tuner{transition:none}}
+@media (prefers-reduced-motion:reduce){.reveal,.svc-video.reveal{opacity:1;transform:none;transition:none}.hint i{animation:none}}
 
 /* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
 @media (min-width:721px) and (max-width:1000px){
@@ -719,16 +674,6 @@ canvas.trail{position:fixed;inset:0;width:100%;height:100%;z-index:11;pointer-ev
 <dialog class="vid" id="vid" aria-label="Відео">
   <figure><button type="button" id="vidClose" aria-label="Закрити">×</button><img id="vidImg" src="play-thumb.webp" alt="Дві жінки обіймаються в коридорі церкви" width="939" height="498"><figcaption id="vidCap">Тут буде відео про церкву.</figcaption></figure>
 </dialog>
-<button class="tuner-tab" id="tunerTab" type="button" aria-controls="tuner" aria-expanded="false">Тюнер</button>
-<aside class="tuner" id="tuner" aria-label="Тюнер ефектів" hidden>
-  <header><b>Тюнер</b><button type="button" id="tunerClose">Закрити</button></header>
-  <div class="body" id="tunerBody"></div>
-  <footer>
-    <button type="button" id="tunerReset">Скинути</button>
-    <button type="button" id="tunerCopy">Копіювати JSON</button>
-    <small id="tunerNote">Синім — змінені значення. Подвійний клік по параметру повертає стандартне. Налаштування зберігаються в цьому браузері.</small>
-  </footer>
-</aside>
 
 <script>
 (()=>{
@@ -1354,78 +1299,10 @@ addEventListener("scroll",()=>{
   else if(auto.state==="end"&&S.autoReverse&&scrollY<end-4){if(noInput)return;playTo(0)}
 },{passive:true});
 
-/* ---------- tuner UI ---------- */
-const tab=$("tunerTab"),panel=$("tuner"),body=$("tunerBody");
-function fmt(v,step){const d=String(step).includes(".")?String(step).split(".")[1].length:0;return Number(v).toFixed(d)}
-function buildTuner(){
-  body.innerHTML="";
-  let openState={};try{openState=JSON.parse(localStorage.getItem(OPEN_KEY)||"{}")}catch(e){}
-  const vb=document.createElement("div");vb.className="ver";
-  vb.innerHTML=`<label for="t-version">Версія</label><select id="t-version">${VERSIONS.map(v=>`<option value="${v.id}">${v.name}</option>`).join("")}</select><p>${ver.note}</p>`;
-  const vs=vb.querySelector("select");vs.value=ver.id;
-  vs.onchange=()=>{
-    ver=VERSIONS.find(v=>v.id===vs.value);DEFAULTS=ver.defaults;loadS();
-    try{localStorage.setItem(VKEY,ver.id)}catch(e){}
-    buildTuner();apply();resetAuto();snap=null;
-  };
-  body.appendChild(vb);
-  GROUPS.forEach(([title,ctrls,only],gi)=>{
-    if(only&&only!==ver.mode)return;
-    const det=document.createElement("details");det.className="grp";det.open=openState[gi]??gi<2;
-    const sum=document.createElement("summary");sum.innerHTML=`<span>${title}</span><i class="badge" hidden></i>`;det.appendChild(sum);
-    const badge=sum.querySelector(".badge"),keys=ctrls.filter(c=>typeof c!=="string").map(c=>c[0]);
-    const recount=()=>{const n=keys.filter(k=>S[k]!==DEFAULTS[k]).length;badge.hidden=!n;badge.textContent=n};
-    det.ontoggle=()=>{openState[gi]=det.open;try{localStorage.setItem(OPEN_KEY,JSON.stringify(openState))}catch(e){}};
-    body.appendChild(det);
-    for(const item of ctrls){
-      if(typeof item==="string"){const h=document.createElement("h4");h.textContent=item;det.appendChild(h);continue}
-      const [key,label,a,b,step]=item;
-      const row=document.createElement("div");row.className="ctl";const id="t-"+key;
-      row.title="Подвійний клік — стандартне значення";
-      let show;   // writes S[key] back into the control
-      if(a==="check"){
-        row.classList.add("check");
-        row.innerHTML=`<input type="checkbox" id="${id}"><label for="${id}">${label}</label>`;
-        const inp=row.querySelector("input");
-        show=()=>{inp.checked=!!S[key]};
-        inp.onchange=()=>{S[key]=inp.checked;commit()};
-      }else if(a==="select"){
-        const names=key==="grainType"?TEXTURES:key==="autoEase"?EASE_NAMES:key==="curBlend"||key==="trailBlend"?{difference:"Інверсія (difference)",exclusion:"М'яка інверсія (exclusion)",overlay:"Overlay",normal:"Без накладання"}:key==="curStyle"?{trail:"Слід (Framer CursorDotTrail)",jelly:"Желе-магніт (попередній)"}:key==="trailColor"?{"#F7F2E8":"Кремовий","#FFFFFF":"Білий","#080808":"Чорний"}:{};
-        row.innerHTML=`<label for="${id}">${label}</label><output></output><select id="${id}">${b.map(o=>`<option value="${o}">${names[o]||o}</option>`).join("")}</select>`;
-        const sel=row.querySelector("select");
-        show=()=>{sel.value=S[key]};
-        sel.onchange=()=>{S[key]=sel.value;commit()};
-      }else{
-        row.innerHTML=`<label for="${id}">${label}</label><output for="${id}"></output><input type="range" id="${id}" min="${a}" max="${b}" step="${step}">`;
-        const inp=row.querySelector("input"),out=row.querySelector("output");
-        show=()=>{inp.value=S[key];out.textContent=fmt(S[key],step)};
-        inp.oninput=()=>{S[key]=parseFloat(inp.value);out.textContent=fmt(S[key],step);commit()};
-      }
-      const mark=()=>{row.classList.toggle("changed",S[key]!==DEFAULTS[key]);recount()};
-      const commit=()=>{mark();save();apply()};
-      row.ondblclick=e=>{e.preventDefault();S[key]=DEFAULTS[key];show();commit()};
-      show();mark();
-      det.appendChild(row);
-    }
-  });
-  const ta=document.createElement("textarea");ta.id="tunerJson";ta.readOnly=true;ta.hidden=true;ta.setAttribute("aria-label","Налаштування у форматі JSON");body.appendChild(ta);
-}
-function setOpen(o){
-  if(o)panel.hidden=false;
-  requestAnimationFrame(()=>panel.classList.toggle("open",o));
-  tab.setAttribute("aria-expanded",o);
-  if(!o)setTimeout(()=>{if(!panel.classList.contains("open"))panel.hidden=true},340);
-}
-tab.onclick=()=>setOpen(!panel.classList.contains("open"));
-$("tunerClose").onclick=()=>setOpen(false);
-addEventListener("keydown",e=>{if(e.key==="Escape")setOpen(false)});
-$("tunerReset").onclick=()=>{S={...DEFAULTS};save();buildTuner();apply();$("tunerNote").textContent="Повернуто стандартні значення."};
-$("tunerCopy").onclick=()=>{
-  const json=JSON.stringify({version:ver.id,...S},null,2),ta=$("tunerJson"),note=$("tunerNote");
-  ta.value=json;
-  const fallback=()=>{ta.hidden=false;ta.focus();ta.select();note.textContent="Виділіть і скопіюйте текст нижче."};
-  try{navigator.clipboard.writeText(json).then(()=>{note.textContent="JSON скопійовано."},fallback)}catch(e){fallback()}
-};
+/* тюнер ефектів винесено в папку tools (лише для розробки, на сайт не публікується); тут — доступ до стану сторінки */
+window.HERO_TUNER={$,VERSIONS,GROUPS,TEXTURES,EASE_NAMES,OPEN_KEY,VKEY,loadS,save,apply,resetAuto,
+  get S(){return S},set S(v){S=v},get ver(){return ver},set ver(v){ver=v},get DEFAULTS(){return DEFAULTS},set DEFAULTS(v){DEFAULTS=v},
+  get snap(){return snap},set snap(v){snap=v}};
 
 /* ---------- cursor style "trail": spring dot with a fading trail, ring over buttons ---------- */
 const tc=$("trail"),tx2=tc.getContext("2d");
@@ -1571,7 +1448,7 @@ $("vidClose").onclick=()=>vid.close();
 vid.addEventListener("click",e=>{if(e.target===vid)vid.close()});
 
 /* ---------- go ---------- */
-buildTuner();size();sizeTrail();apply();
+size();sizeTrail();apply();
 if(LITE){const ft=document.querySelector(".ft"),endEl=document.querySelector(".end"),hold=document.querySelector(".nx-hold");let tick=0;const fit=()=>{endEl.style.setProperty("--fh",Math.max(ft.offsetHeight,innerHeight)+"px");pos()};const pos=()=>{const over=Math.max(0,-hold.getBoundingClientRect().bottom),max=Math.max(0,ft.offsetHeight-innerHeight);ft.style.transform="translate3d(0,"+(-Math.min(over,max))+"px,0)"};addEventListener("scroll",()=>{if(!tick){tick=requestAnimationFrame(()=>{tick=0;pos()})}},{passive:true});addEventListener("resize",fit);addEventListener("load",fit);setTimeout(fit,800);setTimeout(fit,2500);fit()}
 if(LITE){const sec=document.createElement("section");sec.className="cards-sec";sec.id="cardsSec";sec.setAttribute("aria-label","Прийди й побач");track.after(sec);sec.append(cards);cards.dataset.off="0"}
 if(ver.mode==="auto")resetAuto();else cur=prevCur=target=progress();

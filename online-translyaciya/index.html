@@ -61,16 +61,75 @@ live-player{--lp-cap:#F7F2E8}
 @media (max-width:720px){:root{--pt:68px;--pb:16px;--bar:68px}.pg{padding-inline:16px}.pg>.row-w{width:100%}.x{width:36px;height:36px;top:calc(18px + env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px))}}
 @media (prefers-reduced-motion:reduce){.x,.x .ml,.x .mc{transition:none}}
 .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* телефон: замість власного плеєра — картка з відео, що відкривається у вікні, як проповідь (кнопка «Відкрити на YouTube») */
+.lm{display:none}
+.lm-modal{padding:0;border:0;background:transparent;max-width:none;max-height:none;width:100vw;height:100vh;height:100svh;color:var(--ds-cream)}
+.lm-modal::backdrop{background:rgba(20,17,15,.9);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.lm-box{position:relative;box-sizing:border-box;width:100%;height:100%;display:grid;align-content:center;justify-items:center;gap:18px;padding:64px 16px 28px}
+.lm-frame{width:100%;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#000}
+.lm-frame iframe{width:100%;height:100%;border:0;display:block}
+.lm-info{width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.lm-info h2{margin:0;font-weight:500;font-size:clamp(22px,6vw,28px);line-height:1.12;letter-spacing:-.04em}
+.lm-info p{margin:6px 0 0;font-weight:600;font-size:15px;color:rgba(247,242,232,.7)}
+.lm-info a{flex:none;display:inline-flex;align-items:center;height:44px;padding:0 16px;border-radius:12px;background:rgba(247,242,232,.14);color:var(--ds-cream);text-decoration:none;font:800 var(--t3-size)/1 var(--sans);letter-spacing:.04em;text-transform:uppercase}
+.lm-x{position:absolute;top:calc(18px + env(safe-area-inset-top,0px));right:16px;width:36px;height:36px;padding:0;border:0;background:none;line-height:0;cursor:pointer;border-radius:50%}
+.lm-x svg{width:100%;height:100%;overflow:visible}
+.lm-x .mc{fill:#F7F2E8}.lm-x .ml{fill:#000;transform-box:view-box;transform-origin:20px 20px}
+.lm-x .ml1{transform:rotate(45deg) translateY(3px)}.lm-x .ml2{transform:rotate(-45deg) translateY(-3px)}
+.lm-lock{overflow:hidden}
+@media (max-width:720px){
+  live-player{display:none!important}
+  .lm{display:block;width:100%}
+  .lm-card{position:relative;display:block;width:100%;padding:0;border:0;border-radius:14px;overflow:hidden;background:#141414;cursor:pointer;aspect-ratio:16/9}
+  .lm-card img{width:100%;height:100%;object-fit:cover;display:block}
+  .lm-card::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.2)}
+  .lm-play{position:absolute;z-index:1;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:#F7F2E8;display:grid;place-items:center}
+  .lm-play svg{width:30px;height:30px;margin-left:4px}
+  .lm-cap{margin:16px 0 0;font-weight:600;font-size:15px;color:rgba(247,242,232,.7);text-align:center}
+}
 </style>
 </head>
 <body>
 <a class="x" id="close" href="/" aria-label="Закрити"><svg viewBox="0 0 40 40" aria-hidden="true"><rect class="mc" width="40" height="40" rx="20"/><rect class="ml ml1" x="12" y="16" width="16" height="2" rx="1"/><rect class="ml ml2" x="12" y="22" width="16" height="2" rx="1"/></svg></a>
-<main class="pg"><h1 class="sr-only">LIVE трансляція церкви «Філадельфія»</h1><div class="row-w"><live-player variant="b" caption="overlay"></live-player></div></main>
+<main class="pg"><h1 class="sr-only">LIVE трансляція церкви «Філадельфія»</h1><div class="row-w"><live-player variant="b" caption="overlay"></live-player><section class="lm" id="lm" aria-label="LIVE трансляція"><button class="lm-card" id="lmCard" type="button" aria-haspopup="dialog" aria-label="Дивитись LIVE трансляцію"><img id="lmImg" src="live/poster.jpg" alt="Кадр із LIVE трансляції церкви «Філадельфія»"><span class="lm-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.2v13.6a1 1 0 0 0 1.5.9l11-6.8a1 1 0 0 0 0-1.8l-11-6.8A1 1 0 0 0 8 5.2Z" fill="#14110F"/></svg></span></button><p class="lm-cap" id="lmCap">LIVE трансляція</p></section></div></main>
 <script>
 // хрестик повертає туди, звідки прийшли (якщо це наш сайт), інакше — на головну
 document.getElementById("close").addEventListener("click",e=>{
   try{if(history.length>1&&document.referrer&&new URL(document.referrer).origin===location.origin){e.preventDefault();history.back()}}catch(_){}
 });
+
+// телефон: відео відкривається у вікні, як проповідь
+(function(){
+  const card=document.getElementById("lmCard"),cap=document.getElementById("lmCap");
+  let v={id:"E0NxPiqECLM",title:"Недільне богослужіння",startedAt:"2026-11-15T09:00:17+00:00",isLive:false};
+  const clean=s=>String(s||"").replace(/^[^\p{L}\d]+/u,"").replace(/\s*\|\s*(НАЖИВО|Пряма трансляція)/gi,"").trim()||"LIVE трансляція";
+  const date=iso=>{try{return new Intl.DateTimeFormat("uk-UA",{day:"numeric",month:"long",year:"numeric"}).format(new Date(iso)).replace(/\s?р\.$/,"")}catch(e){return""}};
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const sub=()=>(v.isLive?"Пряма трансляція":"LIVE трансляція")+(v.startedAt?" · "+date(v.startedAt):"");
+  fetch("live/latest.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{
+    if(!d||!/^[\w-]{6,20}$/.test(d.liveId||d.id||""))return;
+    v={id:d.isLive&&d.liveId?d.liveId:d.id,title:clean(d.title),startedAt:d.startedAt,isLive:!!(d.isLive&&d.liveId)};
+    if(d.thumb)document.getElementById("lmImg").src=d.thumb;
+    cap.textContent=sub();
+  }).catch(()=>{});
+  cap.textContent=sub();
+  card.addEventListener("click",()=>{
+    let d=document.getElementById("lm-modal");
+    if(!d){
+      d=document.createElement("dialog");d.id="lm-modal";d.className="lm-modal";
+      d.innerHTML='<div class="lm-box"><button class="lm-x" type="button" aria-label="Закрити"><svg viewBox="0 0 40 40" aria-hidden="true"><rect class="mc" width="40" height="40" rx="20"/><rect class="ml ml1" x="12" y="16" width="16" height="2" rx="1"/><rect class="ml ml2" x="12" y="22" width="16" height="2" rx="1"/></svg></button><div class="lm-frame"></div><div class="lm-info"></div></div>';
+      document.body.appendChild(d);
+      d.querySelector(".lm-x").addEventListener("click",()=>d.close());
+      d.addEventListener("click",e=>{if(e.target===d)d.close()});
+      d.addEventListener("close",()=>{d.querySelector(".lm-frame").innerHTML="";document.documentElement.classList.remove("lm-lock")});
+    }
+    d.querySelector(".lm-frame").innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+esc(v.id)+'?autoplay=1&rel=0&playsinline=1" title="'+esc(v.title)+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    d.querySelector(".lm-info").innerHTML='<div><h2>'+esc(v.title)+'</h2><p>'+esc(sub())+'</p></div><a href="https://www.youtube.com/watch?v='+esc(v.id)+'" target="_blank" rel="noopener">Відкрити на YouTube</a>';
+    document.documentElement.classList.add("lm-lock");
+    d.showModal();
+  });
+})();
 </script>
 </body>
 </html>

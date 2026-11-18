@@ -117,49 +117,7 @@ button{font:inherit;color:inherit}
   .rv,.hg-step{transition:none!important}.rv{opacity:1;transform:none}
 }
 
-/* ---------- tuner (same look as on the home page) ---------- */
-.tuner-tab,.tuner{--t-ink:#F7F2E8;--t-panel:rgba(20,17,15,.86);--t-line:rgba(255,255,255,.14);--t-mute:rgba(255,255,255,.55);--t-accent:#E9C46A;--t-changed:#5FD4FF;
-  --t-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-.tuner-tab{position:fixed;z-index:20;right:0;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;
-  font:600 11px/1 var(--t-mono);letter-spacing:.18em;text-transform:uppercase;color:var(--t-ink);
-  padding:16px 9px;padding-right:calc(9px + env(safe-area-inset-right,0px));
-  background:var(--t-panel);border:1px solid var(--t-line);border-right:0;border-radius:10px 0 0 10px;cursor:pointer;
-  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
-.tuner-tab:hover{color:var(--t-accent)}
-.tuner-tab:focus-visible{outline:2px solid var(--t-accent);outline-offset:2px}
-.tuner-tab i{display:inline-block;width:7px;height:7px;margin-top:8px;border-radius:50%;background:var(--t-changed)}
-.tuner-tab i[hidden]{display:none}
-.tuner{position:fixed;z-index:30;top:0;right:0;bottom:0;width:min(340px,92vw);display:flex;flex-direction:column;
-  background:var(--t-panel);border-left:1px solid var(--t-line);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
-  font:400 var(--t3-size)/1.35 var(--t-mono);color:var(--t-ink);transform:translateX(102%);transition:transform .32s cubic-bezier(.2,.7,.2,1)}
-.tuner.open{transform:none}
-.tuner[hidden]{display:flex;visibility:hidden}
-.tuner.open[hidden]{visibility:visible}
-.tuner header{display:flex;align-items:center;justify-content:space-between;gap:8px;
-  padding:calc(16px + env(safe-area-inset-top,0px)) calc(16px + env(safe-area-inset-right,0px)) 12px 16px;border-bottom:1px solid var(--t-line)}
-.tuner header b{text-transform:uppercase;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track)}
-.tuner button{font:600 11px/1 var(--t-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--t-ink);
-  background:transparent;border:1px solid var(--t-line);border-radius:7px;padding:9px 10px;cursor:pointer}
-.tuner button:hover:not(:disabled){border-color:var(--t-accent);color:var(--t-accent)}
-.tuner button:focus-visible{outline:2px solid var(--t-accent);outline-offset:2px}
-.tuner button:disabled{opacity:.4;cursor:default}
-.tuner button[aria-pressed="true"]{background:var(--t-accent);border-color:var(--t-accent);color:#14110F}
-.tuner .body{flex:1;overflow:auto;padding:4px 16px 16px;padding-right:calc(16px + env(safe-area-inset-right,0px))}
-.tuner h4{margin:16px 0 8px;font:600 10px/1 var(--t-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--t-mute)}
-.tuner p{margin:0 0 12px;color:var(--t-mute);font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track)}
-.t-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
-.t-row button{flex:1 1 auto}
-.t-status{display:block;min-height:1.5em;color:var(--t-mute);font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track)}
-.t-status.ok{color:#8FE3A5}.t-status.warn{color:var(--t-changed)}.t-status.err{color:#FF9B8A}
-.t-list{margin:0;padding:0;list-style:none;display:grid;gap:4px}
-.t-list li{display:flex;justify-content:space-between;gap:8px;padding:6px 8px;border-radius:6px;background:rgba(255,255,255,.05);font-size:var(--t3-size)}
-.t-list li b{font-weight:600;color:var(--t-ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.t-list li span{color:var(--t-changed);flex:none}
-.t-list li{align-items:center}
-.t-list li button{flex:none;padding:6px 8px;font-size:var(--t3-size)}
-.tuner textarea{width:100%;box-sizing:border-box;height:120px;font:11px/1.4 var(--t-mono);color:var(--t-ink);background:rgba(0,0,0,.35);border:1px solid var(--t-line);border-radius:6px;padding:8px}
 
-@media (prefers-reduced-motion:reduce){.tuner{transition:none}}
 
 /* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
 @media (max-width:720px){
@@ -231,31 +189,6 @@ button{font:inherit;color:inherit}
 
 <site-footer></site-footer>
 
-<button class="tuner-tab" id="tunerTab" type="button" aria-controls="tuner" aria-expanded="false">Тюнер<i id="tunerDot" hidden></i></button>
-<aside class="tuner" id="tuner" aria-label="Тюнер сторінки" hidden>
-  <header><b>Тюнер</b><button type="button" id="tunerClose">Закрити</button></header>
-  <div class="body">
-    <h4>Тексти груп</h4>
-    <p>Увімкніть редагування, оберіть групу на карті чи в списку й виправте будь-який текст просто в картці праворуч.</p>
-    <div class="t-row">
-      <button type="button" id="tEdit" aria-pressed="false">Редагувати</button>
-    </div>
-    <div class="t-row">
-      <button type="button" id="tSave" disabled>Зберегти</button>
-      <button type="button" id="tUndo" disabled>Скасувати</button>
-    </div>
-    <span class="t-status" id="tStatus" role="status"></span>
-    <h4>Змінено</h4>
-    <ul class="t-list" id="tList"><li><b>Поки нічого</b></li></ul>
-    <h4>Архів</h4>
-    <p>Група в архіві зникає зі списку й карти, але її дані лишаються — її можна повернути.</p>
-    <div class="t-row"><button type="button" id="tArch" disabled>В архів</button></div>
-    <ul class="t-list" id="tArchList"></ul>
-    <h4>Для розробника</h4>
-    <div class="t-row"><button type="button" id="tCopy">Копіювати правки JSON</button></div>
-    <textarea id="tJson" readonly hidden aria-label="Правки у форматі JSON"></textarea>
-  </div>
-</aside>
 
 <script src="groups/data.js"></script>
 <script src="contacts/base.js"></script>

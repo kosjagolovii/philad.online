@@ -23,7 +23,7 @@ window.DN={
     });
     if(opts&&opts.switcher===false) return;
     // тимчасовий перемикач варіантів
-    const V=[["A","donate.html"],["B","donate-b.html"],["C","donate-c.html"]];
+    const V=[["A","donate.html"]];
     const here=location.pathname.split("/").pop()||"donate.html";
     const nav=document.createElement("nav");
     nav.className="vsw"; nav.setAttribute("aria-label","Варіанти сторінки");

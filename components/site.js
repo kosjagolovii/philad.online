@@ -478,4 +478,3 @@ window.PHILAD_SITE=SITE;
 })();
 
 /* інструменти розробки (тюнери, перемикачі варіантів) видно лише локально; на бойовому домені вони приховані */
-if(!/^(localhost|127\.0\.0\.1|\[::1\])$|\.localhost$/.test(location.hostname)){const st=document.createElement("style");st.textContent=".tuner-tab,.tuner,.tt-tab,.tt,.vsw{display:none!important}";document.head.appendChild(st)}

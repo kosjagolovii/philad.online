@@ -68,7 +68,7 @@ window.CT={
     document.querySelectorAll(".rv").forEach(el=>reduce?el.classList.add("in"):io.observe(el));
     document.querySelectorAll("[data-goto]").forEach(a=>a.addEventListener("click",e=>{const t=document.querySelector(a.dataset.goto);if(!t)return;e.preventDefault();t.scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"})}));
     if(opts&&opts.switcher===false)return;
-    const V=[["Основна","/contacts/"],["A","contacts-a.html"],["B","contacts-b.html"],["C","contacts-c.html"],["E","contacts-e.html"],["F","contacts-f.html"],["G","contacts-g.html"]];
+    const V=[["Основна","/contacts/"]];
     const here=location.pathname.split("/").pop()||"/contacts/";
     const nav=document.createElement("nav");
     nav.className="vsw";nav.setAttribute("aria-label","Варіанти сторінки");
