@@ -392,22 +392,55 @@ canvas.trail{position:fixed;inset:0;width:100%;height:100%;z-index:11;pointer-ev
 @media (max-width:900px),(pointer:coarse){
   /* повна висота екрана: lvh = коли панель браузера згорнута, тож знизу немає чорної смуги */
   .stage{height:100vh;height:100lvh}
-  .services{height:100vh;height:100lvh;margin-top:-100vh;margin-top:-100lvh}
-  .min6{height:100vh;height:100lvh}
-  .min6-wrap{height:calc(200vh + 180px);height:calc(200lvh + 180px);margin-top:-100vh;margin-top:-100lvh}
+  .services{height:100vh;height:100lvh;margin-top:0}   /* блок 4 іде знизу разом із прокруткою, а не проявляється під картками */
   /* контент не ховається під панеллю браузера, коли вона розгорнута */
-  .copy{padding-bottom:calc(20px + (100lvh - 100svh) + env(safe-area-inset-bottom,0px))}
+  .copy{padding-bottom:calc(28px + (100lvh - 100svh) + env(safe-area-inset-bottom,0px))}
   .services{padding-bottom:calc(30px + (100lvh - 100svh))}
-  .min6{padding-bottom:calc(30px + (100lvh - 100svh))}
   /* декор, що мерехтить і гальмує */
   #lines,.grain,.scan,.vignette,canvas.trail,.cursor{display:none!important}
   #cv{filter:none!important;transform:none!important}
-  .vision,.card,.cards-head,.lcard-in,.lcard-img img{will-change:auto}
-  .lcard-img img{top:0;height:100%}
-  .lcard-in{transform:none!important}
-  /* текст бачення без тіні й руху: зміна лише прозорості */
+  .vision,.card,.cards-head{will-change:auto}
   .vision{transform:none!important}
+  /* перший екран: без відео-прев'ю, текст вужчий і на темнішому градієнті */
+  .play{display:none!important}
+  .wash{height:86%;background:linear-gradient(to top,rgba(20,17,15,.88),rgba(20,17,15,.62) 42%,rgba(20,17,15,.22) 72%,rgba(20,17,15,0))}
+  .row p{max-width:19.5em;flex:0 1 auto;text-wrap:balance}
+  .copy h1{text-shadow:0 2px 24px rgba(0,0,0,.35)}
+  /* заголовок «Прийди й побач» — як у решти заголовків */
+  .cards-head h2{font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track)}
+  /* картки «життя церкви»: нахил і зменшення — CSS-анімація за прокруткою (без JS і мерехтіння) */
+  .lcard-in{will-change:transform;isolation:isolate;--rot:-2.5deg}
+  .lcard:nth-child(even) .lcard-in{--rot:2.5deg}
+  .lcard-img img{top:0;height:100%}
+  /* блок «Служіння нашої церкви»: звичайний потік, квадратні картки, екран може прокручуватись */
+  .min6-wrap{height:auto;margin-top:0}
+  .min6{position:relative;height:auto;overflow:visible;padding-block:64px 40px}
+  .sgrid{grid-template-rows:none;grid-auto-rows:auto}
+  .scard{aspect-ratio:1/1}
+  /* блок «Перші кроки»: кнопка в межах картки */
+  .nx-card .lbtn{width:auto;max-width:calc(100% - 24px);box-sizing:border-box}
+  /* футер: посилання в рядок, що переноситься; висота за вмістом */
+  .ft{position:relative!important;min-height:0!important;height:auto!important}
+  .ft-nav{display:flex!important;grid-template-columns:none!important;flex-direction:column!important;flex-wrap:nowrap!important;gap:18px!important;width:100%}
+  .ft-col{width:100%!important;min-width:0!important;gap:8px!important}
+  .ft-col ul{display:flex!important;flex-wrap:wrap;gap:0 22px!important}
+  .ft-col a{min-height:40px;font-size:var(--t1-size)}
 }
+@supports (animation-timeline:view()){
+  @media (max-width:900px),(pointer:coarse){
+    .life-stack{timeline-scope:--lc2,--lc3,--lc4}
+    .lcard:nth-child(2){view-timeline:--lc2 block}
+    .lcard:nth-child(3){view-timeline:--lc3 block}
+    .lcard:nth-child(4){view-timeline:--lc4 block}
+    .lcard:nth-child(1) .lcard-in,.lcard:nth-child(1) .lcard-in::after{animation-timeline:--lc2}
+    .lcard:nth-child(2) .lcard-in,.lcard:nth-child(2) .lcard-in::after{animation-timeline:--lc3}
+    .lcard:nth-child(3) .lcard-in,.lcard:nth-child(3) .lcard-in::after{animation-timeline:--lc4}
+    .lcard:not(:last-child) .lcard-in{animation-name:lccover;animation-timing-function:linear;animation-fill-mode:both;animation-range:entry 0% entry 100%}
+    .lcard:not(:last-child) .lcard-in::after{animation-name:lcdark;animation-timing-function:linear;animation-fill-mode:both;animation-range:entry 0% entry 100%}
+  }
+}
+@keyframes lccover{from{transform:none}to{transform:rotate(var(--rot,-2.5deg)) scale(.94)}}
+@keyframes lcdark{from{opacity:0}to{opacity:.35}}
 @media (prefers-reduced-motion:reduce){.reveal,.svc-video.reveal{opacity:1;transform:none;transition:none}.hint i{animation:none}.tuner{transition:none}}
 </style>
 
@@ -734,7 +767,8 @@ const small=Math.min(screen.width,screen.height)<=820&&innerWidth<900;
 const dir=small?"f/m/":"f/d/";
 const img=src=>{const i=new Image();i.decoding="async";i.src=src;return i};
 const ok=i=>i&&i.complete&&i.naturalWidth>0;
-const start=img(small?"start-m.webp":"start.webp"),end=img(small?"end-m.webp":"end.webp");
+const start=img(LITE||!small?"start.webp":"start-m.webp"),end=img(LITE||!small?"end.webp":"end-m.webp");
+let shiftX=0;
 const frames=new Array(N);let loaded=0;
 function loadFrame(i){
   if(frames[i])return;
@@ -765,7 +799,8 @@ function cover(im,alpha=1){
   if(!ok(im))return false;
   const s=Math.max(cv.width/im.naturalWidth,cv.height/im.naturalHeight);
   const w=im.naturalWidth*s,h=im.naturalHeight*s;
-  ctx.globalAlpha=alpha;ctx.drawImage(im,(cv.width-w)/2,(cv.height-h)/2,w,h);ctx.globalAlpha=1;return true;
+  let ox=(cv.width-w)/2;if(LITE&&shiftX)ox=Math.min(0,Math.max(cv.width-w,ox+shiftX));
+  ctx.globalAlpha=alpha;ctx.drawImage(im,ox,(cv.height-h)/2,w,h);ctx.globalAlpha=1;return true;
 }
 
 /* ---------- video frame ---------- */
@@ -777,6 +812,7 @@ function drawVideo(p){
   }
   const t=clamp((p-S.flyFrom)/Math.max(.01,S.flyTo-S.flyFrom));
   const x=t*(N-1),i=Math.floor(x),f=x-i;
+  shiftX=LITE?.1*cv.width*clamp((t-.55)/.45):0;
   const a=ok(frames[i])?frames[i]:nearest(i,-1),b=ok(frames[i+1])?frames[i+1]:null;
   if(!a&&!cover(start))return;
   if(a)cover(a);
@@ -871,6 +907,7 @@ function stepGrain(dt){
 
 /* ---------- apply settings ---------- */
 function apply(){
+  if(LITE)S.b3ExitVh=0;
   track.style.height=(S.trackVh+S.visVh+S.b3Vh+S.b3ExitVh)+"vh";
   const tiles=tilesFor(S.grainType);grainI%=tiles.length;
   grain.style.backgroundImage=tiles[grainI];
@@ -963,7 +1000,7 @@ function stepB3(dt){
   vision.style.visibility=op>0?"visible":"hidden";
   vision.style.transform=reduce||LITE?"":`translate3d(0,${((1-te)*S.visRise-up).toFixed(2)}vh,0)`;
   // exit: the cards leave through the top in the same staggered way while block 4 shows through from beneath
-  const x=clamp((-r.top-flightPx()-visPx()-b3Px())/exitPx());
+  const x=LITE?0:clamp((-r.top-flightPx()-visPx()-b3Px())/exitPx());
   if(q3===q3Shown&&x===b3xShown&&!dirty)return;q3Shown=q3;b3xShown=x;
   const pe=clamp(q3/S.b3Paper),pp=pe*pe*(3-2*pe);
   paper.style.opacity=pp.toFixed(3);
@@ -997,7 +1034,7 @@ const nxPale=[...nx8.querySelectorAll(".nx-card")];
 function stepB5(){
   const lr=life.getBoundingClientRect();
   // once the scene lets go, hide it: otherwise its copy of block 4 scrolls away over the real, pinned one
-  const gone=track.getBoundingClientRect().bottom<=vh+1;
+  const gone=track.getBoundingClientRect().bottom<=(LITE?0:vh+1);
   if(gone!==stageGone){stageGone=gone;stage.style.opacity=gone?"0":"";stage.style.pointerEvents=gone?"none":"";if(gone)ghost4.style.pointerEvents="none";else b3xShown=-1}
   // teal sections want the light logo — unless a pale block 8 card is the thing actually under the header
   const under=r=>r.top<70&&r.bottom>40;
