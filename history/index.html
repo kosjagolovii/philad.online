@@ -64,7 +64,7 @@ h3{margin:0;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);let
 /* timeline spine */
 .tl{position:relative}
 .ln{position:absolute;top:0;bottom:0;width:2px;background:rgba(20,20,20,.14);border-radius:2px}
-.ln i{position:absolute;left:0;top:0;width:100%;height:0;background:var(--teal);border-radius:2px}
+.ln i{position:absolute;left:0;top:0;width:100%;height:100%;transform:scaleY(0);transform-origin:top;background:var(--teal);border-radius:2px;will-change:transform}
 .dot{position:absolute;left:50%;top:0;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 7px rgba(49,124,142,.18),0 8px 20px -6px rgba(40,105,122,.7);z-index:3;will-change:transform}
 .ch{position:relative;z-index:2;display:flex;justify-content:center;margin:clamp(56px,8vw,110px) 0 clamp(28px,4vw,56px)}
 .ch span{padding:12px 24px;border-radius:999px;background:var(--ink);color:var(--ds-cream);font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track)}
@@ -213,7 +213,7 @@ img[src$="/doc.webp"],img[src$="/xmas99.webp"],img[src$="/bap1.webp"],img[src$="
 <article class="it rv hc hy"><span class="nd"></span><div class="yc"><p class="yr" data-k="e22y">1998</p></div><div class="bd"><p class="chp" data-k="e22c">Козачок і відкриття</p><h3 data-k="e22t">Пасторство прийняв Анатолій Козачок</h3><p class="sub" data-k="e22s">Проводи родини В. С. Прохора до США, 20 грудня 1998</p><div class="im n1"><figure class="ph"><img src="/history/img/prokhor98.webp" alt="Пасторство прийняв Анатолій Козачок" loading="lazy" decoding="async"></figure></div></div></article>
 <article class="it rv hy"><span class="nd"></span><div class="yc"><p class="yr" data-k="e23y">11 вересня 2000</p></div><div class="bd"><h3 data-k="e23t">Святкове відкриття церкви «Філадельфія»</h3><div class="im n2"><figure class="ph"><img src="/history/img/o1.webp" alt="Святкове відкриття церкви «Філадельфія»" loading="lazy" decoding="async"></figure><figure class="ph"><img src="/history/img/o2.webp" alt="Святкове відкриття церкви «Філадельфія»" loading="lazy" decoding="async"></figure></div></div></article>
 <article class="it rv"><span class="nd"></span><div class="yc"><span class="yd"></span></div><div class="bd"><h3 data-k="e24t">Мрії стали реальністю</h3><p class="sub" data-k="e24s">Тоді мрії про своє приміщення стали реальністю</p><div class="im n2"><figure class="ph"><img src="/history/img/o3.webp" alt="Мрії стали реальністю" loading="lazy" decoding="async"></figure><figure class="ph"><img src="/history/img/o4.webp" alt="Мрії стали реальністю" loading="lazy" decoding="async"></figure></div></div></article>
-<article class="it rv hc hy"><span class="nd"></span><div class="yc"><p class="yr" data-k="e25y">Сьогодні</p></div><div class="bd"><p class="chp" data-k="e25c">Сьогодні</p><h3 data-k="e25t">Це не просто будівля</h3><p class="sub" data-k="e25s">Церква «Філадельфія» — це спільнота</p><div class="im n1"><figure class="ph"><img src="/history/img/today1.webp" alt="Це не просто будівля" loading="lazy" decoding="async"></figure></div></div></article>
+<article class="it rv hc hy"><span class="nd"></span><div class="yc"><p class="yr" data-k="e25y">Сьогодні</p></div><div class="bd"><h3 data-k="e25t">Це не просто будівля</h3><p class="sub" data-k="e25s">Церква «Філадельфія» — це спільнота</p><div class="im n1"><figure class="ph"><img src="/history/img/today1.webp" alt="Це не просто будівля" loading="lazy" decoding="async"></figure></div></div></article>
 <article class="it rv"><span class="nd"></span><div class="yc"><span class="yd"></span></div><div class="bd"><h3 data-k="e26t">Спільнота, яка змінює життя</h3><div class="im n2"><figure class="ph"><img src="/history/img/comm2.webp" alt="Спільнота, яка змінює життя" loading="lazy" decoding="async"></figure><figure class="ph"><img src="/history/img/comm3.webp" alt="Спільнота, яка змінює життя" loading="lazy" decoding="async"></figure></div></div></article>
 <article class="it rv"><span class="nd"></span><div class="yc"><span class="yd"></span></div><div class="bd"><h3 data-k="e27t">Де кожен може знайти Бога</h3><div class="im n2"><figure class="ph"><img src="/history/img/comm5.webp" alt="Де кожен може знайти Бога" loading="lazy" decoding="async"><figcaption class="pc"><b data-k="cap-comm5-n">Анатолій Фещенко</b><span data-k="cap-comm5-r">Старший пастор церкви Філадельфія</span></figcaption></figure><figure class="ph"><img src="/history/img/comm4.webp" alt="Де кожен може знайти Бога" loading="lazy" decoding="async"><figcaption class="pc"><b data-k="cap-comm4-n">Юрій Кавун</b><span data-k="cap-comm4-r">Пастор церкви Філадельфія</span></figcaption></figure></div></div></article>
   </div>
@@ -228,8 +228,16 @@ img[src$="/doc.webp"],img[src$="/xmas99.webp"],img[src$="/bap1.webp"],img[src$="
   document.querySelectorAll(".rv").forEach(el=>io.observe(el));
   const tl=document.querySelector(".tl"),fill=tl.querySelector(".ln i"),dot=tl.querySelector(".dot"),its=[...tl.querySelectorAll(".it")];
   let t=false;
-  const upd=()=>{t=false;const r=tl.getBoundingClientRect(),y=Math.max(0,Math.min(r.height,innerHeight*.5-r.top));
-    fill.style.height=y+"px";dot.style.transform=`translateY(${y}px)`;
+  // крапка й заповнена частина лінії плавно наздоганяють позицію скролу (інерція), а не стрибають за кожним кроком колеса/пальця
+  let tgt=0,cur=null,raf=0;
+  const paint=()=>{raf=0;
+    if(cur===null||reduce)cur=tgt;else cur+=(tgt-cur)*.14;
+    if(Math.abs(tgt-cur)<.15)cur=tgt;
+    fill.style.transform=`scaleY(${(cur/(tl.offsetHeight||1)).toFixed(5)})`;
+    dot.style.transform=`translate3d(0,${cur.toFixed(2)}px,0)`;
+    if(cur!==tgt)raf=requestAnimationFrame(paint)};
+  const upd=()=>{t=false;const r=tl.getBoundingClientRect();tgt=Math.max(0,Math.min(r.height,innerHeight*.5-r.top));
+    if(!raf)raf=requestAnimationFrame(paint);
     its.forEach(i=>{const b=i.getBoundingClientRect();i.classList.toggle("on",b.top+40<innerHeight*.5)})};
   const wides=[...document.querySelectorAll(".ph.wide")];
   const grow=()=>wides.forEach(w=>{const r=w.getBoundingClientRect(),vh=innerHeight;let p=(vh-r.top)/(vh*.75);p=Math.max(0,Math.min(1,p));p=1-Math.pow(1-p,3);w.style.setProperty("--s",reduce?1:(.8+.2*p).toFixed(4))});

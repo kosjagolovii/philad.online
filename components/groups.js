@@ -23,8 +23,8 @@ home-groups img{max-width:100%;display:block}
 .hg-static{position:absolute;left:0;top:0;width:1049px;height:822.5px;max-width:none;transform-origin:0 0;user-select:none;-webkit-user-drag:none;will-change:transform}
 .hg-canvas{background:#292929;touch-action:none}
 .hg-map.live .hg-canvas{touch-action:auto}
-.hg-live{position:absolute;inset:0;opacity:0;transition:opacity .8s ease;background:#1b1d1f}
-.hg-map.live .hg-live{opacity:1}
+.hg-live{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .8s ease;background:#1b1d1f}
+.hg-map.live .hg-live{opacity:1;pointer-events:auto}
 .hg-map .hg-live.maplibregl-map{position:absolute}
 .hg-map.live .hg-static,.hg-map.live .hg-dots{visibility:hidden}
 .hg-live .maplibregl-canvas{outline:none}
@@ -234,7 +234,7 @@ class HomeGroups extends HTMLElement{
     this.innerHTML=TPL;
     const t=this.getAttribute("title");if(t){this.querySelector("#hgTitle").textContent=t;this.removeAttribute("title")}
     // wait for the page to finish parsing (it may load groups/data.js itself), then for the data
-    const go=()=>loadData().then(()=>init(this)).catch(()=>{});
+    const go=()=>loadData().then(()=>init(this)).catch(e=>console.error("home-groups:",e));
     document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go,{once:true}):go();
   }
 }
@@ -438,7 +438,7 @@ spots.forEach(s=>dotsBox.append(s.el));
 
 // live map: MapLibre GL + MapTiler (same key and look as «Ви вперше у нас?», flat — без 3D)
 const MAPTILER_KEY="4xnpIboEIZ8Se3POUMKB";   // ключ «philad.org»: дозволений лише для localhost і philad.org
-const STYLE=MAPTILER_KEY?`https://api.maptiler.com/maps/dataviz-dark/style.json?key=${MAPTILER_KEY}`:"https://tiles.openfreemap.org/styles/dark";
+const STYLES=[MAPTILER_KEY&&`https://api.maptiler.com/maps/dataviz-dark/style.json?key=${MAPTILER_KEY}`,"https://tiles.openfreemap.org/styles/dark"].filter(Boolean);   // якщо MapTiler недоступний — запасна карта OpenFreeMap
 const LIB="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/";
 const loadLib=()=>new Promise((ok,no)=>{if(window.maplibregl)return ok();
   const l=document.createElement("link");l.rel="stylesheet";l.href=LIB+"maplibre-gl.css";document.head.append(l);
@@ -460,10 +460,12 @@ function brand(m){
     }catch(e){}}
 }
 let live=null,meMk=null;
-async function startLive(){
+async function startLive(i=0){
+  const STYLE=STYLES[i];if(!STYLE)return;                // джерела скінчились → лишається статична картинка (кліки по точках працюють і в ній)
+  const next=()=>startLive(i+1);
   try{
-    if(/[?&]static/.test(location.search))throw 0;   // ?static — test the fallback picture
-    const r=await fetch(STYLE);if(!r.ok)throw 0;     // blocked or offline → keep the static picture
+    if(/[?&]static/.test(location.search))return;   // ?static — test the fallback picture
+    const r=await fetch(STYLE);if(!r.ok)throw 0;     // blocked or offline → next source
     await loadLib();
     const b=bounds(pts());
     const m=new maplibregl.Map({container:"hgLive",style:STYLE,bounds:b,fitBoundsOptions:{padding:panelPad()},pitch:0,bearing:0,dragRotate:false,pitchWithRotate:false,touchPitch:false,
@@ -472,15 +474,18 @@ async function startLive(){
               "CooperativeGesturesHandler.MacHelpText":"Щоб змінити масштаб, тримайте ⌘ і крутіть коліщатко",
               "CooperativeGesturesHandler.MobileHelpText":"Рухайте карту двома пальцями"}});
     m.touchZoomRotate.disableRotation();
+    let ok=false;const giveUp=()=>{if(ok)return;try{m.remove()}catch(e){}next()};
+    const timer=setTimeout(giveUp,12000);               // карта не завантажилась за 12 с → наступне джерело
+    m.on("error",e=>{const c=e&&e.error&&e.error.status;if(!ok&&(c===401||c===403||c===429)){clearTimeout(timer);giveUp()}});
     m.on("style.load",()=>brand(m));
     m.once("load",()=>{
-      live=m;
+      ok=true;clearTimeout(timer);live=m;
       spots.forEach(s=>{s.el.style.left=s.el.style.top="";s.mk=new maplibregl.Marker({element:s.el,anchor:"center"}).setLngLat(s.at).addTo(m);s.el.setAttribute("aria-label",s.label)});   // the library renames markers to «Map marker»
       if(st.me)showMe();
       box.classList.add("live");$("#hgLive").removeAttribute("aria-hidden");
       document.querySelectorAll("#hgLive .maplibregl-compact-show").forEach(n=>n.classList.remove("maplibregl-compact-show"));
     });
-  }catch(e){/* static picture stays */}
+  }catch(e){next()}
 }
 function bounds(p){let a=[180,90,-180,-90];p.forEach(([x,y])=>{a=[Math.min(a[0],x),Math.min(a[1],y),Math.max(a[2],x),Math.max(a[3],y)]});return[[a[0],a[1]],[a[2],a[3]]]}
 function fitVisible(){
