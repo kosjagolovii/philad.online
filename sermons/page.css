@@ -11,7 +11,8 @@
 .top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px 40px;margin-bottom:40px}
 .lay{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:14px;align-items:start}
 /* відступ згори = відступу панелі від лівого краю екрана */
-.side{--sp:calc((100vw - var(--row))/2);grid-column:1/2;position:sticky;top:var(--sp);display:grid;gap:18px;max-height:calc(100svh - 2*var(--sp));overflow:auto;padding:2px 14px 20px 2px;scrollbar-width:thin}
+/* зверху лишаємо місце під логотип: шапка з'являється при прокручуванні вгору й не має накривати пошук (так само, як на «Темах домашніх груп») */
+.side{--top:104px;grid-column:1/2;position:sticky;top:var(--top);display:grid;gap:16px;max-height:calc(100svh - var(--top) - 24px);overflow:auto;padding:2px 14px 20px 2px;scrollbar-width:thin}
 .fg{border-top:1px solid var(--line);padding-top:16px}
 .fg summary{display:flex;align-items:center;justify-content:space-between;cursor:pointer;list-style:none;font-weight:700;font-size:15px;letter-spacing:-.02em}
 .fg summary::-webkit-details-marker{display:none}
