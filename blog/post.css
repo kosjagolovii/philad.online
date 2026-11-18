@@ -108,9 +108,25 @@
 @media (max-width:1100px){.lay{grid-template-columns:minmax(0,700px);justify-content:center}.side{display:none}.main{grid-column:1}}
 @media (max-width:900px){.rc-grid{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:720px){
-  .pg{padding-top:112px;gap:56px}
-  .hd{margin-bottom:36px}.hero,.hero.vid{margin-bottom:40px}
-  .verse{padding-left:18px}.yt-b{width:64px;height:64px}.gal{grid-template-columns:minmax(0,1fr)}
+  .pg{padding-top:112px;gap:64px}
+  .hd{margin-bottom:40px}.hero,.hero.vid{margin-bottom:40px}
+  .verse{padding-left:16px}.yt-b{width:64px;height:64px}.gal{grid-template-columns:minmax(0,1fr)}
   .pn{grid-template-columns:minmax(0,1fr)}.pn a:last-child{text-align:left}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .crumbs ol{gap:4px 8px}
+  .meta{gap:4px 8px}
+  .hd{gap:16px;margin:0 auto 64px}
+  .lay{column-gap:40px}
+  .end-meta{gap:16px;margin-top:40px;padding-top:24px}
+  .toc{gap:16px}
+  .tools{padding:16px 0}
+  .pn{gap:16px}
+  .pn a{gap:8px}
+  .rel{gap:24px}
+  .rc-grid{gap:24px 16px}
+  .rc{gap:8px}
+}

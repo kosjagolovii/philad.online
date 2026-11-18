@@ -102,21 +102,35 @@ h2{font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:
   .cards{grid-template-columns:minmax(0,1fr)}.cd h3{min-height:0}
 }
 @media (max-width:720px){
-  .pg{gap:72px;padding-block:120px 72px}
+  .pg{gap:64px;padding-block:120px 64px}
   .sec{gap:24px}
-  .pas{grid-template-columns:minmax(0,1fr);gap:28px}
+  .pas{grid-template-columns:minmax(0,1fr);gap:24px}
   .wide,.cd,.con-a,.con-b,.pa,.de{border-radius:16px}
   .pa{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;padding:8px}
   .pa-t{padding:8px 4px 4px}.pa-t h3{font-size:var(--h3-size)}
-  .dea{gap:8px}.de{padding:8px 8px 14px}.de-t{padding:0 4px}.de-t b{font-size:var(--t1-size)}.de-t span{font-size:var(--t2-size)}
-  .say{gap:20px}.say-cols{grid-template-columns:minmax(0,1fr)}
+  .dea{gap:8px}.de{padding:8px 8px 16px}.de-t{padding:0 4px}.de-t b{font-size:var(--t1-size)}.de-t span{font-size:var(--t2-size)}
+  .say{gap:16px}.say-cols{grid-template-columns:minmax(0,1fr)}
   .wide{aspect-ratio:4/3}
-  .mis{gap:32px}
+  .mis{gap:24px}
   .con{grid-template-columns:minmax(0,1fr)}.con-a{min-height:220px}
 }
 .con-l{display:flex;flex-wrap:wrap;gap:0 20px;margin:20px 0 0}
 @media (max-width:900px),(pointer:coarse){.con-l a{display:inline-flex;align-items:center;min-height:40px}}   /* зона натискання на телефоні */
 .con-l a{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:var(--teal-ink);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .pa-t{gap:16px}
+  .de{gap:16px}
+  .say-cols{gap:16px 40px}
+  .mis-h{gap:24px}
+  .cards{gap:16px}
+  .cd{gap:24px;padding:24px 24px 24px}
+  .con{gap:16px}
+  .con-b{gap:24px}
+  .con dl{gap:24px}
+  .con-l{gap:0 16px;margin:16px 0 0}
+}
 </style>
 </head>
 <body>

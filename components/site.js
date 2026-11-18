@@ -137,7 +137,7 @@ site-menu,site-footer,site-next{display:contents}
 .nx-card .lbtn{box-sizing:border-box;padding:0 12px;white-space:normal;text-align:center}
 @media (max-width:1000px){.nx-row{grid-template-columns:repeat(2,var(--cw))}.nx-text h3{font-size:var(--h2s-size)}}
 @media (max-width:900px){.nx{padding-top:104px}}
-@media (max-width:720px){.nx{padding-block:72px 64px;gap:40px}.nx-row{width:100%;grid-template-columns:minmax(0,1fr);gap:10px}.nx-card{min-height:0;border-radius:16px}.nx-text h3{font-size:var(--h2s-size)}}
+@media (max-width:720px){.nx{padding-block:64px 64px;gap:40px}.nx-row{width:100%;grid-template-columns:minmax(0,1fr);gap:8px}.nx-card{min-height:0;border-radius:16px}.nx-text h3{font-size:var(--h2s-size)}}
 /* header */
 .bar{position:fixed;z-index:10;transition:transform .45s cubic-bezier(.2,.7,.2,1);top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;
   padding-top:calc(30px + env(safe-area-inset-top,0px));
@@ -228,12 +228,12 @@ a:hover .u::after,a:focus-visible .u::after{transform:scaleX(1);transform-origin
 @media (max-width:720px){
   .nav{height:100vh;height:100svh;border-radius:0;padding-block:calc(96px + env(safe-area-inset-top,0px)) calc(32px + env(safe-area-inset-bottom,0px));
     padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-  .nav-in{gap:30px}
-  .nav-cols{flex-direction:column;gap:30px}
+  .nav-in{gap:24px}
+  .nav-cols{flex-direction:column;gap:24px}
   .nav-col{gap:16px}
-  .nav-col ul{gap:10px}
+  .nav-col ul{gap:8px}
   .nav-col a{font-size:var(--h3-size)}
-  .nav-info{display:flex;align-items:flex-start;gap:14px}
+  .nav-info{display:flex;align-items:flex-start;gap:16px}
   .nav-time p{font-size:var(--h3-size)}
   .nav-info .ft-soc{margin-top:16px}
 }
@@ -286,14 +286,14 @@ a:hover .u::after,a:focus-visible .u::after{transform:scaleX(1);transform-origin
 }
 @media (max-width:900px){.ft{padding-block:104px 32px}.ft-about{gap:48px}.ft-col{width:auto;min-width:200px}.ft-col a,.ft-addr{font-size:var(--h3-size)}}
 @media (max-width:720px){
-  .ft{padding-block:92px 22px}
-  .ft-in{gap:22px}
-  .ft-top{flex-direction:column;gap:26px}
-  .ft-about{gap:18px}
+  .ft{padding-block:92px 24px}
+  .ft-in{gap:24px}
+  .ft-top{flex-direction:column;gap:24px}
+  .ft-about{gap:16px}
   .ft-logo .m{width:44px;height:44px}
   .ft-logo .w{width:130px;height:15.4px}
   .ft-logo small{font-size:var(--t3-size)}
-  .ft-contact{gap:10px}
+  .ft-contact{gap:8px}
   .ft-mail{font-size:var(--h2s-size)}
   .ft-addr{font-size:var(--t1-size)}
   .ft-time{font-size:var(--t2-size)}
@@ -301,10 +301,28 @@ a:hover .u::after,a:focus-visible .u::after{transform:scaleX(1);transform-origin
   .ft-soc a,.ft-soc img{width:38px;height:38px}
   .ft-soc img.s{width:30px;height:30px}
   .ft-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;width:100%}
-  .ft-col{width:auto;min-width:0;gap:12px}
-  .ft-col ul{gap:9px}
+  .ft-col{width:auto;min-width:0;gap:16px}
+  .ft-col ul{gap:8px}
   .ft-col a{font-size:var(--t1-size)}
   .ft-bot{gap:6px 16px;font-size:var(--t3-size)}
+}
+/* мобільна шкала відступів (ui-kit/tokens.css: --sp-1…5) для блоку «Що далі» і футера на всіх сторінках */
+@media (max-width:720px){
+  html body .nx{padding-block:var(--sp-5);gap:var(--sp-3)}
+  html body .nx-head{gap:var(--sp-1)}
+  html body .nx-row{gap:var(--sp-1)}
+  html body .nx-card{padding:var(--sp-1) var(--sp-1) var(--sp-3);gap:var(--sp-2)}
+  html body .nx-text,html body .nx-card .lbtn{margin-inline:var(--sp-1)}
+  html body .nx-card .lbtn{width:auto;max-width:calc(100% - 2*var(--sp-1))}
+  html body .nx-text{gap:var(--sp-1)}
+  html body .ft{padding-block:var(--sp-5) var(--sp-4)}
+  html body .ft-in{width:100%;max-width:none;gap:var(--sp-4)}
+  html body .ft-top{gap:var(--sp-4)}
+  html body .ft-about{gap:var(--sp-3)}
+  html body .ft-contact{gap:var(--sp-2)}
+  html body .ft-nav{display:flex;flex-direction:column;flex-wrap:nowrap;gap:var(--sp-4)}
+  html body .ft-col{width:100%;gap:var(--sp-1)}
+  html body .ft-col ul{display:grid;gap:0}
 }
 @media (prefers-reduced-motion:reduce){.ft-soc a{transition:none}}`;
 me.before(style);   // ставимо перед стилями сторінки, щоб сторінка могла їх перекрити

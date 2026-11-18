@@ -93,12 +93,20 @@ a:hover .bl-play{background:var(--teal);color:var(--cream);scale:1.08}
 @media (max-width:720px){
   :root{--side:16px}
   .bl{gap:40px;padding-block:120px 96px}
-  .bl-tabs{gap:22px;margin-inline:calc(var(--side) * -1);padding-inline:var(--side);width:auto!important;max-width:none!important;justify-self:stretch}
-  .bl-tab{font-size:16px;padding-bottom:14px}
+  .bl-tabs{gap:24px;margin-inline:calc(var(--side) * -1);padding-inline:var(--side);width:auto!important;max-width:none!important;justify-self:stretch}
+  .bl-tab{font-size:16px;padding-bottom:16px}
   .bl-chips{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(var(--side) * -1);padding-inline:var(--side);scrollbar-width:none}
   .bl-chips::-webkit-scrollbar{display:none}
   .bl-chip{flex:none}
   .bl-pic{border-radius:16px}
-  .bl-dlg{border-radius:18px}.bl-dlg-t{padding:18px 18px 22px}
+  .bl-dlg{border-radius:18px}.bl-dlg-t{padding:16px 16px 24px}
 }
 @media (prefers-reduced-motion:reduce){.rv,.bl-pic,.bl-pic img,.bl-play,.bl-tab::after{transition:none!important}.rv{opacity:1;transform:none}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .bl-find{margin-top:24px}
+  .bl-find+.a-bar{margin-top:16px}
+  .bl-tags span{padding:5px 8px}
+  .bl-dlg-t{gap:8px}
+}

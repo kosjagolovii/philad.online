@@ -28,4 +28,19 @@
 .ggrid i{display:grid;place-items:center;font:600 28px/1 var(--font);color:var(--mute);font-style:normal}
 .ggrid b{font:var(--h3-weight) var(--t1-size)/1.2 var(--font);letter-spacing:var(--t1-track)}
 .ggrid span{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);color:var(--mute)}
-@media (max-width:720px){.ggrid{grid-template-columns:1fr}.gfacts.f4{grid-template-columns:1fr}.gjoin{padding:24px 18px;border-radius:20px}}
+@media (max-width:720px){.ggrid{grid-template-columns:1fr}.gfacts.f4{grid-template-columns:1fr}.gjoin{padding:24px 16px;border-radius:20px}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .hg-pg .hero{margin-bottom:40px}
+  .gfacts{gap:16px;margin:0 0 24px}
+  .gfacts div{padding:16px 16px}
+  .gnote{margin:0 0 24px;padding:16px 16px}
+  .gacts{gap:8px;margin:0 0 64px}
+  .gjoin{margin-top:64px}
+  .gjoin>p{margin:0 0 24px!important}
+  .gmore h2{margin:0 0 16px!important}
+  .ggrid{gap:16px}
+  .gall{margin:24px 0 0!important}
+  .ggrid a{gap:8px;padding:16px}
+}

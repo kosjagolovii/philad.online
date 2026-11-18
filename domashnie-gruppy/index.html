@@ -90,7 +90,7 @@ button{font:inherit;color:inherit}
 .hg-join-head p{margin:0;max-width:586px;font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);color:rgba(20,20,20,.7);text-wrap:pretty}
 .hg-join-card{width:min(640px,100%);box-sizing:border-box;padding:32px;border-radius:24px;background:#E9E2D3;color:var(--ink)}
 .hg-join-card .cf{display:block}
-@media (max-width:720px){.hg-join{gap:28px}.hg-join-card{padding:24px 18px;border-radius:20px}}
+@media (max-width:720px){.hg-join{gap:24px}.hg-join-card{padding:24px 16px;border-radius:20px}}
 
 @media (max-width:1100px){
   .hg-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -102,13 +102,13 @@ button{font:inherit;color:inherit}
 /* tablet & phone: map on top, list below it, the selected group opens as a sheet over the map */
 @media (max-width:720px){
   :root{--side:16px}
-  .hg{gap:64px;padding-block:120px 56px}
-  .hg-intro{gap:18px}
+  .hg{gap:64px;padding-block:120px 64px}
+  .hg-intro{gap:16px}
   .hg-lead{font-size:var(--t1-size)}
   .hg-why figure{border-radius:16px}
   .hg-why p,.hg-meet-head p{font-size:var(--t1-size)}
   .hg-meet{gap:40px}
-  .hg-steps{grid-template-columns:minmax(0,1fr);gap:12px}
+  .hg-steps{grid-template-columns:minmax(0,1fr);gap:16px}
   .hg-step{min-height:0;padding:24px;border-radius:20px}
   .hg-step i{width:52px;height:52px;margin-bottom:4px}
   .hg-step p{max-width:none}
@@ -160,6 +160,12 @@ button{font:inherit;color:inherit}
 .tuner textarea{width:100%;box-sizing:border-box;height:120px;font:11px/1.4 var(--t-mono);color:var(--t-ink);background:rgba(0,0,0,.35);border:1px solid var(--t-line);border-radius:6px;padding:8px}
 
 @media (prefers-reduced-motion:reduce){.tuner{transition:none}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .hg-why-txt{gap:24px}
+  .t-row{margin-bottom:16px}
+}
 </style>
 </head>
 <body>

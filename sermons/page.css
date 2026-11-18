@@ -44,4 +44,15 @@
   .fbtn{display:inline-flex}
   .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-@media (max-width:720px){.grid3{grid-template-columns:minmax(0,1fr);gap:28px}.rh{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:720px){.grid3{grid-template-columns:minmax(0,1fr);gap:24px}.rh{grid-template-columns:minmax(0,1fr)}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .lay{column-gap:16px}
+  .side{gap:16px}
+  .fl{padding-top:16px}
+  .spk{padding-top:8px}
+  .res{gap:24px}
+  .rh{gap:16px}
+  .rinfo{gap:8px 16px}
+}

@@ -89,3 +89,12 @@ ul,ol{padding:0;list-style:none}
 @media (max-width:720px){.cf .row2{grid-template-columns:minmax(0,1fr)}.intro .go{width:100%;height:60px}}
 
 .cf.compact textarea{min-height:84px}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .vsw span{padding:0 8px 0 16px}
+  .vsw a{padding:8px 16px}
+  .cf{gap:16px}
+  .cf .row2{gap:16px}
+  .cf .thanks{gap:8px;padding:24px 0}
+}

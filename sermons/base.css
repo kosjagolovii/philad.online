@@ -100,9 +100,9 @@ button{font:inherit;color:inherit}
 .sm-x:focus-visible{outline:2px solid #F7F2E8;outline-offset:3px}
 .sm-lock{overflow:hidden}
 @media (max-width:720px){
-  .sc-row{grid-template-columns:minmax(0,1fr);gap:14px}
-  .sm-box{padding-top:76px}.sm-x{top:calc(18px + env(safe-area-inset-top,0px))}
-  .sm-info{flex-direction:column;gap:12px}
+  .sc-row{grid-template-columns:minmax(0,1fr);gap:16px}
+  .sm-box{padding-top:64px}.sm-x{top:calc(18px + env(safe-area-inset-top,0px))}
+  .sm-info{flex-direction:column;gap:16px}
   .sc-img{border-radius:14px}
 }
 /* телефон / сенсорні екрани: зона натискання тегів, спікера й назви — не менше ~36px */
@@ -113,3 +113,16 @@ button{font:inherit;color:inherit}
 }
 /* iOS: поля з кеглем менше 16px збільшують сторінку під час фокуса */
 @media (max-width:900px){.sel,.search input{font-size:16px}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .sc-dur{padding:5px 8px}
+  .sc-b{gap:8px}
+  .sc-meta{gap:6px 8px}
+  .sc-fmt{padding:3px 8px}
+  .sc-by{gap:8px}
+  .sel{padding:0 40px 0 16px}
+  .empty{gap:16px;padding:80px 16px}
+  .sm-box{gap:16px}
+  .sm-info a{padding:0 16px}
+}

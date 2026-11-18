@@ -80,7 +80,20 @@
 .apply h2{margin:0;text-align:center;font:700 var(--h3-size)/32px var(--font);letter-spacing:-.02em}
 .apply>p{margin:12px 0 24px;text-align:center;font:500 15px/1.4 var(--font);letter-spacing:-.02em;opacity:.65;text-wrap:balance}
 .apply .cf{display:block}
-@media (max-width:720px){.pg{padding-block:130px 64px;gap:64px}.vid{border-radius:16px}.ph{border-radius:16px}.yt b{width:68px;height:68px}.apply{padding:24px 20px;border-radius:20px}}
+@media (max-width:720px){.pg{padding-block:130px 64px;gap:64px}.vid{border-radius:16px}.ph{border-radius:16px}.yt b{width:68px;height:68px}.apply{padding:24px 16px;border-radius:20px}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .body{gap:16px}
+  .body .h{margin:40px 0 0}
+  .body blockquote{padding:6px 0 6px 24px}
+  .body ol{gap:8px}
+  .body ol li{padding-left:24px}
+  .facts{gap:16px}
+  .facts li{padding:16px 16px}
+  .acts{gap:8px}
+  .apply>p{margin:16px 0 24px}
+}
 </style>
 </head>
 <body>

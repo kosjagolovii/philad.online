@@ -45,3 +45,9 @@ ul,ol{padding:0;list-style:none}
   .prose{font-size:16px}
   .vsw span{display:none}
 }
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .vsw span{padding:0 8px 0 16px}
+  .vsw a{padding:8px 16px}
+}

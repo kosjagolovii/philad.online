@@ -68,10 +68,20 @@
   .qrc{position:static}
 }
 @media (max-width:720px){
-  .pg{gap:48px;padding-block:120px 72px}
+  .pg{gap:40px;padding-block:120px 64px}
   .acc,.qr,.qrc{border-radius:16px}
   .row{grid-template-columns:minmax(0,1fr) auto}.row dt{grid-column:1/-1}
   .acts{width:100%}.acts>*{flex:1 1 100%}
+}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .acts{gap:8px}
+  .grid{gap:16px}
+  .cards{gap:16px}
+  .acc-h{padding-bottom:16px}
+  .row{gap:6px 16px}
+  .qrc{gap:16px;padding:16px}
 }
 </style>
 </head>

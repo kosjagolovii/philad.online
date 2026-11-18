@@ -92,16 +92,16 @@ img{max-width:100%;display:block}
 }
 @media (max-width:720px){
   :root{--side:16px}
-  .fv{gap:56px;padding-block:120px 56px}
-  .fv-intro{gap:18px}
+  .fv{gap:64px;padding-block:120px 64px}
+  .fv-intro{gap:16px}
   .fv-lead{font-size:var(--t1-size)}
   .fv-go{width:100%;height:60px}
-  .fv-duo{gap:12px}
+  .fv-duo{gap:16px}
   .fv-photo{aspect-ratio:4/3;border-radius:16px}
-  .fv-expect{padding:32px 20px;border-radius:16px;gap:20px}
+  .fv-expect{padding:24px 16px;border-radius:16px;gap:16px}
   .fv-expect h2{font-size:var(--h3-size)}
   .fv-expect ol{gap:16px}
-  .fv-expect li{font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);gap:12px}
+  .fv-expect li{font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);gap:16px}
 }
 @media (prefers-reduced-motion:reduce){
   .rv{transition:none!important;opacity:1;transform:none}
@@ -125,6 +125,14 @@ img{max-width:100%;display:block}
 .tt li.main .d{color:var(--teal-ink)}
 .sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media (max-width:900px){.tt li{grid-template-columns:minmax(0,1fr);gap:4px;padding:22px 0}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .fv-faq>h2{margin:0 0 16px}
+  .fv-faq summary{gap:16px;padding:16px 0}
+  .fv-faq .faq-a{padding:0 0 24px}
+  .tt li{padding:24px 0}
+}
 </style>
 </head>
 <body>

@@ -125,15 +125,15 @@ h3{margin:0;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);let
 .ph figcaption.pc span{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);opacity:.85}
 @media (max-width:700px){
   :root{--side:16px}
-  .h{padding-block:120px 80px;gap:56px}
+  .h{padding-block:120px 80px;gap:64px}
   .top{text-align:left;justify-items:start}
   .tl .ln,.nd,.dot{left:11px}
   .nd{margin-left:-3px}.it.hy .nd{margin-left:-7px}
   .dot{margin-left:-7px}
-  .it{grid-template-columns:1fr;padding-left:44px;column-gap:0}
-  .yc{text-align:left;padding-top:26px;padding-right:0}
+  .it{grid-template-columns:1fr;padding-left:40px;column-gap:0}
+  .yc{text-align:left;padding-top:24px;padding-right:0}
   .yc:has(.yd){display:none}
-  .it .nd,.it.hc .nd{top:18px}.it.hy .nd,.it.hc.hy .nd{top:27px}.it.hc .yc{padding-top:26px}
+  .it .nd,.it.hc .nd{top:18px}.it.hy .nd,.it.hc.hy .nd{top:27px}.it.hc .yc{padding-top:24px}
   .bd{padding-top:6px}
   .gal .ph{left:12%;width:76%}
   .gal:hover .ph:nth-child(3){transform:translate(-20%,6%) rotate(-7deg)}
@@ -146,6 +146,16 @@ img[src$="/doc.webp"],img[src$="/xmas99.webp"],img[src$="/bap1.webp"],img[src$="
 .ph:has(img[src$="/doc.webp"]){background:transparent}
 .ph:has(img[src$="/sis03.webp"]),.ph:has(img[src$="/c021.webp"]),.ph:has(img[src$="/doc.webp"]){max-width:68%}
 .gal .ph img{object-position:50% 14%}.gal .ph:has(img[src$="/p95a.webp"]) img{object-position:50% 8%}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .top{gap:24px}
+  .im{gap:16px}
+  .ch span{padding:16px 24px}
+  .tl .im{gap:16px}
+  .gal-n{padding:7px 16px}
+  .ph figcaption.pc{padding:64px 24px 24px}
+}
 </style>
 </head>
 <body>

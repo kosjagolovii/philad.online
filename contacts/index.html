@@ -40,7 +40,7 @@
 .pg{position:relative;z-index:1;background:var(--ds-cream);display:grid;justify-items:center;gap:56px;padding-block:130px 72px;
   padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
 .pg>*{min-width:0;box-sizing:border-box}
-@media (max-width:720px){.pg{gap:40px;padding-block:110px 48px}}
+@media (max-width:720px){.pg{gap:40px;padding-block:110px 40px}}
 /* ОСНОВНА (варіант D «Мозаїка») — компактно: заголовок у рядок, плитки зліва, форма справа на всю висоту; карта в кінці */
 .head{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:end}
 .head h1{margin:0;font:var(--d1-weight) var(--d1-size)/var(--d1-lh) var(--font);letter-spacing:var(--d1-track)}
@@ -64,7 +64,24 @@
 .formd .cf .note{margin-top:auto}
 .formd h2{margin:0;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track)}
 @media (max-width:1000px){.mos{grid-template-columns:minmax(0,1fr)}.head{grid-template-columns:minmax(0,1fr)}.head p{justify-self:start}}
-@media (max-width:720px){.tile,.formd{border-radius:16px}.tile{min-height:0;padding:20px}.formd{padding:24px 20px}}
+@media (max-width:720px){.tile,.formd{border-radius:16px}.tile{min-height:0;padding:16px}.formd{padding:24px 16px}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  </script>
+<!-- seo:end -->
+<script src="components/site.js"></script>
+<link rel="stylesheet" href="ui-kit/tokens.css">
+<script src="components/map.js"></script>
+<link rel="stylesheet" href="/contacts/base.css">
+<style>
+.pg{gap:64px;padding-block:130px 64px}
+  .head{gap:16px}
+  .mos{gap:16px}
+  .stack{gap:16px}
+  .tile{gap:8px}
+  .tile.tm .v{gap:6px 40px}
+}
 </style>
 </head>
 <body>

@@ -72,7 +72,14 @@ button{font:inherit;color:inherit}
 .loading{display:grid;place-items:center;height:80px}
 .loading i{width:30px;height:30px;border-radius:50%;border:3px solid rgba(20,20,20,.12);border-top-color:var(--teal);animation:hgspin .9s linear infinite}
 @keyframes hgspin{to{rotate:360deg}}
-@media (max-width:720px){.tc{border-radius:16px}.tc-b{padding:16px 18px 20px}}
+@media (max-width:720px){.tc{border-radius:16px}.tc-b{padding:16px 16px 16px}}
 
 /* iOS: поля з кеглем менше 16px збільшують сторінку під час фокуса */
 @media (max-width:900px){.sel,.search input{font-size:16px}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .sel{padding:0 40px 0 16px}
+  .empty{gap:16px;padding:80px 16px}
+  .tc-b{gap:8px}
+}

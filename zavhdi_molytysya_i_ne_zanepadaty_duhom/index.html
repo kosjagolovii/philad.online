@@ -87,7 +87,18 @@
 .tc h3{font-size:clamp(20px,1.7vw,25px);line-height:1.15;letter-spacing:-.035em}
 .tc-ex{font-size:15px}
 .grid3{gap:36px 14px}
-@media (max-width:720px){.tc{border-radius:0}.tc-img{border-radius:14px}.tc-b{padding:0}.grid3{gap:28px}}
+@media (max-width:720px){.tc{border-radius:0}.tc-img{border-radius:14px}.tc-b{padding:0}.grid3{gap:24px}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .lay{column-gap:16px}
+  .fl{padding-top:16px}
+  .sub{padding-top:16px}
+  .res{gap:24px}
+  .rh{gap:16px}
+  .rinfo{gap:8px 16px}
+  .tc-b{gap:8px}
+}
 </style>
 </head>
 <body>

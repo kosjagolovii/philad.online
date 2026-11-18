@@ -118,6 +118,14 @@ button,input,textarea{font:inherit;color:inherit}
   .md-lead b{font-size:var(--h2s-size)}
 }
 @media (prefers-reduced-motion:reduce){.rv,.md-row img{transition:none!important}.rv{opacity:1;transform:none}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .md-copy{gap:16px}
+  .md-copy ul{padding-left:24px}
+  .md-row{gap:16px}
+  .md-about{gap:64px}
+}
 </style>
 </head>
 <body>

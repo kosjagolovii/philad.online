@@ -183,13 +183,25 @@ button,input,textarea{font:inherit;color:inherit}
   .y-lead{gap:16px}
   .y-lead img{width:96px;height:96px}
   .y-lead b{font-size:var(--h2s-size)}
-  .y-vtx{padding:32px 20px}
+  .y-vtx{padding:24px 16px}
   .y-play i{width:84px;height:84px}
   .y-play i img{width:30px;height:30px}
   .y-card{grid-template-columns:minmax(0,1fr);min-height:0;border-radius:16px}
   .y-card figure{aspect-ratio:350/300}
 }
 @media (prefers-reduced-motion:reduce){.rv,.y-row img,.y-player>img,.y-play i,.y-yt{transition:none!important}.rv{opacity:1;transform:none}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .y-copy{gap:16px}
+  .y-row{gap:16px}
+  .y-about{gap:64px}
+  .y-video{gap:16px}
+  .y-fall{padding:16px 16px}
+  .y-soc{gap:16px}
+  .y-cards{gap:16px}
+  .y-herow{gap:16px}
+}
 </style>
 </head>
 <body>

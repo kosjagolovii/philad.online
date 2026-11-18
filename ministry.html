@@ -316,7 +316,7 @@ button,input,textarea{font:inherit;color:inherit}
   .m-grid{grid-template-columns:minmax(0,1fr)}
   .m-body{font-size:var(--t1-size)}
   .m-about{gap:40px}
-  .m-apply{border-radius:22px;padding:22px 18px}
+  .m-apply{border-radius:22px;padding:24px 16px}
   .v-f .m-cta{width:104px;height:104px;font-size:var(--t3-size)}
   .v-d .m-first h1{font-size:var(--d1-size)}
 }
@@ -438,10 +438,58 @@ button,input,textarea{font:inherit;color:inherit}
 @media (max-width:720px){
   .l-cta{width:104px;height:104px;font-size:var(--t3-size)}
   .n-badge{width:104px;height:104px}.n-badge b{font-size:var(--h2s-size)}
-  .n-ac summary{padding:20px 0}.n-pm{width:38px;height:38px}
+  .n-ac summary{padding:16px 0}.n-pm{width:38px;height:38px}
 }
 @media (prefers-reduced-motion:reduce){.l-track,.n-badge svg{animation:none}}
 @media (prefers-reduced-motion:reduce){.rv,.m-card img{transition:none!important}.rv{opacity:1;transform:none}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .m-first{gap:16px}
+  .m-cta{padding:0 24px}
+  .v-a .m-about .m-facts{gap:16px}
+  .v-a .m-facts li{padding:16px 16px}
+  .v-b .m-text{gap:16px}
+  .v-c .m-first{row-gap:16px}
+  .v-c .m-crumbs{padding-bottom:24px}
+  .v-c .m-text{gap:24px}
+  .v-d .m-first{row-gap:16px}
+  .v-d .m-side{gap:16px}
+  .v-e .m-first{row-gap:16px}
+  .v-f .m-first{gap:16px}
+  .v-f .m-text{gap:16px}
+  .vg .m-apply,.v-a .m-apply{padding:24px}
+  .vg .m-apply-tx p,.v-a .m-apply-tx p{margin:16px 0 0}
+  .m-facts{gap:16px}
+  .m-facts li{padding:24px 24px}
+  .m-body{gap:16px}
+  .m-body .h{margin:40px 0 0}
+  .m-body .h3{margin:16px 0 0}
+  .m-body ul{gap:8px}
+  .m-body li{padding-left:24px}
+  .m-body blockquote{padding:6px 0 6px 24px}
+  .m-more{gap:24px}
+  .m-grid{gap:16px}
+  .m-card{gap:16px}
+  .m-all{padding:0 24px}
+  .m-form{gap:16px}
+  .m-ok{gap:8px;padding:24px}
+  .v-e .m-text{padding:6px 0 8px}
+  .k-grid{gap:16px}
+  .k-t{gap:16px}
+  .k-ch{padding-top:24px}
+  .l-row{gap:24px}
+  .l-marq{padding:16px 0}
+  .l-track span{padding-right:40px}
+  .l-side{gap:24px}
+  .l-ch{gap:16px}
+  .n-hero{gap:24px}
+  .n-stats li{padding:24px 24px}
+  .n-side{gap:16px}
+  .n-ac .m-body{padding:0 0 40px}
+  .n-bar{gap:16px}
+  .n-bar a{padding:0 24px}
+}
 </style>
 </head>
 <body>

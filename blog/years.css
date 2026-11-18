@@ -21,11 +21,11 @@
 .mg-yb[aria-pressed="true"] sup{opacity:.75}
 /* телефон: пошук на всю ширину, під ним роки в один рядок з горизонтальною прокруткою */
 @media (max-width:720px){
-  .mg-tabrow{flex-direction:column;align-items:stretch;gap:12px;border-bottom:0;min-width:0;max-width:100%}
+  .mg-tabrow{flex-direction:column;align-items:stretch;gap:16px;border-bottom:0;min-width:0;max-width:100%}
   .mg-tabrow .bl-tabs{border-bottom:1px solid var(--line);min-width:0;width:100%!important;max-width:100%!important;margin-inline:0;padding-inline:0}
   .mg-meta{justify-content:space-between;order:2}
-  .mg-line{flex-direction:column;align-items:stretch;gap:14px}
+  .mg-line{flex-direction:column;align-items:stretch;gap:16px}
   .mg-line .bl-find{flex:none}
   .mg-yrs{gap:6px;margin-inline:calc(var(--side) * -1);padding-inline:var(--side);scroll-snap-type:x proximity}
-  .mg-yb{min-height:38px;padding:0 14px;scroll-snap-align:start}
+  .mg-yb{min-height:38px;padding:0 16px;scroll-snap-align:start}
 }

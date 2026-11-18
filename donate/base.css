@@ -62,3 +62,10 @@ ul,ol{padding:0;list-style:none}
   .row dd.mono{font-size:clamp(15px,4.4vw,18px);overflow-wrap:normal;word-break:keep-all}
   .row .copy{grid-column:1/-1;justify-self:start;margin-top:4px}
 }
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .vsw span{padding:0 8px 0 16px}
+  .vsw a{padding:8px 16px}
+  .copy{padding:0 16px}
+}

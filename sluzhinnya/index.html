@@ -193,14 +193,14 @@ button{font:inherit;color:inherit}
 }
 @media (max-width:720px){
   :root{--side:16px;--top:110px}
-  .mn{gap:72px;padding-bottom:64px}
-  .mn-intro{gap:18px}
+  .mn{gap:64px;padding-bottom:64px}
+  .mn-intro{gap:16px}
   .mn-lead{font-size:var(--t1-size)}
-  .mn-main,.mn-groups{gap:48px}
-  .mgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 10px}
+  .mn-main,.mn-groups{gap:40px}
+  .mgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 8px}
   .mcard-ph,.scta{border-radius:14px}
   .mcard-n{font-size:var(--t2-size)}
-  .scta{padding:14px}
+  .scta{padding:16px}
   /* filters run edge to edge on a phone */
   .mn-nav{margin-inline:calc(-1*max(var(--side),env(safe-area-inset-left,0px)));padding-inline:max(var(--side),env(safe-area-inset-left,0px))}
   .mdlg{width:100vw;max-width:100vw;max-height:92svh;margin:auto 0 0;border-radius:22px 22px 0 0}
@@ -211,6 +211,21 @@ button{font:inherit;color:inherit}
 @media (prefers-reduced-motion:reduce){
   .rv,.mcard,.mcard-ph,.mcard-ph img,.scta,.scta i,.mn-intro,.mn-cur,.sbadge-swing,.sbadge.on .sbadge-swing{transition:none!important}
   .rv{opacity:1;transform:none}.sbadge.kick .sbadge-swing{animation:none}.mdlg[open]{animation:none}.mgrid li.in-f{animation:none}
+}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .mn-body{column-gap:8px}
+  .mn-group{gap:16px}
+  .mn-group h2{gap:8px}
+  .mn-groups.filtered{gap:24px}
+  .mcard{gap:16px}
+  .mn-join{gap:64px}
+  .mn-steps{gap:16px}
+  .mn-step{gap:16px}
+  .mdlg-tx{padding:24px 16px 24px}
+  .mdlg-lead{padding:16px 16px}
+  .mdlg-acts{gap:8px}
 }
 </style>
 </head>

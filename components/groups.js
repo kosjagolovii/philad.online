@@ -153,8 +153,8 @@ home-groups img{max-width:100%;display:block}
   .hg-map{border-radius:16px}
   .hg-name{font-size:var(--t1-size)}
   .hg-ava{width:56px;height:56px}
-  .hg-card{padding:12px 14px}
-  .hg-card[aria-current="true"]{padding-block:14px}
+  .hg-card{padding:16px 16px}
+  .hg-card[aria-current="true"]{padding-block:16px}
 }
 @media (max-width:420px){
   .hg-detail{grid-template-columns:96px minmax(0,1fr)}

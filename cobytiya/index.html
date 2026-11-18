@@ -163,16 +163,16 @@ button{font:inherit;color:inherit}
 }
 @media (max-width:720px){
   :root{--side:16px}
-  .ev{gap:48px;padding-block:120px 64px}
-  .ev-grid{grid-template-columns:minmax(0,1fr);gap:32px}
+  .ev{gap:40px;padding-block:120px 64px}
+  .ev-grid{grid-template-columns:minmax(0,1fr);gap:24px}
   .ev-bar{display:grid}
   .ev-chips{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(var(--side) * -1);padding-inline:var(--side);scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .ev-chips::-webkit-scrollbar{display:none}
   .ev-chips .ev-chip{flex:none}
   .ev-ctl{justify-content:flex-start}
-  .ev-lmonth{padding-top:32px}
-  .ev-lrow{grid-template-columns:minmax(0,1fr) 124px;grid-template-areas:"d p" "i i";column-gap:16px;row-gap:12px;align-items:start;padding:16px 0}
-  .ev-ld{grid-area:d;grid-template-columns:auto 1fr;align-items:end;column-gap:10px;row-gap:2px}
+  .ev-lmonth{padding-top:24px}
+  .ev-lrow{grid-template-columns:minmax(0,1fr) 124px;grid-template-areas:"d p" "i i";column-gap:16px;row-gap:16px;align-items:start;padding:16px 0}
+  .ev-ld{grid-area:d;grid-template-columns:auto 1fr;align-items:end;column-gap:8px;row-gap:2px}
   .ev-ld b{font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track)}.ev-ld b small{font-size:.5em}.ev-ld span{font-size:var(--t3-size);align-self:end}.ev-ld em{grid-column:1/-1;font-size:var(--t2-size)}
   .ev-lpic{grid-area:p;grid-column:auto;max-width:none;border-radius:12px}
   .ev-li{grid-area:i;gap:8px}
@@ -180,11 +180,11 @@ button{font:inherit;color:inherit}
   .ev-cal{margin-top:64px}
   .ev-cal-nav button{width:44px;height:44px}
   /* on a phone a 7-column grid cannot hold titles: the month turns into an agenda — only the days that have events, one under another */
-  .ev-cal{padding:20px 16px 22px;border-radius:24px}
+  .ev-cal{padding:16px 16px 24px;border-radius:24px}
   .ev-cal-key{margin-bottom:16px}
   .cal-g{display:block}
   .cal-w,.cal-c:not(.has){display:none}
-  .cal-c.has{display:grid;grid-template-columns:72px minmax(0,1fr);grid-auto-rows:min-content;row-gap:0;align-items:start;min-height:0;margin-bottom:8px;padding:12px}
+  .cal-c.has{display:grid;grid-template-columns:72px minmax(0,1fr);grid-auto-rows:min-content;row-gap:0;align-items:start;min-height:0;margin-bottom:8px;padding:16px}
   .cal-c.has>b{grid-row:1/20;display:grid;justify-items:start;align-content:start;min-width:0;height:auto;padding:0;border-radius:0;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track);background:none}
   .cal-c.has.today>b{color:var(--teal);background:none}
   .cal-c.has>b small{display:block;margin:4px 0 0;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);text-transform:uppercase;color:rgba(20,20,20,.45)}
@@ -192,6 +192,20 @@ button{font:inherit;color:inherit}
   .cal-none{display:block}.cal-g:has(.cal-c.has)+.cal-none{display:none}
 }
 @media (prefers-reduced-motion:reduce){.rv,.ev-pic img,.ev-cur,.ev-lpic,.cal-ev{transition:none!important}.cal-g.swap{animation:none}.rv{opacity:1;transform:none}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .ev-count{margin:0 0 16px}
+  .ev-reg{padding:6px 8px}
+  .ev-tags span,.ev-tags li{padding:5px 8px}
+  .ev-ctl{gap:8px}
+  .ev-lmonth{padding:40px 0 16px}
+  .ev-lmonth span{margin-left:8px}
+  .ev-cal-key{gap:16px;margin:0 0 24px}
+  .cal-c{padding:8px 8px 8px}
+  .cal-ev{padding:7px 8px 8px}
+  .cal-none{padding:24px}
+}
 </style>
 </head>
 <body>

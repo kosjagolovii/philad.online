@@ -36,7 +36,7 @@ const CSS=`
 .jf-inline{box-sizing:border-box;width:min(640px,100%);margin-inline:auto;padding:40px 32px 32px;border-radius:24px;background:#E9E2D3;color:var(--ink,#141414);scroll-margin-top:100px}
 .jf-inline.sent form,.jf-inline.sent .jf-p{display:none}.jf-inline.sent .jf-ok{display:grid}
 html.jf-lock{overflow:hidden}
-@media (max-width:560px){.jf{border-radius:20px}.jf-in{padding:36px 18px 22px}}
+@media (max-width:560px){.jf{border-radius:20px}.jf-in{padding:40px 16px 24px}}
 @media (prefers-reduced-motion:reduce){.jf[open]{animation:none}}`;
 let dlg,cfg={};
 const okContact=s=>{const t=s.trim();return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(t)||t.replace(/\D/g,"").length>=9&&/^[+\d\s()\-.]+$/.test(t)};
