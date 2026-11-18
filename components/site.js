@@ -89,6 +89,8 @@ SITE.send=async(subject,fields)=>{
 /* ---------- нижче — розмітка, стилі й поведінка; зазвичай редагувати не треба ---------- */
 const me=document.currentScript;
 const BASE=new URL("../",me.src).href;           // папка сайту: картинки беруться звідси на будь-якій сторінці
+// футер і шапка рахують розміри з токенів UI-кіту: якщо сторінка їх не підключила (наприклад, згенерована сторінка теми), підтягуємо ui-kit/tokens.css самі
+document.addEventListener("DOMContentLoaded",()=>{if(!getComputedStyle(document.documentElement).getPropertyValue("--h2-size").trim()){const l=document.createElement("link");l.rel="stylesheet";l.href=BASE+"ui-kit/tokens.css";document.head.append(l)}});
 const asset=p=>BASE+p;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[c]);
 const ext=h=>/^https?:/.test(h);
@@ -331,7 +333,13 @@ a:hover .u::after,a:focus-visible .u::after{transform:scaleX(1);transform-origin
   html body .nx-row{gap:var(--st-1)}
   html body .ft{padding-block:var(--st-5) var(--st-4)}
   html body .ft-in{gap:var(--st-4)}
+  html body .nx{padding-inline:var(--st-4)}
+  html body .nx-row{width:100%;max-width:100%}
+  html body .ft{padding-inline:var(--st-4)}
+  html body .ft-in{width:100%;max-width:none}
 }
+@media (min-width:721px) and (max-width:1000px){html body .nx-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){html body .nx-row{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media (prefers-reduced-motion:reduce){.ft-soc a{transition:none}}`;
 me.before(style);   // ставимо перед стилями сторінки, щоб сторінка могла їх перекрити
 

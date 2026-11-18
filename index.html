@@ -458,6 +458,16 @@ canvas.trail{position:fixed;inset:0;width:100%;height:100%;z-index:11;pointer-ev
   html body .ft-nav{gap:var(--sp-4)!important}
   html body .ft-col{gap:var(--sp-1)!important}
 }
+/* планшет: усі блоки по ширині контентної зони (бічний відступ = --gutter = 48px) */
+@media (min-width:721px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  html body .copy{padding-left:max(var(--st-4),env(safe-area-inset-left,0px));padding-right:max(var(--st-4),env(safe-area-inset-right,0px))}
+  html body .cards-sec{padding-inline:var(--st-4)}
+  html body .svc-video{width:calc(100% - 2*var(--st-4))}
+  html body .lv{padding-inline:var(--st-4)}
+  html body .lv{grid-template-columns:minmax(0,1fr)}
+  html body .lv-row{width:100%;max-width:100%}
+  html body .life{--cwid:100%;padding-left:var(--st-4);padding-right:var(--st-4)}
+}
 @media (prefers-reduced-motion:reduce){.reveal,.svc-video.reveal{opacity:1;transform:none;transition:none}.hint i{animation:none}}
 
 /* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
