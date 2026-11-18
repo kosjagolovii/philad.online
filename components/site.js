@@ -69,7 +69,8 @@ const SITE={
     {label:"YouTube",href:"https://www.youtube.com/@philadkyiv",icon:"youtube"},
     {label:"Instagram",href:"https://www.instagram.com/philadkyiv",icon:"instagram"},
     {label:"Facebook",href:"https://www.facebook.com/philadkyiv/",icon:"facebook"},
-    {label:"Telegram",href:"https://t.me/philadkyiv",icon:"telegram",small:true}
+    {label:"Telegram",href:"https://t.me/philadkyiv",icon:"telegram",small:true},
+    {label:"Біблія (YouVersion)",href:"https://www.bible.com/organizations/0225372b-5b4c-43cc-b89f-4581d2052600?utm_source=yvapp&utm_medium=share&utm_content=partner-profile",icon:"bible",small:true}
   ]
 };
 

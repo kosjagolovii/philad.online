@@ -22,8 +22,17 @@ window.DONATE={
       {k:"Company name",v:"PHILADELPHIA CHURCH",copy:true},
       {k:"IBAN code",v:"UA593052990000026005026206626",copy:true,mono:true},
       {k:"Bank SWIFT code",v:"PBANUA2X",copy:true,mono:true},
-      {k:"Name of the bank",v:"JSC CB “PRIVATBANK”, 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE"},
-      {k:"Company address",v:"57, HOLOSIIVSKA STR., KYIV, 01001, UKRAINE"}
+      {k:"Name of the bank",v:"JSC CB “PRIVATBANK”, 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE",copy:true},
+      {k:"Company address",v:"57, HOLOSIIVSKA STR., KYIV, 01001, UKRAINE",copy:true}
+    ]},
+    {id:"eur",tab:"EUR",title:"Рахунок у євро",rows:[
+      {k:"Company name",v:"PHILADELPHIA CHURCH",copy:true},
+      {k:"IBAN code",v:"UA803052990000026003036233012",copy:true,mono:true},
+      {k:"Bank SWIFT code",v:"PBANUA2X",copy:true,mono:true},
+      {k:"Name of the bank",v:"JSC CB “PRIVATBANK”, 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE",copy:true},
+      {k:"Company address",v:"57, HOLOSIIVSKA STR., KYIV, 03039, UKRAINE",copy:true},
+      {k:"Correspondent bank",v:"Commerzbank AG, Frankfurt am Main, Germany · SWIFT COBADEFF · Acc. 400886700401",copy:true},
+      {k:"Payment details",v:"Voluntary donation",copy:true}
     ]}
   ]
 };
