@@ -27,7 +27,7 @@ B.set=patch=>{
   Object.assign(S,patch);
   if(S.theme!=="all"&&!B.byTab(S.tab).some(p=>p.themes.includes(S.theme)))S.theme="all";   // у новій вкладці такої теми немає
   const h=new URLSearchParams();if(S.tab!=="all")h.set("tab",S.tab);if(S.theme!=="all")h.set("theme",S.theme);
-  history.replaceState(null,"",h.size?"#"+h:location.pathname+location.search);
+  history.replaceState(null,"",location.pathname+location.search+(h.size?"#"+h:""))   /* повний шлях: на «чистих» адресах стоїть <base href="/"> */;
   sync.forEach(f=>f());const l=B.list();subs.forEach(f=>f(l))};
 const sync=[];
 addEventListener("hashchange",()=>{const n={tab:"all",theme:"all"};new URLSearchParams(location.hash.slice(1)).forEach((v,k)=>{if(k in n)n[k]=v});

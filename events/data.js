@@ -47,7 +47,7 @@ events:[
   text:"Спільне генеральне прибирання церкви: приходьте з бажанням допомогти."},
  {id:"leaders-training",poster:true,title:"Навчання лідерів домашніх груп",aud:["leaders"],audText:"Лідерам домашніх груп",place:"Соццентр, 2 поверх (вул. Голосіївська, 57)",img:"events/img/leaders-training.webp",
   date:"2026-10-31",time:"11:00–15:30",how:{type:"register",text:"Реєстрація за посиланням.",href:"https://forms.gle/VV1D3qgZsgcx1hc7A",label:"Зареєструватись"},
-  text:"Навчання для лідерів домашніх груп: практика, спілкування і підтримка.",href:"homegroups.html"},
+  text:"Навчання для лідерів домашніх груп: практика, спілкування і підтримка.",href:"/domashnie-gruppy/"},
  {id:"sisters-donka",poster:true,title:"Сестринське: Бути Його донькою",aud:["women"],audText:"Сестрам церкви",place:"вул. Голосіївська, 57, центральна зала",img:"events/img/sisters-donka.webp",
   date:"2026-10-09",time:"18:30",how:{type:"register",text:"Реєстрація за посиланням. Реєстраційний внесок — 250 грн.",href:"https://forms.gle/X3sQcs7qJQq1aLxL6",label:"Зареєструватись"},
   text:"Вечір для сестер: «Цінна. Обрана. Покликана.» Розмова про те, що означає бути Божою донькою."},

@@ -43,15 +43,15 @@ style.textContent=`church-map{display:contents}
 .fv-tag::before{content:"";position:absolute;left:50%;top:-5px;width:10px;height:10px;margin-left:-5px;background:inherit;rotate:45deg;border-radius:2px}
 .fv-map.in .fv-tag{opacity:1;translate:0 0}
 .fv-tag b{font-weight:700;font-size:15px;line-height:1.2;letter-spacing:-.02em}
-.fv-tag span{font-weight:600;font-size:12px;line-height:1.3;color:var(--mute)}
+.fv-tag span{font-weight:600;font-size:var(--t3-size);line-height:1.3;color:var(--mute)}
 .fv-route{position:absolute;right:20px;bottom:20px;display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 20px;border-radius:12px;
-  background:var(--ds-cream);color:var(--ink);font-weight:800;font-size:12px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;
+  background:var(--ds-cream);color:var(--ink);font-weight:800;font-size:var(--t3-size);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;
   transition:scale .35s cubic-bezier(.2,.7,.2,1)}
 .fv-route:hover{scale:1.04}
 .fv-route:focus-visible{outline:2px solid var(--ds-cream);outline-offset:3px}
 .fv-route svg{width:16px;height:16px}
-.fv-addr{position:absolute;left:20px;bottom:20px;margin:0;font-weight:600;font-size:14px;line-height:1.35;color:rgba(247,242,232,.75)}
-.fv-addr strong{display:block;font-weight:600;font-size:18px;color:var(--ds-cream)}
+.fv-addr{position:absolute;left:20px;bottom:20px;margin:0;font-weight:600;font-size:var(--t2-size);line-height:1.35;color:rgba(247,242,232,.75)}
+.fv-addr strong{display:block;font-weight:600;font-size:var(--t1-size);color:var(--ds-cream)}
 
 /* live map (MapLibre): sits over the static picture and fades in once its tiles are ready */
 .fv-map .fv-live{position:absolute;inset:0;opacity:0;transition:opacity .8s ease;background:#1b1d1f}
@@ -78,7 +78,7 @@ style.textContent=`church-map{display:contents}
 /* metro station marker */
 .fv-metro{display:flex;flex-direction:row-reverse;align-items:center;gap:7px;padding:4px 4px 4px 10px;border-radius:999px;background:rgba(20,20,20,.82);color:var(--ds-cream);
   font:600 13px/1 var(--sans);letter-spacing:-.01em;white-space:nowrap;box-shadow:0 6px 18px rgba(0,0,0,.35);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-.fv-metro i{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#2BA84A;color:#fff;font:800 12px/1 var(--sans);font-style:normal}
+.fv-metro i{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#2BA84A;color:#fff;font:800 var(--t3-size)/1 var(--sans);font-style:normal}
 /* keep the library chrome quiet and on-brand */
 .fv-live .maplibregl-ctrl-attrib{background:rgba(20,20,20,.55)!important;color:rgba(247,242,232,.6);font:500 10px/1.4 var(--sans)}
 .fv-live .maplibregl-ctrl-attrib a{color:inherit}
@@ -106,7 +106,7 @@ class ChurchMap extends HTMLElement{
     const addr=S.address.join(", ");
     this.innerHTML=`<section class="fv-map row-w" id="map" aria-label="Як нас знайти: Київ, вул. Голосіївська, 57" data-dark>
     <div class="fv-map-in">
-      <img src="${asset("first/map.webp")}" alt="" width="2400" height="1534" loading="lazy">
+      <img src="${asset("first/map.webp")}" alt="Карта: церква «Філадельфія», вул. Голосіївська, 57, поряд зі станцією метро «Голосіївська» у Києві" width="2400" height="1534" loading="lazy">
       <div class="fv-pin">
         <img class="fv-church" src="${asset("first/church.webp")}" alt="Будівля церкви «Філадельфія»" width="360" height="331">
         <div class="fv-tag"><b>Церква «Філадельфія»</b><span>вул. Голосіївська, 57</span></div>

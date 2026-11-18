@@ -2,6 +2,12 @@
 <html lang="uk">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#F7F2E8">
 <base href="/">
 <script src="/components/base-fix.js"></script>
 <title>Події церкви «Філадельфія» — афіша і календар</title>
@@ -81,7 +87,8 @@ button{font:inherit;color:inherit}
 .ev-line{margin:0;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.55)}
 .ev-tags{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
 .ev-tags span,.ev-tags li{padding:5px 9px;border-radius:8px;background:rgba(49,124,142,.1);color:var(--teal);font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track)}
-.ev-cur{position:fixed;left:0;top:0;z-index:7;width:60px;height:60px;border-radius:50%;background:var(--ds-cream);color:var(--ink);display:grid;place-items:center;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);pointer-events:none;opacity:0;scale:0;transform-origin:0 0;transition:opacity .2s ease,scale .45s cubic-bezier(.3,1.4,.5,1);box-shadow:0 10px 24px -12px rgba(20,20,20,.35)}
+.ev-cur{position:fixed;left:0;top:0;z-index:7;width:60px;height:60px;border-radius:50%;background:var(--ds-cream);color:var(--ink);display:grid;place-items:center;font:var(--t2-weight) 11px/1.2 var(--font);letter-spacing:0;   /* підпис у кружку: менший і тонший, щоб не впирався в краї (було t3: 12px/800) */
+  pointer-events:none;opacity:0;scale:0;transform-origin:0 0;transition:opacity .2s ease,scale .45s cubic-bezier(.3,1.4,.5,1);box-shadow:0 10px 24px -12px rgba(20,20,20,.35)}
 .ev-cur.on{opacity:1;scale:1}
 .ev-arch{display:grid;justify-items:center}
 .ev-empty{margin:0;text-align:center;font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);color:var(--mute)}
@@ -215,7 +222,7 @@ button{font:inherit;color:inherit}
       <p class="cal-none" id="calNone">У цьому місяці подій немає.</p>
     </section>
   </section>
-  <div class="ev-arch rv"><a class="lbtn" href="/events/" data-no-u>Архів подій 2014–2022</a></div>
+  <div class="ev-arch rv"><a class="lbtn" href="/category/vse_zapisi/#tab=ev" data-no-u>Архів подій 2014–2022</a></div>
 </main>
 
 <site-footer></site-footer>

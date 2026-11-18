@@ -1,55 +1,58 @@
 /* Усі служіння церкви «Філадельфія».
-   Поля: id (ім'я фото в min/<id>.webp), name, cat (ключ з CATS), text, lead (лідер, необов'язково),
+   Поля: id (ім'я фото в min/<id>.webp), name, cat (ключ з CATS), text, lead (лідер, необов'язково), leadRole (підпис над іменем, за замовчуванням «Лідер служіння»), leadPhoto (кругле фото лідера, необов'язково), hero (головне фото, якщо воно не в min/hero/<id>.webp), leadNote (рядок під іменем, напр. «Пастор церкви»),
    img (інше фото замість min/<id>.webp), nophoto:true (фото ще немає — показати заглушку; приберіть, коли додасте min/<id>.webp), href (посилання «Детальніше» у вікні), page (своя сторінка: клік на картку одразу відкриває її).
    Порядок у списку = порядок на сторінці. archived:true — служіння сховане зі сторінки, дані лишаються. */
 window.PHILAD_MIN_CATS=[
   {id:"pray",label:"Поклоніння і молитва"},
-  {id:"young",label:"Діти і молодь"},
+  {id:"kids",label:"Діти"},
+  {id:"young",label:"Молодь"},
   {id:"family",label:"Сім’я і спільнота"},
   {id:"help",label:"Допомога людям"},
   {id:"faith",label:"Віра і навчання"},
   {id:"team",label:"Команди церкви"}
 ];
 window.PHILAD_MIN=[
-  {id:"youth",page:"/project/philadyouth/",name:"Молодіжне служіння",cat:"young",text:"Молодь 16–25 років: зустрічі, дружба, служіння і чесні розмови про віру та життя."},
+  {id:"youth",page:"/project/philadyouth/",hero:"youth/hero.webp",name:"Молодіжне служіння",cat:"young",text:"Молодь 16–25 років: зустрічі, дружба, служіння і чесні розмови про віру та життя."},
   {id:"prayer",name:"Молитовне служіння",cat:"pray",text:"Молимося за церкву, за людей, які просять про молитву, і за Україну. Долучитися може кожен."},
   {id:"wednesday",name:"Вечірнє служіння по середах",cat:"pray",lead:"Регіональний пастор",text:"Зібрання посеред тижня: Слово, молитва і спілкування, щоб не чекати неділі."},
   {id:"night",name:"Нічні молитви",cat:"young",text:"Нічні молитовні зустрічі молоді — час, коли без поспіху шукаємо Бога разом."},
   {id:"homegroups",name:"Домашні групи",cat:"family",lead:"Лідери домашніх груп у своїх районах",href:"/domashnie-gruppy/",text:"Невеликі групи по всьому Києву, де разом читають Біблію, моляться і підтримують одне одного."},
-  {id:"worship",name:"Служіння прославлення",cat:"pray",text:"Музиканти і вокалісти, які ведуть церкву в поклонінні на богослужіннях."},
-  {id:"sunday-school",name:"Недільна школа",cat:"young",text:"Поки дорослі на богослужінні, діти вивчають Біблію, граються і дружать у групах за віком."},
-  {id:"kids-choir",name:"Дитячий хор",cat:"young",text:"Діти вчаться співати разом і служать піснями на богослужіннях і святах."},
+  {id:"worship",name:"Служіння прославлення",cat:"pray",lead:"Тимофій Ярошевич",leadRole:"Лідер прославлення",leadPhoto:"min/leaders/worship.webp",text:"Музиканти і вокалісти, які ведуть церкву в поклонінні на богослужіннях."},
+  {id:"sunday-school",name:"Недільна школа",cat:"kids",lead:"Світлана Поліщук",leadRole:"Директорка недільної школи",leadPhoto:"min/leaders/sunday-school.webp",text:"Поки дорослі на богослужінні, діти вивчають Біблію, граються і дружать у групах за віком."},
+  {id:"kids-choir",name:"Дитячий хор",cat:"kids",text:"Діти вчаться співати разом і служать піснями на богослужіннях і святах."},
   {id:"choir",name:"Дорослий хор",cat:"pray",text:"Хор церкви славить Бога піснями на богослужіннях і святкових зібраннях."},
-  {id:"camps",name:"Дитячі табори",cat:"young",text:"Літні табори для дітей церкви та їхніх друзів: природа, ігри, наставники і біблійні уроки."},
-  {id:"teens",name:"Служіння підліткам",cat:"young",text:"Зустрічі для підлітків: ігри, розмови на важливі теми, молитва і друзі."},
-  {id:"chaplain",name:"Капеланство",cat:"help",text:"Капелани підтримують військових, поранених і їхніх рідних словом, молитвою і присутністю."},
-  {id:"mil-families",name:"Служіння сім’ям військових",cat:"help",text:"Підтримуємо дружин, дітей і батьків тих, хто служить: розмова, молитва і практична допомога."},
+  {id:"camps",name:"Дитячі табори",cat:"kids",text:"Літні табори для дітей церкви та їхніх друзів: природа, ігри, наставники і біблійні уроки."},
+  {id:"teens",name:"Служіння підліткам",cat:"young",lead:"Лещук Андрій",leadRole:"Лідер підліткового",leadPhoto:"min/leaders/teens.webp",text:"Зустрічі для підлітків: ігри, розмови на важливі теми, молитва і друзі."},
+  {id:"happiness",name:"Щастя поруч",cat:"young",lead:"Юрій Кавун",leadRole:"Лідер служіння",leadNote:"Пастор церкви",leadPhoto:"min/leaders/kavun.webp",text:"Молодіжний рух, де вчаться будувати стосунки так, як їх задумав Бог, і знайомляться в християнській атмосфері."},
+  {id:"chaplain",lead:"Володимир Губський",leadRole:"Капелан",leadPhoto:"min/leaders/chaplain.webp",name:"Капеланство",cat:"help",text:"Капелани підтримують військових, поранених і їхніх рідних словом, молитвою і присутністю."},
+  {id:"mil-families",lead:"Тетяна Василенко",leadRole:"Лідерка служіння",leadPhoto:"min/leaders/mil-families.webp",name:"Служіння сім’ям військових",cat:"help",text:"Підтримуємо дружин, дітей і батьків тих, хто служить: розмова, молитва і практична допомога."},
   {id:"szho",name:"Служіння сім’ям СЖО",cat:"help",text:"Поруч із родинами в найважчі часи: підтримка, молитва і допомога."},
   {id:"evacuation",name:"Евакуація людей",cat:"help",text:"Волонтери церкви допомагають людям виїхати з небезпечних районів і дістатися безпечного місця."},
   {id:"day-center",archived:true,name:"Денний центр у «Філадельфії»",cat:"help",text:"Місце, куди можна прийти вдень: гаряча їжа, тепло, спілкування і підтримка."},
-  {id:"settlement",name:"Поселення евакуйованих людей",cat:"help",lead:"Вадим Наконечний",text:"Допомагаємо людям, які втратили дім через війну, знайти житло й облаштуватися на новому місці."},
+  {id:"settlement",name:"Поселення евакуйованих людей",cat:"help",text:"Допомагаємо людям, які втратили дім через війну, знайти житло й облаштуватися на новому місці."},
   {id:"social",name:"Соціальна робота",cat:"help",lead:"Володимир Рудницький",text:"Гуманітарна допомога тим, хто її потребує: продукти, речі та супровід."},
   {id:"seekers",name:"Групи вивчення Біблії з невіруючими",cat:"faith",text:"Зустрічі для тих, хто ще шукає: тут можна поставити будь-яке питання і разом читати Біблію."},
   {id:"limetels",name:"Лімітлес",cat:"faith",text:"Детальніше про це служіння розповімо зовсім скоро."},
-  {id:"premarital",name:"Консультування пар до одруження",cat:"family",text:"Зустрічі з досвідченими подружжями для пар, які готуються до весілля."},
+  {id:"premarital",lead:"Юрій Кавун",leadRole:"Лідер служіння",leadNote:"Пастор церкви",leadPhoto:"min/leaders/kavun.webp",name:"Консультування пар до одруження",cat:"family",text:"Зустрічі з досвідченими подружжями для пар, які готуються до весілля."},
   {id:"family-nights",name:"Сімейні вечори",cat:"family",text:"Вечори для подружжів: час одне для одного, розмови і спілкування з іншими сім’ями."},
-  {id:"young-families",name:"Праця з молодими сім’ями",cat:"family",text:"Підтримка молодих подружжів і батьків: зустрічі, поради та друзі на тому ж етапі життя."},
-  {id:"plus37",name:"Служіння 37+",cat:"family",text:"Спільнота для тих, кому 37 і більше: дружба, підтримка і служіння разом."},
-  {id:"media",name:"Медіа команда",cat:"team",text:"Трансляції, фото, відео і соцмережі: розповідаємо про життя церкви і несемо Євангеліє далі."},
+  {id:"young-families",lead:"Прінц Ефе",leadRole:"Лідер служіння",leadPhoto:"min/leaders/young-families.webp",name:"Праця з молодими сім’ями",cat:"family",text:"Підтримка молодих подружжів і батьків: зустрічі, поради та друзі на тому ж етапі життя."},
+  {id:"plus37",lead:"Альона Рісто",leadRole:"Лідерка служіння",leadPhoto:"min/leaders/plus37.webp",name:"Служіння 37+",cat:"family",text:"Спільнота для тих, кому 37 і більше: дружба, підтримка і служіння разом."},
+  {id:"media",page:"/project/media-sluzhinnya/",name:"Медіа команда",cat:"team",text:"Трансляції, фото, відео і соцмережі: розповідаємо про життя церкви і несемо Євангеліє далі."},
   {id:"hospitality",name:"Група гостинності",cat:"team",text:"Зустрічаємо людей на вході, пригощаємо кавою і допомагаємо новим гостям почуватися вдома."},
   {id:"order",name:"Група порядку",cat:"team",text:"Дбаємо, щоб на богослужіннях було зручно і спокійно: зустрічаємо, підказуємо, допомагаємо знайти місце."},
   {id:"special-kids",name:"Служіння дітям з інвалідністю",cat:"help",lead:"Юлія Ніколайчук",text:"Зустрічі, турбота і підтримка для дітей з інвалідністю та їхніх батьків."},
   {id:"front",name:"Служіння на фронті",cat:"help",lead:"Олександр Івонін, капелан",text:"Капелан їздить до військових на передову з підтримкою, молитвою і Словом."},
-  {id:"women",name:"Жіноче служіння",cat:"family",text:"Зустрічі для жінок: Слово, молитва, розмови і підтримка одна одної."},
-  {id:"sisters",name:"Служіння сестрам",cat:"family",text:"Теплі зустрічі для незаміжніх сестер за чаєм: розмови, молитва і підтримка."},
+  {id:"women",lead:"Наталія Вольвачева",leadRole:"Лідерка служіння",leadPhoto:"min/leaders/women.webp",name:"Жіноче служіння",cat:"family",text:"Зустрічі для жінок: Слово, молитва, розмови і підтримка одна одної."},
+  {id:"sisters",lead:"Тетяна Кобрій",leadRole:"Лідерка служіння",leadPhoto:"min/leaders/sisters.webp",name:"Служіння сестрам",cat:"young",text:"Теплі зустрічі для незаміжніх сестер за чаєм: розмови, молитва і підтримка."},
   {id:"think",name:"«Думай глибше»",cat:"faith",text:"Інтелектуальна платформа: лекції і дискусії про віру, науку, культуру та складні питання."},
-  {id:"baptism",name:"Підготовка до водного хрещення",cat:"faith",text:"Курс для тих, хто вирішив прийняти водне хрещення: основи віри, Писання і сенс хрещення."},
+  {id:"first-steps",name:"Перші кроки у вірі",cat:"faith",lead:"Олексій Вольвачев",leadRole:"Лідер",leadNote:"Диякон",leadPhoto:"min/leaders/first-steps.webp",text:"Особливі зустрічі для тих, хто робить перші кроки з Богом, хоче прийняти водне хрещення або дізнатися більше про основи віри — у дружній атмосфері колективних обговорень."},
+  {id:"baptism",name:"Підготовка до водного хрещення",cat:"faith",lead:"Олексій Вольвачев",leadRole:"Лідер служіння",leadPhoto:"min/leaders/baptism.webp",text:"Курс для тих, хто вирішив прийняти водне хрещення: основи віри, Писання і сенс хрещення."},
   {id:"films",name:"Philad Films",cat:"team",text:"Знімаємо фільми та історії про віру і людей нашої церкви."}
 ];
 
 /* Кожне служіння має власну сторінку: ministry.html#<id> (шаблон; тексти — min/pages.js).
    Молодіжне і домашні групи мають свої окремі сторінки (поле page вище / нижче). */
-window.PHILAD_MIN_SLUGS={"prayer":"molytovne-sluzhinnia","worship":"proslavlennya","sunday-school":"nedilna-shkola","camps":"detskiy-lager","teens":"pidlitkove-sluzhinnya","chaplain":"kapelanstvo","media":"media-sluzhinnya","special-kids":"proverka-skrolera","settlement":"sluzhinnya-pereselencyam","baptism":"obuchenie-pervye-shagi-v-vere","sisters":"sluzhenie-dlya-sester","young-families":"sluzhenie-semyam"};   // id служіння → адреса /project/<slug>/ зі старого сайту (сторінку створює build-urls.py)
+window.PHILAD_MIN_SLUGS={"prayer":"molytovne-sluzhinnia","worship":"proslavlennya","sunday-school":"nedilna-shkola","camps":"detskiy-lager","teens":"pidlitkove-sluzhinnya","chaplain":"kapelanstvo","special-kids":"proverka-skrolera","settlement":"sluzhinnya-pereselencyam","baptism":"obuchenie-pervye-shagi-v-vere","sisters":"sluzhenie-dlya-sester","young-families":"sluzhenie-semyam","happiness":"sshastya-poruch","wednesday":"vechirnie-sluzhinnia-po-seredakh","night":"nichni-molytvy","kids-choir":"dytiachyi-khor","choir":"doroslyi-khor","mil-families":"sluzhinnia-simiam-viiskovykh","szho":"sluzhinnia-simiam-szho","evacuation":"evakuatsiia-liudei","social":"sotsialna-robota","seekers":"hrupy-vyvchennia-biblii","limetels":"limitles","premarital":"konsultuvannia-par-do-odruzhennia","family-nights":"simeini-vechory","plus37":"sluzhinnia-37-plus","hospitality":"hrupa-hostynnosti","order":"hrupa-poriadku","front":"sluzhinnia-na-fronti","women":"zhinoche-sluzhinnia","think":"dumai-hlybshe","films":"philad-films","first-steps":"pershi-kroky-u-viri"};   // id служіння → адреса /project/<slug>/ (зі старого сайту; для нових служінь — латинський slug за назвою) (сторінку створює build-urls.py)
 window.PHILAD_MIN.forEach(function(m){
   const PS=window.PHILAD_MIN_SLUGS;
   if(m.page)return;

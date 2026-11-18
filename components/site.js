@@ -34,7 +34,7 @@ const SITE={
   copyright:"© 2026 — Церква «Філадельфія». Всі права захищені",
   privacy:{label:"Політика конфіденційності",href:"/privacy-policy/"},
   menuTitle:"Наші служіння",
-  more:{label:"Дізнатись більше",href:"/sluzhinnya/"},
+  more:{label:"Дізнатись більше",href:"/first-visit/#schedule"},
   // адреси відносно папки сайту: "сторінка.html" або "сторінка.html#секція"; "#footer" — футер на поточній сторінці.
   // поки окремих сторінок немає, частина пунктів веде на секції головної (/#…)
   menu:[
@@ -53,18 +53,16 @@ const SITE={
     {label:"Проповіді",href:"/category/sermon/"},
     {label:"Пошук Бога",href:"/poshuk-boga/"},
     {label:"Блог",href:"/category/vse_zapisi/"},
-    {label:"Відеобібліотека",href:"/video/"},
-    {label:"Архів подій",href:"/events/"}
   ],
   // блок «А що мені далі робити?» — однаковий на всіх сторінках, де стоїть <site-next>
   next:{
     title:"А що мені далі робити?",
     text:"Якщо ви вперше у нас, заповніть форму, і ми з вами звʼяжемось. Або приходьте до нас на недільне служіння.",
     cards:[
-      {label:"Запрошуємо на курс",title:"Перші кроки у вірі",text:"Для тих, хто тільки робить перші кроки з Богом, хоче прийняти водне хрещення, планує перейти з іншої церкви або просто прагне більше дізнатися про основи християнського віровчення, в церкві «Філадельфія» проходять особливі зустрічі. Вони проходять у формі колективних обговорень у дружній атмосфері.",button:"Записатись на курс",href:"#course"},
-      {label:"Ви у нас вперше? Запишіться на",title:"Домашні групи",text:"Перегляньте домашні групи і виберіть, яка вам краще підходить за віком і місцем проведення.",button:"Переглянути домашні групи",href:"/domashnie-gruppy/"},
-      {label:"Добровільні пожертвування",title:"Пожертву&shy;вати",text:"Для здійснення усієї цієї праці церква дуже потребує матеріальних ресурсів. Якщо Господь покладе вам на серце матеріально підтримати церковні служіння, переходьте до реквізитів, за допомогою яких ви можете послужити фінансово.",button:"Пожертвувати",href:"/donate/"},
-      {label:"Контакти",title:"Зв’язатися з нами",text:"Якщо у вас є питання або пропозиції, можете залишити їх у формі, натиснувши на кнопку нижче.",button:"Контакти",href:"/contacts/"}
+      {label:"Запрошуємо на курс",title:"Перші кроки у вірі",img:"/nx/steps.webp",alt:"Водне хрещення: двоє чоловіків у воді",text:"Для тих, хто тільки робить перші кроки з Богом, хоче прийняти водне хрещення, планує перейти з іншої церкви або просто прагне більше дізнатися про основи християнського віровчення, в церкві «Філадельфія» проходять особливі зустрічі. Вони проходять у формі колективних обговорень у дружній атмосфері.",button:"Записатись на курс",href:"#course"},
+      {label:"Ви у нас вперше? Запишіться на",title:"Домашні групи",img:"/nx/groups.webp",alt:"Учасники зустрічі домашньої групи слухають, дівчина тримає чашку чаю",text:"Перегляньте домашні групи і виберіть, яка вам краще підходить за віком і місцем проведення.",button:"Переглянути домашні групи",href:"/domashnie-gruppy/"},
+      {label:"Добровільні пожертвування",title:"Пожертву&shy;вати",img:"/nx/donate.webp",alt:"Рука кладе конверт у скриньку для пожертвувань",text:"Для здійснення усієї цієї праці церква дуже потребує матеріальних ресурсів. Якщо Господь покладе вам на серце матеріально підтримати церковні служіння, переходьте до реквізитів, за допомогою яких ви можете послужити фінансово.",button:"Пожертвувати",href:"/donate/"},
+      {label:"Контакти",title:"Зв’язатися з нами",img:"/nx/contacts.webp",alt:"Жінка з чашкою спілкується після зібрання",text:"Якщо у вас є питання або пропозиції, можете залишити їх у формі, натиснувши на кнопку нижче.",button:"Контакти",href:"/contacts/"}
     ]
   },
   social:[
@@ -125,11 +123,18 @@ site-menu,site-footer,site-next{display:contents}
 .nx-row{position:relative;max-width:100%;display:grid;grid-template-columns:repeat(4,var(--cw));gap:14px;justify-content:center}
 .nx-card{box-sizing:border-box;min-height:calc(var(--cw)*452/330);padding:28px 24px 24px;border-radius:20px;will-change:transform,opacity;background:#E8E7DB;color:#141414;
   display:flex;flex-direction:column;justify-content:space-between;gap:32px;min-width:0}
+.nx-ph{margin:0;overflow:hidden;position:relative}
+.nx-ph img{display:block;width:100%;height:100%;object-fit:cover}
+/* фото зверху картки; текст починається одразу під фото (однаково в усіх картках), кнопка притиснута донизу */
+.nx-card{padding:12px 12px 24px;gap:22px;justify-content:flex-start}
+.nx-ph{aspect-ratio:3/2;border-radius:12px;flex:none}
+.nx-text,.nx-card .lbtn{margin-inline:12px}
+.nx-card .lbtn{margin-top:auto;align-self:stretch}
 .nx-text{display:grid;gap:16px}
 .nx-text small{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.5)}
 .nx-text h3{margin:0;font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track);hyphens:manual;overflow-wrap:break-word}
 .nx-text p{margin:0;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.5)}
-.nx-card .lbtn{width:100%;box-sizing:border-box;padding:0 12px;white-space:normal;text-align:center}
+.nx-card .lbtn{box-sizing:border-box;padding:0 12px;white-space:normal;text-align:center}
 @media (max-width:1000px){.nx-row{grid-template-columns:repeat(2,var(--cw))}.nx-text h3{font-size:var(--h2s-size)}}
 @media (max-width:900px){.nx{padding-top:104px}}
 @media (max-width:720px){.nx{padding-block:72px 64px;gap:40px}.nx-row{width:100%;grid-template-columns:minmax(0,1fr);gap:10px}.nx-card{min-height:0;border-radius:16px}.nx-text h3{font-size:var(--h2s-size)}}
@@ -272,6 +277,13 @@ a:hover .u::after,a:focus-visible .u::after{transform:scaleX(1);transform-origin
 .ft-bot{display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:#9A9A8D}
 .ft-bot a{color:inherit;text-decoration:none}
 .ft a:focus-visible{outline:2px solid var(--ds-cream);outline-offset:4px}
+/* телефон / сенсорні екрани: пункти меню й футера — зона натискання не менше 40px (рекомендація Apple/Google 44px) */
+@media (max-width:900px),(pointer:coarse){
+  .ft-col ul,.nav-col ul{gap:0}
+  .ft-col a,.nav-col a{display:inline-flex;align-items:center;min-height:40px}
+  .ft-bot a,.nav-time a{display:inline-flex;align-items:center;min-height:40px}
+  .ft-mail{display:inline-flex;align-items:center;min-height:44px}
+}
 @media (max-width:900px){.ft{padding-block:104px 32px}.ft-about{gap:48px}.ft-col{width:auto;min-width:200px}.ft-col a,.ft-addr{font-size:var(--h3-size)}}
 @media (max-width:720px){
   .ft{padding-block:92px 22px}
@@ -325,6 +337,7 @@ function nextHTML(){
   <div class="nx-head"><h2 id="nx-h">${esc(N.title)}</h2><p>${esc(N.text)}</p></div>
   <div class="nx-row">${N.cards.map(c=>`
     <article class="nx-card">
+      <figure class="nx-ph"><img src="${esc(c.img)}" alt="${esc(c.alt)}" loading="lazy" width="915" height="672"></figure>
       <div class="nx-text"><small>${esc(c.label)}</small><h3>${c.title}</h3><p>${esc(c.text)}</p></div>
       <a class="lbtn" href="${esc(c.href)}">${esc(c.button)}</a>
     </article>`).join("")}

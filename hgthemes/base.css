@@ -12,9 +12,9 @@ img{max-width:100%;display:block}
 h1,h2,h3,p,figure,ul,ol{margin:0}
 ul,ol{padding:0;list-style:none}
 
-.kicker{font-weight:600;font-size:14px;line-height:1.3;letter-spacing:-.057em;text-transform:uppercase;color:var(--teal)}
+.kicker{font-weight:600;font-size:var(--t2-size);line-height:1.3;letter-spacing:-.057em;text-transform:uppercase;color:var(--teal)}
 /* довгий текст */
-.prose{display:grid;gap:1.1em;font-weight:500;font-size:18px;line-height:1.5;letter-spacing:-.015em;color:var(--soft);text-wrap:pretty}
+.prose{display:grid;gap:1.1em;font-weight:500;font-size:var(--t1-size);line-height:1.5;letter-spacing:-.015em;color:var(--soft);text-wrap:pretty}
 .prose a{color:var(--teal-ink);text-decoration:none}
 
 /* заглушка фото */
@@ -31,13 +31,13 @@ ul,ol{padding:0;list-style:none}
 .end{position:relative;z-index:3}
 
 /* ---- теми домашніх груп: спільне ---- */
-.kick{font-weight:600;font-size:14px;line-height:1.3;letter-spacing:-.057em;text-transform:uppercase;color:var(--teal)}
+.kick{font-weight:600;font-size:var(--t2-size);line-height:1.3;letter-spacing:-.057em;text-transform:uppercase;color:var(--teal)}
 .sm-h1{margin:0;font-weight:500;font-size:clamp(40px,5.2vw,80px);line-height:.98;letter-spacing:-.055em}
 button{font:inherit;color:inherit}
 /* чіпи й кнопки фільтрів */
 .chip{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:transparent;cursor:pointer;font-weight:600;font-size:15px;letter-spacing:-.02em;color:var(--ink);transition:background .2s ease,color .2s ease,border-color .2s ease}
 .chip:hover{border-color:var(--ink)}
-.chip em{font-style:normal;font-weight:700;font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums}
+.chip em{font-style:normal;font-weight:700;font-size:var(--t3-size);color:var(--mute);font-variant-numeric:tabular-nums}
 .chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--ds-cream)}
 .chip[aria-pressed="true"] em{color:rgba(247,242,232,.6)}
 .chip[disabled],.chip.zero:not([aria-pressed="true"]){opacity:.38;pointer-events:none}
@@ -49,8 +49,8 @@ button{font:inherit;color:inherit}
 .search svg{position:absolute;left:18px;top:50%;width:18px;height:18px;margin-top:-9px;color:var(--mute);pointer-events:none}
 .sel{height:52px;padding:0 40px 0 18px;border:1px solid var(--line);border-radius:14px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1.5 5 5 5-5' fill='none' stroke='%23141414' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 16px center;-webkit-appearance:none;appearance:none;font:600 15px/1 var(--sans);letter-spacing:-.02em;color:var(--ink);cursor:pointer}
 .sel:focus-visible{outline:2px solid var(--teal)}
-.reset{padding:0;border:0;background:none;cursor:pointer;font-weight:700;font-size:14px;letter-spacing:-.01em;color:var(--teal-ink);text-decoration:underline;text-underline-offset:3px}
-.more{display:grid;place-items:center;height:56px;padding:0 40px;border:0;border-radius:14px;background:var(--teal);color:var(--ds-cream);cursor:pointer;font:800 12px/1 var(--sans);letter-spacing:.04em;text-transform:uppercase;transition:scale .35s cubic-bezier(.2,.7,.2,1),background .25s ease}
+.reset{padding:0;border:0;background:none;cursor:pointer;font-weight:700;font-size:var(--t2-size);letter-spacing:-.01em;color:var(--teal-ink);text-decoration:underline;text-underline-offset:3px}
+.more{display:grid;place-items:center;height:56px;padding:0 40px;border:0;border-radius:14px;background:var(--teal);color:var(--ds-cream);cursor:pointer;font:800 var(--t3-size)/1 var(--sans);letter-spacing:.04em;text-transform:uppercase;transition:scale .35s cubic-bezier(.2,.7,.2,1),background .25s ease}
 .more:hover{scale:1.03;background:var(--teal-ink)}
 .empty{display:grid;justify-items:center;gap:14px;padding:80px 20px;text-align:center}
 .empty b{font-weight:500;font-size:clamp(24px,2.6vw,36px);letter-spacing:-.04em}
@@ -73,3 +73,6 @@ button{font:inherit;color:inherit}
 .loading i{width:30px;height:30px;border-radius:50%;border:3px solid rgba(20,20,20,.12);border-top-color:var(--teal);animation:hgspin .9s linear infinite}
 @keyframes hgspin{to{rotate:360deg}}
 @media (max-width:720px){.tc{border-radius:16px}.tc-b{padding:16px 18px 20px}}
+
+/* iOS: поля з кеглем менше 16px збільшують сторінку під час фокуса */
+@media (max-width:900px){.sel,.search input{font-size:16px}}

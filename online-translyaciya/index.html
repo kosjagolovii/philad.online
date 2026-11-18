@@ -2,6 +2,12 @@
 <html lang="uk">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#F7F2E8">
 <base href="/">
 <script src="/components/base-fix.js"></script>
 <title>LIVE трансляція — Церква «Філадельфія»</title>
@@ -54,11 +60,12 @@ live-player{--lp-cap:#F7F2E8}
 .x:focus-visible{outline:2px solid #F7F2E8;outline-offset:3px}
 @media (max-width:720px){:root{--pt:68px;--pb:16px;--bar:68px}.pg{padding-inline:16px}.pg>.row-w{width:100%}.x{width:36px;height:36px;top:calc(18px + env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px))}}
 @media (prefers-reduced-motion:reduce){.x,.x .ml,.x .mc{transition:none}}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 </style>
 </head>
 <body>
 <a class="x" id="close" href="/" aria-label="Закрити"><svg viewBox="0 0 40 40" aria-hidden="true"><rect class="mc" width="40" height="40" rx="20"/><rect class="ml ml1" x="12" y="16" width="16" height="2" rx="1"/><rect class="ml ml2" x="12" y="22" width="16" height="2" rx="1"/></svg></a>
-<main class="pg"><div class="row-w"><live-player variant="b" caption="overlay"></live-player></div></main>
+<main class="pg"><h1 class="sr-only">LIVE трансляція церкви «Філадельфія»</h1><div class="row-w"><live-player variant="b" caption="overlay"></live-player></div></main>
 <script>
 // хрестик повертає туди, звідки прийшли (якщо це наш сайт), інакше — на головну
 document.getElementById("close").addEventListener("click",e=>{

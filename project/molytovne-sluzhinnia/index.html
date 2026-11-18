@@ -1,12 +1,35 @@
 <!doctype html>
 <html lang="uk">
 <head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#F7F2E8">
 <base href="/">
 <script src="/components/base-fix.js"></script>
 <script>window.MIN_ID="prayer"</script>
-<title>Служіння</title>
+<title>Молитовне служіння — служіння церкви «Філадельфія»</title>
+<!-- seo:start -->
+<meta name="description" content="Молимося за церкву, за людей, які просять про молитву, і за Україну. Долучитися може кожен.">
+<link rel="canonical" href="https://philad.org/project/molytovne-sluzhinnia/">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Церква «Філадельфія»">
+<meta property="og:title" content="Молитовне служіння — служіння церкви «Філадельфія»">
+<meta property="og:description" content="Молимося за церкву, за людей, які просять про молитву, і за Україну. Долучитися може кожен.">
+<meta property="og:url" content="https://philad.org/project/molytovne-sluzhinnia/">
+<meta property="og:image" content="https://philad.org/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Молитовне служіння — служіння церкви «Філадельфія»">
+<meta name="twitter:description" content="Молимося за церкву, за людей, які просять про молитву, і за Україну. Долучитися може кожен.">
+<meta name="twitter:image" content="https://philad.org/og.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Молитовне служіння — служіння церкви «Філадельфія»", "description": "Молимося за церкву, за людей, які просять про молитву, і за Україну. Долучитися може кожен.", "url": "https://philad.org/project/molytovne-sluzhinnia/", "inLanguage": "uk", "isPartOf": {"@type": "WebSite", "name": "Церква «Філадельфія»", "url": "https://philad.org/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://philad.org/"}, {"@type": "ListItem", "position": 2, "name": "Служіння", "item": "https://philad.org/sluzhinnya/"}, {"@type": "ListItem", "position": 3, "name": "Молитовне служіння", "item": "https://philad.org/project/molytovne-sluzhinnia/"}]}</script>
+<!-- seo:end -->
 <meta name="claude:viewport-fit-sides" content="cover">
 <script src="components/site.js"></script>
 <link rel="stylesheet" href="ui-kit/tokens.css">
@@ -158,7 +181,7 @@ button,input,textarea{font:inherit;color:inherit}
 .vg .m-f.bad input,.v-a .m-f.bad input{border-color:#C0392B}
 .vg .m-err,.v-a .m-err{color:#B3261E;text-align:center;min-height:0}
 .vg .m-err:empty,.v-a .m-err:empty{display:none}
-.vg .m-send,.v-a .m-send{height:56px;margin-top:0;border-radius:14px;background:var(--teal);color:#fff;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);box-shadow:none}
+.vg .m-send,.v-a .m-send{height:56px;margin-top:0;border-radius:14px;background:var(--teal);color:#fff;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);box-shadow:none}
 .vg .m-send:hover:not(:disabled),.v-a .m-send:hover:not(:disabled){background:var(--teal-ink)}
 .vg .m-note,.v-a .m-note{display:block}
 .vg .m-ok,.v-a .m-ok{background:rgba(255,255,255,.65);color:var(--ink)}
@@ -225,6 +248,14 @@ button,input,textarea{font:inherit;color:inherit}
 .m-lead{display:grid;justify-items:center;gap:4px;text-align:center}
 .m-lead span{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:var(--grey)}
 .m-lead b{font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track)}
+.m-lead>div{display:grid;justify-items:inherit;gap:4px}
+.m-lead small{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:var(--grey)}
+.m-lead small[hidden]{display:none}
+.m-lead.has-ph{display:flex;align-items:center;justify-content:center;gap:24px;text-align:left}   /* з фото: кругле фото 150px і підпис поруч — як на «Молодіжному служінні» */
+.m-lead.has-ph>div{justify-items:start}
+.m-lead img{width:150px;height:150px;border-radius:50%;object-fit:cover;background:var(--sand)}
+.m-lead img[hidden]{display:none}
+@media (max-width:720px){.m-lead.has-ph{gap:16px}.m-lead img{width:96px;height:96px}}
 
 .m-about{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;gap:56px}
 .m-h2{margin:0;max-width:978px;font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track);text-align:center;text-wrap:balance}
@@ -236,7 +267,7 @@ button,input,textarea{font:inherit;color:inherit}
 
 .m-body{width:100%;max-width:720px;display:grid;gap:18px;font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);color:rgba(20,20,20,.78)}
 .m-body p{margin:0}
-.m-body a{color:inherit;overflow-wrap:anywhere}
+.m-body a:not(.lbtn){color:inherit;overflow-wrap:anywhere}   /* кнопка .lbtn лишається зі своїм кольором тексту */
 .m-body .h{margin:34px 0 0;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track);color:var(--ink);text-wrap:balance}
 .m-body .h3{margin:18px 0 0;font:var(--h3-weight) var(--h3-size)/var(--h3-lh) var(--font);letter-spacing:var(--h3-track);color:var(--ink)}
 .m-body .h:first-child,.m-body .h3:first-child{margin-top:0}
@@ -450,7 +481,7 @@ button,input,textarea{font:inherit;color:inherit}
     <figure class="m-hero" id="mHero"></figure>
   </section>
 
-  <section class="m-lead rv" id="mLead" hidden aria-label="Лідер служіння"><span>Лідер служіння</span><b id="mLeadName"></b></section>
+  <section class="m-lead rv" id="mLead" hidden aria-label="Лідер служіння"><img id="mLeadImg" alt="" width="150" height="150" hidden><div><span id="mLeadRole">Лідер служіння</span><b id="mLeadName"></b><small id="mLeadNote" hidden></small></div></section>
 
   <section class="m-about" aria-labelledby="mAbout">
     <h2 class="m-h2 rv" id="mAbout"></h2>
@@ -494,14 +525,18 @@ const MIN=(window.PHILAD_MIN||[]).filter(m=>!m.archived), PG=window.PHILAD_MIN_P
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const linkify=s=>esc(s).replace(/(https?:\/\/[^\s<]+[^\s<.,;)])/g,'<a href="$1" target="_blank" rel="noopener">$1</a>');
 let V="";                                   // layout suffix of the current address: "", "-b" or "-c"
-const href=m=>m.page&&!/^ministry\.html/.test(m.page)?m.page:"ministry.html#"+m.id+V;
+const href=m=>m.page&&!/^\/?ministry\.html/.test(m.page)?m.page:"ministry.html#"+m.id+V;
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -8% 0px",threshold:.06});
 const watch=()=>document.querySelectorAll(".rv:not(.in)").forEach(el=>io.observe(el));
 
 function photo(id,name,big){
   const f=document.createElement("div");f.className="m-ph";f.innerHTML=`<b>${esc(name)}</b>Фото незабаром`;
   const im=new Image();im.alt=big?name:"";im.decoding="async";if(!big)im.loading="lazy";
-  im.onload=()=>{f.remove()};im.onerror=()=>{im.remove()};im.src=`min/hero/${id}.webp`;
+  im.onload=()=>{f.remove()};
+  // головне фото служіння: m.hero (якщо задано в min/data.js) або min/hero/<id>.webp; якщо такого фото немає — квадратне фото картки min/<id>.webp; інакше напис «Фото незабаром»
+  const m=(window.PHILAD_MIN||[]).find(x=>x.id===id)||{},tries=[m.hero||`min/hero/${id}.webp`,`min/${id}.webp`];
+  im.onerror=()=>{const n=tries.shift();if(n)im.src=n;else im.remove()};
+  im.onerror();
   return [im,f];
 }
 function parse(){
@@ -582,19 +617,23 @@ function render(){
   const {id,v}=parse();V=v;
   const m=MIN.find(x=>x.id===id);
   if(!m){location.replace("/sluzhinnya/");return}
-  if(m.page&&!/^ministry\.html/.test(m.page)){location.replace(m.page);return}
+  if(m.page&&!/^\/?ministry\.html/.test(m.page)&&m.page!==location.pathname){location.replace(m.page);return}   // сторінка /project/<slug>/ — це і є цей шаблон: на себе не переадресовуємо (інакше нескінченне перезавантаження)
   cur=m;const pg=PG[m.id]||{};
   const mp=$("mp");const G=/^-[g-j]$/.test(v);mp.className="mp v-"+(v?v.slice(1):"a")+(G?" vg":"")+(/^-[klm]$/.test(v)?" nv":"");
   fx.forEach(f=>f());fx=[];if(newEl){newEl.remove();newEl=null}
   // the transparent menu sits over the photo on layout B: let it switch to light
   if(v==="-b"||v==="-e")$("mFirst").setAttribute("data-dark","");else $("mFirst").removeAttribute("data-dark");
-  document.title=m.name+" · Служіння";
+  document.title=m.name+" — служіння церкви «Філадельфія»";
   $("mCrumb").textContent=m.name;
   $("mH1").textContent=m.name;                      // only the name of the ministry
   $("mLede").textContent=G?(pg.applyLead||m.text):m.text;
   $("mHome").textContent=G?"Головна":"Церква Філадельфія";
   $("mHero").replaceChildren(...photo(m.id,m.name,true));
   const lead=pg.lead||m.lead;$("mLead").hidden=!lead;if(lead)$("mLeadName").textContent=lead;
+  $("mLeadRole").textContent=m.leadRole||"Лідер служіння";
+  const ln=$("mLeadNote");ln.textContent=m.leadNote||"";ln.hidden=!m.leadNote;
+  const lph=$("mLeadImg"),lp=m.leadPhoto;lph.hidden=!lp;if(lp){lph.src=lp;lph.alt=lead||""}
+  $("mLead").classList.toggle("has-ph",!!lp);
   $("mAbout").textContent=m.text;
   const facts=$("mFacts");facts.hidden=!(pg.facts&&pg.facts.length);
   facts.innerHTML=(pg.facts||[]).map(([k,x])=>`<li><small>${esc(k)}</small><span>${esc(x)}</span></li>`).join("");
@@ -604,6 +643,7 @@ function render(){
     else if(t==="h3")body.insertAdjacentHTML("beforeend",`<h4 class="h3">${esc(x)}</h4>`);
     else if(t==="ul")body.insertAdjacentHTML("beforeend",`<ul>${x.map(i=>`<li>${linkify(i)}</li>`).join("")}</ul>`);
     else if(t==="q")body.insertAdjacentHTML("beforeend",`<blockquote>${linkify(x)}</blockquote>`);
+    else if(t==="btn")body.insertAdjacentHTML("beforeend",`<p><a class="lbtn" href="${esc(x[1])}" target="_blank" rel="noopener" data-no-u>${esc(x[0])}</a></p>`);
     else body.insertAdjacentHTML("beforeend",`<p>${linkify(x)}</p>`);
   });
   body.hidden=!(pg.body&&pg.body.length);$("mEmpty").hidden=!body.hidden;

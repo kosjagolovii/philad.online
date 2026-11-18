@@ -2,6 +2,12 @@
 <html lang="uk">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#F7F2E8">
 <base href="/">
 <script src="/components/base-fix.js"></script>
 <title>Теми домашніх груп — Церква «Філадельфія»</title>
@@ -51,14 +57,14 @@
 .fg[open] summary::after{rotate:225deg;translate:0 2px}
 .fg summary:focus-visible{outline:2px solid var(--teal);outline-offset:4px;border-radius:4px}
 .fl{display:flex;flex-wrap:wrap;gap:6px;padding-top:14px}
-.fl .chip{min-height:34px;padding:0 12px;font-size:14px}
+.fl .chip{min-height:34px;padding:0 12px;font-size:var(--t2-size)}
 .sub{padding-top:14px;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
 .res{grid-column:2/5;display:grid;gap:22px;min-width:0}
 .rh{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center}
 .rinfo{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;font-weight:700;font-size:15px;letter-spacing:-.02em}
 .act{display:flex;flex-wrap:wrap;gap:6px}
-.act .chip{min-height:34px;padding:0 6px 0 14px;background:var(--teal);border-color:var(--teal);color:var(--ds-cream);font-size:14px}
-.act .chip::after{content:"×";font-size:18px;line-height:1;width:22px;text-align:center;opacity:.8}
+.act .chip{min-height:34px;padding:0 6px 0 14px;background:var(--teal);border-color:var(--teal);color:var(--ds-cream);font-size:var(--t2-size)}
+.act .chip::after{content:"×";font-size:var(--t1-size);line-height:1;width:22px;text-align:center;opacity:.8}
 .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .fbtn{display:none}
 @media (max-width:1000px){
@@ -76,6 +82,7 @@
 .tc:hover{background:none;translate:none}
 .tc-img{aspect-ratio:16/9;border-radius:18px;background:var(--sand)}
 .tc-b{padding:0;gap:10px}
+@media (max-width:900px),(pointer:coarse){.tc-b a{display:inline-block;padding-block:8px}}   /* зона натискання назви теми */
 .tc-meta{font-size:13px}
 .tc h3{font-size:clamp(20px,1.7vw,25px);line-height:1.15;letter-spacing:-.035em}
 .tc-ex{font-size:15px}

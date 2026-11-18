@@ -1,0 +1,31 @@
+/* Блог: ряд років замість тем */
+/* ряд вкладок: лінія під ним, праворуч лічильник і «Очистити фільтри» */
+.mg-tabrow{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line)}
+.mg-tabrow .bl-tabs{flex:1 1 auto;min-width:0;border-bottom:0}
+.mg-meta{flex:none;display:flex;align-items:center;gap:16px;padding-top:2px}
+.mg-meta .bl-count{margin:0;white-space:nowrap}
+.mg-clear{min-height:36px;padding:0 16px;border:1px solid rgba(20,17,15,.2);border-radius:999px;background:none;color:inherit;cursor:pointer;font:600 14px var(--font);transition:background .2s,border-color .2s}
+.mg-clear:hover{background:rgba(20,17,15,.07);border-color:rgba(20,17,15,.35)}
+.mg-clear[hidden]{display:none}
+.mg-line{display:flex;align-items:center;gap:12px;margin-top:16px;min-width:0}
+.mg-line .bl-find{flex:0 0 clamp(260px,26vw,380px);margin-top:0}
+.mg-yrs{flex:1 1 auto;min-width:0;display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.mg-yrs::-webkit-scrollbar{display:none}
+.mg-yb{cursor:pointer;font:inherit;color:inherit}
+.mg-yb:disabled{opacity:.3;cursor:default}
+.mg-yb sup{font-size:12px;font-weight:700;opacity:.5}
+.mg-yb{flex:none;display:inline-flex;align-items:center;gap:6px;min-height:42px;padding:0 18px;border:0;border-radius:999px;background:rgba(20,17,15,.07);font:var(--t2-weight) var(--t2-size)/1 var(--font);letter-spacing:var(--t2-track);transition:background .2s,color .2s}
+.mg-yb:not(:disabled):not([aria-pressed="true"]):hover{background:rgba(20,17,15,.14)}
+.mg-yb[aria-pressed="true"]:hover{background:#28697A;color:#F7F2E8}   /* ховер на обраному році: фон темніший, текст лишається світлим */
+.mg-yb[aria-pressed="true"]{background:#317C8E;color:#F7F2E8}
+.mg-yb[aria-pressed="true"] sup{opacity:.75}
+/* телефон: пошук на всю ширину, під ним роки в один рядок з горизонтальною прокруткою */
+@media (max-width:720px){
+  .mg-tabrow{flex-direction:column;align-items:stretch;gap:12px;border-bottom:0;min-width:0;max-width:100%}
+  .mg-tabrow .bl-tabs{border-bottom:1px solid var(--line);min-width:0;width:100%!important;max-width:100%!important;margin-inline:0;padding-inline:0}
+  .mg-meta{justify-content:space-between;order:2}
+  .mg-line{flex-direction:column;align-items:stretch;gap:14px}
+  .mg-line .bl-find{flex:none}
+  .mg-yrs{gap:6px;margin-inline:calc(var(--side) * -1);padding-inline:var(--side);scroll-snap-type:x proximity}
+  .mg-yb{min-height:38px;padding:0 14px;scroll-snap-align:start}
+}

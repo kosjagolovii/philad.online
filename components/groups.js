@@ -39,7 +39,7 @@ home-groups img{max-width:100%;display:block}
    and a CSS scale on it would scale that offset too and push the dot off its address. All visuals live on the inner <i>. */
 .hg-dot{width:44px;height:44px;padding:0;border:0;background:none;display:grid;place-items:center;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .hg-dot i{box-sizing:border-box;width:30px;height:30px;display:grid;place-items:center;border:4px solid var(--ds-cream);border-radius:15px;background:var(--ink);color:var(--ds-cream);
-  font:800 12px/1 var(--sans);font-style:normal;box-shadow:0 6px 16px rgba(0,0,0,.35);transition:scale .3s cubic-bezier(.2,.7,.2,1),background .25s ease,border-width .25s ease}
+  font:800 var(--t3-size)/1 var(--sans);font-style:normal;box-shadow:0 6px 16px rgba(0,0,0,.35);transition:scale .3s cubic-bezier(.2,.7,.2,1),background .25s ease,border-width .25s ease}
 .hg-dot.many i{width:auto;min-width:38px;height:38px;padding:0 8px;border-radius:19px}
 .hg-dot:hover i{scale:1.15}
 .hg-dot:focus-visible{outline:none}
@@ -56,7 +56,8 @@ home-groups img{max-width:100%;display:block}
 .hg-tools{display:grid;gap:16px}
 .hg-search{display:block;position:relative}
 .hg-search input{width:100%;height:56px;box-sizing:border-box;padding:0 24px;border:0;border-radius:15px;background:rgba(247,242,232,.1);color:var(--ds-cream);
-  font:600 14px/1 var(--sans);letter-spacing:-.057em;outline:none;transition:background .2s ease,box-shadow .2s ease}
+  font:600 var(--t2-size)/1 var(--sans);letter-spacing:-.057em;outline:none;transition:background .2s ease,box-shadow .2s ease}
+@media (max-width:900px){.hg-search input{font-size:16px}}   /* iOS не збільшує сторінку при фокусі */
 .hg-search input::placeholder{color:rgba(247,242,232,.55)}
 .hg-search input:focus{background:rgba(247,242,232,.14);box-shadow:inset 0 0 0 1px rgba(247,242,232,.35)}
 .hg-chips{display:flex;flex-wrap:wrap;gap:10px;position:relative}
@@ -104,7 +105,7 @@ home-groups img{max-width:100%;display:block}
 .hg-facts dd{margin:0;color:rgba(20,20,20,.72)}
 .hg-note{margin:0;padding:10px 12px;border-radius:10px;background:var(--sand);font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:rgba(20,20,20,.7)}
 .hg-acts{display:grid;gap:10px;margin-top:4px}
-.hg-btn{display:grid;place-items:center;height:48px;border-radius:10px;background:var(--teal);color:var(--ds-cream);font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);text-transform:uppercase;text-decoration:none;transition:background .25s ease,scale .3s cubic-bezier(.2,.7,.2,1)}
+.hg-btn{display:grid;place-items:center;height:48px;border-radius:12px;background:var(--teal);color:var(--ds-cream);font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);text-transform:uppercase;text-decoration:none;transition:background .25s ease,scale .3s cubic-bezier(.2,.7,.2,1)}
 .hg-btn:hover{background:var(--teal-ink)}
 .hg-btn.alt{background:var(--sand);color:var(--ink)}
 .hg-btn.alt:hover{background:#dcdbcd}
@@ -177,7 +178,7 @@ home-groups img{max-width:100%;display:block}
 @media (max-width:860px){.hg-editing .hg-detail{max-height:none}}`;
 const TPL=`  <section class="hg-map" aria-label="Карта домашніх груп" data-dark>
     <div class="hg-canvas">
-      <img class="hg-static" id="hgStatic" src="groups/kyiv.webp" alt="" width="1049" height="823" draggable="false">
+      <img class="hg-static" id="hgStatic" src="groups/kyiv.webp" alt="Карта Києва з розташуванням домашніх груп церкви «Філадельфія»" width="1049" height="823" draggable="false">
       <div class="hg-dots" id="hgDots"></div>
       <div class="hg-live" id="hgLive" aria-hidden="true"></div>
       <div class="hg-ctrl" role="group" aria-label="Керування картою">

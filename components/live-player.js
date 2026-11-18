@@ -53,8 +53,8 @@ const CSS=`live-player{display:block}
 @keyframes lpspin{to{rotate:360deg}}
 .lp-err{position:absolute;inset:0;z-index:3;display:none;place-content:center;justify-items:center;gap:16px;text-align:center;padding:24px;background:#141414}
 .lp[data-mode="error"] .lp-err{display:grid}
-.lp-err p{margin:0;font-weight:600;font-size:18px;letter-spacing:-.02em}
-.lp-err a{display:inline-flex;align-items:center;height:48px;padding:0 28px;border-radius:12px;background:var(--lp-cream);color:var(--lp-ink);text-decoration:none;font:800 12px/1 inherit;letter-spacing:.04em;text-transform:uppercase}
+.lp-err p{margin:0;font-weight:600;font-size:var(--t1-size);letter-spacing:-.02em}
+.lp-err a{display:inline-flex;align-items:center;height:48px;padding:0 28px;border-radius:12px;background:var(--lp-cream);color:var(--lp-ink);text-decoration:none;font:800 var(--t3-size)/1 inherit;letter-spacing:.04em;text-transform:uppercase}
 /* кнопки */
 .lp-btn{flex:none;display:grid;place-items:center;width:46px;height:46px;border:0;border-radius:50%;padding:0;cursor:pointer;background:var(--lp-cream);color:var(--lp-ink);
   transition:scale .3s cubic-bezier(.2,.7,.2,1),background .25s ease,color .25s ease}
@@ -82,12 +82,12 @@ const CSS=`live-player{display:block}
 .lp-range::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;margin-top:-5px;border-radius:50%;background:var(--lp-cream);border:0;box-shadow:0 2px 8px rgba(0,0,0,.4)}
 .lp-range::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--lp-cream);border:0}
 .lp-range:focus-visible{outline:2px solid var(--lp-cream);outline-offset:2px;border-radius:6px}
-.lp-live{display:none;align-items:center;gap:8px;margin-right:auto;height:34px;padding:0 14px;border-radius:999px;background:rgba(20,17,15,.55);font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.lp-live{display:none;align-items:center;gap:8px;margin-right:auto;height:34px;padding:0 14px;border-radius:999px;background:rgba(20,17,15,.55);font-weight:800;font-size:var(--t3-size);letter-spacing:.06em;text-transform:uppercase;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .lp-live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lp-red);animation:lppulse 1.6s ease-in-out infinite}
 .lp[data-mode="live"] .lp-live{display:inline-flex}
 @keyframes lppulse{50%{scale:1.5;opacity:.6}}
 .lp-unmute{position:absolute;left:20px;top:20px;z-index:5;display:none;align-items:center;gap:10px;height:46px;padding:0 20px 0 14px;border:0;border-radius:999px;cursor:pointer;background:var(--lp-cream);color:var(--lp-ink);
-  font:800 12px/1 inherit;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:scale .3s cubic-bezier(.2,.7,.2,1)}
+  font:800 var(--t3-size)/1 inherit;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:scale .3s cubic-bezier(.2,.7,.2,1)}
 .lp-unmute svg{width:22px;height:22px}
 .lp-unmute:hover{scale:1.04}
 .lp-unmute:focus-visible{outline:2px solid var(--lp-cream);outline-offset:3px}
@@ -104,7 +104,7 @@ const CSS=`live-player{display:block}
 .lp-cap{color:var(--lp-cap,#141414);display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;padding:20px 4px 0}
 .lp-cap-l{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px}
 .lp-cap h2{margin:0;font-weight:500;font-size:clamp(26px,2.8vw,40px);line-height:1.1;letter-spacing:-.04em}
-.lp-tag{display:inline-flex;align-items:center;height:30px;padding:0 14px;border-radius:999px;background:rgba(20,20,20,.07);font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.lp-tag{display:inline-flex;align-items:center;height:30px;padding:0 14px;border-radius:999px;background:rgba(20,20,20,.07);font-weight:700;font-size:var(--t3-size);letter-spacing:.04em;text-transform:uppercase}
 .lp[data-mode="live"] .lp-tag,.lp[data-mode="loading"] .lp-tag{display:none}
 .lp-dot{display:none;width:12px;height:12px;border-radius:50%;background:var(--lp-red);animation:lppulse 1.6s ease-in-out infinite}
 .lp[data-mode="live"] .lp-dot{display:inline-block}
@@ -147,7 +147,7 @@ const CSS=`live-player{display:block}
   .lp-stage{border-radius:16px}
   .lp-bar{padding:34px 12px 12px;gap:8px}
   .lp-btn{width:40px;height:40px}.lp-btn svg{width:20px;height:20px}
-  .lp-time{min-width:0;font-size:12px}
+  .lp-time{min-width:0;font-size:var(--t3-size)}
   .lp-unmute{left:12px;top:12px;height:40px;padding:0 16px 0 10px}
   .lp-big{width:72px;height:72px;margin:-36px 0 0 -36px}
   .lp-cap{padding-top:14px}

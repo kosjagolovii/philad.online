@@ -2,6 +2,12 @@
 <html lang="uk">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#F7F2E8">
 <base href="/">
 <script src="/components/base-fix.js"></script>
 <title>Служіння церкви «Філадельфія»</title>
@@ -96,7 +102,8 @@ button{font:inherit;color:inherit}
 .mcard.is-hot .mcard-ph img{scale:1.06}
 
 /* the round label that follows the pointer over a photo */
-.mn-cur{position:fixed;left:0;top:0;z-index:7;width:60px;height:60px;border-radius:50%;background:var(--ds-cream);color:var(--ink);display:grid;place-items:center;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);pointer-events:none;opacity:0;scale:0;transform-origin:0 0;transition:opacity .2s ease,scale .45s cubic-bezier(.3,1.4,.5,1);box-shadow:0 10px 24px -12px rgba(20,20,20,.35)}
+.mn-cur{position:fixed;left:0;top:0;z-index:7;width:60px;height:60px;border-radius:50%;background:var(--ds-cream);color:var(--ink);display:grid;place-items:center;font:var(--t2-weight) 11px/1.2 var(--font);letter-spacing:0;   /* підпис у кружку: менший і тонший, щоб не впирався в краї (було t3: 12px/800) */
+  pointer-events:none;opacity:0;scale:0;transform-origin:0 0;transition:opacity .2s ease,scale .45s cubic-bezier(.3,1.4,.5,1);box-shadow:0 10px 24px -12px rgba(20,20,20,.35)}
 .mn-cur.on{opacity:1;scale:1}
 
 /* the teal card from the home block */
@@ -245,6 +252,7 @@ button{font:inherit;color:inherit}
 </main>
 
 <site-footer></site-footer>
+<script src="components/join-form.js"></script>
 
 <div class="mn-cur" id="mnCur" aria-hidden="true">Відкрити</div>
 
@@ -275,12 +283,12 @@ const footer=$("footer");if(footer)footer.setAttribute("data-dark","");
 const pic=m=>m.img||("min/"+m.id+".webp");
 const el=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e};
 
-/* filters: one per direction, «Діти і молодь» splits into two */
+/* filters: one per direction (категорії «Діти» і «Молодь» — окремі в min/data.js) */
 const FILTERS=[
   {id:"all",label:"Всі",test:()=>true},
   {id:"pray",label:"Поклоніння і молитва",test:m=>m.cat==="pray"},
-  {id:"kids",label:"Діти",test:m=>["sunday-school","kids-choir","camps","teens"].includes(m.id)},
-  {id:"youth",label:"Молодь",test:m=>["youth","night","teens"].includes(m.id)},
+  {id:"kids",label:"Діти",test:m=>m.cat==="kids"},
+  {id:"youth",label:"Молодь",test:m=>m.cat==="young"},
   {id:"family",label:"Сім’я і спільнота",test:m=>m.cat==="family"},
   {id:"help",label:"Допомога",test:m=>m.cat==="help"},
   {id:"faith",label:"Віра і навчання",test:m=>m.cat==="faith"},
@@ -380,7 +388,8 @@ dlg.addEventListener("close",()=>{if(opener)opener.focus({preventScroll:true})})
 const toFooter=e=>{e.preventDefault();if(dlg.open){opener=null;dlg.close()}
   requestAnimationFrame(()=>scrollTo({top:document.documentElement.scrollHeight,behavior:reduce?"auto":"smooth"}))};
 $("mdlgJoin").addEventListener("click",toFooter);
-document.querySelectorAll("[data-to-footer]").forEach(a=>a.addEventListener("click",toFooter));
+// «Написати» / «Не знайшли своє? Напишіть нам» — вікно з формою (components/join-form.js), а не прокрутка до футера
+document.querySelectorAll("[data-to-footer]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();JoinForm.open({ministry:"general",ministryName:"Сторінка «Служіння» — Напишіть нам",subject:"Заявка на служіння (сторінка «Служіння»)"},a)}));
 
 /* a link like ministries.html#worship (cards on the home page) opens that ministry */
 const fromHash=()=>{const id=decodeURIComponent(location.hash.slice(1)),c=cards.find(x=>x.m.id===id);

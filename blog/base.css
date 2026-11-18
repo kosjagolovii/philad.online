@@ -29,7 +29,7 @@ button,input,select{font:inherit;color:inherit}
 .bl-tabs::-webkit-scrollbar{display:none}
 .bl-tab{position:relative;flex:none;display:inline-flex;gap:5px;padding:0 0 16px;border:0;background:none;cursor:pointer;white-space:nowrap;
   font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);color:rgba(20,17,15,.5);transition:color .25s}
-.bl-tab sup{font-weight:700;font-size:11px;letter-spacing:0;line-height:1.5;color:rgba(20,17,15,.4)}
+.bl-tab sup{font-weight:700;font-size:12px;letter-spacing:0;line-height:1.5;color:rgba(20,17,15,.4)}
 .bl-tab::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--teal);scale:0 1;transform-origin:left;transition:scale .4s cubic-bezier(.2,.7,.2,1)}
 .bl-tab:hover,.bl-tab[aria-selected="true"]{color:var(--night)}
 .bl-tab[aria-selected="true"]::after{scale:1 1}

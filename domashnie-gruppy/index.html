@@ -2,6 +2,12 @@
 <html lang="uk">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#F7F2E8">
 <base href="/">
 <script src="/components/base-fix.js"></script>
 <title>Домашні групи церкви «Філадельфія» у Києві</title>
@@ -28,6 +34,7 @@
 <!-- seo:end -->
 <script src="components/site.js"></script>
 <link rel="stylesheet" href="ui-kit/tokens.css">
+<link rel="stylesheet" href="/contacts/base.css">
 <script src="components/groups.js"></script>
 <style>
 :root{
@@ -76,9 +83,14 @@ button{font:inherit;color:inherit}
 .rv{opacity:0;transform:translate3d(0,40px,0);transition:opacity .8s ease,transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0)*90ms)}
 .rv.in{opacity:1;transform:none}
 
-/* footer: pinned at the bottom, the teal block scrolls away and uncovers it — like on the home page */
-.end{position:relative;z-index:3}
-.nx-hold{position:relative;z-index:1}
+/* форма заявки в домашню групу (замість блоку «А що мені далі робити?»); футер виїжджає з-під <main> */
+.hg{position:relative;z-index:1;background:var(--ds-cream)}
+.hg-join{display:grid;justify-items:center;gap:36px}
+.hg-join-head{display:grid;justify-items:center;gap:16px;text-align:center;max-width:672px}
+.hg-join-head p{margin:0;max-width:586px;font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);color:rgba(20,20,20,.7);text-wrap:pretty}
+.hg-join-card{width:min(640px,100%);box-sizing:border-box;padding:32px;border-radius:24px;background:#E9E2D3;color:var(--ink)}
+.hg-join-card .cf{display:block}
+@media (max-width:720px){.hg-join{gap:28px}.hg-join-card{padding:24px 18px;border-radius:20px}}
 
 @media (max-width:1100px){
   .hg-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -119,7 +131,7 @@ button{font:inherit;color:inherit}
 .tuner-tab i[hidden]{display:none}
 .tuner{position:fixed;z-index:30;top:0;right:0;bottom:0;width:min(340px,92vw);display:flex;flex-direction:column;
   background:var(--t-panel);border-left:1px solid var(--t-line);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
-  font:400 12px/1.35 var(--t-mono);color:var(--t-ink);transform:translateX(102%);transition:transform .32s cubic-bezier(.2,.7,.2,1)}
+  font:400 var(--t3-size)/1.35 var(--t-mono);color:var(--t-ink);transform:translateX(102%);transition:transform .32s cubic-bezier(.2,.7,.2,1)}
 .tuner.open{transform:none}
 .tuner[hidden]{display:flex;visibility:hidden}
 .tuner.open[hidden]{visibility:visible}
@@ -183,12 +195,17 @@ button{font:inherit;color:inherit}
       <li class="hg-step rv" style="--d:3"><i><img src="groups/ic-serve.svg" alt="" width="32" height="32"></i><h3>Служіння</h3><p>Розкриваємо свої таланти та дари, щоб служити Богу та іншим людям.</p></li>
     </ol>
   </section>
+
+  <section class="hg-join row-w" id="join" aria-labelledby="hg-join-h">
+    <div class="hg-join-head">
+      <h2 class="hg-h2 rv" id="hg-join-h">Залишити заявку в домашню групу</h2>
+      <p class="rv" style="--d:1">Розкажіть, яка група вам підходить, і лідер зв’яжеться з вами та підкаже, як долучитись.</p>
+    </div>
+    <div class="hg-join-card rv" style="--d:2" id="hgForm"></div>
+  </section>
 </main>
 
-<div class="end">
-  <div class="nx-hold" data-dark><site-next></site-next></div>
-  <site-footer></site-footer>
-</div>
+<site-footer></site-footer>
 
 <button class="tuner-tab" id="tunerTab" type="button" aria-controls="tuner" aria-expanded="false">Тюнер<i id="tunerDot" hidden></i></button>
 <aside class="tuner" id="tuner" aria-label="Тюнер сторінки" hidden>
@@ -217,6 +234,7 @@ button{font:inherit;color:inherit}
 </aside>
 
 <script src="groups/data.js"></script>
+<script src="contacts/base.js"></script>
 <script>
 (()=>{
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -235,6 +253,11 @@ const ph=$(".hg-why figure img");
 if(!reduce){let raf=0;const step=()=>{raf=0;const r=ph.parentElement.getBoundingClientRect(),t=Math.min(1,Math.max(0,(innerHeight-r.top)/(innerHeight+r.height)));ph.style.setProperty("--ps",(1.14-.1*t).toFixed(4))};
   addEventListener("scroll",()=>{if(!raf)raf=requestAnimationFrame(step)},{passive:true});step()}
 })();
+</script>
+<script>
+(()=>{const b=document.getElementById("hgForm");if(!b||!window.CT)return;
+b.innerHTML=CT.formHTML({label:"Заявка в домашню групу",button:"Надіслати заявку",messageLabel:"Яка група вам підходить?",placeholder:"Район, день тижня, вік, зручний час — як вам зручно",thanks:"Дякуємо! Заявку отримано",subject:"Заявка в домашню групу (сторінка «Домашні групи»)"});
+CT.init({switcher:false})})();
 </script>
 </body>
 </html>

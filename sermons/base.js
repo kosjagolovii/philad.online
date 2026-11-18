@@ -5,7 +5,7 @@
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[c]);
 const BASE=new URL("../",document.currentScript.src).href;
 const CFG=Object.assign({data:"sermons/data.json",words:["проповідь","проповіді","проповідей"],all:"Усі проповіді"},window.SM_CONFIG||{});   // налаштування сторінки (див. sermons/page.js)
-const GROUPS=["topic","speaker","format","dur","year"];          // групи фільтрів
+const GROUPS=["topic","speaker","format","dur","year","src"];          // групи фільтрів
 const STEP=12;
 const fmtDate=d=>{const [y,m,dd]=d.split("-").map(Number);return new Intl.DateTimeFormat("uk-UA",{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"}).format(new Date(Date.UTC(y,m-1,dd))).replace(/\s?р\.$/,"")};
 const fmtDur=s=>{if(!s)return"";const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60,p=n=>String(n).padStart(2,"0");return h?`${h}:${p(m)}:${p(x)}`:`${m}:${p(x)}`};
@@ -13,11 +13,22 @@ const fmtDur=s=>{if(!s)return"";const h=Math.floor(s/3600),m=Math.floor(s%3600/6
 const SM={
   esc,fmtDate,fmtDur,
   data:null,items:[],
-  state:{q:"",topic:new Set(),speaker:new Set(),format:new Set(),dur:new Set(),year:new Set(),sort:"new",limit:STEP},
+  state:{q:"",topic:new Set(),speaker:new Set(),format:new Set(),dur:new Set(),year:new Set(),src:new Set(),sort:"new",limit:STEP},
   _cb:[],
   onChange(fn){this._cb.push(fn)},
   emit(){this.writeUrl();this._cb.forEach(f=>f(this))},
   async load(){
+    if(CFG.merge){                                // об'єднана сторінка: кілька списків = один архів (src: "new" — проповіді, "arch" — відеобібліотека)
+      const parts=await Promise.all(CFG.merge.map(m=>fetch(BASE+m.data,{cache:"no-store"}).then(r=>r.json())));
+      const seen=new Set(),items=[],avatars={};
+      parts.forEach((d,k)=>{Object.assign(avatars,d.avatars);d.items.forEach(i=>{if(seen.has(i.id))return;seen.add(i.id);items.push(Object.assign({src:CFG.merge[k].src},i))})});
+      this.data=Object.assign({},parts[0],{items,avatars});
+      this.items=items;
+      this.topicLabel=Object.fromEntries(this.data.topics.map(t=>[t.id,t.label]));
+      this.durLabel=Object.fromEntries(this.data.durations.map(t=>[t.id,t.label]));
+      this.readUrl();
+      return this;
+    }
     try{
       const r=await fetch(BASE+CFG.data,{cache:"no-store"});
       if(!r.ok)throw 0;
@@ -54,6 +65,7 @@ const SM={
     if(skip!=="speaker"&&s.speaker.size&&!s.speaker.has(it.speaker))return false;
     if(skip!=="format"&&s.format.size&&!s.format.has(it.format))return false;
     if(skip!=="dur"&&s.dur.size&&!s.dur.has(it.dur))return false;
+    if(skip!=="src"&&s.src.size&&!s.src.has(it.src))return false;
     if(skip!=="year"&&s.year.size&&!s.year.has(it.date.slice(0,4)))return false;
     return true;
   },
@@ -65,11 +77,11 @@ const SM={
   /* варіанти групи з лічильниками «скільки проповідей лишиться, якщо обрати це» */
   facets(group){
     const pool=this.items.filter(i=>this.match(i,group)),cnt=new Map();
-    const val=i=>group==="topic"?i.topics:group==="year"?[i.date.slice(0,4)]:[i[group]];
+    const val=i=>group==="topic"?i.topics:group==="src"?[i.src]:group==="year"?[i.date.slice(0,4)]:[i[group]];
     pool.forEach(i=>val(i).forEach(v=>{if(v)cnt.set(v,(cnt.get(v)||0)+1)}));
     const all=new Set(this.items.flatMap(val).filter(Boolean));
     let list=[...all].map(v=>({value:v,count:cnt.get(v)||0,active:this.state[group].has(v),
-      label:group==="topic"?this.topicLabel[v]:group==="dur"?this.durLabel[v]:v,
+      label:group==="topic"?this.topicLabel[v]:group==="dur"?this.durLabel[v]:group==="src"?(CFG.merge.find(m=>m.src===v)||{}).label:v,
       avatar:group==="speaker"&&this.data.avatars[v]?BASE+this.data.avatars[v]:null}));
     if(group==="speaker"&&CFG.hideSpeaker)list=list.filter(f=>f.value!==CFG.hideSpeaker);   // «Невідомий спікер» не показуємо як фільтр
     if(group==="topic")list.sort((a,b)=>this.data.topics.findIndex(t=>t.id===a.value)-this.data.topics.findIndex(t=>t.id===b.value));
@@ -87,7 +99,7 @@ const SM={
   activeCount(){const s=this.state;return GROUPS.reduce((n,g)=>n+s[g].size,0)+(s.q?1:0)},
   activeList(){   // для рядка «Обрано: …» з можливістю зняти
     const s=this.state,out=[];
-    GROUPS.forEach(g=>s[g].forEach(v=>out.push({group:g,value:v,label:g==="topic"?this.topicLabel[v]:g==="dur"?this.durLabel[v]:v})));
+    GROUPS.forEach(g=>s[g].forEach(v=>out.push({group:g,value:v,label:g==="topic"?this.topicLabel[v]:g==="dur"?this.durLabel[v]:g==="src"?(CFG.merge.find(m=>m.src===v)||{}).label:v})));
     return out;
   },
   plural(n){const a=n%10,b=n%100,w=CFG.words;return(b>10&&b<15)?w[2]:a===1?w[0]:(a>1&&a<5)?w[1]:w[2]},
@@ -141,5 +153,6 @@ const SM={
     this.wire();
   }
 };
-window.SM=SM;
+CFG.streamOf=src=>CFG.merge.find(m=>m.src===src);
+window.SM=SM;SM.CFG=CFG;
 })();

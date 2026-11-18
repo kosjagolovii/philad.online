@@ -34,6 +34,7 @@ document.getElementById("fbtn").addEventListener("click",()=>document.getElement
 document.getElementById("spkMore").addEventListener("click",()=>{allSpk=!allSpk;render()});
 const chip=(g,f,extra)=>`<button class="chip${f.count?"":" zero"}" type="button" aria-pressed="${f.active}" data-toggle="${g}:${esc(f.value)}">${extra||""}<span>${esc(f.label)}</span><em>${f.count}</em></button>`;
 function render(){
+
   ["topic","format","dur","year"].forEach(g=>{document.querySelector(`[data-facet="${g}"]`).innerHTML=SM.facets(g).map(f=>chip(g,f)).join("")});
   const sp=SM.facets("speaker"),shown=allSpk?sp:sp.filter((f,i)=>i<8||f.active);
   document.querySelector('[data-facet="speaker"]').innerHTML=shown.map(f=>chip("speaker",f,f.avatar?`<img src="${f.avatar}" alt="" loading="lazy">`:`<i aria-hidden="true">${esc(f.label.split(" ").map(w=>w[0]).slice(0,2).join(""))}</i>`)).join("");

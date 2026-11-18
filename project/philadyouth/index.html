@@ -2,6 +2,12 @@
 <html lang="uk">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#F7F2E8">
 <base href="/">
 <script src="/components/base-fix.js"></script>
 <title>PhiladYouth — молодіжне служіння церкви «Філадельфія»</title>
@@ -109,8 +115,9 @@ button,input,textarea{font:inherit;color:inherit}
 
 /* 5 · video */
 .y-video{display:grid;grid-template-columns:minmax(0,534fr) minmax(0,870fr);gap:12px}
-.y-vtx{display:grid;justify-items:center;align-content:center;gap:24px;padding:24px 40px;border-radius:20px;background:var(--sand);text-align:center}
+.y-vtx{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;align-content:center;gap:24px;padding:24px 40px;border-radius:20px;background:var(--sand);text-align:center}
 .y-vtx .y-h2{font-size:var(--h2-size)}
+@media (max-width:380px){.y-vtx .y-h2{font-size:clamp(26px,8.2vw,34px);overflow-wrap:anywhere}}
 .y-vtx .y-txt{max-width:394px;color:rgba(20,20,20,.5)}
 .y-yt{display:grid;place-items:center;width:300px;max-width:100%;height:72px;border-radius:15px;background:var(--teal);color:var(--ds-cream);text-decoration:none;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);text-transform:uppercase;transition:background .25s,scale .3s cubic-bezier(.2,.7,.2,1)}
 .y-yt:hover{background:var(--teal-ink);scale:1.03}
@@ -202,7 +209,7 @@ button,input,textarea{font:inherit;color:inherit}
   <div class="y-herow">
     <figure class="y-hero rv"><img src="youth/hero.webp" alt="Молодь церкви «Філадельфія» — велике спільне фото" width="2400" height="1220"></figure>
     <!-- the newest broadcast of youtube.com/@philadyouth/streams (youth/live.json, written by update-latest.py) -->
-    <button class="y-live" type="button" id="yLive" aria-label="Дивитись останню трансляцію PhiladYouth"><img id="yLiveImg" src="youth/live.jpg" alt="" width="1280" height="720"></button>
+    <button class="y-live" type="button" id="yLive" aria-label="Дивитись останню трансляцію PhiladYouth"><img id="yLiveImg" src="youth/live.jpg" alt="Трансляція молодіжного зібрання PhiladYouth" width="1280" height="720"></button>
   </div>
 
   <section class="y-lead rv" aria-label="Лідер служіння">
@@ -227,7 +234,7 @@ button,input,textarea{font:inherit;color:inherit}
   </section>
 
   <section class="y-head" aria-labelledby="y-vision">
-    <img class="y-logo rv" src="youth/logo.svg" alt="" width="60" height="60">
+    <img class="y-logo rv" src="youth/logo.svg" alt="Логотип PhiladYouth" width="60" height="60">
     <h2 class="y-h2 rv" id="y-vision">Молодіжне бачення:<br><span>Досягати загиблих.<br>Укріпляти спасенних.<br>Навчати примножувати.</span></h2>
     <div class="y-copy rv">
       <p>Молодіжне служіння спрямоване на створення спільних інтересів. Тут формуються музичні гурти, медіа-команди, організовуються тематичні зустрічі. Молодь розвиває в собі навички фотографів, дизайнерів, програмістів, музикантів, організаторів. Підлітки й студенти активно беруть участь в інших церковних служіннях: працюють з дітьми, піклуються про людей літнього віку, їздять до прифронтових зон на Сході України як волонтери. У літній період організовують християнські табори, сповнені радості активного відпочинку.</p>
@@ -263,7 +270,7 @@ button,input,textarea{font:inherit;color:inherit}
       <a class="y-yt" href="https://www.youtube.com/@philadyouth" target="_blank" rel="noopener" data-no-u>Всі відео на YouTube</a>
     </div>
     <div class="y-player rv" style="--d:1" id="yPlayer">
-      <img id="yThumb" src="youth/latest.jpg" alt="" loading="lazy">
+      <img id="yThumb" src="youth/latest.jpg" alt="Останнє відео молодіжного служіння PhiladYouth" loading="lazy">
       <button class="y-play" type="button" id="yPlay" aria-label="Дивитись останнє відео PhiladYouth"><i><img src="youth/play.svg" alt="" width="40" height="40"></i></button>
       <p class="y-fall" id="yFall" hidden>Відео не відкривається тут — <a id="yLink" href="https://www.youtube.com/@philadyouth" target="_blank" rel="noopener">дивіться на YouTube</a>.</p>
     </div>

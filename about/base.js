@@ -22,13 +22,6 @@ window.AB={
     const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -10% 0px"});
     document.querySelectorAll(".rv").forEach(el=>reduce?el.classList.add("in"):io.observe(el));
 
-    // тимчасовий перемикач варіантів
-    const V=[["Основна","about.html"],["A","about-a.html"],["B","about-b.html"],["B2","about-b2.html"],["B3","about-b3.html"],["C","about-c.html"]];
-    const here=(location.pathname.split("/").pop()||"about.html");
-    const nav=document.createElement("nav");
-    nav.className="vsw"; nav.setAttribute("aria-label","Варіанти сторінки");
-    nav.innerHTML="<span>Варіант</span>"+V.map(([l,h])=>`<a href="${h}" data-no-u${h===here?' aria-current="page"':""}>${l}</a>`).join("");
-    document.body.appendChild(nav);
   }
 };
 })();
