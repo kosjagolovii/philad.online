@@ -416,6 +416,11 @@ canvas.trail{position:fixed;inset:0;width:100%;height:100%;z-index:11;pointer-ev
   .lcard-in{will-change:auto}
   .lcard-in::after{display:none}
   .lcard-img img{top:0;height:100%;transform:none!important;will-change:auto}
+  /* картки «Прийди й побач» — окремий екран у звичайному потоці */
+  .cards-sec{position:relative;z-index:2;background:var(--ds-cream);padding:72px 16px 0;box-sizing:border-box}
+  .cards-sec .cards{position:relative;inset:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%;padding:0;pointer-events:auto;visibility:visible!important;z-index:auto}
+  .cards-sec .card{width:auto;opacity:1!important;transform:none!important}
+  .cards-sec .cards-head{opacity:1!important;transform:none!important;grid-column:1/-1;margin-bottom:12px}
   /* текст бачення — дрібніший */
   .vision h2{font-size:var(--h2s-size);line-height:1.22;max-width:19em}
   /* блок 4: відео на повну ширину контенту */
@@ -930,7 +935,7 @@ function stepGrain(dt){
 
 /* ---------- apply settings ---------- */
 function apply(){
-  if(LITE)S.b3ExitVh=0;
+  if(LITE){S.b3ExitVh=0;S.b3Vh=1}
   track.style.height=(S.trackVh+S.visVh+S.b3Vh+S.b3ExitVh)+"vh";
   const tiles=tilesFor(S.grainType);grainI%=tiles.length;
   grain.style.backgroundImage=tiles[grainI];
@@ -1013,6 +1018,7 @@ const paper=$("paper"),cards=$("cards"),cardEls=[...cards.querySelectorAll(".car
 let q3=0,q3Shown=-1,b3xShown=-1,onLight=false;
 function stepB3(dt){
   const r=track.getBoundingClientRect(),te=visTe;
+  if(LITE){vision.style.opacity=te.toFixed(3);vision.style.visibility=te>0?"visible":"hidden";vision.style.transform="";const cs=document.getElementById("cardsSec");onLight=cs.getBoundingClientRect().top<70;bar.classList.toggle("light",onLight&&!overTeal);return}
   const want=clamp((-r.top-flightPx()-visPx())/(b3Px()*.75));
   q3+=(want-q3)*clamp(S.smooth*1.5*dt*60);
   if(Math.abs(want-q3)<.0005)q3=want;
@@ -1468,8 +1474,8 @@ vid.addEventListener("click",e=>{if(e.target===vid)vid.close()});
 
 /* ---------- go ---------- */
 buildTuner();size();sizeTrail();apply();
-if(LITE){const svc=$("services"),gap=()=>{const sb=stage.getBoundingClientRect().bottom,cb=cardEls[cardEls.length-1].getBoundingClientRect().bottom;svc.style.marginTop=-Math.max(0,Math.round(sb-cb))+"px"};gap();addEventListener("resize",gap);addEventListener("load",gap);setTimeout(gap,1200);setTimeout(gap,3500)}
 if(LITE){const ft=document.querySelector(".ft"),endEl=document.querySelector(".end"),hold=document.querySelector(".nx-hold");let tick=0;const fit=()=>{endEl.style.setProperty("--fh",Math.max(ft.offsetHeight,innerHeight)+"px");pos()};const pos=()=>{const over=Math.max(0,-hold.getBoundingClientRect().bottom),max=Math.max(0,ft.offsetHeight-innerHeight);ft.style.transform="translate3d(0,"+(-Math.min(over,max))+"px,0)"};addEventListener("scroll",()=>{if(!tick){tick=requestAnimationFrame(()=>{tick=0;pos()})}},{passive:true});addEventListener("resize",fit);addEventListener("load",fit);setTimeout(fit,800);setTimeout(fit,2500);fit()}
+if(LITE){const sec=document.createElement("section");sec.className="cards-sec";sec.id="cardsSec";sec.setAttribute("aria-label","Прийди й побач");track.after(sec);sec.append(cards);cards.dataset.off="0"}
 if(ver.mode==="auto")resetAuto();else cur=prevCur=target=progress();
 addEventListener("resize",()=>{size();sizeTrail();apply()});
 requestAnimationFrame(frame);
