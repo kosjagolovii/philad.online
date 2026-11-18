@@ -414,7 +414,8 @@ canvas.trail{position:fixed;inset:0;width:100%;height:100%;z-index:11;pointer-ev
   .lcard:nth-child(2){--off:10px}
   .lcard:nth-child(3){--off:20px}
   .lcard:nth-child(4){--off:30px}
-  .lcard-in{transform:none!important;will-change:auto}
+  .lcard-in{will-change:auto;overflow:visible!important;clip-path:inset(0 round 16px);backface-visibility:hidden;-webkit-backface-visibility:hidden}
+  .lcard-img{overflow:visible!important;clip-path:inset(0 round 10px)}
   .lcard-in::after{display:none}
   .lcard-img img{top:0;height:100%;transform:none!important;will-change:auto}
   /* картки «Прийди й побач» — окремий екран у звичайному потоці */
@@ -450,6 +451,19 @@ canvas.trail{position:fixed;inset:0;width:100%;height:100%;z-index:11;pointer-ev
   /* блок 7: на всю ширину контентної області */
   .lv-row{width:100%!important}
 }
+@supports (animation-timeline:view()){
+  @media (max-width:900px),(pointer:coarse){
+    .life-stack{timeline-scope:--lc2,--lc3,--lc4}
+    .lcard:nth-child(2){view-timeline:--lc2 block}
+    .lcard:nth-child(3){view-timeline:--lc3 block}
+    .lcard:nth-child(4){view-timeline:--lc4 block}
+    .lcard:nth-child(1) .lcard-in{animation-timeline:--lc2;--rot:-2deg}
+    .lcard:nth-child(2) .lcard-in{animation-timeline:--lc3;--rot:2deg}
+    .lcard:nth-child(3) .lcard-in{animation-timeline:--lc4;--rot:-2deg}
+    .lcard:not(:last-child) .lcard-in{will-change:transform;animation-name:lccover2;animation-timing-function:linear;animation-fill-mode:both;animation-range:entry 0% entry 100%}
+  }
+}
+@keyframes lccover2{from{transform:translateZ(0) rotate(0) scale(1)}to{transform:translateZ(0) rotate(var(--rot,-2deg)) scale(.95)}}
 @media (prefers-reduced-motion:reduce){.reveal,.svc-video.reveal{opacity:1;transform:none;transition:none}.hint i{animation:none}.tuner{transition:none}}
 </style>
 
