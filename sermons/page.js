@@ -45,9 +45,12 @@ function render(){
   document.getElementById("reset").hidden=!SM.activeCount();
   document.getElementById("act").innerHTML=SM.activeList().map(a=>`<button class="chip" type="button" data-toggle="${a.group}:${esc(a.value)}" aria-label="Зняти: ${esc(a.label)}">${esc(a.label)}</button>`).join("");
   document.getElementById("grid").innerHTML=n?list.slice(0,SM.state.limit).map(i=>SM.card(i)).join(""):`<div class="empty" style="grid-column:1/-1"><b>Нічого не знайдено</b><span>Спробуйте прибрати частину фільтрів</span><button class="reset" data-reset type="button">Скинути все</button></div>`;
-  document.getElementById("moreW").innerHTML=n>SM.state.limit?`<button class="more" data-more type="button">Показати ще ${Math.min(12,n-SM.state.limit)}</button>`:"";
+  // нові картки підвантажуються самі, коли користувач наближається до кінця списку (кнопка лишається лише там, де немає IntersectionObserver)
+  document.getElementById("moreW").innerHTML=n>SM.state.limit?(MORE_IO?`<div id="moreSent" aria-hidden="true" style="height:1px;width:100%"></div>`:`<button class="more" data-more type="button">Показати ще ${Math.min(12,n-SM.state.limit)}</button>`):"";
+  if(MORE_IO){MORE_IO.disconnect();const s=document.getElementById("moreSent");if(s)MORE_IO.observe(s)}
   if(document.activeElement!==q&&q.value!==SM.state.q)q.value=SM.state.q;
 }
+const MORE_IO="IntersectionObserver" in window?new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting))SM.more()},{rootMargin:"900px 0px"}):null;
 SM.onChange(render);render();
 SM.init();
 })();
