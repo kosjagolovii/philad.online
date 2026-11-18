@@ -408,12 +408,14 @@ canvas.trail{position:fixed;inset:0;width:100%;height:100%;z-index:11;pointer-ev
   .copy h1{text-shadow:0 2px 24px rgba(0,0,0,.35)}
   /* заголовок «Прийди й побач» — як у решти заголовків */
   .cards-head h2{font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track)}
-  /* картки «життя церкви»: без закріплення й нахилів (sticky + transform на iOS мерехтять) — звичайний потік, плавна поява один раз */
-  .lcard{position:relative!important;top:auto!important}
-  .lcard-in{transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
-  .lcard-in.pre{opacity:0;transform:translateY(28px)!important}
+  /* картки «життя церкви»: чисті sticky-картки, що напливають одна на одну. Жодних transform/filter/анімацій на ходу — тому без мерехтіння */
+  .lcard{top:calc((100svh - var(--ch))/2 + var(--off,0px))}
+  .lcard:nth-child(2){--off:10px}
+  .lcard:nth-child(3){--off:20px}
+  .lcard:nth-child(4){--off:30px}
+  .lcard-in{transform:none!important;will-change:auto}
   .lcard-in::after{display:none}
-  .lcard-img img{top:0;height:100%}
+  .lcard-img img{top:0;height:100%;transform:none!important;will-change:auto}
   /* текст бачення — дрібніший */
   .vision h2{font-size:var(--h2s-size);line-height:1.22;max-width:19em}
   /* блок 4: відео на повну ширину контенту */
@@ -427,12 +429,18 @@ canvas.trail{position:fixed;inset:0;width:100%;height:100%;z-index:11;pointer-ev
   .scard{aspect-ratio:1/1}
   /* блок «Перші кроки»: кнопка в межах картки */
   .nx-card .lbtn{width:auto;max-width:calc(100% - 24px);box-sizing:border-box}
-  /* футер: посилання в рядок, що переноситься; висота за вмістом */
-  .ft{position:relative!important;min-height:0!important;height:auto!important}
-  .ft-nav{display:flex!important;grid-template-columns:none!important;flex-direction:column!important;flex-wrap:nowrap!important;gap:18px!important;width:100%}
-  .ft-col{width:100%!important;min-width:0!important;gap:8px!important}
+  /* футер: закріплений під останнім блоком, той «сповзає» і відкриває його; якщо вмісту забагато — скрол усередині футера */
+  .ft,.ft.tall{position:sticky!important;bottom:0;max-height:100vh;max-height:100svh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;box-sizing:border-box}
+  .ft-in{width:100%!important;max-width:none!important;gap:44px!important}
+  .ft-top{gap:40px!important}
+  .ft-about{gap:32px!important}
+  .ft-contact{gap:20px!important}
+  .ft-nav{display:flex!important;grid-template-columns:none!important;flex-direction:column!important;flex-wrap:nowrap!important;gap:36px!important;width:100%}
+  .ft-col{width:100%!important;min-width:0!important;gap:12px!important}
   .ft-col ul{display:grid!important;gap:0!important}
   .ft-col a{min-height:40px;font-size:var(--t1-size)}
+  /* блок 7: на всю ширину контентної області */
+  .lv-row{width:100%!important}
 }
 @media (prefers-reduced-motion:reduce){.reveal,.svc-video.reveal{opacity:1;transform:none;transition:none}.hint i{animation:none}.tuner{transition:none}}
 </style>
@@ -1437,7 +1445,6 @@ vid.addEventListener("click",e=>{if(e.target===vid)vid.close()});
 /* ---------- go ---------- */
 buildTuner();size();sizeTrail();apply();
 if(LITE){const svc=$("services"),gap=()=>{const sb=stage.getBoundingClientRect().bottom,cb=cardEls[cardEls.length-1].getBoundingClientRect().bottom;svc.style.marginTop=-Math.max(0,Math.round(sb-cb))+"px"};gap();addEventListener("resize",gap);addEventListener("load",gap);setTimeout(gap,1200);setTimeout(gap,3500)}
-if(LITE){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove("pre");io.unobserve(e.target)}}),{threshold:.12});lcards.forEach(c=>{c.inn.classList.add("pre");io.observe(c.inn)})}
 if(ver.mode==="auto")resetAuto();else cur=prevCur=target=progress();
 addEventListener("resize",()=>{size();sizeTrail();apply()});
 requestAnimationFrame(frame);
