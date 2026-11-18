@@ -126,3 +126,31 @@ button{font:inherit;color:inherit}
   .sm-box{gap:16px}
   .sm-info a{padding:0 16px}
 }
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .sc-dur{padding:5px 8px}
+  .sc-b{gap:8px}
+  .sc-meta{gap:6px 8px}
+  .sc-fmt{padding:3px 8px}
+  .sc-by{gap:8px}
+  .sel{padding:0 32px 0 16px}
+  .more{padding:0 32px}
+  .empty{gap:16px;padding:80px 16px}
+  .sm-box{gap:16px}
+  .sm-info{gap:16px}
+  .sm-info a{padding:0 16px}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .sc-dur{padding:5px 8px}
+  .sc-b{gap:8px}
+  .sc-meta{gap:6px 8px}
+  .sc-fmt{padding:3px 8px}
+  .sc-by{gap:8px}
+  .sel{padding:0 32px 0 16px}
+  .more{padding:0 32px}
+  .empty{gap:16px;padding:80px 16px}
+  .sm-box{gap:16px}
+  .sm-info{gap:16px}
+  .sm-info a{padding:0 16px}
+}

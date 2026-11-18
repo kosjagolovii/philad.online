@@ -324,6 +324,14 @@ a:hover .u::after,a:focus-visible .u::after{transform:scaleX(1);transform-origin
   html body .ft-col{width:100%;gap:var(--sp-1)}
   html body .ft-col ul{display:grid;gap:0}
 }
+/* планшетна шкала відступів (ui-kit/tokens.css: --st-1…5) для блоку «Що далі» і футера */
+@media (min-width:721px) and (max-width:1000px),(min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  html body .nx{padding-block:var(--st-5);gap:var(--st-3)}
+  html body .nx-head{gap:var(--st-1)}
+  html body .nx-row{gap:var(--st-1)}
+  html body .ft{padding-block:var(--st-5) var(--st-4)}
+  html body .ft-in{gap:var(--st-4)}
+}
 @media (prefers-reduced-motion:reduce){.ft-soc a{transition:none}}`;
 me.before(style);   // ставимо перед стилями сторінки, щоб сторінка могла їх перекрити
 

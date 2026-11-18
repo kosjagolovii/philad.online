@@ -133,6 +133,23 @@ img{max-width:100%;display:block}
   .fv-faq .faq-a{padding:0 0 24px}
   .tt li{padding:24px 0}
 }
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .fv{gap:80px;padding-block:150px 80px}
+  .fv-expect{padding:48px 48px}
+  .fv-faq>h2{margin:0 0 16px}
+  .fv-faq summary{gap:16px;padding:16px 0}
+  .fv-faq .faq-a{padding:0 0 24px}
+  .tt li{padding:24px 0}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .fv{gap:80px;padding-block:150px 80px}
+  .fv-expect{padding:48px 48px}
+  .fv-faq>h2{margin:0 0 16px}
+  .fv-faq summary{gap:16px;padding:16px 0}
+  .fv-faq .faq-a{padding:0 0 24px}
+}
 </style>
 </head>
 <body>

@@ -34,3 +34,21 @@
   .a-foot{gap:8px 16px}
   .a-end{margin-top:40px}
 }
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .a-bar{margin-top:24px}
+  .a-lead{gap:16px;margin-top:32px}
+  .a-lead-t{gap:16px}
+  .a-grid{gap:48px 16px;margin:48px 0 0}
+  .a-tx{gap:8px}
+  .a-foot{gap:8px 8px}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .a-bar{margin-top:24px}
+  .a-lead{gap:32px;margin-top:32px}
+  .a-lead-t{gap:16px}
+  .a-grid{gap:48px 16px;margin:48px 0 0}
+  .a-tx{gap:8px}
+  .a-foot{gap:8px 8px}
+}

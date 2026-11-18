@@ -48,6 +48,11 @@
   --sp-1:8px; --sp-2:16px; --sp-3:24px; --sp-4:40px; --sp-5:64px;
   --radius-card:16px;
 }
+/* tablet spacing scale (portrait 721–1000, landscape 1001–1180, iPad Pro landscape ≤1366 coarse), 2026-11-18: 16 gap between cards · 24 inside a block · 32 title→content · 48 block bottom / gutter · 80 between sections */
+:root{ --st-1:16px; --st-2:24px; --st-3:32px; --st-4:48px; --st-5:80px; }
+@media (min-width:721px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  :root{ --gutter:var(--st-4); }
+}
 @media (max-width:720px){
   :root{ --t1-size:16px; --b1-size:17.5px; --gutter:var(--gutter-m); }
 }

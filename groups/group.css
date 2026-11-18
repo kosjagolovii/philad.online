@@ -44,3 +44,31 @@
   .gall{margin:24px 0 0!important}
   .ggrid a{gap:8px;padding:16px}
 }
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .hg-pg .hero{margin-bottom:32px}
+  .gfacts{gap:8px;margin:0 0 24px}
+  .gfacts div{padding:16px 16px}
+  .gnote{margin:0 0 24px;padding:16px 16px}
+  .gacts{gap:8px;margin:0 0 48px}
+  .gjoin{margin-top:48px}
+  .gjoin>p{margin:0 0 24px!important}
+  .gmore{margin-top:48px}
+  .gmore h2{margin:0 0 16px!important}
+  .ggrid{gap:8px}
+  .ggrid a{gap:8px;padding:16px}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .hg-pg .hero{margin-bottom:32px}
+  .gfacts{gap:8px;margin:0 0 24px}
+  .gfacts div{padding:16px 16px}
+  .gnote{margin:0 0 24px;padding:16px 16px}
+  .gacts{gap:8px;margin:0 0 48px}
+  .gjoin{margin-top:48px}
+  .gjoin>p{margin:0 0 24px!important}
+  .gmore{margin-top:48px}
+  .gmore h2{margin:0 0 16px!important}
+  .ggrid{gap:8px}
+  .ggrid a{gap:8px;padding:16px}
+}

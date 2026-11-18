@@ -98,3 +98,19 @@ ul,ol{padding:0;list-style:none}
   .cf .row2{gap:16px}
   .cf .thanks{gap:8px;padding:24px 0}
 }
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .vsw span{padding:0 8px 0 8px}
+  .vsw a{padding:8px 16px}
+  .cf{gap:16px}
+  .cf .row2{gap:16px}
+  .cf .thanks{gap:8px;padding:24px 0}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .vsw span{padding:0 8px 0 8px}
+  .vsw a{padding:8px 16px}
+  .cf{gap:16px}
+  .cf .row2{gap:16px}
+  .cf .thanks{gap:8px;padding:24px 0}
+}

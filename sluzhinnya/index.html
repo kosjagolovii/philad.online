@@ -227,6 +227,43 @@ button{font:inherit;color:inherit}
   .mdlg-lead{padding:16px 16px}
   .mdlg-acts{gap:8px}
 }
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .mn{gap:80px}
+  .mn-body{column-gap:8px}
+  .mn-main{gap:48px}
+  .mn-groups{gap:48px}
+  .mn-group{gap:16px}
+  .mn-group h2{gap:8px}
+  .mn-groups.filtered{gap:24px}
+  .mgrid{gap:24px 8px}
+  .mcard{gap:8px}
+  .scta{padding:16px}
+  .mn-join{gap:48px}
+  .mn-steps{gap:8px}
+  .mn-step{gap:16px}
+  .mdlg-tx{padding:24px 16px 24px}
+  .mdlg-lead{padding:16px 16px}
+  .mdlg-acts{gap:8px}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .mn{gap:80px}
+  .mn-body{column-gap:8px}
+  .mn-main{gap:48px}
+  .mn-groups{gap:48px}
+  .mn-group{gap:16px}
+  .mn-group h2{gap:8px}
+  .mn-groups.filtered{gap:24px}
+  .mgrid{gap:24px 8px}
+  .mcard{gap:8px}
+  .scta{padding:16px}
+  .mn-join{gap:48px}
+  .mn-step{gap:16px}
+  .mdlg-tx{padding:48px 32px 32px}
+  .mdlg-lead{padding:16px 16px}
+  .mdlg-acts{gap:8px}
+}
 </style>
 </head>
 <body>

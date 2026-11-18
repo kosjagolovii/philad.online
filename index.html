@@ -504,6 +504,70 @@ canvas.trail{position:fixed;inset:0;width:100%;height:100%;z-index:11;pointer-ev
   html body .ft-col{gap:var(--sp-1)!important}
 }
 @media (prefers-reduced-motion:reduce){.reveal,.svc-video.reveal{opacity:1;transform:none;transition:none}.hint i{animation:none}.tuner{transition:none}}
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .vision{gap:24px}
+  .cards{gap:16px}
+  .card.invite{padding:24px 24px 24px}
+  .card.invite p{margin:8px 0 0}
+  .card.invite a{gap:16px}
+  .services{padding-block:80px 32px;gap:48px;padding-top:48px}
+  .min6{gap:24px;padding-block:48px 32px}
+  .sgrid{gap:8px}
+  .lv{padding-block:48px}
+  .lv-row{gap:8px}
+  .lv-panel{padding:32px 16px}
+  .life{padding-block:80px;gap:48px}
+  .life-stack{gap:16px}
+  .lcard-in{padding:16px}
+  .lcard-body{gap:16px}
+  .svc-head{gap:32px}
+  .row{gap:24px}
+  .yt-bar{margin-bottom:8px}
+  .yt-fall{margin:8px 0 0}
+  .vid figcaption{padding:16px 16px}
+  .hint{gap:8px}
+  .ver{padding:16px 0 16px}
+  .grp summary{padding:16px 0}
+  .ctl{gap:4px 8px;margin:0 0 8px}
+  .scard b{padding:24px 8px 8px}
+  .cards-sec{padding:80px 16px 0}
+  .cards-sec .cards{gap:8px}
+  .cards-sec .cards-head{margin-bottom:8px}
+  .ft-in{gap:48px!important}
+  .ft-top{gap:32px!important}
+  .ft-contact{gap:16px!important}
+  .ft-nav{gap:32px!important}
+  .ft-col{gap:8px!important}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .vision{gap:24px}
+  .cards{gap:16px}
+  .card.invite{padding:24px 24px 24px}
+  .card.invite p{margin:8px 0 0}
+  .card.invite a{gap:16px}
+  .services{padding-block:80px 32px;gap:48px}
+  .min6{gap:24px;padding-block:48px 32px}
+  .sgrid{gap:8px}
+  .lv{padding-block:80px}
+  .lv-row{gap:8px}
+  .lv-panel{padding:24px 32px}
+  .life{padding-block:80px;gap:48px}
+  .life-stack{gap:16px}
+  .lcard-in{padding:16px}
+  .lcard-body{gap:16px}
+  .svc-head{gap:32px}
+  .row{gap:24px}
+  .yt-bar{margin-bottom:8px}
+  .yt-fall{margin:8px 0 0}
+  .vid figcaption{padding:16px 16px}
+  .hint{gap:8px}
+  .ver{padding:16px 0 16px}
+  .grp summary{padding:16px 0}
+  .ctl{gap:4px 8px;margin:0 0 8px}
+}
+@media (min-width:721px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){html:root{--gutter:var(--st-4)}}
 </style>
 
 <site-menu></site-menu>

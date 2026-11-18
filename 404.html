@@ -34,6 +34,16 @@ p{margin:0;max-width:520px;font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var
   .pg{gap:40px}
   .links a{padding:0 16px}
 }
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .pg{gap:32px}
+  .links a{padding:0 16px}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .pg{gap:32px}
+  .links a{padding:0 16px}
+}
 </style>
 </head>
 <body>

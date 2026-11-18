@@ -110,3 +110,23 @@ a:hover .bl-play{background:var(--teal);color:var(--cream);scale:1.08}
   .bl-tags span{padding:5px 8px}
   .bl-dlg-t{gap:8px}
 }
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .bl{gap:48px}
+  .bl-tabs{gap:24px}
+  .bl-empty{margin:32px 0}
+  .bl-find{margin-top:24px}
+  .bl-find+.a-bar{margin-top:16px}
+  .bl-tags span{padding:5px 8px}
+  .bl-dlg-t{gap:8px;padding:24px 24px 32px}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .bl{gap:48px}
+  .bl-tabs{gap:24px}
+  .bl-empty{margin:32px 0}
+  .bl-find{margin-top:24px}
+  .bl-find+.a-bar{margin-top:16px}
+  .bl-tags span{padding:5px 8px}
+  .bl-dlg-t{gap:8px;padding:24px 24px 32px}
+}

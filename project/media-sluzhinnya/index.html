@@ -126,6 +126,22 @@ button,input,textarea{font:inherit;color:inherit}
   .md-row{gap:16px}
   .md-about{gap:64px}
 }
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .md{gap:80px;padding-block:164px 80px}
+  .md-copy{gap:16px}
+  .md-copy ul{padding-left:24px}
+  .md-row{gap:16px}
+  .md-about{gap:48px}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .md{gap:80px;padding-block:164px 80px}
+  .md-copy{gap:16px}
+  .md-copy ul{padding-left:24px}
+  .md-row{gap:16px}
+  .md-about{gap:48px}
+}
 </style>
 </head>
 <body>

@@ -156,6 +156,32 @@ img[src$="/doc.webp"],img[src$="/xmas99.webp"],img[src$="/bap1.webp"],img[src$="
   .gal-n{padding:7px 16px}
   .ph figcaption.pc{padding:64px 24px 24px}
 }
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .top{gap:24px}
+  .im{gap:8px}
+  .ch span{padding:8px 24px}
+  .it{column-gap:48px}
+  .yc{padding-top:32px;padding-right:32px}
+  .bd{padding-top:24px}
+  .it.hc .yc{padding-top:48px}
+  .tl .im{gap:16px}
+  .gal-n{padding:7px 8px}
+  .ph figcaption.pc{padding:48px 24px 24px}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .top{gap:24px}
+  .im{gap:8px}
+  .ch span{padding:8px 24px}
+  .it{column-gap:48px}
+  .yc{padding-top:32px;padding-right:32px}
+  .bd{padding-top:24px}
+  .it.hc .yc{padding-top:48px}
+  .tl .im{gap:16px}
+  .gal-n{padding:7px 8px}
+  .ph figcaption.pc{padding:48px 24px 24px}
+}
 </style>
 </head>
 <body>

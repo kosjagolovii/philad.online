@@ -202,6 +202,32 @@ button,input,textarea{font:inherit;color:inherit}
   .y-cards{gap:16px}
   .y-herow{gap:16px}
 }
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .yt{gap:80px;padding-block:164px 80px}
+  .y-copy{gap:16px}
+  .y-row{gap:16px}
+  .y-about{gap:48px}
+  .y-video{gap:8px}
+  .y-vtx{padding:24px 32px}
+  .y-fall{padding:8px 16px}
+  .y-soc{gap:8px}
+  .y-cards{gap:16px}
+  .y-herow{gap:8px}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .yt{gap:80px;padding-block:164px 80px}
+  .y-copy{gap:16px}
+  .y-row{gap:16px}
+  .y-about{gap:48px}
+  .y-video{gap:8px}
+  .y-vtx{padding:24px 32px}
+  .y-fall{padding:8px 16px}
+  .y-soc{gap:8px}
+  .y-cards{gap:16px}
+  .y-herow{gap:8px}
+}
 </style>
 </head>
 <body>

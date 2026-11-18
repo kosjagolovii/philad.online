@@ -29,3 +29,15 @@
   .mg-yrs{gap:6px;margin-inline:calc(var(--side) * -1);padding-inline:var(--side);scroll-snap-type:x proximity}
   .mg-yb{min-height:38px;padding:0 16px;scroll-snap-align:start}
 }
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .mg-tabrow{gap:16px}
+  .mg-line{gap:8px}
+  .mg-yb{padding:0 16px}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .mg-tabrow{gap:16px}
+  .mg-line{gap:8px}
+  .mg-yb{padding:0 16px}
+}

@@ -206,6 +206,42 @@ button{font:inherit;color:inherit}
   .cal-ev{padding:7px 8px 8px}
   .cal-none{padding:24px}
 }
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .ev{gap:80px}
+  .ev-count{margin:0 0 16px}
+  .ev-grid{gap:32px 16px}
+  .ev-reg{padding:6px 8px}
+  .ev-tags span,.ev-tags li{padding:5px 8px}
+  .ev-ctl{gap:8px}
+  .ev-lmonth{padding:48px 0 16px}
+  .ev-lmonth span{margin-left:8px}
+  .ev-lrow{padding:24px 0;row-gap:16px}
+  .ev-li{gap:8px}
+  .ev-cal{margin-top:80px;padding:32px 32px 32px}
+  .ev-cal-key{gap:16px;margin:0 0 24px}
+  .cal-c{padding:8px 8px 8px}
+  .cal-ev{padding:7px 8px 8px}
+  .cal-none{padding:24px}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .ev{gap:80px}
+  .ev-count{margin:0 0 16px}
+  .ev-grid{gap:32px 16px}
+  .ev-reg{padding:6px 8px}
+  .ev-tags span,.ev-tags li{padding:5px 8px}
+  .ev-ctl{gap:8px}
+  .ev-lmonth{padding:48px 0 16px}
+  .ev-lmonth span{margin-left:8px}
+  .ev-lrow{padding:24px 0;row-gap:16px}
+  .ev-li{gap:8px}
+  .ev-cal{margin-top:80px;padding:32px 32px 32px}
+  .ev-cal-key{gap:16px;margin:0 0 24px}
+  .cal-c{padding:8px 8px 8px}
+  .cal-ev{padding:7px 8px 8px}
+  .cal-none{padding:24px}
+}
 </style>
 </head>
 <body>
