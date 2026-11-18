@@ -44,6 +44,8 @@
   /* space */
   --gutter:50px; --gutter-m:16px; --top:30px; --bottom:40px;
   --gap-h1-info:32px; --gap-info:28px;
+  /* spacing scale (multiples of 8) — mobile rhythm, added 2026-11-18: 8 card gap/photo frame · 16 gutter, text inset, gap inside a block · 24 title→content · 40 block bottom · 64 between sections */
+  --sp-1:8px; --sp-2:16px; --sp-3:24px; --sp-4:40px; --sp-5:64px;
   --radius-card:16px;
 }
 @media (max-width:720px){
