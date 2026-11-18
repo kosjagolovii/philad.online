@@ -409,7 +409,8 @@ canvas.trail{position:fixed;inset:0;width:100%;height:100%;z-index:11;pointer-ev
   /* заголовок «Прийди й побач» — як у решти заголовків */
   .cards-head h2{font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track)}
   /* картки «життя церкви»: чисті sticky-картки, що напливають одна на одну. Жодних transform/filter/анімацій на ходу — тому без мерехтіння */
-  .lcard{top:calc((100svh - var(--ch))/2 + var(--off,0px))}
+  .life{overflow:visible!important}   /* overflow-x:clip на предку ламає sticky у Safari iOS */
+  .lcard{top:calc(88px + var(--off,0px))}
   .lcard:nth-child(2){--off:10px}
   .lcard:nth-child(3){--off:20px}
   .lcard:nth-child(4){--off:30px}
@@ -1049,7 +1050,7 @@ function stepB5(){
   const under=r=>r.top<70&&r.bottom>40;
   const ot=[lr,nx8.getBoundingClientRect(),$("footer").getBoundingClientRect()].some(under)&&!nxPale.some(c=>under(c.getBoundingClientRect()));
   if(ot!==overTeal){overTeal=ot;bar.classList.toggle("light",onLight&&!overTeal)}
-  if(lr.top>vh*1.2||lr.bottom<-vh*.2)return;
+  if(LITE||lr.top>vh*1.2||lr.bottom<-vh*.2)return;
   const rs=lcards.map(c=>c.el.getBoundingClientRect());
   const key=rs.map(r=>r.top.toFixed(1)).join()+S.b5Rot+S.b5Scale+S.b5Dark+S.b5Par;
   if(key===b5Key&&!dirty)return;b5Key=key;
