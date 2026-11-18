@@ -387,6 +387,74 @@ canvas.trail{position:fixed;inset:0;width:100%;height:100%;z-index:11;pointer-ev
   .card.invite a i{width:30px;height:30px}
   .hint{display:none}
 }
+
+/* ===== легкий режим для телефонів (hometest) ===== */
+@media (max-width:900px),(pointer:coarse){
+  /* повна висота екрана: lvh = коли панель браузера згорнута, тож знизу немає чорної смуги */
+  .stage{height:100vh;height:100lvh}
+  .services{height:100vh;height:100lvh;margin-top:0;z-index:1;padding-top:56px}   /* блок 4 іде знизу разом із прокруткою, а не проявляється під картками */
+  /* контент не ховається під панеллю браузера, коли вона розгорнута */
+  .copy{padding-bottom:calc(28px + (100lvh - 100svh) + env(safe-area-inset-bottom,0px))}
+  .services{padding-bottom:calc(30px + (100lvh - 100svh))}
+  /* декор, що мерехтить і гальмує */
+  #lines,.grain,.scan,.vignette,canvas.trail,.cursor{display:none!important}
+  #cv{filter:none!important;transform:none!important}
+  .vision,.card,.cards-head{will-change:auto}
+  .vision{transform:none!important}
+  /* перший екран: без відео-прев'ю, текст вужчий і на темнішому градієнті */
+  .play{display:none!important}
+  .wash{height:86%;background:linear-gradient(to top,rgba(20,17,15,.88),rgba(20,17,15,.62) 42%,rgba(20,17,15,.22) 72%,rgba(20,17,15,0))}
+  .row p{max-width:19.5em;flex:0 1 auto;text-wrap:balance}
+  .copy h1{text-shadow:0 2px 24px rgba(0,0,0,.35)}
+  /* заголовок «Прийди й побач» — як у решти заголовків */
+  .cards-head h2{font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track)}
+  /* картки «життя церкви»: чисті sticky-картки, що напливають одна на одну. Жодних transform/filter/анімацій на ходу — тому без мерехтіння */
+  .life{overflow:visible!important}   /* overflow-x:clip на предку ламає sticky у Safari iOS */
+  .lcard{top:calc(88px + var(--off,0px))}
+  .lcard:nth-child(2){--off:10px}
+  .lcard:nth-child(3){--off:20px}
+  .lcard:nth-child(4){--off:30px}
+  .lcard-in{will-change:auto;overflow:visible!important;clip-path:inset(0 round 16px);backface-visibility:hidden;-webkit-backface-visibility:hidden}
+  .lcard-img{overflow:visible!important;clip-path:inset(0 round 10px)}
+  .lcard-in::after{display:none}
+  .lcard-img img{top:0;height:100%;transform:none!important;will-change:auto}
+  /* картки «Прийди й побач» — окремий екран у звичайному потоці */
+  .cards-sec{position:relative;z-index:2;background:var(--ds-cream);padding:72px 16px 0;box-sizing:border-box}
+  .cards-sec .cards{position:relative;inset:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%;padding:0;pointer-events:auto;visibility:visible!important;z-index:auto}
+  .cards-sec .card{width:auto;opacity:1!important;transform:none!important}
+  .cards-sec .cards-head{opacity:1!important;transform:none!important;grid-column:1/-1;margin-bottom:12px}
+  /* текст бачення — дрібніший */
+  .vision h2{font-size:var(--h2s-size);line-height:1.22;max-width:19em}
+  /* блок 4: відео на повну ширину контенту */
+  .svc-video{width:calc(100% - 32px);max-width:none}
+  /* блок 7 стоїть на місці, блок 8 наїжджає на нього */
+  .lv{position:sticky;top:0;z-index:2}
+  /* блок «Служіння нашої церкви»: звичайний потік, квадратні картки, екран може прокручуватись */
+  .min6-wrap{height:auto;margin-top:0}
+  .min6{position:relative;height:auto;overflow:visible;padding-block:64px 40px}
+  .sgrid{grid-template-rows:none;grid-auto-rows:auto}
+  .scard{aspect-ratio:1/1}
+  /* блок «Перші кроки»: кнопка в межах картки */
+  .nx-card .lbtn{width:auto;max-width:calc(100% - 24px);box-sizing:border-box}
+  /* футер: закріплений під останнім блоком, той «сповзає» і відкриває його; якщо вмісту забагато — скрол усередині футера */
+  .end{clip-path:inset(0)}
+  .end::after{content:"";display:block;height:var(--fh,100svh)}
+  .ft,.ft.tall{position:fixed!important;left:0;right:0;top:0;bottom:auto!important;z-index:0;min-height:100vh;min-height:100svh;max-height:none!important;overflow:visible!important;box-sizing:border-box;will-change:transform}
+  .ft-in{width:100%!important;max-width:none!important;gap:44px!important}
+  .ft-top{gap:40px!important}
+  .ft-about{gap:32px!important}
+  .ft-contact{gap:20px!important}
+  .ft-nav{display:flex!important;grid-template-columns:none!important;flex-direction:column!important;flex-wrap:nowrap!important;gap:36px!important;width:100%}
+  .ft-col{width:100%!important;min-width:0!important;gap:12px!important}
+  .ft-col ul{display:grid!important;gap:0!important}
+  .ft-col a{min-height:40px;font-size:var(--t1-size)}
+  /* блок 7: на всю ширину контентної області */
+  .lv-row{width:100%!important}
+}
+@media (max-width:900px),(pointer:coarse){
+  .lcard:nth-child(2) .lcard-in{transform:rotate(-2deg)}
+  .lcard:nth-child(3) .lcard-in{transform:rotate(2deg)}
+}
 @media (prefers-reduced-motion:reduce){.reveal,.svc-video.reveal{opacity:1;transform:none;transition:none}.hint i{animation:none}.tuner{transition:none}}
 </style>
 
@@ -703,6 +771,8 @@ const cv=$("cv"),ctx=cv.getContext("2d"),lc=$("lines"),lx=lc.getContext("2d");
 const track=$("track"),stage=$("stage"),copy=$("copy"),hint=$("hint"),wash=$("wash");
 const grain=$("grain"),scan=$("scan"),vignette=$("vignette"),load=$("load"),loadBar=$("loadBar");
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const LITE=matchMedia("(max-width:900px), (pointer:coarse)").matches;
+if(LITE)document.documentElement.classList.add("lite");
 const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
 
 /* ---------- frames (WebP, lighter set on small screens) ---------- */
@@ -711,7 +781,8 @@ const small=Math.min(screen.width,screen.height)<=820&&innerWidth<900;
 const dir=small?"f/m/":"f/d/";
 const img=src=>{const i=new Image();i.decoding="async";i.src=src;return i};
 const ok=i=>i&&i.complete&&i.naturalWidth>0;
-const start=img(small?"start-m.webp":"start.webp"),end=img(small?"end-m.webp":"end.webp");
+const start=img(LITE||!small?"start.webp":"start-m.webp"),end=img(LITE||!small?"end.webp":"end-m.webp");
+let shiftX=0;
 const frames=new Array(N);let loaded=0;
 function loadFrame(i){
   if(frames[i])return;
@@ -742,7 +813,8 @@ function cover(im,alpha=1){
   if(!ok(im))return false;
   const s=Math.max(cv.width/im.naturalWidth,cv.height/im.naturalHeight);
   const w=im.naturalWidth*s,h=im.naturalHeight*s;
-  ctx.globalAlpha=alpha;ctx.drawImage(im,(cv.width-w)/2,(cv.height-h)/2,w,h);ctx.globalAlpha=1;return true;
+  let ox=(cv.width-w)/2;if(LITE&&shiftX)ox=Math.min(0,Math.max(cv.width-w,ox+shiftX));
+  ctx.globalAlpha=alpha;ctx.drawImage(im,ox,(cv.height-h)/2,w,h);ctx.globalAlpha=1;return true;
 }
 
 /* ---------- video frame ---------- */
@@ -754,6 +826,7 @@ function drawVideo(p){
   }
   const t=clamp((p-S.flyFrom)/Math.max(.01,S.flyTo-S.flyFrom));
   const x=t*(N-1),i=Math.floor(x),f=x-i;
+  shiftX=LITE?.1*cv.width*clamp((t-.55)/.45):0;
   const a=ok(frames[i])?frames[i]:nearest(i,-1),b=ok(frames[i+1])?frames[i+1]:null;
   if(!a&&!cover(start))return;
   if(a)cover(a);
@@ -848,6 +921,7 @@ function stepGrain(dt){
 
 /* ---------- apply settings ---------- */
 function apply(){
+  if(LITE){S.b3ExitVh=0;S.b3Vh=1}
   track.style.height=(S.trackVh+S.visVh+S.b3Vh+S.b3ExitVh)+"vh";
   const tiles=tilesFor(S.grainType);grainI%=tiles.length;
   grain.style.backgroundImage=tiles[grainI];
@@ -855,7 +929,7 @@ function apply(){
   grain.style.backgroundSize=`${S.grainSize}px ${S.grainSize}px`;
   grain.style.opacity=S.grainOpacity;grain.style.mixBlendMode=S.grainBlend;
   scan.style.opacity=S.scanOpacity;vignette.style.opacity=S.vignette;
-  cv.style.filter=`contrast(${S.contrast}) saturate(${S.saturate}) brightness(${S.brightness})`;
+  if(!LITE)cv.style.filter=`contrast(${S.contrast}) saturate(${S.saturate}) brightness(${S.brightness})`;
   seed();dirty=true;target=progress();
   vqShown=q3Shown=-1;   // re-render blocks 2 and 3 with the new settings
 }
@@ -887,13 +961,12 @@ function frame(now){
     hint.style.opacity=1-clamp(cur/.03);wash.style.opacity=1-c*.75;
     drawVideo(cur);dirty=false;
   }
-  drawLines(dt,vel,cur);
+  if(!LITE)drawLines(dt,vel,cur);
   stepVision(dt);
   stepB3(dt);
   stepB5();
   stepB8();
-  stepCursor(dt);
-  stepGrain(dt);
+  if(!LITE){stepCursor(dt);stepGrain(dt)}
   if(ver.mode==="scrub")stepSnap(now);
   requestAnimationFrame(frame);
 }
@@ -909,10 +982,10 @@ function stepVision(dt){
   if(Math.abs(want-vq)<.0005)vq=want;
   if(vq===vqShown&&!dirty)return;vqShown=vq;
   const e=vq*vq*(3-2*vq);
-  const z=reduce?0:S.visZoom*e;
+  const z=reduce||LITE?0:S.visZoom*e;
   cv.style.transform=z?`scale(${(1+z).toFixed(4)})`:"";
-  cv.style.filter=`contrast(${S.contrast}) saturate(${S.saturate}) brightness(${S.brightness})`+(e>.001?` blur(${(S.visBlur*e).toFixed(2)}px)`:"");
-  dim.style.opacity=(S.visDark*e).toFixed(3);
+  if(!LITE)cv.style.filter=`contrast(${S.contrast}) saturate(${S.saturate}) brightness(${S.brightness})`+(e>.001?` blur(${(S.visBlur*e).toFixed(2)}px)`:"");
+  dim.style.opacity=(LITE?Math.max(S.visDark,.78)*Math.min(1,e*2):S.visDark*e).toFixed(3);
   // the text comes up from below once the photo has started to soften
   const t=clamp((vq-S.visText)/Math.max(.05,1-S.visText-.15));visTe=1-Math.pow(1-t,3);
 }
@@ -931,6 +1004,7 @@ const paper=$("paper"),cards=$("cards"),cardEls=[...cards.querySelectorAll(".car
 let q3=0,q3Shown=-1,b3xShown=-1,onLight=false;
 function stepB3(dt){
   const r=track.getBoundingClientRect(),te=visTe;
+  if(LITE){vision.style.opacity=te.toFixed(3);vision.style.visibility=te>0?"visible":"hidden";vision.style.transform="";const cs=document.getElementById("cardsSec");onLight=cs.getBoundingClientRect().top<70;bar.classList.toggle("light",onLight&&!overTeal);return}
   const want=clamp((-r.top-flightPx()-visPx())/(b3Px()*.75));
   q3+=(want-q3)*clamp(S.smooth*1.5*dt*60);
   if(Math.abs(want-q3)<.0005)q3=want;
@@ -939,9 +1013,9 @@ function stepB3(dt){
   const op=te*fade;
   vision.style.opacity=op.toFixed(3);
   vision.style.visibility=op>0?"visible":"hidden";
-  vision.style.transform=reduce?"":`translate3d(0,${((1-te)*S.visRise-up).toFixed(2)}vh,0)`;
+  vision.style.transform=reduce||LITE?"":`translate3d(0,${((1-te)*S.visRise-up).toFixed(2)}vh,0)`;
   // exit: the cards leave through the top in the same staggered way while block 4 shows through from beneath
-  const x=clamp((-r.top-flightPx()-visPx()-b3Px())/exitPx());
+  const x=LITE?0:clamp((-r.top-flightPx()-visPx()-b3Px())/exitPx());
   if(q3===q3Shown&&x===b3xShown&&!dirty)return;q3Shown=q3;b3xShown=x;
   const pe=clamp(q3/S.b3Paper),pp=pe*pe*(3-2*pe);
   paper.style.opacity=pp.toFixed(3);
@@ -952,7 +1026,7 @@ function stepB3(dt){
     const t=clamp((q3-S.b3CardsAt-i*S.b3Stagger)/S.b3CardDur),e=1-Math.pow(1-t,3);
     const tx=clamp((x*S.b3Exit-i*S.b3Stagger)/S.b3CardDur),o=tx*tx;
     c.style.opacity=(e*(1-o)).toFixed(3);
-    c.style.transform=reduce?"":`translate3d(0,${((1-e)*S.b3Rise-o*S.b3Rise).toFixed(2)}vh,0) scale(${(.94+.06*e-.04*o).toFixed(4)})`;
+    c.style.transform=reduce||LITE?"":`translate3d(0,${((1-e)*S.b3Rise-o*S.b3Rise).toFixed(2)}vh,0) scale(${(.94+.06*e-.04*o).toFixed(4)})`;
     if(e>.95)shown++;
   });
   if(cardsHead){cardsHead.style.opacity=cardEls[0].style.opacity;cardsHead.style.transform=cardEls[0].style.transform}   // заголовок блоку з’являється й зникає разом із першою карткою
@@ -961,7 +1035,7 @@ function stepB3(dt){
   const g=clamp((x-.1)/.75),ge=g*g*(3-2*g);
   ghost4.style.opacity=ge.toFixed(3);ghost4.style.visibility=ge>0?"visible":"hidden";
   ghost4.style.pointerEvents=ge>.5&&!stageGone?"auto":"none";   // the video is clickable as soon as it shows, not only once the scene lets go
-  ghost4.style.transform=reduce?"":`translate3d(0,${((1-ge)*3).toFixed(2)}vh,0)`;
+  ghost4.style.transform=reduce||LITE?"":`translate3d(0,${((1-ge)*3).toFixed(2)}vh,0)`;
   cards.dataset.off=q3>0?"0":"1";
   cards.style.visibility=q3>0?"visible":"hidden";
 }
@@ -975,13 +1049,13 @@ const nxPale=[...nx8.querySelectorAll(".nx-card")];
 function stepB5(){
   const lr=life.getBoundingClientRect();
   // once the scene lets go, hide it: otherwise its copy of block 4 scrolls away over the real, pinned one
-  const gone=track.getBoundingClientRect().bottom<=vh+1;
+  const gone=track.getBoundingClientRect().bottom<=(LITE?0:vh+1);
   if(gone!==stageGone){stageGone=gone;stage.style.opacity=gone?"0":"";stage.style.pointerEvents=gone?"none":"";if(gone)ghost4.style.pointerEvents="none";else b3xShown=-1}
   // teal sections want the light logo — unless a pale block 8 card is the thing actually under the header
   const under=r=>r.top<70&&r.bottom>40;
   const ot=[lr,nx8.getBoundingClientRect(),$("footer").getBoundingClientRect()].some(under)&&!nxPale.some(c=>under(c.getBoundingClientRect()));
   if(ot!==overTeal){overTeal=ot;bar.classList.toggle("light",onLight&&!overTeal)}
-  if(lr.top>vh*1.2||lr.bottom<-vh*.2)return;
+  if(LITE||lr.top>vh*1.2||lr.bottom<-vh*.2)return;
   const rs=lcards.map(c=>c.el.getBoundingClientRect());
   const key=rs.map(r=>r.top.toFixed(1)).join()+S.b5Rot+S.b5Scale+S.b5Dark+S.b5Par;
   if(key===b5Key&&!dirty)return;b5Key=key;
@@ -989,10 +1063,10 @@ function stepB5(){
     const r=rs[i],n=rs[i+1];
     // 0 → the next card is a full card below, 1 → it lies exactly on top
     const p=n?clamp(1-(n.top-r.top)/(r.height+14)):0,e=p*p*(3-2*p);
-    c.inn.style.transform=reduce||!e?"":`rotate(${(c.dir*S.b5Rot*e).toFixed(3)}deg) scale(${(1-S.b5Scale*e).toFixed(4)})`;
+    c.inn.style.transform=reduce||LITE||!e?"":`rotate(${(c.dir*S.b5Rot*e).toFixed(3)}deg) scale(${(1-S.b5Scale*e).toFixed(4)})`;
     c.inn.style.setProperty("--dk",(S.b5Dark*e).toFixed(3));
     const t=clamp(((r.top+r.height/2)-vh/2)/vh,-1,1);
-    c.img.style.transform=reduce?"":`translate3d(0,${(-t*S.b5Par).toFixed(2)}%,0)`;
+    c.img.style.transform=reduce||LITE?"":`translate3d(0,${(-t*S.b5Par).toFixed(2)}%,0)`;
   });
 }
 
@@ -1068,7 +1142,7 @@ function stepB8(){
   nxCards.forEach((c,i)=>{
     const e=1-Math.pow(1-ps[i],3);
     c.style.opacity=reduce?"":e.toFixed(3);
-    c.style.transform=reduce?"":`translate3d(0,${((1-e)*S.b3Rise).toFixed(2)}vh,0) scale(${(.94+.06*e).toFixed(4)})`;
+    c.style.transform=reduce||LITE?"":`translate3d(0,${((1-e)*S.b3Rise).toFixed(2)}vh,0) scale(${(.94+.06*e).toFixed(4)})`;
   });
 }
 
@@ -1159,11 +1233,13 @@ addEventListener("keydown",e=>{
   if((down||up)&&intent(down?99:-99))e.preventDefault();
 });
 // scrollbar drags and anything else that moves the page
+let lastIn=0;const loadT=performance.now();["touchstart","touchmove","touchend","wheel","keydown","mousedown","pointerdown"].forEach(n=>addEventListener(n,()=>{lastIn=performance.now()},{passive:true,capture:true}));
 addEventListener("scroll",()=>{
   if(ver.mode!=="auto"||reduce||auto.anim)return;
   const [top,end]=ends();
-  if(auto.state==="start"&&scrollY>top+4)playTo(1);
-  else if(auto.state==="end"&&S.autoReverse&&scrollY<end-4)playTo(0);
+  const noInput=LITE&&performance.now()-lastIn>1500;
+  if(auto.state==="start"&&scrollY>top+4){if(noInput){if(performance.now()-loadT<8000&&scrollY<(top+end)/2)scrollTo(0,top);return}playTo(1)}
+  else if(auto.state==="end"&&S.autoReverse&&scrollY<end-4){if(noInput)return;playTo(0)}
 },{passive:true});
 
 /* ---------- tuner UI ---------- */
@@ -1384,6 +1460,8 @@ vid.addEventListener("click",e=>{if(e.target===vid)vid.close()});
 
 /* ---------- go ---------- */
 buildTuner();size();sizeTrail();apply();
+if(LITE){const ft=document.querySelector(".ft"),endEl=document.querySelector(".end"),hold=document.querySelector(".nx-hold");let tick=0;const fit=()=>{endEl.style.setProperty("--fh",Math.max(ft.offsetHeight,innerHeight)+"px");pos()};const pos=()=>{const over=Math.max(0,-hold.getBoundingClientRect().bottom),max=Math.max(0,ft.offsetHeight-innerHeight);ft.style.transform="translate3d(0,"+(-Math.min(over,max))+"px,0)"};addEventListener("scroll",()=>{if(!tick){tick=requestAnimationFrame(()=>{tick=0;pos()})}},{passive:true});addEventListener("resize",fit);addEventListener("load",fit);setTimeout(fit,800);setTimeout(fit,2500);fit()}
+if(LITE){const sec=document.createElement("section");sec.className="cards-sec";sec.id="cardsSec";sec.setAttribute("aria-label","Прийди й побач");track.after(sec);sec.append(cards);cards.dataset.off="0"}
 if(ver.mode==="auto")resetAuto();else cur=prevCur=target=progress();
 addEventListener("resize",()=>{size();sizeTrail();apply()});
 requestAnimationFrame(frame);
