@@ -182,6 +182,19 @@ img[src$="/doc.webp"],img[src$="/xmas99.webp"],img[src$="/bap1.webp"],img[src$="
   .gal-n{padding:7px 8px}
   .ph figcaption.pc{padding:48px 24px 24px}
 }
+
+/* відео: плеєр YouTube вантажиться лише після кліку */
+.vc{display:grid;gap:12px;align-content:start;padding:0;border:0;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.vc-ph{position:relative;display:block;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:var(--sand)}
+.vc-ph img,.vc-ph iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.vc-ph img{transition:scale 1.1s cubic-bezier(.2,.7,.2,1)}.vc:hover .vc-ph img{scale:1.04}
+.vc-ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,20,20,.28))}.vc.on .vc-ph::after{display:none}
+.vc-play{position:absolute;z-index:1;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--teal);box-shadow:0 10px 26px -8px rgba(40,105,122,.7);transition:scale .35s cubic-bezier(.2,.7,.2,1)}
+.vc-play::after{content:"";position:absolute;left:25px;top:20px;border-left:17px solid var(--ds-cream);border-block:12px solid transparent}
+.vc:hover .vc-play,.vc:focus-visible .vc-play{scale:1.1}.vc:focus-visible{outline:2px solid var(--teal);outline-offset:4px;border-radius:20px}
+.vc-t{font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track)}
+.vc-d{margin-left:8px;font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);color:rgba(20,20,20,.5)}
+@media (max-width:640px){.vc-play{width:54px;height:54px;margin:-27px 0 0 -27px}.vc-play::after{left:21px;top:16px;border-left-width:15px;border-block-width:11px}}
 </style>
 </head>
 <body>
@@ -190,10 +203,10 @@ img[src$="/doc.webp"],img[src$="/xmas99.webp"],img[src$="/bap1.webp"],img[src$="
   <div class="top rv"><p class="kicker" data-k="kicker">Історія</p><h1>Історія церкви<br><span>«Філадельфія»</span></h1></div>
   <div class="tl"><div class="ln"><i></i></div><div class="dot"></div>
 <article class="it rv hc hy"><span class="nd"></span><div class="yc"><p class="yr" data-k="e1y">1991</p></div><div class="bd"><p class="chp" data-k="e1c">Контекст</p><h3 data-k="e1t">70 років комунізму</h3><p class="sub" data-k="e1s">Залишили по собі порожнечу, але прагнення до істини не згасло</p><div class="im n1"><figure class="ph"><img src="/history/img/news.webp" alt="70 років комунізму" loading="lazy" decoding="async"></figure></div></div></article>
-<article class="it rv"><span class="nd"></span><div class="yc"><span class="yd"></span></div><div class="bd"><h3 data-k="e2t">Люди шукали живу віру</h3><p class="sub" data-k="e2s">Прагнучи знайти Бога</p><div class="im n2"><figure class="ph"><img src="/history/img/queue.webp" alt="Люди шукали живу віру" loading="lazy" decoding="async"></figure><figure class="ph"><img src="/history/img/crowd.webp" alt="Люди шукали живу віру" loading="lazy" decoding="async"></figure></div><div class="vid"><span class="vid-play"></span><span class="vid-t">Відео · 2:03</span><span class="vid-s">з’явиться незабаром</span></div></div></article>
-<article class="it rv hc hy"><span class="nd"></span><div class="yc"><p class="yr" data-k="e3y">31 жовтня 1992</p></div><div class="bd"><p class="chp" data-k="e3c">Створення</p><h3 data-k="e3t">Євангелізація в Палаці спорту</h3><p class="sub" data-k="e3s">Віктор Прохор та Уолтер Зігаревич організували євангелізацію в Палаці спорту</p><div class="im n1"><figure class="ph"><img src="/history/img/palace.webp" alt="Євангелізація в Палаці спорту" loading="lazy" decoding="async"></figure></div><div class="vid"><span class="vid-play"></span><span class="vid-t">Відео · 1:48</span><span class="vid-s">з’явиться незабаром</span></div></div></article>
+<article class="it rv"><span class="nd"></span><div class="yc"><span class="yd"></span></div><div class="bd"><h3 data-k="e2t">Люди шукали живу віру</h3><p class="sub" data-k="e2s">Прагнучи знайти Бога</p><div class="im n2"><figure class="ph"><img src="/history/img/queue.webp" alt="Люди шукали живу віру" loading="lazy" decoding="async"></figure><figure class="ph"><img src="/history/img/crowd.webp" alt="Люди шукали живу віру" loading="lazy" decoding="async"></figure></div><button type="button" class="vc" data-yt="nVKrIy1Hdh4" aria-label="Дивитись відео: 25 років історії · Частина перша"><span class="vc-ph"><img src="/history/img/vid-s1.webp" alt="" width="960" height="540" loading="lazy" decoding="async"><span class="vc-play"></span></span><span><span class="vc-t">25 років історії · Частина перша</span><span class="vc-d">11:02</span></span></button></div></article>
+<article class="it rv hc hy"><span class="nd"></span><div class="yc"><p class="yr" data-k="e3y">31 жовтня 1992</p></div><div class="bd"><p class="chp" data-k="e3c">Створення</p><h3 data-k="e3t">Євангелізація в Палаці спорту</h3><p class="sub" data-k="e3s">Віктор Прохор та Уолтер Зігаревич організували євангелізацію в Палаці спорту</p><div class="im n1"><figure class="ph"><img src="/history/img/palace.webp" alt="Євангелізація в Палаці спорту" loading="lazy" decoding="async"></figure></div><button type="button" class="vc" data-yt="_DPaCDGjscM" aria-label="Дивитись відео: 25 років історії · Частина друга"><span class="vc-ph"><img src="/history/img/vid-s2.webp" alt="" width="960" height="540" loading="lazy" decoding="async"><span class="vc-play"></span></span><span><span class="vc-t">25 років історії · Частина друга</span><span class="vc-d">14:27</span></span></button></div></article>
 <article class="it rv"><span class="nd"></span><div class="yc"><span class="yd"></span></div><div class="bd"><h3 data-k="e4t">Без фінансів і гарантій</h3><p class="sub" data-k="e4s">Але з великою вірою</p><div class="im n1"><figure class="ph"><img src="/history/img/three.webp" alt="Без фінансів і гарантій" loading="lazy" decoding="async"></figure></div></div></article>
-<article class="it rv"><span class="nd"></span><div class="yc"><span class="yd"></span></div><div class="bd"><h3 data-k="e5t">Народилася нова спільнота</h3><p class="sub" data-k="e5s">У самому залі звучала Євангелія, пісні та заклик до покаяння. Того вечора народилася нова спільнота</p><div class="im n2"><figure class="ph"><img src="/history/img/stage.webp" alt="Народилася нова спільнота" loading="lazy" decoding="async"></figure><figure class="ph"><img src="/history/img/cry.webp" alt="Народилася нова спільнота" loading="lazy" decoding="async"></figure></div><div class="vid"><span class="vid-play"></span><span class="vid-t">Відео · 5:03</span><span class="vid-s">з’явиться незабаром</span></div></div></article>
+<article class="it rv"><span class="nd"></span><div class="yc"><span class="yd"></span></div><div class="bd"><h3 data-k="e5t">Народилася нова спільнота</h3><p class="sub" data-k="e5s">У самому залі звучала Євангелія, пісні та заклик до покаяння. Того вечора народилася нова спільнота</p><div class="im n2"><figure class="ph"><img src="/history/img/stage.webp" alt="Народилася нова спільнота" loading="lazy" decoding="async"></figure><figure class="ph"><img src="/history/img/cry.webp" alt="Народилася нова спільнота" loading="lazy" decoding="async"></figure></div></div></article>
 <article class="it rv"><span class="nd"></span><div class="yc"><span class="yd"></span></div><div class="bd"><h3 data-k="e6t">Не маючи приміщення</h3><p class="sub" data-k="e6s">тоді збиралися в бібліотеці Вернадського</p><div class="im n1"><figure class="ph"><img src="/history/img/library.webp" alt="Не маючи приміщення" loading="lazy" decoding="async"></figure></div></div></article>
 <article class="it rv hc hy"><span class="nd"></span><div class="yc"><p class="yr" data-k="e7y">Травень 1993</p></div><div class="bd"><p class="chp" data-k="e7c">Історія</p><h3 data-k="e7t">Перше водне хрещення</h3><p class="sub" data-k="e7s">Тоді у басейні хрестили 27 людей</p><div class="im n2"><figure class="ph"><img src="/history/img/bap1.webp" alt="Перше водне хрещення" loading="lazy" decoding="async"></figure><figure class="ph"><img src="/history/img/bap3.webp" alt="Перше водне хрещення" loading="lazy" decoding="async"></figure></div></div></article>
 <article class="it rv hy"><span class="nd"></span><div class="yc"><p class="yr" data-k="e8y">13 квітня 1994</p></div><div class="bd"><h3 data-k="e8t">Заснування церкви</h3><p class="sub" data-k="e8s">Після першого служіння було засновано церкву</p><div class="im n1"><figure class="ph"><img src="/history/img/doc.webp" alt="Заснування церкви" loading="lazy" decoding="async"></figure></div></div></article>
@@ -265,6 +278,15 @@ img[src$="/doc.webp"],img[src$="/xmas99.webp"],img[src$="/bap1.webp"],img[src$="
   const open=fig=>{const grp=fig.closest(".gal,.im")||fig;const figs=grp===fig?[fig]:[...grp.querySelectorAll(".ph")];PhiladLightbox.open(figs.map(f=>f.querySelector("img")),figs.indexOf(fig))};
   document.addEventListener("click",e=>{const f=e.target.closest(".tl .ph,.ph.wide");if(f&&!e.target.closest("[contenteditable]"))open(f)});
   document.querySelectorAll(".gal").forEach(g=>g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open(g.querySelector(".ph"))}}));
+})();
+</script>
+<script>
+(()=>{
+  document.addEventListener("click",e=>{const b=e.target.closest(".vc[data-yt]");if(!b)return;
+    const ph=b.querySelector(".vc-ph"),f=document.createElement("iframe");
+    f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.yt+"?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+    f.title=b.getAttribute("aria-label").replace("Дивитись відео: ","");f.allow="autoplay; encrypted-media; picture-in-picture; fullscreen";f.allowFullscreen=true;
+    ph.replaceChildren(f);b.classList.add("on");b.removeAttribute("data-yt")});
 })();
 </script>
 </body>
