@@ -16,7 +16,7 @@ window.PHILAD_MIN=[
   {id:"youth",page:"/project/philadyouth/",hero:"youth/hero.webp",name:"Молодіжне служіння",cat:"young",text:"Молодь 16–25 років: зустрічі, дружба, служіння і чесні розмови про віру та життя."},
   {id:"prayer",lead:"Анатолій Фещенко",leadRole:"Лідер служіння",leadNote:"Старший пастор",leadPhoto:"min/leaders/feshchenko-prayer.webp",name:"Молитовне служіння",cat:"pray",text:"Молимося за церкву, за людей, які просять про молитву, і за Україну. Долучитися може кожен."},
   {id:"wednesday",name:"Вечірнє служіння по середах",cat:"pray",lead:"Регіональний служитель",text:"Зібрання посеред тижня: Слово, молитва і спілкування, щоб не чекати неділі."},
-  {id:"night",lead:"Андрій Лещук",leadRole:"Лідер служіння",leadPhoto:"min/leaders/teens.webp",name:"Нічні молитви",cat:"young",text:"Нічні молитовні зустрічі молоді — час, коли без поспіху шукаємо Бога разом."},
+  {id:"night",lead:"Андрій Лещук",leadRole:"Лідер служіння",leadPhoto:"min/leaders/teens.webp",name:"Нічні молитви",cat:"pray",text:"Нічні молитовні зустрічі молоді — час, коли без поспіху шукаємо Бога разом."},
   {id:"vpb",name:"Вечір Пошуку Бога (ВПБ)",cat:"pray",lead:"Шашлов Андрій",leadPhoto:"min/leaders/vpb.webp",text:"Вечір поклоніння і молитви, на якому разом шукаємо Бога."},
   {id:"homegroups",name:"Домашні групи",cat:"family",lead:"Лідери домашніх груп у своїх районах",href:"/domashnie-gruppy/",text:"Невеликі групи по всьому Києву, де разом читають Біблію, моляться і підтримують одне одного."},
   {id:"worship",name:"Служіння прославлення",cat:"pray",lead:"Тимофій Ярошевич",leadRole:"Лідер прославлення",leadPhoto:"min/leaders/worship.webp",text:"Музиканти і вокалісти, які ведуть церкву в поклонінні на богослужіннях."},
