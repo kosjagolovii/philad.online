@@ -694,7 +694,7 @@ const BASE={
   trackVh:300, smooth:.1, flyFrom:.04, flyTo:.86, copyFade:.2,
   snapOn:true, snapVh:1.5, snapDelay:140, snapDur:1000,
   linesOn:true, linesCount:300, linesSpeed:.75, linesLength:1, linesWidth:2, linesOpacity:.75,
-  linesBase:0, linesGain:1, linesFlightOnly:true, linesCx:50, linesCy:50, linesDecay:.9,
+  linesBase:0, linesGain:1, linesFlightOnly:true, linesDecay:.9,
   visVh:180, visDark:.45, visBlur:14, visZoom:.08, visRise:30, visText:.25,
   b3Vh:130, b3TextUp:70, b3Paper:.5, b3CardsAt:.04, b3Stagger:.06, b3CardDur:.45, b3Rise:70, b3Exit:1, b3ExitVh:90,
   b5Rot:2.5, b5Scale:.06, b5Dark:.35, b5Par:8,
@@ -755,10 +755,7 @@ const GROUPS=[
     ["linesDecay","Затухання",.5,.99,.01],
     "Форма",
     ["linesLength","Довжина",.2,4,.05],
-    ["linesWidth","Товщина, px",.3,4,.1],
-    "Точка розльоту",
-    ["linesCx","Центр X, %",0,100,1],
-    ["linesCy","Центр Y, %",0,100,1]]],
+    ["linesWidth","Товщина, px",.3,4,.1]]],
   ["Текстура",[
     ["grainType","Тип текстури","select",Object.keys(TEXTURES)],
     ["grainBlend","Накладання","select",["overlay","soft-light","screen","multiply","normal"]],
@@ -846,17 +843,23 @@ if(LITE)document.documentElement.classList.add("lite");
 const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
 
 /* ---------- frames (WebP, lighter set on small screens) ---------- */
-const N=65;
+const N=97;
 const small=Math.min(screen.width,screen.height)<=820&&innerWidth<900;
 const dir=small?"f/m/":"f/d/";
 const img=src=>{const i=new Image();i.decoding="async";i.src=src;return i};
 const ok=i=>i&&i.complete&&i.naturalWidth>0;
-const start=img(LITE||!small?"start.webp":"start-m.webp"),end=img(LITE||!small?"end.webp":"end-m.webp");
+const start=img(LITE||!small?"start.webp?v=20261128":"start-m.webp?v=20261128"),end=img(LITE||!small?"end.webp":"end-m.webp");
 let shiftX=0;
+/* куди «летить» камера: група людей на сходах церкви, ключові кадри [кадр, x, y] у частках зображення */
+const FOCAL=[[0,.46,.47],[21,.46,.58],[40,.44,.60],[56,.46,.58],[73,.47,.58],[96,.47,.58]];
+function focalAt(x){
+  for(let i=1;i<FOCAL.length;i++){const a=FOCAL[i-1],b=FOCAL[i];
+    if(x<=b[0]||i===FOCAL.length-1){const u=clamp((x-a[0])/(b[0]-a[0]));return[a[1]+(b[1]-a[1])*u,a[2]+(b[2]-a[2])*u]}}
+}
 const frames=new Array(N);let loaded=0;
 function loadFrame(i){
   if(frames[i])return;
-  const im=img(`${dir}${String(i).padStart(3,"0")}.webp`);frames[i]=im;
+  const im=img(`${dir}${String(i).padStart(3,"0")}.webp?v=20261128`);frames[i]=im;
   im.onload=()=>{loaded++;loadBar.style.width=(loaded/N*100)+"%";if(loaded>=N)load.style.opacity=0;dirty=true};
 }
 // coarse pass first so any scroll position has a nearby frame, then fill the gaps
@@ -902,7 +905,7 @@ function drawVideo(p){
   if(a)cover(a);
   if(b&&f>0)cover(b,f);           // blend neighbours so 65 frames scrub smoothly
   if(t<.06)cover(start,1-t/.06);   // sharp stills over the soft video at both ends
-  if(t>.94)cover(end,(t-.94)/.06);
+  if(t>.9)cover(end,(t-.9)/.1);
 }
 
 /* ---------- speed lines ---------- */
@@ -924,7 +927,11 @@ function drawLines(dt,vel,p){
   // rise fast, fall by the decay setting
   energy=want>energy?energy+(want-energy)*.35:energy*Math.pow(S.linesDecay,dt*60);
   if(energy<.004)return;
-  const W=lc.width,H=lc.height,cx=W*S.linesCx/100,cy=H*S.linesCy/100;
+  const W=lc.width,H=lc.height;
+  // лінії розходяться з точки, яка їде разом із кадром: переводимо її з координат відео в координати полотна
+  const [fx,fy]=focalAt(clamp((p-S.flyFrom)/Math.max(.01,S.flyTo-S.flyFrom))*(N-1));
+  const iw=Math.max(W,H*16/9),ih=Math.max(H,W*9/16);
+  const cx=(W-iw)/2+fx*iw,cy=(H-ih)/2+fy*ih;
   const R=Math.hypot(Math.max(cx,W-cx),Math.max(cy,H-cy));
   const k=lc.width/vw;
   lx.lineCap="round";lx.strokeStyle="#fff";
