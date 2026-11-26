@@ -70,6 +70,11 @@ h2{font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:
 .say .kicker{grid-column:1/2;padding-top:.9em}
 .say-big{grid-column:2/5;font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track);text-wrap:pretty}
 .say-big span{color:rgba(20,20,20,.42)}
+.say-big .hint{position:relative;color:inherit;outline:none}
+.say-big .hint-t{position:absolute;left:50%;bottom:calc(100% + 10px);z-index:5;width:max-content;max-width:min(260px,70vw);padding:9px 14px;border-radius:12px;background:#fff;color:var(--night,#14110F);box-shadow:0 10px 28px rgba(20,17,15,.16),0 2px 6px rgba(20,17,15,.08);font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);text-decoration:none;text-wrap:balance;opacity:0;visibility:hidden;transform:translate(calc(-50% + var(--dx,0px)),6px);transition:opacity .2s ease,transform .25s cubic-bezier(.2,.7,.2,1),visibility .2s;pointer-events:none}
+.say-big .hint-t::after{content:"";position:absolute;left:calc(50% - var(--dx,0px));top:100%;width:10px;height:10px;background:#fff;box-shadow:3px 3px 6px rgba(20,17,15,.07);transform:translate(-50%,-5px) rotate(45deg);border-radius:2px}
+.say-big .hint:hover .hint-t,.say-big .hint:focus-visible .hint-t,.say-big .hint:focus .hint-t{opacity:1;visibility:visible;transform:translate(calc(-50% + var(--dx,0px)),0)}
+@media (prefers-reduced-motion:reduce){.say-big .hint-t{transition:none}}
 .say-cols{grid-column:2/5;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 40px}
 .wide{aspect-ratio:21/9;border-radius:20px;overflow:hidden;background:var(--sand)}
 .wide img{width:100%;height:100%;object-fit:cover;object-position:50% 64%}
@@ -169,6 +174,71 @@ h2{font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:
   .con dl{gap:24px}
   .con-l{gap:0 16px;margin:16px 0 0}
 }
+
+/* --- УЦХВЄ: належність до братерства --- */
+.uc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 14px}
+.uc .kicker{grid-column:1/2;padding-top:.9em}
+.uc-card{grid-column:2/5;display:grid;gap:40px;padding:clamp(28px,3.4vw,48px);border-radius:20px;background:var(--card)}
+.uc-logo{display:block;width:auto;height:56px}
+.uc-card h2{max-width:900px;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track);text-wrap:balance}
+.uc-lead{margin:0;max-width:760px;font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);color:var(--soft);text-wrap:pretty}
+.uc-st{margin:0;padding:24px 0 0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 32px;border-top:1px solid var(--line)}
+.uc-st b{display:block;font:var(--d1-weight) var(--d1-size)/var(--d1-lh) var(--font);letter-spacing:var(--d1-track);color:var(--teal)}
+.uc-st span{display:block;margin-top:8px;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:var(--mute)}
+.uc-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 40px}
+.uc-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px}
+.uc-foot a{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);color:var(--teal-ink);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.uc-foot small{font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);color:var(--mute)}
+@media (max-width:900px),(pointer:coarse){.uc-foot a{display:inline-flex;align-items:center;min-height:40px}}
+@media (max-width:1000px){.uc .kicker,.uc-card{grid-column:1/-1}.uc .kicker{padding-top:0}}
+@media (max-width:720px){
+  .uc{gap:16px}.uc-card{gap:24px;border-radius:16px}
+  .uc-logo{height:44px}
+  .uc-st{grid-template-columns:minmax(0,1fr);gap:16px}
+  .uc-st li{display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);align-items:center;gap:16px}
+  .uc-st b{font-size:var(--h2s-size);min-width:5.2em}.uc-st span{margin-top:0}
+  .uc-cols{grid-template-columns:minmax(0,1fr);gap:16px}
+}
+
+/* --- v2: гасло, бачення, пункти місії, цінності --- */
+.slo{position:relative;isolation:isolate;overflow:hidden;border-radius:20px;min-height:clamp(480px,48vw,720px);display:flex;align-items:flex-end;padding:clamp(24px,3.4vw,48px);color:var(--ds-cream);background:var(--night,#14110F)}
+.slo>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.slo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(20,17,15,.72),rgba(20,17,15,.38) 55%,rgba(20,17,15,.28))}
+.slo-a{display:grid;gap:20px;max-width:880px}
+.slo h2{font:var(--d1-weight) var(--d1-size)/var(--d1-lh) var(--font);letter-spacing:var(--d1-track);text-wrap:balance}
+.slo-b{display:grid;gap:8px;max-width:620px}
+.slo-v{margin:0;font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);color:rgba(247,242,232,.92);text-wrap:pretty}
+.slo-r{margin:0;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);color:rgba(247,242,232,.72)}
+/* таби: бачення · місія · цінності */
+.tb{display:grid;justify-items:center;gap:48px}
+.tb-bar{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:var(--card)}
+.tb-bar button{appearance:none;border:0;cursor:pointer;padding:12px 24px;border-radius:999px;background:transparent;color:var(--ink);font:var(--t1-weight) var(--t1-size)/1 var(--font);letter-spacing:var(--t1-track);transition:background .2s ease,color .2s ease}
+.tb-bar button:hover{background:rgba(20,20,20,.06)}
+.tb-bar button[aria-selected="true"]{background:var(--teal);color:var(--ds-cream)}
+.tb-bar button:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.tb-body{width:100%}
+.tb-body [role="tabpanel"][hidden]{display:none}
+.vis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 14px}
+.vis .kicker{grid-column:1/2;padding-top:.9em}
+.vis-big{grid-column:2/5;margin:0;font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track);text-wrap:pretty}
+.mis-h h2.mis-t{max-width:1100px;font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:var(--h2-track)}
+.mis .cd h3,.val .cd h3{min-height:0}
+.mis-more{margin:0;text-align:center;font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);color:var(--soft)}
+.mis-more a{color:var(--teal-ink);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.val{display:grid;gap:56px}
+.val .cards{grid-template-columns:repeat(4,minmax(0,1fr))}
+.val .cd{gap:20px}
+.val .cd h3{font:var(--h3-weight) var(--h3-size)/var(--h3-lh) var(--font);letter-spacing:var(--h3-track);overflow-wrap:anywhere;hyphens:auto}
+@media (max-width:1000px){
+  .vis .kicker,.vis-big{grid-column:1/-1}.vis .kicker{padding-top:0}
+  .cards,.val .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  .slo{border-radius:16px;min-height:480px}.slo-a{gap:16px}
+  .tb{gap:32px}.tb-bar button{padding:10px 16px;font-size:var(--t2-size)}
+  .vis{gap:16px}.val{gap:24px}
+  .cards,.val .cards{grid-template-columns:minmax(0,1fr)}
+}
 </style>
 </head>
 <body>
@@ -176,9 +246,7 @@ h2{font:var(--h2-weight) var(--h2-size)/var(--h2-lh) var(--font);letter-spacing:
 
 <main class="pg" id="app"></main>
 
-<div class="end">
-  <site-footer></site-footer>
-</div>
+<site-footer></site-footer>
 
 <script src="about/data.js"></script>
 <script src="about/base.js"></script>
@@ -211,20 +279,59 @@ document.getElementById("app").innerHTML=`
 
   <section class="say" aria-label="${esc(D.aboutTitle)}">
     <p class="kicker rv">${esc(D.aboutTitle)}</p>
-    <p class="say-big rv">${first.slice(0,cut)}<span>${first.slice(cut)}</span></p>
+    <p class="say-big rv">${first.slice(0,cut)}<span>${first.slice(cut).replace("«еклезія»",'<span class="hint" tabindex="0">«еклезія»<span class="hint-t" role="tooltip">Це не те що ви подумали</span></span>')}</span></p>
     <div class="say-cols">${D.intro.slice(1).map((t,i)=>`<div class="prose rv" style="--d:${i}"><p>${t}</p></div>`).join("")}</div>
+  </section>
+
+  <section class="uc" aria-labelledby="uc-h">
+    <p class="kicker rv">${esc(D.union.kicker)}</p>
+    <div class="uc-card rv" style="--d:1">
+      <img class="uc-logo" src="${esc(D.union.logo)}" alt="${esc(D.union.logoAlt)}" width="593" height="196" loading="lazy">
+      <h2 id="uc-h">${esc(D.union.title)}</h2>
+      <p class="uc-lead">${esc(D.union.lead)}</p>
+      <ul class="uc-st">${D.union.stats.map(x=>`<li><b>${esc(x.big)}</b><span>${esc(x.text)}</span></li>`).join("")}</ul>
+      <div class="uc-cols prose">${D.union.text.map(t=>`<p>${esc(t)}</p>`).join("")}</div>
+      <div class="uc-foot"><a href="${esc(D.union.link.href)}" target="_blank" rel="noopener">${esc(D.union.link.label)}</a><small>${esc(D.union.note)}</small></div>
+    </div>
   </section>
 
   <figure class="wide rv"><img src="about/church.webp" alt="Церква «Філадельфія»: спільне фото біля будівлі церкви" width="2200" height="1467" loading="lazy"></figure>
 
-  <section class="mis" aria-labelledby="mis-h">
-    <div class="mis-h"><p class="kicker rv">${esc(D.missionKicker)}</p><h2 id="mis-h" class="rv" style="--d:1">${esc(D.mission)}</h2></div>
-    <div class="cards">${D.pillars.map((p,i)=>`
-      <article class="cd rv" style="--d:${i}">
-        <span class="cd-n">${i+1}</span>
-        <h3>${esc(p.title)}</h3>
-        <div class="prose">${p.text.map(t=>`<p>${t}</p>`).join("")}</div>
-      </article>`).join("")}
+  <section class="tb" aria-label="Бачення, місія, цінності">
+    <div class="tb-bar rv" role="tablist" aria-label="Бачення, місія, цінності">
+      ${[["vision","Бачення"],["mission","Місія"],["values","Цінності"]].map(([k,l],n)=>`<button type="button" role="tab" id="tb-t-${k}" aria-controls="tb-p-${k}" aria-selected="${n==0}" tabindex="${n==0?0:-1}">${l}</button>`).join("")}
+    </div>
+    <div class="tb-body rv" style="--d:1">
+      <div class="mis" role="tabpanel" id="tb-p-vision" aria-labelledby="tb-t-vision">
+        <div class="mis-h"><h2 class="mis-t">${esc(D.vision)}</h2></div>
+      </div>
+      <div class="mis" role="tabpanel" id="tb-p-mission" aria-labelledby="tb-t-mission" hidden>
+        <div class="mis-h"><h2 class="mis-t">${esc(D.mission)}</h2></div>
+        <div class="cards">${D.pillars.map((p,i)=>`
+          <article class="cd">
+            <span class="cd-n">${i+1}</span>
+            <h3>${esc(p.title)}</h3>
+            <div class="prose">${p.text.map(t=>`<p>${esc(t)}</p>`).join("")}</div>
+          </article>`).join("")}
+        </div>
+        <p class="mis-more">${D.missionMore}</p>
+      </div>
+      <div class="val" role="tabpanel" id="tb-p-values" aria-labelledby="tb-t-values" hidden>
+        <div class="cards">${D.values.map(v=>`
+          <article class="cd">
+            <h3>${esc(v.title)}</h3>
+            <div class="prose"><p>${esc(v.text)}</p></div>
+          </article>`).join("")}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slo rv" aria-label="${esc(D.slogan.text)}">
+    <img src="about/slogan.webp" alt="Богослужіння в церкві «Філадельфія»: зал, сцена та люди, що моляться" width="2400" height="1600" loading="lazy">
+    <div class="slo-a">
+      <h2>${esc(D.slogan.text)}</h2>
+      <div class="slo-b"><p class="slo-v">${esc(D.slogan.verse)}</p><p class="slo-r">${esc(D.slogan.ref)}</p></div>
     </div>
   </section>
 
@@ -239,6 +346,24 @@ document.getElementById("app").innerHTML=`
       <p class="con-l">${(D.contacts.links||[]).map(l=>`<a href="${esc(l.href)}">${esc(l.label)}</a>`).join("")}</p>
     </div>
   </section>`;
+document.querySelectorAll(".tb").forEach(tb=>{
+  const tabs=[...tb.querySelectorAll('[role="tab"]')];
+  const show=t=>{tabs.forEach(b=>{const on=b===t;b.setAttribute("aria-selected",on);b.tabIndex=on?0:-1;document.getElementById(b.getAttribute("aria-controls")).hidden=!on})};
+  tabs.forEach((b,i)=>{
+    b.addEventListener("click",()=>show(b));
+    b.addEventListener("keydown",e=>{
+      const d={ArrowRight:1,ArrowLeft:-1}[e.key]; if(!d&&e.key!=="Home"&&e.key!=="End")return;
+      e.preventDefault(); const n=e.key==="Home"?0:e.key==="End"?tabs.length-1:(i+d+tabs.length)%tabs.length; tabs[n].focus(); show(tabs[n]);
+    });
+  });
+});
+document.querySelectorAll(".hint").forEach(h=>{
+  const t=h.querySelector(".hint-t");
+  const place=()=>{t.style.setProperty("--dx","0px");const r=t.getBoundingClientRect(),m=8;let d=0;
+    if(r.left<m)d=m-r.left;else if(r.right>innerWidth-m)d=innerWidth-m-r.right;
+    t.style.setProperty("--dx",d+"px")};
+  ["mouseenter","focus","touchstart"].forEach(e=>h.addEventListener(e,place,{passive:true}));
+});
 AB.init();
 })();
 </script>

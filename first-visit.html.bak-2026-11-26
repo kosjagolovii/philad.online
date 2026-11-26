@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ви вперше у нас? — Церква «Філадельфія»</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<!-- seo:start -->
+<meta name="description" content="Вперше у церкві «Філадельфія»? Розповідаємо, як дістатися, що чекає на недільному зібранні та з чого почати знайомство з церквою.">
+<link rel="canonical" href="https://philad.org/first-visit/">
+<meta name="robots" content="noindex,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Церква «Філадельфія»">
+<meta property="og:title" content="Ви вперше у нас? — Церква «Філадельфія»">
+<meta property="og:description" content="Вперше у церкві «Філадельфія»? Розповідаємо, як дістатися, що чекає на недільному зібранні та з чого почати знайомство з церквою.">
+<meta property="og:url" content="https://philad.org/first-visit/">
+<meta property="og:image" content="https://philad.org/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ви вперше у нас? — Церква «Філадельфія»">
+<meta name="twitter:description" content="Вперше у церкві «Філадельфія»? Розповідаємо, як дістатися, що чекає на недільному зібранні та з чого почати знайомство з церквою.">
+<meta name="twitter:image" content="https://philad.org/og.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Ви вперше у нас? — Церква «Філадельфія»", "description": "Вперше у церкві «Філадельфія»? Розповідаємо, як дістатися, що чекає на недільному зібранні та з чого почати знайомство з церквою.", "url": "https://philad.org/first-visit/", "inLanguage": "uk", "isPartOf": {"@type": "WebSite", "name": "Церква «Філадельфія»", "url": "https://philad.org/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://philad.org/"}, {"@type": "ListItem", "position": 2, "name": "Ви вперше у нас?", "item": "https://philad.org/first-visit/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Недільне зібрання", "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "https://schema.org/Sunday", "startTime": "11:00", "scheduleTimezone": "Europe/Kyiv"}, "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Церква «Філадельфія»", "address": {"@type": "PostalAddress", "streetAddress": "вул. Голосіївська, 57", "addressLocality": "Київ", "addressCountry": "UA"}, "geo": {"@type": "GeoCoordinates", "latitude": 50.39785, "longitude": 30.51349}}, "organizer": {"@type": "Church", "name": "Церква «Філадельфія»", "url": "https://philad.org/"}, "url": "https://philad.org/first-visit/", "inLanguage": "uk"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Молитовне зібрання", "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "https://schema.org/Wednesday", "startTime": "19:00", "scheduleTimezone": "Europe/Kyiv"}, "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Церква «Філадельфія»", "address": {"@type": "PostalAddress", "streetAddress": "вул. Голосіївська, 57", "addressLocality": "Київ", "addressCountry": "UA"}, "geo": {"@type": "GeoCoordinates", "latitude": 50.39785, "longitude": 30.51349}}, "organizer": {"@type": "Church", "name": "Церква «Філадельфія»", "url": "https://philad.org/"}, "url": "https://philad.org/first-visit/", "inLanguage": "uk"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Ранкова молитва за Україну (вівторок)", "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "https://schema.org/Tuesday", "startTime": "07:30", "scheduleTimezone": "Europe/Kyiv"}, "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Церква «Філадельфія»", "address": {"@type": "PostalAddress", "streetAddress": "вул. Голосіївська, 57", "addressLocality": "Київ", "addressCountry": "UA"}, "geo": {"@type": "GeoCoordinates", "latitude": 50.39785, "longitude": 30.51349}}, "organizer": {"@type": "Church", "name": "Церква «Філадельфія»", "url": "https://philad.org/"}, "url": "https://philad.org/first-visit/", "inLanguage": "uk"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Ранкова молитва за Україну (четвер)", "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "https://schema.org/Thursday", "startTime": "08:00", "scheduleTimezone": "Europe/Kyiv"}, "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Церква «Філадельфія»", "address": {"@type": "PostalAddress", "streetAddress": "вул. Голосіївська, 57", "addressLocality": "Київ", "addressCountry": "UA"}, "geo": {"@type": "GeoCoordinates", "latitude": 50.39785, "longitude": 30.51349}}, "organizer": {"@type": "Church", "name": "Церква «Філадельфія»", "url": "https://philad.org/"}, "url": "https://philad.org/first-visit/", "inLanguage": "uk"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Молодіжне зібрання", "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "https://schema.org/Saturday", "startTime": "17:00", "scheduleTimezone": "Europe/Kyiv"}, "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Церква «Філадельфія»", "address": {"@type": "PostalAddress", "streetAddress": "вул. Голосіївська, 57", "addressLocality": "Київ", "addressCountry": "UA"}, "geo": {"@type": "GeoCoordinates", "latitude": 50.39785, "longitude": 30.51349}}, "organizer": {"@type": "Church", "name": "Церква «Філадельфія»", "url": "https://philad.org/"}, "url": "https://philad.org/first-visit/", "inLanguage": "uk"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Що на мене чекає на зібранні?", "acceptedAnswer": {"@type": "Answer", "text": "Щира та дружня атмосфера, де кожен відчуває себе як вдома, пісні прославлення Бога, практичне та зрозуміле вчення з Біблії. Для дітей працює недільна школа з окремою програмою."}}, {"@type": "Question", "name": "Коли проходять зібрання?", "acceptedAnswer": {"@type": "Answer", "text": "Недільне зібрання — щонеділі об 11:00. Молитовне зібрання — щосереди з 19:00 до 20:00. Ранкова молитва за Україну — у вівторок з 7:30 до 8:30 і в четвер з 8:00 до 8:30. Молодіжне зібрання — щосуботи о 17:00. Повний розклад — у таблиці вище на цій сторінці."}}, {"@type": "Question", "name": "Де знаходиться церква «Філадельфія»?", "acceptedAnswer": {"@type": "Answer", "text": "У Києві, на вул. Голосіївській, 57, поряд зі станцією метро «Голосіївська». Карта нижче, а контакти церкви — на окремій сторінці."}}, {"@type": "Question", "name": "Чи є програма для дітей?", "acceptedAnswer": {"@type": "Answer", "text": "Так, під час зібрання діти можуть відвідувати недільну школу з окремою програмою. Якщо хочете знайти коло спілкування, подивіться домашні групи."}}]}</script>
+<!-- seo:end -->
+<script src="components/site.js"></script>
+<link rel="stylesheet" href="ui-kit/tokens.css">
+<script src="components/map.js"></script>
+<style>
+:root{
+  --ds-cream:#F7F2E8; --ink:#141414; --mute:#85837E; --teal:#317C8E; --teal-ink:#28697A;
+  --sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --side:12px;   /* grid (--cw, --row, --gutter) comes from components/site.js */
+  color-scheme:light;
+}
+html{scroll-behavior:auto}
+html,body{margin:0;padding:0;background:var(--ds-cream);color:var(--ink)}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+
+/* ---------- page ---------- */
+.fv{display:grid;gap:90px;padding-block:150px 90px;
+  padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+
+/* intro */
+.fv-intro{display:grid;justify-items:center;gap:24px;text-align:center}
+.fv-kicker{margin:0;font:var(--t2-weight) var(--t2-size)/var(--t2-lh) var(--font);letter-spacing:var(--t2-track);text-transform:uppercase;color:var(--teal)}
+.fv-intro h1{margin:0;max-width:640px;font:var(--d1-weight) var(--d1-size)/var(--d1-lh) var(--font);letter-spacing:var(--d1-track);text-wrap:balance}
+.fv-lead{margin:0;max-width:490px;font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);color:var(--mute);text-wrap:pretty}
+.fv-go{display:grid;place-items:center;width:300px;max-width:100%;height:72px;border-radius:15px;background:var(--teal);color:var(--ds-cream);font:var(--t3-weight) var(--t3-size)/var(--t3-lh) var(--font);letter-spacing:var(--t3-track);text-transform:uppercase;text-decoration:none;transition:scale .35s cubic-bezier(.2,.7,.2,1),background .25s ease}
+.fv-go:hover{scale:1.03;background:var(--teal-ink)}
+.fv-go:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* photo + what to expect */
+.fv-duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;min-height:400px}
+.fv-photo{position:relative;border-radius:20px;overflow:hidden;background:#d9d9d9;min-height:0}
+.fv-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(var(--ps,1.08));will-change:transform}
+.fv-expect{display:flex;flex-direction:column;justify-content:center;gap:24px;padding:52px 48px;border-radius:20px;background:var(--teal);color:var(--ds-cream);min-width:0}
+.fv-expect h2{margin:0;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track)}
+.fv-expect ol{list-style:none;margin:0;padding:0;display:grid;gap:24px;max-width:536px}
+.fv-expect li{display:flex;align-items:center;gap:16px;font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);text-wrap:pretty}
+.fv-expect li b{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.2);font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track)}
+
+/* reveal on scroll */
+.rv{opacity:0;transform:translate3d(0,40px,0);transition:opacity .8s ease,transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0)*90ms)}
+.rv.in{opacity:1;transform:none}
+.fv-expect li.rv{transform:translate3d(0,16px,0)}
+.fv-expect li.rv.in{transform:none}
+
+/* footer: pinned at the bottom, the teal block scrolls away and uncovers it — like on the home page */
+.end{position:relative;z-index:3}
+.nx-hold{position:relative;z-index:1}
+
+@media (max-width:1000px){
+    .fv-duo{grid-template-columns:minmax(0,1fr);min-height:0}
+  .fv-photo{aspect-ratio:16/10}
+}
+@media (max-width:720px){
+  :root{--side:16px}
+  .fv{gap:64px;padding-block:120px 64px}
+  .fv-intro{gap:16px}
+  .fv-lead{font-size:var(--t1-size)}
+  .fv-go{width:100%;height:60px}
+  .fv-duo{gap:16px}
+  .fv-photo{aspect-ratio:4/3;border-radius:16px}
+  .fv-expect{padding:24px 16px;border-radius:16px;gap:16px}
+  .fv-expect h2{font-size:var(--h3-size)}
+  .fv-expect ol{gap:16px}
+  .fv-expect li{font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track);gap:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  .rv{transition:none!important;opacity:1;transform:none}
+  .fv-go{transition:none}
+}
+.fv-faq{width:var(--row);max-width:100%;display:grid;gap:0;margin-inline:auto}
+.fv-faq>h2{margin:0 0 20px;font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track)}
+.fv-faq details{border-top:1.5px solid rgba(20,20,20,.14)}.fv-faq details:last-child{border-bottom:1.5px solid rgba(20,20,20,.14)}
+.fv-faq summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;cursor:pointer;list-style:none;font:var(--h3-weight) var(--h3-size)/var(--h3-lh) var(--font);letter-spacing:var(--h3-track)}
+.fv-faq summary::-webkit-details-marker{display:none}.fv-faq summary::after{content:"+";flex:none;font-weight:500;font-size:28px;line-height:1;color:var(--teal-ink)}
+.fv-faq details[open] summary::after{content:"−"}
+.fv-faq .faq-a{padding:0 0 22px;max-width:720px}.fv-faq .faq-a a{color:var(--teal-ink);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.fv-faq .faq-a p{margin:0;font:var(--b1-weight) var(--b1-size)/var(--b1-lh) var(--font);letter-spacing:var(--b1-track);color:#242424}
+
+/* графік зібрань: день, час і назва в рядку-таблиці (перенесено зі сторінки «Графік служінь») */
+.tt{width:var(--row);max-width:100%;margin:0 auto;padding:0;list-style:none;border-top:1.5px solid rgba(20,20,20,.14)}
+.tt li{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.8fr) minmax(0,1.3fr);gap:8px 32px;align-items:baseline;padding:24px 0;border-bottom:1.5px solid rgba(20,20,20,.14)}
+.tt .d{font:var(--h2s-weight) var(--h2s-size)/var(--h2s-lh) var(--font);letter-spacing:var(--h2s-track)}
+.tt .t{font:var(--h3-weight) var(--h3-size)/var(--h3-lh) var(--font);letter-spacing:var(--h3-track);color:var(--teal-ink);font-variant-numeric:tabular-nums}
+.tt .n{font:var(--t1-weight) var(--t1-size)/var(--t1-lh) var(--font);letter-spacing:var(--t1-track)}
+.tt li.main .d{color:var(--teal-ink)}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:900px){.tt li{grid-template-columns:minmax(0,1fr);gap:4px;padding:22px 0}}
+
+/* мобільна шкала відступів (snap-spacing.py): база → 8·16·24·40·64 */
+@media (max-width:720px){
+  .fv-faq>h2{margin:0 0 16px}
+  .fv-faq summary{gap:16px;padding:16px 0}
+  .fv-faq .faq-a{padding:0 0 24px}
+  .tt li{padding:24px 0}
+}
+
+/* планшетна шкала відступів (snap-tablet.py): база → 8·16·24·32·48·80 */
+@media (min-width:721px) and (max-width:1000px){
+  .fv{gap:80px;padding-block:150px 80px}
+  .fv-expect{padding:48px 48px}
+  .fv-faq>h2{margin:0 0 16px}
+  .fv-faq summary{gap:16px;padding:16px 0}
+  .fv-faq .faq-a{padding:0 0 24px}
+  .tt li{padding:24px 0}
+}
+@media (min-width:1001px) and (max-width:1180px),(min-width:1181px) and (max-width:1366px) and (pointer:coarse){
+  .fv{gap:80px;padding-block:150px 80px}
+  .fv-expect{padding:48px 48px}
+  .fv-faq>h2{margin:0 0 16px}
+  .fv-faq summary{gap:16px;padding:16px 0}
+  .fv-faq .faq-a{padding:0 0 24px}
+}
+</style>
+</head>
+<body>
+<site-menu tone="auto"></site-menu>
+
+<main class="fv">
+  <section class="fv-intro" aria-labelledby="fv-h">
+    <p class="fv-kicker rv">Ви вперше у нас?</p>
+    <h1 id="fv-h" class="rv" style="--d:1">Ласкаво просимо до нашої церкви</h1>
+    <p class="fv-lead rv" style="--d:2">Ми раді бачити вас! Незалежно від того, де ви знаходитесь на своєму духовному шляху, для вас є місце в нашій церкві.</p>
+    <a class="fv-go rv" style="--d:3" href="#map">Як добратись?</a>
+  </section>
+
+  <section id="schedule" aria-labelledby="sch-h">
+    <h2 id="sch-h" class="sr-only">Графік служінь</h2>
+    <ul class="tt">
+      <li class="rv main"><span class="d">Неділя</span><span class="t">11:00</span><span class="n">Недільне зібрання</span></li>
+      <li class="rv"><span class="d">Вівторок</span><span class="t">7:30–8:30</span><span class="n">Ранкова молитва за Україну</span></li>
+      <li class="rv"><span class="d">Середа</span><span class="t">19:00–20:00</span><span class="n">Молитовне зібрання</span></li>
+      <li class="rv"><span class="d">Четвер</span><span class="t">8:00–8:30</span><span class="n">Ранкова молитва за Україну</span></li>
+      <li class="rv"><span class="d">Субота</span><span class="t">17:00</span><span class="n">Молодіжне зібрання</span></li>
+    </ul>
+  </section>
+
+  <section class="fv-duo row-w" aria-labelledby="fv-exp">
+    <div class="fv-photo rv"><img src="first/photo.webp" alt="Люди спілкуються з чашками в руках у фоє церкви" width="1400" height="927" loading="lazy"></div>
+    <div class="fv-expect rv" style="--d:1" data-dark>
+      <h2 id="fv-exp">Що на вас чекає?</h2>
+      <ol>
+        <li class="rv" style="--d:2"><b>1</b>Щира та дружня атмосфера, де кожен відчуває себе як вдома.</li>
+        <li class="rv" style="--d:3"><b>2</b>Пісні прославлення Бога.</li>
+        <li class="rv" style="--d:4"><b>3</b>Практичне та зрозуміле вчення з Біблії.</li>
+        <li class="rv" style="--d:5"><b>4</b>Чудова недільна школа з програмою для ваших дітей.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="fv-faq rv" aria-labelledby="faq-h">
+    <h2 id="faq-h">Часті запитання</h2>
+    <details><summary>Що на мене чекає на зібранні?</summary><div class="faq-a"><p>Щира та дружня атмосфера, де кожен відчуває себе як вдома, пісні прославлення Бога, практичне та зрозуміле вчення з Біблії. Для дітей працює недільна школа з окремою програмою.</p></div></details>
+    <details><summary>Коли проходять зібрання?</summary><div class="faq-a"><p>Недільне зібрання — щонеділі об 11:00. Молитовне зібрання — щосереди з 19:00 до 20:00. Ранкова молитва за Україну — у вівторок з 7:30 до 8:30 і в четвер з 8:00 до 8:30. Молодіжне зібрання — щосуботи о 17:00. Повний розклад — у таблиці вище на цій сторінці.</p></div></details>
+    <details><summary>Де знаходиться церква «Філадельфія»?</summary><div class="faq-a"><p>У Києві, на вул. Голосіївській, 57, поряд зі станцією метро «Голосіївська». Карта нижче, а <a href="/contacts/">контакти церкви</a> — на окремій сторінці.</p></div></details>
+    <details><summary>Чи є програма для дітей?</summary><div class="faq-a"><p>Так, під час зібрання діти можуть відвідувати недільну школу з окремою програмою. Якщо хочете знайти коло спілкування, подивіться <a href="/domashnie-gruppy/">домашні групи</a>.</p></div></details>
+  </section>
+
+  <church-map></church-map>
+</main>
+
+<div class="end">
+  <div class="nx-hold" data-dark><site-next></site-next></div>
+  <site-footer></site-footer>
+</div>
+
+<script>
+(()=>{
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+// footer is dark too: the header stays light over it
+document.getElementById("footer").setAttribute("data-dark","");
+
+// reveal: elements rise in as they reach the screen; block 8 cards come in one after another
+document.querySelectorAll(".nx-card").forEach((c,i)=>{c.classList.add("rv");c.style.setProperty("--d",i)});
+document.querySelectorAll(".nx-head").forEach(h=>h.classList.add("rv"));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -12% 0px"});
+document.querySelectorAll(".rv").forEach(el=>reduce?el.classList.add("in"):io.observe(el));
+
+// «Як добратись?» — smooth ride down to the map
+document.querySelector(".fv-go").addEventListener("click",e=>{e.preventDefault();document.getElementById("map").scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"})});
+
+// photo: slow parallax zoom while it passes through the screen
+const ph=document.querySelector(".fv-photo img");
+if(!reduce){let raf=0;const step=()=>{raf=0;const r=ph.parentElement.getBoundingClientRect(),t=Math.min(1,Math.max(0,(innerHeight-r.top)/(innerHeight+r.height)));ph.style.setProperty("--ps",(1.14-.1*t).toFixed(4))};
+  addEventListener("scroll",()=>{if(!raf)raf=requestAnimationFrame(step)},{passive:true});step()}
+})();
+</script>
+</body>
+</html>
