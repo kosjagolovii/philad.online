@@ -135,7 +135,7 @@ class ChurchMap extends HTMLElement{
 const MAPTILER_KEY="4xnpIboEIZ8Se3POUMKB";   // MapTiler, ключ «philad.org»: дозволений лише для localhost і philad.org
 const CHURCH=[30.51349,50.39785];   // вул. Голосіївська, 57 (OpenStreetMap)
 const METRO=[30.50895,50.39752];    // метро «Голосіївська», вихід на Голосіївську площу
-const STYLE=MAPTILER_KEY?`https://api.maptiler.com/maps/dataviz-dark/style.json?key=${MAPTILER_KEY}`:"https://tiles.openfreemap.org/styles/dark";
+const STYLES=[MAPTILER_KEY&&`https://api.maptiler.com/maps/dataviz-dark/style.json?key=${MAPTILER_KEY}`,"https://tiles.openfreemap.org/styles/dark"].filter(Boolean);   // якщо MapTiler недоступний (ключ дозволений лише для philad.org) — запасна карта OpenFreeMap, як на «Домашніх групах»
 const LIB="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/";
 const loadLib=()=>new Promise((ok,no)=>{
   if(window.maplibregl)return ok();
@@ -168,20 +168,26 @@ function brand(m){
 }
 let live=null,flown=false;
 const VIEW={center:CHURCH,zoom:15.6,pitch:52,bearing:-18};
-async function startLive(){
+async function startLive(i=0){
+  const STYLE=STYLES[i];if(!STYLE)return;                  // джерела скінчились → лишається статична карта
+  const next=()=>startLive(i+1);
   try{
-    const r=await fetch(STYLE);if(!r.ok)throw 0;          // blocked or offline → keep the static map
+    const r=await fetch(STYLE);if(!r.ok)throw 0;          // blocked or offline → next source
     await loadLib();
     const m=new maplibregl.Map({container:"liveMap",style:STYLE,center:[30.52,50.43],zoom:10.6,pitch:0,bearing:0,
       attributionControl:{compact:true},cooperativeGestures:true,dragRotate:true,maxZoom:18.5,minZoom:8,
       locale:{"CooperativeGesturesHandler.WindowsHelpText":"Щоб змінити масштаб, тримайте Ctrl і крутіть коліщатко",
               "CooperativeGesturesHandler.MacHelpText":"Щоб змінити масштаб, тримайте ⌘ і крутіть коліщатко",
               "CooperativeGesturesHandler.MobileHelpText":"Рухайте карту двома пальцями"}});
+    let ok=false;const giveUp=()=>{if(ok)return;try{m.remove()}catch(e){}next()};
+    const timer=setTimeout(giveUp,12000);                  // карта не завантажилась за 12 с → наступне джерело
+    m.on("error",e=>{const c=e&&e.error&&e.error.status;if(!ok&&(c===401||c===403||c===429)){clearTimeout(timer);giveUp()}});
     live=m;
     const el=document.createElement("div");el.className="fv-mk";
     el.innerHTML='<img class="fv-church" src="'+asset("first/church.webp")+'" alt="Будівля церкви «Філадельфія»" width="360" height="331"><div class="fv-tag"><b>Церква «Філадельфія»</b><span>вул. Голосіївська, 57</span></div>';
     m.on("style.load",()=>brand(m));
     m.once("load",()=>{
+      ok=true;clearTimeout(timer);
       new maplibregl.Marker({element:el,anchor:"center"}).setLngLat(CHURCH).addTo(m);
       const mt=document.createElement("div");mt.className="fv-metro";mt.innerHTML='<i aria-hidden="true">M</i>Метро «Голосіївська»';
       new maplibregl.Marker({element:mt,anchor:"right",offset:[15,0]}).setLngLat(METRO).addTo(m);
@@ -190,7 +196,7 @@ async function startLive(){
       if(map.classList.contains("in"))fly();
     });
     m.on("error",e=>{if(!map.classList.contains("live"))console.warn("map",e&&e.error)});
-  }catch(e){/* static map stays */}
+  }catch(e){next()}
 }
 function fly(){if(!live||flown)return;flown=true;live.flyTo({...VIEW,duration:reduce?0:4200,curve:1.5,essential:true})}
 document.getElementById("mapIn").onclick=()=>live&&live.zoomIn();
